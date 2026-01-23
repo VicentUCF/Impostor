@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import deportesData from '../db/Deportes.json';
-import escapeRoomsData from '../db/EscapeRooms.json';
-import juegosData from '../db/Juegos.json';
-import marcasData from '../db/Marcas.json';
-import padelData from '../db/Padel.json';
-import peliculasData from '../db/Peliculas.json';
-import seriesData from '../db/Series.json';
-import trabajosData from '../db/Trabajos.json';
+import {
+  CategorySource,
+  Difficulty,
+  WordEntry,
+  buildCategorySources,
+  collectActiveEntries,
+  collectAllEntries,
+  pickWordEntry
+} from './utils/word-data';
+import { Role, assignRoles, formatTime, parseBoundedInt } from './utils/game-utils';
 
 type Screen =
   | 'intro'
@@ -21,142 +23,6 @@ type Screen =
   | 'starter'
   | 'round-live'
   | 'reveal';
-
-type Role = 'crew' | 'impostor';
-type Difficulty = 'easy' | 'normal' | 'hard';
-
-interface WordSub {
-  id?: string;
-  easy?: string[];
-  normal?: string[];
-  hard?: string[];
-}
-
-interface WordEntryRaw {
-  category?: string;
-  sub?: WordSub;
-  words?: string[];
-}
-
-interface WordHints {
-  easy: string[];
-  normal: string[];
-  hard: string[];
-}
-
-interface WordEntry {
-  category: string;
-  hints: WordHints;
-  words: string[];
-}
-
-interface CategorySource {
-  id: string;
-  label: string;
-  entries: WordEntry[];
-  enabled: boolean;
-}
-
-const sanitizeList = (values?: string[]): string[] => {
-  if (!Array.isArray(values)) {
-    return [];
-  }
-
-  return values
-    .filter((value): value is string => typeof value === 'string')
-    .map((value) => value.trim())
-    .filter((value) => value.length > 0);
-};
-
-const buildHints = (sub?: WordSub): WordHints => ({
-  easy: sanitizeList(sub?.easy),
-  normal: sanitizeList(sub?.normal),
-  hard: sanitizeList(sub?.hard)
-});
-
-const deriveLabel = (fallback: string, entries: WordEntryRaw[]): string => {
-  const label = entries.find((entry) => entry.category)?.category;
-  return label?.trim().length ? label.trim() : fallback;
-};
-
-const normalizeEntries = (label: string, entries: WordEntryRaw[]): WordEntry[] =>
-  entries
-    .map((entry) => {
-      const category = entry.category?.trim().length ? entry.category.trim() : label;
-      const words = sanitizeList(entry.words);
-      const hints = buildHints(entry.sub);
-
-      return { category, words, hints };
-    })
-    .filter((entry) => entry.words.length > 0);
-
-const buildSources = (): CategorySource[] => {
-  const deportesRaw = Array.isArray(deportesData) ? (deportesData as WordEntryRaw[]) : [];
-  const escapeRoomsRaw = Array.isArray(escapeRoomsData)
-    ? (escapeRoomsData as WordEntryRaw[])
-    : [];
-  const juegosRaw = Array.isArray(juegosData) ? (juegosData as WordEntryRaw[]) : [];
-  const marcasRaw = Array.isArray(marcasData) ? (marcasData as WordEntryRaw[]) : [];
-  const padelRaw = Array.isArray(padelData) ? (padelData as WordEntryRaw[]) : [];
-  const peliculasRaw = Array.isArray(peliculasData) ? (peliculasData as WordEntryRaw[]) : [];
-  const seriesRaw = Array.isArray(seriesData) ? (seriesData as WordEntryRaw[]) : [];
-  const trabajosRaw = Array.isArray(trabajosData) ? (trabajosData as WordEntryRaw[]) : [];
-
-  const sources = [
-    {
-      id: 'deportes',
-      fallbackLabel: 'Deportes',
-      raw: deportesRaw
-    },
-    {
-      id: 'escape-rooms',
-      fallbackLabel: 'Escape Room',
-      raw: escapeRoomsRaw
-    },
-    {
-      id: 'juegos',
-      fallbackLabel: 'Juegos',
-      raw: juegosRaw
-    },
-    {
-      id: 'marcas',
-      fallbackLabel: 'Marcas',
-      raw: marcasRaw
-    },
-    {
-      id: 'padel',
-      fallbackLabel: 'Padel',
-      raw: padelRaw
-    },
-    {
-      id: 'peliculas',
-      fallbackLabel: 'Peliculas',
-      raw: peliculasRaw
-    },
-    {
-      id: 'series',
-      fallbackLabel: 'Series',
-      raw: seriesRaw
-    },
-    {
-      id: 'trabajos',
-      fallbackLabel: 'Trabajos',
-      raw: trabajosRaw
-    }
-  ];
-
-  return sources.map((source) => {
-    const label = deriveLabel(source.fallbackLabel, source.raw);
-    const entries = normalizeEntries(label, source.raw);
-
-    return {
-      id: source.id,
-      label,
-      entries,
-      enabled: entries.length > 0
-    };
-  });
-};
 
 @Component({
   selector: 'app-root',
@@ -189,7 +55,7 @@ export class AppComponent {
   showCategory = true;
   showHint = true;
   hintDifficulty: Difficulty = 'normal';
-  categorySources: CategorySource[] = buildSources();
+  categorySources: CategorySource[] = buildCategorySources();
 
   roundSeconds = 0;
   canReveal = false;
@@ -239,9 +105,7 @@ export class AppComponent {
   }
 
   get activeEntries(): WordEntry[] {
-    return this.categorySources
-      .filter((source) => source.enabled && source.entries.length > 0)
-      .flatMap((source) => source.entries);
+    return collectActiveEntries(this.categorySources);
   }
 
   get canConfirmConfig(): boolean {
@@ -261,7 +125,7 @@ export class AppComponent {
   }
 
   get roundTimerLabel(): string {
-    return this.formatTime(this.roundSeconds);
+    return formatTime(this.roundSeconds);
   }
 
   goToPlayers(): void {
@@ -269,7 +133,7 @@ export class AppComponent {
   }
 
   confirmPlayers(): void {
-    const parsed = this.parseBounded(
+    const parsed = parseBoundedInt(
       this.totalPlayersInput,
       this.minPlayers,
       this.maxPlayers,
@@ -303,7 +167,7 @@ export class AppComponent {
   }
 
   confirmImpostors(): void {
-    const parsed = this.parseBounded(
+    const parsed = parseBoundedInt(
       this.impostorsInput,
       1,
       this.maxImpostors,
@@ -420,65 +284,17 @@ export class AppComponent {
   }
 
   private setupRound(): void {
-    const selection = this.pickWord();
+    const entries = collectActiveEntries(this.categorySources);
+    const selection = pickWordEntry(
+      entries.length > 0 ? entries : collectAllEntries(this.categorySources),
+      this.hintDifficulty
+    );
+
     this.category = selection.category;
     this.word = selection.word;
     this.hint = selection.hint;
-    this.roles = this.assignRoles();
+    this.roles = assignRoles(this.totalPlayers, this.impostors);
     this.starterIndex = Math.floor(Math.random() * this.totalPlayers);
-  }
-
-  private parseBounded(value: string, min: number, max: number, fallback: number): number {
-    const parsed = Number.parseInt(value, 10);
-    if (Number.isNaN(parsed)) {
-      return fallback;
-    }
-    return Math.min(Math.max(parsed, min), max);
-  }
-
-  private assignRoles(): Role[] {
-    const roles: Role[] = Array.from({ length: this.totalPlayers }, () => 'crew');
-    const order = this.shuffle(Array.from({ length: this.totalPlayers }, (_, index) => index));
-
-    for (let i = 0; i < this.impostors; i += 1) {
-      roles[order[i]] = 'impostor';
-    }
-
-    return roles;
-  }
-
-  private pickWord(): { category: string; hint: string; word: string } {
-    const entries = this.activeEntries.length > 0 ? this.activeEntries : this.allEntries();
-
-    if (entries.length === 0) {
-      return { category: '', hint: '', word: '' };
-    }
-
-    const entry = this.randomItem(entries);
-    const word = this.randomItem(entry.words);
-    const difficultyHints = entry.hints[this.hintDifficulty] ?? [];
-    const hint = difficultyHints.length > 0 ? this.randomItem(difficultyHints) : 'SIN PISTA';
-
-    return { category: entry.category, hint, word };
-  }
-
-  private allEntries(): WordEntry[] {
-    return this.categorySources.flatMap((source) => source.entries);
-  }
-
-  private randomItem<T>(items: T[]): T {
-    return items[Math.floor(Math.random() * items.length)];
-  }
-
-  private shuffle<T>(items: T[]): T[] {
-    const copy = [...items];
-
-    for (let index = copy.length - 1; index > 0; index -= 1) {
-      const swapIndex = Math.floor(Math.random() * (index + 1));
-      [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
-    }
-
-    return copy;
   }
 
   private startPassDelay(): void {
@@ -515,11 +331,5 @@ export class AppComponent {
     }
     this.roundSeconds = 0;
     this.canReveal = false;
-  }
-
-  private formatTime(totalSeconds: number): string {
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   }
 }
