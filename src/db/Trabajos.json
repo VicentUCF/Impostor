@@ -1,0 +1,179 @@
+[
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "oficios_manual",
+      "easy": ["Oficio", "Herramienta", "Taller", "Manos"],
+      "normal": ["Trabajo", "Material", "Proceso", "Montaje"],
+      "hard": ["Tarea", "Ejecución", "Rutina", "Resultado"]
+    },
+    "words": [
+      "Carpintero",
+      "Fontanero",
+      "Electricista",
+      "Albañil",
+      "Herrero",
+      "Mecánico",
+      "Soldador",
+      "Pintor"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "sanidad",
+      "easy": ["Salud", "Hospital", "Paciente", "Atención"],
+      "normal": ["Clínica", "Tratamiento", "Cuidado", "Servicio"],
+      "hard": ["Asistencia", "Responsabilidad", "Intervención", "Gestión"]
+    },
+    "words": [
+      "Médico",
+      "Enfermero",
+      "Cirujano",
+      "Fisioterapeuta",
+      "Dentista",
+      "Psicólogo",
+      "Auxiliar",
+      "Paramédico"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "educacion",
+      "easy": ["Escuela", "Clase", "Alumno", "Aula"],
+      "normal": ["Formación", "Enseñanza", "Aprendizaje", "Evaluación"],
+      "hard": ["Didáctica", "Método", "Guía", "Proceso"]
+    },
+    "words": [
+      "Profesor",
+      "Maestro",
+      "Docente",
+      "Tutor",
+      "Instructor",
+      "Orientador",
+      "Pedagogo"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "tecnologia",
+      "easy": ["Tecnología", "Ordenador", "Pantalla", "Sistema"],
+      "normal": ["Software", "Datos", "Código", "Plataforma"],
+      "hard": ["Lógica", "Arquitectura", "Abstracción", "Estructura"]
+    },
+    "words": [
+      "Programador",
+      "Desarrollador",
+      "Ingeniero",
+      "Analista",
+      "Administrador",
+      "Técnico",
+      "Consultor"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "servicios",
+      "easy": ["Servicio", "Cliente", "Atención", "Turno"],
+      "normal": ["Gestión", "Soporte", "Interacción", "Organización"],
+      "hard": ["Relación", "Flujo", "Coordinación", "Contexto"]
+    },
+    "words": [
+      "Camarero",
+      "Dependiente",
+      "Recepcionista",
+      "Repartidor",
+      "Cajero",
+      "Teleoperador"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "seguridad",
+      "easy": ["Seguridad", "Orden", "Uniforme", "Control"],
+      "normal": ["Vigilancia", "Protección", "Autoridad", "Intervención"],
+      "hard": ["Riesgo", "Presencia", "Respuesta", "Prevención"]
+    },
+    "words": [
+      "Policía",
+      "Guardia",
+      "Vigilante",
+      "Bombero",
+      "Escolta",
+      "Rescatista"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "transporte",
+      "easy": ["Transporte", "Vehículo", "Ruta", "Viaje"],
+      "normal": ["Conducción", "Trayecto", "Servicio", "Movimiento"],
+      "hard": ["Dirección", "Logística", "Flujo", "Recorrido"]
+    },
+    "words": [
+      "Conductor",
+      "Piloto",
+      "Maquinista",
+      "Repartidor",
+      "Mensajero",
+      "Transportista"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "arte_creativo",
+      "easy": ["Arte", "Creatividad", "Diseño", "Imagen"],
+      "normal": ["Expresión", "Estilo", "Composición", "Producción"],
+      "hard": ["Concepto", "Narrativa", "Intención", "Visión"]
+    },
+    "words": [
+      "Diseñador",
+      "Ilustrador",
+      "Fotógrafo",
+      "Músico",
+      "Actor",
+      "Escritor",
+      "Editor"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "gestion_empresa",
+      "easy": ["Empresa", "Oficina", "Equipo", "Trabajo"],
+      "normal": ["Gestión", "Organización", "Planificación", "Dirección"],
+      "hard": ["Estrategia", "Decisión", "Liderazgo", "Responsabilidad"]
+    },
+    "words": [
+      "Gerente",
+      "Director",
+      "Administrador",
+      "Supervisor",
+      "Coordinador",
+      "Responsable"
+    ]
+  },
+  {
+    "category": "Trabajos",
+    "sub": {
+      "id": "campo_naturaleza",
+      "easy": ["Campo", "Naturaleza", "Tierra", "Aire"],
+      "normal": ["Cultivo", "Cuidado", "Producción", "Entorno"],
+      "hard": ["Ciclo", "Ritmo", "Sostenibilidad", "Equilibrio"]
+    },
+    "words": [
+      "Agricultor",
+      "Ganadero",
+      "Jardinero",
+      "Pescador",
+      "Forestero",
+      "Apicultor"
+    ]
+  }
+]

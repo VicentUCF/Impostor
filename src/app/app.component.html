@@ -99,6 +99,110 @@
         </button>
       </div>
 
+      <div *ngSwitchCase="'config'" class="o-stack o-stack--form">
+        <p class="c-eyebrow">CONFIGURACION</p>
+        <h1 class="c-title">PARTIDA</h1>
+        <div class="c-config">
+          <button
+            class="c-toggle"
+            type="button"
+            [class.c-toggle--on]="showCategory"
+            [attr.aria-pressed]="showCategory"
+            (click)="toggleShowCategory()"
+          >
+            <span class="c-toggle__label">MOSTRAR CATEGORIA</span>
+            <span class="c-toggle__state">{{ showCategory ? "SI" : "NO" }}</span>
+          </button>
+          <button
+            class="c-toggle"
+            type="button"
+            [class.c-toggle--on]="showHint"
+            [attr.aria-pressed]="showHint"
+            (click)="toggleShowHint()"
+          >
+            <span class="c-toggle__label">MOSTRAR PISTA</span>
+            <span class="c-toggle__state">{{ showHint ? "SI" : "NO" }}</span>
+          </button>
+        </div>
+        <p class="c-section">DIFICULTAD DE PISTA</p>
+        <div class="c-choice-list c-choice-list--compact">
+          <button
+            class="c-choice"
+            type="button"
+            [class.c-choice--on]="hintDifficulty === 'easy'"
+            [attr.aria-pressed]="hintDifficulty === 'easy'"
+            (click)="setHintDifficulty('easy')"
+          >
+            <div class="c-choice__row">
+              <span class="c-choice__label">FACIL</span>
+              <span class="c-choice__state">
+                {{ hintDifficulty === "easy" ? "ACTIVA" : "" }}
+              </span>
+            </div>
+          </button>
+          <button
+            class="c-choice"
+            type="button"
+            [class.c-choice--on]="hintDifficulty === 'normal'"
+            [attr.aria-pressed]="hintDifficulty === 'normal'"
+            (click)="setHintDifficulty('normal')"
+          >
+            <div class="c-choice__row">
+              <span class="c-choice__label">NORMAL</span>
+              <span class="c-choice__state">
+                {{ hintDifficulty === "normal" ? "ACTIVA" : "" }}
+              </span>
+            </div>
+          </button>
+          <button
+            class="c-choice"
+            type="button"
+            [class.c-choice--on]="hintDifficulty === 'hard'"
+            [attr.aria-pressed]="hintDifficulty === 'hard'"
+            (click)="setHintDifficulty('hard')"
+          >
+            <div class="c-choice__row">
+              <span class="c-choice__label">DIFICIL</span>
+              <span class="c-choice__state">
+                {{ hintDifficulty === "hard" ? "ACTIVA" : "" }}
+              </span>
+            </div>
+          </button>
+        </div>
+        <p class="c-section">
+          CATEGORIAS {{ selectedSourcesCount }} / {{ totalSourcesCount }}
+        </p>
+        <div class="c-choice-list">
+          <button
+            class="c-choice"
+            type="button"
+            *ngFor="let source of categorySources; trackBy: trackBySource"
+            [class.c-choice--on]="source.enabled"
+            [attr.aria-pressed]="source.enabled"
+            [disabled]="source.entries.length === 0"
+            (click)="toggleCategory(source)"
+          >
+            <div class="c-choice__row">
+              <span class="c-choice__label">{{ source.label }}</span>
+              <span class="c-choice__state">
+                {{ source.entries.length === 0 ? "VACIO" : source.enabled ? "INCLUIDO" : "FUERA" }}
+              </span>
+            </div>
+            <span class="c-choice__meta">
+              {{ source.entries.length === 0 ? "SIN DATOS" : source.entries.length + " TEMAS" }}
+            </span>
+          </button>
+        </div>
+        <button
+          class="c-action"
+          type="button"
+          [disabled]="!canConfirmConfig"
+          (click)="confirmConfig()"
+        >
+          CONTINUAR
+        </button>
+      </div>
+
       <div *ngSwitchCase="'ready'" class="o-stack">
         <p class="c-eyebrow">PREPARA EL MOVIL</p>
         <h1 class="c-title">NADIE MIRA LA PANTALLA</h1>
@@ -121,14 +225,22 @@
 
       <div *ngSwitchCase="'role-reveal'" class="o-stack">
         <p class="c-eyebrow">ROL</p>
-        <h1 class="c-role" [class.c-role--impostor]="isImpostor">
-          {{ isImpostor ? "IMPOSTOR" : "EQUIPO" }}
+        <h1
+          class="c-role"
+          [class.c-role--impostor]="isImpostor"
+          [class.c-role--informante]="!isImpostor"
+        >
+          {{ isImpostor ? "IMPOSTOR" : "INFORMANTE" }}
         </h1>
-        <div class="c-block">
-          <p class="c-meta">CATEGORIA</p>
-          <p class="c-value">{{ category }}</p>
-          <p class="c-meta">CLUSTER</p>
-          <p class="c-value">{{ cluster }}</p>
+        <div class="c-block" *ngIf="showCategory || (showHint && isImpostor)">
+          <ng-container *ngIf="showCategory">
+            <p class="c-meta">CATEGORIA</p>
+            <p class="c-value">{{ category }}</p>
+          </ng-container>
+          <ng-container *ngIf="showHint && isImpostor">
+            <p class="c-meta">PISTA</p>
+            <p class="c-value">{{ hint }}</p>
+          </ng-container>
         </div>
         <div *ngIf="!isImpostor" class="c-block">
           <p class="c-meta">PALABRA</p>
@@ -140,18 +252,17 @@
         </button>
       </div>
 
-      <div *ngSwitchCase="'pass-device'" class="o-stack">
+      <div *ngSwitchCase="'pass-device'" class="o-stack o-stack--instant">
         <p class="c-eyebrow">PASA EL MOVIL</p>
-        <h1 class="c-title">AL SIGUIENTE</h1>
-        <p class="c-note" *ngIf="hasNextPlayer">SIGUE: {{ nextPlayerName }}</p>
-        <p class="c-note" *ngIf="!hasNextPlayer">TODOS LISTOS</p>
+        <p class="c-pass-name">A {{ nextPlayerName }}</p>
         <button
-          class="c-action"
+          class="c-action c-action--delay"
           type="button"
+          [class.c-action--ready]="passReady"
           [disabled]="!passReady"
           (click)="continueAfterPass()"
         >
-          {{ passReady ? "LISTO" : "ESPERA" }}
+          CONTINUAR
         </button>
       </div>
 
@@ -183,10 +294,16 @@
         <div class="c-block">
           <p class="c-meta">PALABRA</p>
           <p class="c-value c-value--word">{{ word }}</p>
-          <p class="c-meta">CATEGORIA</p>
-          <p class="c-value">{{ category }}</p>
-          <p class="c-meta">CLUSTER</p>
-          <p class="c-value">{{ cluster }}</p>
+        </div>
+        <div class="c-block" *ngIf="showCategory || showHint">
+          <ng-container *ngIf="showCategory">
+            <p class="c-meta">CATEGORIA</p>
+            <p class="c-value">{{ category }}</p>
+          </ng-container>
+          <ng-container *ngIf="showHint">
+            <p class="c-meta">PISTA</p>
+            <p class="c-value">{{ hint }}</p>
+          </ng-container>
         </div>
         <button class="c-action" type="button" (click)="newRound()">
           OTRA PARTIDA

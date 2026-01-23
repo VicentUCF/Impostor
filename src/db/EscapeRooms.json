@@ -1,0 +1,486 @@
+[
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "terror",
+      "easy": ["Terror", "Miedo", "Sustos", "Oscuridad"],
+      "normal": ["Terror", "Sombra", "Tensión", "Silencio"],
+      "hard": ["Ambiente", "Noche", "Ruido", "Límite"]
+    },
+    "words": [
+      "Psicofonía",
+      "Paranoia",
+      "Kilómetro 18",
+      "Años oscuros",
+      "Casa maldita",
+      "Haunted house",
+      "No respires",
+      "Sótano",
+      "Sombras",
+      "Susurro",
+      "Alucinación",
+      "Ansiedad",
+      "Pánico",
+      "Eco",
+      "Silencio",
+      "Pasillo",
+      "Habitación cerrada",
+      "Vigilancia",
+      "Linterna",
+      "Respiración"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "hotel",
+      "easy": ["Hotel", "Recepción", "Habitación", "Ascensor"],
+      "normal": ["Hotel", "Alojamiento", "Pasillo", "Llave"],
+      "hard": ["Lugar", "Puerta", "Entrada", "Estancia"]
+    },
+    "words": [
+      "Hotel de los suicidas",
+      "Recepción",
+      "Habitación 13",
+      "Llave maestra",
+      "Pasillo infinito",
+      "Ascensor",
+      "Timbre",
+      "Maleta",
+      "Libro de registro",
+      "Portero",
+      "Puerta entornada",
+      "Cadena",
+      "Cerrojo",
+      "Cortinas",
+      "Espejo",
+      "Moqueta",
+      "Habitación",
+      "Niebla",
+      "Check-in"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "clinica",
+      "easy": ["Clínica", "Hospital", "Paciente", "Jeringa"],
+      "normal": ["Clínica", "Tratamiento", "Expediente", "Bata"],
+      "hard": ["Salud", "Sala", "Control", "Pulso"]
+    },
+    "words": [
+      "Psyquiatricum",
+      "Los inocentes",
+      "Clínica",
+      "Paciente",
+      "Camilla",
+      "Bata",
+      "Jeringa",
+      "Electroshock",
+      "Expediente",
+      "Diagnóstico",
+      "Pulsera",
+      "Enfermería",
+      "Sala de espera",
+      "Quirófano",
+      "Morgue",
+      "Sedante",
+      "Terapia",
+      "Monitor",
+      "Medicamento",
+      "Habitación acolchada"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "thriller",
+      "easy": ["Asesino", "Trampa", "Prueba", "Tiempo"],
+      "normal": ["Caso", "Pista", "Amenaza", "Máscara"],
+      "hard": ["Riesgo", "Señal", "Huella", "Duda"]
+    },
+    "words": [
+      "SAW",
+      "The Hammer Killer",
+      "El asesino",
+      "Cinta",
+      "Prueba",
+      "Amenaza",
+      "Cronómetro",
+      "Trampa",
+      "Coartada",
+      "Sospechoso",
+      "Huella",
+      "Interrogatorio",
+      "Informe",
+      "Caso",
+      "Evidencia",
+      "Cuchillo",
+      "Máscara",
+      "Guantes",
+      "Cinta adhesiva"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "mitologia",
+      "easy": ["Mitología", "Barca", "Río", "Tumba"],
+      "normal": ["Caronte", "Moneda", "Cripta", "Oráculo"],
+      "hard": ["Mito", "Paso", "Rito", "Umbral"]
+    },
+    "words": [
+      "Caronte",
+      "Barca",
+      "Moneda",
+      "Río",
+      "Oráculo",
+      "Tumba",
+      "Cripta",
+      "Sarcófago",
+      "Epitafio",
+      "Cementerio",
+      "Altar",
+      "Velo",
+      "Lamento",
+      "Campana",
+      "Amuleto",
+      "Incienso",
+      "Cenizas"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "espiritus",
+      "easy": ["Fantasma", "Ouija", "Ritual", "Vela"],
+      "normal": ["Espíritu", "Sombra", "Médium", "Sal"],
+      "hard": ["Señal", "Frío", "Ruido", "Presencia"]
+    },
+    "words": [
+      "Fantasmas",
+      "Ouija",
+      "Médium",
+      "Séance",
+      "Exorcismo",
+      "Ritual",
+      "Pentagrama",
+      "Vela",
+      "Sal",
+      "Invocación",
+      "Aparición",
+      "Poltergeist",
+      "Susurros",
+      "Sombra",
+      "Talismán",
+      "Círculo"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "prision",
+      "easy": ["Prisión", "Celda", "Rejas", "Fuga"],
+      "normal": ["Encierro", "Candado", "Vigilante", "Plano"],
+      "hard": ["Salida", "Norma", "Turno", "Control"]
+    },
+    "words": [
+      "El secreto de Alcatraz",
+      "Celda",
+      "Rejas",
+      "Candado",
+      "Llave",
+      "Uniforme",
+      "Sirena",
+      "Vigilante",
+      "Patio",
+      "Túnel",
+      "Plano",
+      "Ronda",
+      "Cámara",
+      "Fichaje",
+      "Reglamento",
+      "Escape"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "ciencia",
+      "easy": ["Laboratorio", "Virus", "Vacuna", "Experimento"],
+      "normal": ["Muestra", "Reactivo", "Antídoto", "Contención"],
+      "hard": ["Prueba", "Cambio", "Dato", "Proceso"]
+    },
+    "words": [
+      "Laboratorio",
+      "Resident Corporation",
+      "Experimento",
+      "Muestra",
+      "Probeta",
+      "Microscopio",
+      "Antídoto",
+      "Virus",
+      "Vacuna",
+      "Reactivo",
+      "Centrífuga",
+      "Contención",
+      "Alarma",
+      "Cámara estéril",
+      "Mutación",
+      "Suero"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "espacio",
+      "easy": ["Espacio", "Nave", "Oxígeno", "Láser"],
+      "normal": ["Estación", "Radar", "Señal", "Coordenadas"],
+      "hard": ["Distancia", "Vacío", "Pulso", "Órbita"]
+    },
+    "words": [
+      "Alien invaders",
+      "Nave",
+      "Oxígeno",
+      "Gravedad",
+      "Señal",
+      "Radar",
+      "Estación",
+      "Cápsula",
+      "Criogenia",
+      "Escotilla",
+      "Astronauta",
+      "Coordenadas",
+      "Láser",
+      "Circuito",
+      "Satélite",
+      "Colonia"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "portales",
+      "easy": ["Portal", "Dimensión", "Umbral", "Pasadizo"],
+      "normal": ["Runas", "Sello", "Vórtice", "Anomalía"],
+      "hard": ["Paso", "Cambio", "Eco", "Grieta"]
+    },
+    "words": [
+      "Portales",
+      "Portales Malfoy",
+      "Umbral",
+      "Dimensión",
+      "Espejo",
+      "Fractura",
+      "Anomalía",
+      "Vórtice",
+      "Sello",
+      "Runas",
+      "Pasadizo",
+      "Símbolo",
+      "Coordenada",
+      "Pared falsa",
+      "Habitación oculta",
+      "Regreso"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "fantasia",
+      "easy": ["Magia", "Dragón", "Hechizo", "Poción"],
+      "normal": ["Varita", "Grimorio", "Amuleto", "Encanto"],
+      "hard": ["Mito", "Poder", "Sello", "Runa"]
+    },
+    "words": [
+      "Las maravillas de Alicia",
+      "Anillo del dragón",
+      "El último dragón",
+      "Mortífagos",
+      "Varita",
+      "Hechizo",
+      "Poción",
+      "Caldero",
+      "Grimorio",
+      "Pergamino",
+      "Hechicero",
+      "Criatura",
+      "Castillo",
+      "Cristal",
+      "Encantamiento"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "aventura",
+      "easy": ["Aventura", "Tesoro", "Mapa", "Templo"],
+      "normal": ["Reliquia", "Ruinas", "Ídolo", "Expedición"],
+      "hard": ["Ruta", "Pista", "Viaje", "Hallazgo"]
+    },
+    "words": [
+      "El tesoro del Jaguar",
+      "Jardín del buda",
+      "Mazmorra",
+      "Reliquias",
+      "Las reliquias de Judi",
+      "Mapa",
+      "Brújula",
+      "Ídolo",
+      "Ruinas",
+      "Templo",
+      "Antorcha",
+      "Cofre",
+      "Gema",
+      "Estatua",
+      "Expedición"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "misterio",
+      "easy": ["Misterio", "Pista", "Enigma", "Clave"],
+      "normal": ["Deducción", "Archivo", "Sello", "Mensaje"],
+      "hard": ["Detalle", "Indicio", "Orden", "Signo"]
+    },
+    "words": [
+      "La herencia del panteón",
+      "La guarida",
+      "Pista",
+      "Enigma",
+      "Deducción",
+      "Diario",
+      "Carta",
+      "Sello",
+      "Testamento",
+      "Cuadro",
+      "Caja fuerte",
+      "Clave",
+      "Mensaje",
+      "Archivo"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "comedia",
+      "easy": ["Comedia", "Parodia", "Broma", "Caos"],
+      "normal": ["Disfraz", "Guion", "Actor", "Cámara"],
+      "hard": ["Giro", "Ruido", "Risa", "Escena"]
+    },
+    "words": [
+      "Remigio VS Trump",
+      "La película",
+      "La tienda del señor Miyagi",
+      "Confusión",
+      "Disfraz",
+      "Improvisación",
+      "Broma",
+      "Parodia",
+      "Caos",
+      "Guion",
+      "Actor",
+      "Cámara",
+      "Aplausos"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "mecanica",
+      "easy": ["Candado", "Llave", "Palanca", "Botón"],
+      "normal": ["Engranaje", "Sensor", "Interruptor", "Panel"],
+      "hard": ["Mecanismo", "Contacto", "Pieza", "Ajuste"]
+    },
+    "words": [
+      "Candado",
+      "Llave",
+      "Cierre",
+      "Cerrojo",
+      "Imán",
+      "Polea",
+      "Engranaje",
+      "Interruptor",
+      "Palanca",
+      "Botón",
+      "Cajón",
+      "Caja fuerte",
+      "Bisagra",
+      "Panel",
+      "Cable",
+      "Batería",
+      "Sensor"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "codigos",
+      "easy": ["Código", "Clave", "Número", "Patrón"],
+      "normal": ["Secuencia", "Cifrado", "Matriz", "Símbolo"],
+      "hard": ["Orden", "Regla", "Serie", "Forma"]
+    },
+    "words": [
+      "Código",
+      "Combinación",
+      "Patrón",
+      "Secuencia",
+      "Anagrama",
+      "Cifrado",
+      "Clave",
+      "Coordenadas",
+      "Ultravioleta",
+      "Número",
+      "Símbolo",
+      "Matriz",
+      "Lógica"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "atrezzo",
+      "easy": ["Atrezzo", "Máscara", "Radio", "Teléfono"],
+      "normal": ["Maletín", "Armario", "Cuadro", "Espejo"],
+      "hard": ["Objeto", "Detalle", "Pieza", "Cosa"]
+    },
+    "words": [
+      "Máscara",
+      "Guantes",
+      "Cadena",
+      "Cuerda",
+      "Candil",
+      "Espejo",
+      "Cuadro",
+      "Reloj",
+      "Libro",
+      "Radio",
+      "Teléfono",
+      "Maletín",
+      "Armario",
+      "Pared falsa"
+    ]
+  },
+  {
+    "category": "Escape Room",
+    "sub": {
+      "id": "tiempo",
+      "easy": ["Tiempo", "Alarma", "Cronómetro", "Cuenta"],
+      "normal": ["Prisa", "Presión", "Límite", "Urgencia"],
+      "hard": ["Ritmo", "Pulso", "Momento", "Tramo"]
+    },
+    "words": [
+      "Cronómetro",
+      "Cuenta atrás",
+      "Alarma",
+      "Prisa",
+      "Tensión",
+      "Adrenalina",
+      "Bloqueo",
+      "Último intento",
+      "Oscuridad",
+      "Salida"
+    ]
+  }
+]

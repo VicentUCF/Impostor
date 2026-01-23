@@ -1,0 +1,153 @@
+[
+  {
+    "category": "Series",
+    "sub": {
+      "id": "drama",
+      "easy": ["Drama", "Conflicto", "Relaciones", "Historia"],
+      "normal": ["Personajes", "Evolución", "Tensión", "Decisiones"],
+      "hard": ["Arco", "Motivación", "Consecuencia", "Proceso"]
+    },
+    "words": [
+      "Breaking Bad",
+      "The Crown",
+      "Mad Men",
+      "The Wire",
+      "This Is Us",
+      "Succession",
+      "Better Call Saul"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "comedia",
+      "easy": ["Comedia", "Risas", "Grupo", "Situación"],
+      "normal": ["Dinámica", "Ritmo", "Diálogo", "Escena"],
+      "hard": ["Timing", "Tono", "Intención", "Observación"]
+    },
+    "words": [
+      "Friends",
+      "The Office",
+      "How I Met Your Mother",
+      "Brooklyn Nine-Nine",
+      "Modern Family",
+      "Parks and Recreation"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "accion",
+      "easy": ["Acción", "Riesgo", "Movimiento", "Conflicto"],
+      "normal": ["Combate", "Amenaza", "Misión", "Presión"],
+      "hard": ["Intensidad", "Respuesta", "Escalada", "Impacto"]
+    },
+    "words": [
+      "24",
+      "Prison Break",
+      "Vikings",
+      "The Boys",
+      "Jack Ryan",
+      "Reacher"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "fantasia_ciencia_ficcion",
+      "easy": ["Fantasía", "Mundo", "Poder", "Aventura"],
+      "normal": ["Universo", "Reglas", "Exploración", "Descubrimiento"],
+      "hard": ["Sistema", "Mito", "Contexto", "Lógica"]
+    },
+    "words": [
+      "Game of Thrones",
+      "House of the Dragon",
+      "Stranger Things",
+      "The Mandalorian",
+      "The Witcher",
+      "Westworld"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "misterio_thriller",
+      "easy": ["Misterio", "Pista", "Secreto", "Pregunta"],
+      "normal": ["Investigación", "Sospecha", "Revelación", "Tensión"],
+      "hard": ["Indicio", "Ambigüedad", "Lectura", "Duda"]
+    },
+    "words": [
+      "Dark",
+      "True Detective",
+      "Mindhunter",
+      "Sherlock",
+      "The Night Of",
+      "Broadchurch"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "policial_crimen",
+      "easy": ["Crimen", "Ley", "Orden", "Caso"],
+      "normal": ["Procedimiento", "Evidencia", "Juicio", "Interrogatorio"],
+      "hard": ["Proceso", "Sistema", "Responsabilidad", "Criterio"]
+    },
+    "words": [
+      "Narcos",
+      "La Casa de Papel",
+      "Peaky Blinders",
+      "Ozark",
+      "Gomorra",
+      "The Sopranos"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "terror",
+      "easy": ["Terror", "Miedo", "Oscuridad", "Amenaza"],
+      "normal": ["Suspenso", "Presencia", "Silencio", "Tensión"],
+      "hard": ["Inquietud", "Atmósfera", "Expectativa", "Sensación"]
+    },
+    "words": [
+      "The Haunting of Hill House",
+      "American Horror Story",
+      "From",
+      "The Walking Dead",
+      "Marianne"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "historica",
+      "easy": ["Historia", "Época", "Reino", "Pasado"],
+      "normal": ["Contexto", "Poder", "Conflicto", "Relato"],
+      "hard": ["Marco", "Influencia", "Cambio", "Legado"]
+    },
+    "words": [
+      "Roma",
+      "Vikings Valhalla",
+      "The Last Kingdom",
+      "Chernobyl",
+      "Band of Brothers"
+    ]
+  },
+  {
+    "category": "Series",
+    "sub": {
+      "id": "animacion",
+      "easy": ["Animación", "Dibujo", "Color", "Estilo"],
+      "normal": ["Narrativa", "Universo", "Formato", "Expresión"],
+      "hard": ["Lenguaje", "Ritmo", "Tono", "Propuesta"]
+    },
+    "words": [
+      "Rick and Morty",
+      "BoJack Horseman",
+      "The Simpsons",
+      "South Park",
+      "Arcane"
+    ]
+  }
+]

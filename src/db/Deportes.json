@@ -1,0 +1,157 @@
+[
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "deportes_equipo",
+      "easy": ["Equipo", "Balón", "Campo", "Partido"],
+      "normal": ["Colectivo", "Marcador", "Competición", "Turno"],
+      "hard": ["Grupo", "Ritmo", "Sistema", "Estructura"]
+    },
+    "words": [
+      "Fútbol",
+      "Baloncesto",
+      "Balonmano",
+      "Hockey",
+      "Rugby",
+      "Voleibol",
+      "Waterpolo",
+      "Béisbol",
+      "Críquet"
+    ]
+  },
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "deportes_individuales",
+      "easy": ["Individual", "Pista", "Marca", "Tiempo"],
+      "normal": ["Rendimiento", "Registro", "Prueba", "Resultado"],
+      "hard": ["Control", "Constancia", "Precisión", "Gestión"]
+    },
+    "words": [
+      "Tenis",
+      "Atletismo",
+      "Natación",
+      "Ciclismo",
+      "Boxeo",
+      "Judo",
+      "Gimnasia",
+      "Escalada",
+      "Halterofilia"
+    ]
+  },
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "acciones_juego",
+      "easy": ["Acción", "Movimiento", "Juego", "Inicio"],
+      "normal": ["Ejecución", "Respuesta", "Reacción", "Cambio"],
+      "hard": ["Decisión", "Lectura", "Timing", "Elección"]
+    },
+    "words": [
+      "Pase",
+      "Disparo",
+      "Salto",
+      "Carrera",
+      "Bloqueo",
+      "Defensa",
+      "Ataque",
+      "Finta",
+      "Gol"
+    ]
+  },
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "posiciones_roles",
+      "easy": ["Rol", "Zona", "Lugar", "Puesto"],
+      "normal": ["Función", "Responsabilidad", "Demarcación", "Tarea"],
+      "hard": ["Perfil", "Especialización", "Cobertura", "Enfoque"]
+    },
+    "words": [
+      "Portero",
+      "Delantero",
+      "Defensa",
+      "Centrocampista",
+      "Árbitro",
+      "Capitán",
+      "Entrenador",
+      "Suplente"
+    ]
+  },
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "objetivos_resultados",
+      "easy": ["Resultado", "Punto", "Victoria", "Final"],
+      "normal": ["Clasificación", "Ronda", "Logro", "Meta"],
+      "hard": ["Objetivo", "Presión", "Expectativa", "Balance"]
+    },
+    "words": [
+      "Gol",
+      "Punto",
+      "Récord",
+      "Empate",
+      "Derrota",
+      "Clasificación",
+      "Medalla",
+      "Trofeo"
+    ]
+  },
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "instalaciones",
+      "easy": ["Lugar", "Pista", "Campo", "Gradas"],
+      "normal": ["Recinto", "Zona", "Superficie", "Espacio"],
+      "hard": ["Entorno", "Marco", "Área", "Contexto"]
+    },
+    "words": [
+      "Estadio",
+      "Pabellón",
+      "Piscina",
+      "Circuito",
+      "Cancha",
+      "Tatami",
+      "Velódromo",
+      "Ring"
+    ]
+  },
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "material",
+      "easy": ["Material", "Equipo", "Objeto", "Uso"],
+      "normal": ["Herramienta", "Protección", "Accesorio", "Elemento"],
+      "hard": ["Soporte", "Recurso", "Carga", "Medio"]
+    },
+    "words": [
+      "Balón",
+      "Raqueta",
+      "Bicicleta",
+      "Casco",
+      "Guantes",
+      "Red",
+      "Zapatillas",
+      "Cronómetro"
+    ]
+  },
+  {
+    "category": "Deportes",
+    "sub": {
+      "id": "fisico_mental",
+      "easy": ["Físico", "Fuerza", "Velocidad", "Aire"],
+      "normal": ["Resistencia", "Equilibrio", "Concentración", "Control"],
+      "hard": ["Gestión", "Templanza", "Confianza", "Enfoque"]
+    },
+    "words": [
+      "Fuerza",
+      "Velocidad",
+      "Resistencia",
+      "Agilidad",
+      "Reflejos",
+      "Concentración",
+      "Fatiga",
+      "Recuperación"
+    ]
+  }
+]

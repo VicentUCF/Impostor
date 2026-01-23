@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import deportesData from '../db/Deportes.json';
+import escapeRoomsData from '../db/EscapeRooms.json';
+import juegosData from '../db/Juegos.json';
+import marcasData from '../db/Marcas.json';
+import padelData from '../db/Padel.json';
+import peliculasData from '../db/Peliculas.json';
+import seriesData from '../db/Series.json';
+import trabajosData from '../db/Trabajos.json';
 
 type Screen =
   | 'intro'
   | 'players'
   | 'names'
   | 'impostors'
+  | 'config'
   | 'ready'
   | 'player-confirm'
   | 'role-reveal'
@@ -14,51 +23,140 @@ type Screen =
   | 'reveal';
 
 type Role = 'crew' | 'impostor';
+type Difficulty = 'easy' | 'normal' | 'hard';
 
-interface WordCluster {
-  name: string;
+interface WordSub {
+  id?: string;
+  easy?: string[];
+  normal?: string[];
+  hard?: string[];
+}
+
+interface WordEntryRaw {
+  category?: string;
+  sub?: WordSub;
+  words?: string[];
+}
+
+interface WordHints {
+  easy: string[];
+  normal: string[];
+  hard: string[];
+}
+
+interface WordEntry {
+  category: string;
+  hints: WordHints;
   words: string[];
 }
 
-interface Category {
-  name: string;
-  clusters: WordCluster[];
+interface CategorySource {
+  id: string;
+  label: string;
+  entries: WordEntry[];
+  enabled: boolean;
 }
 
-const WORD_LIBRARY: Category[] = [
-  {
-    name: 'LUGARES',
-    clusters: [
-      { name: 'CIUDAD', words: ['METRO', 'PUENTE', 'PLAZA', 'CALLE', 'TUNEL'] },
-      { name: 'INTERIOR', words: ['COCINA', 'SALA', 'BANO', 'PASILLO', 'ASCENSOR'] },
-      { name: 'OCIO', words: ['CINE', 'TEATRO', 'ESTADIO', 'MUSEO', 'HOTEL'] }
-    ]
-  },
-  {
-    name: 'OBJETOS',
-    clusters: [
-      { name: 'HOGAR', words: ['LAMPARA', 'CUCHILLO', 'ESPEJO', 'COJIN', 'RELOJ'] },
-      { name: 'TECNO', words: ['TABLET', 'CABLE', 'CAMARA', 'TECLADO', 'ROUTER'] },
-      { name: 'RUTA', words: ['MALETA', 'MAPA', 'MOCHILA', 'BILLETE', 'LLAVE'] }
-    ]
-  },
-  {
-    name: 'OFICIOS',
-    clusters: [
-      { name: 'SERVICIO', words: ['MEDICO', 'BOMBERO', 'PILOTO', 'COCINERO', 'GUARDIA'] },
-      { name: 'CREATIVO', words: ['DISENADOR', 'FOTOGRAFO', 'ACTOR', 'MUSICO', 'ARQUITECTO'] },
-      { name: 'TECNICO', words: ['MECANICO', 'ELECTRICISTA', 'PROGRAMADOR', 'INGENIERO', 'CARPINTERO'] }
-    ]
-  },
-  {
-    name: 'COMIDA',
-    clusters: [
-      { name: 'DULCE', words: ['HELADO', 'GALLETAS', 'PASTEL', 'CHOCOLATE', 'CARAMELO'] },
-      { name: 'SALADO', words: ['PIZZA', 'TACO', 'SOPA', 'ARROZ', 'ENSALADA'] },
-      { name: 'BEBIDA', words: ['AGUA', 'CAFE', 'TE', 'JUGO', 'REFRESCO'] }
-    ]
+const sanitizeList = (values?: string[]): string[] => {
+  if (!Array.isArray(values)) {
+    return [];
   }
-];
+
+  return values
+    .filter((value): value is string => typeof value === 'string')
+    .map((value) => value.trim())
+    .filter((value) => value.length > 0);
+};
+
+const buildHints = (sub?: WordSub): WordHints => ({
+  easy: sanitizeList(sub?.easy),
+  normal: sanitizeList(sub?.normal),
+  hard: sanitizeList(sub?.hard)
+});
+
+const deriveLabel = (fallback: string, entries: WordEntryRaw[]): string => {
+  const label = entries.find((entry) => entry.category)?.category;
+  return label?.trim().length ? label.trim() : fallback;
+};
+
+const normalizeEntries = (label: string, entries: WordEntryRaw[]): WordEntry[] =>
+  entries
+    .map((entry) => {
+      const category = entry.category?.trim().length ? entry.category.trim() : label;
+      const words = sanitizeList(entry.words);
+      const hints = buildHints(entry.sub);
+
+      return { category, words, hints };
+    })
+    .filter((entry) => entry.words.length > 0);
+
+const buildSources = (): CategorySource[] => {
+  const deportesRaw = Array.isArray(deportesData) ? (deportesData as WordEntryRaw[]) : [];
+  const escapeRoomsRaw = Array.isArray(escapeRoomsData)
+    ? (escapeRoomsData as WordEntryRaw[])
+    : [];
+  const juegosRaw = Array.isArray(juegosData) ? (juegosData as WordEntryRaw[]) : [];
+  const marcasRaw = Array.isArray(marcasData) ? (marcasData as WordEntryRaw[]) : [];
+  const padelRaw = Array.isArray(padelData) ? (padelData as WordEntryRaw[]) : [];
+  const peliculasRaw = Array.isArray(peliculasData) ? (peliculasData as WordEntryRaw[]) : [];
+  const seriesRaw = Array.isArray(seriesData) ? (seriesData as WordEntryRaw[]) : [];
+  const trabajosRaw = Array.isArray(trabajosData) ? (trabajosData as WordEntryRaw[]) : [];
+
+  const sources = [
+    {
+      id: 'deportes',
+      fallbackLabel: 'Deportes',
+      raw: deportesRaw
+    },
+    {
+      id: 'escape-rooms',
+      fallbackLabel: 'Escape Room',
+      raw: escapeRoomsRaw
+    },
+    {
+      id: 'juegos',
+      fallbackLabel: 'Juegos',
+      raw: juegosRaw
+    },
+    {
+      id: 'marcas',
+      fallbackLabel: 'Marcas',
+      raw: marcasRaw
+    },
+    {
+      id: 'padel',
+      fallbackLabel: 'Padel',
+      raw: padelRaw
+    },
+    {
+      id: 'peliculas',
+      fallbackLabel: 'Peliculas',
+      raw: peliculasRaw
+    },
+    {
+      id: 'series',
+      fallbackLabel: 'Series',
+      raw: seriesRaw
+    },
+    {
+      id: 'trabajos',
+      fallbackLabel: 'Trabajos',
+      raw: trabajosRaw
+    }
+  ];
+
+  return sources.map((source) => {
+    const label = deriveLabel(source.fallbackLabel, source.raw);
+    const entries = normalizeEntries(label, source.raw);
+
+    return {
+      id: source.id,
+      label,
+      entries,
+      enabled: entries.length > 0
+    };
+  });
+};
 
 @Component({
   selector: 'app-root',
@@ -85,8 +183,13 @@ export class AppComponent {
   roles: Role[] = [];
 
   category = '';
-  cluster = '';
   word = '';
+  hint = '';
+
+  showCategory = true;
+  showHint = true;
+  hintDifficulty: Difficulty = 'normal';
+  categorySources: CategorySource[] = buildSources();
 
   passReady = false;
   private passTimeoutId: number | undefined;
@@ -121,6 +224,24 @@ export class AppComponent {
 
   get allNamesFilled(): boolean {
     return this.playerNames.length > 0 && this.filledNamesCount === this.playerNames.length;
+  }
+
+  get selectedSourcesCount(): number {
+    return this.categorySources.filter((source) => source.enabled).length;
+  }
+
+  get totalSourcesCount(): number {
+    return this.categorySources.length;
+  }
+
+  get activeEntries(): WordEntry[] {
+    return this.categorySources
+      .filter((source) => source.enabled && source.entries.length > 0)
+      .flatMap((source) => source.entries);
+  }
+
+  get canConfirmConfig(): boolean {
+    return this.activeEntries.length > 0;
   }
 
   get impostorNames(): string[] {
@@ -182,6 +303,34 @@ export class AppComponent {
     );
     this.impostors = parsed;
     this.impostorsInput = String(parsed);
+
+    this.screen = 'config';
+  }
+
+  toggleShowCategory(): void {
+    this.showCategory = !this.showCategory;
+  }
+
+  toggleShowHint(): void {
+    this.showHint = !this.showHint;
+  }
+
+  setHintDifficulty(difficulty: Difficulty): void {
+    this.hintDifficulty = difficulty;
+  }
+
+  toggleCategory(source: CategorySource): void {
+    if (source.entries.length === 0) {
+      return;
+    }
+
+    source.enabled = !source.enabled;
+  }
+
+  confirmConfig(): void {
+    if (!this.canConfirmConfig) {
+      return;
+    }
 
     this.setupRound();
     this.screen = 'ready';
@@ -254,11 +403,15 @@ export class AppComponent {
     return index;
   }
 
+  trackBySource(index: number, source: CategorySource): string {
+    return source.id;
+  }
+
   private setupRound(): void {
     const selection = this.pickWord();
     this.category = selection.category;
-    this.cluster = selection.cluster;
     this.word = selection.word;
+    this.hint = selection.hint;
     this.roles = this.assignRoles();
     this.starterIndex = Math.floor(Math.random() * this.totalPlayers);
   }
@@ -282,12 +435,23 @@ export class AppComponent {
     return roles;
   }
 
-  private pickWord(): { category: string; cluster: string; word: string } {
-    const category = this.randomItem(WORD_LIBRARY);
-    const cluster = this.randomItem(category.clusters);
-    const word = this.randomItem(cluster.words);
+  private pickWord(): { category: string; hint: string; word: string } {
+    const entries = this.activeEntries.length > 0 ? this.activeEntries : this.allEntries();
 
-    return { category: category.name, cluster: cluster.name, word };
+    if (entries.length === 0) {
+      return { category: '', hint: '', word: '' };
+    }
+
+    const entry = this.randomItem(entries);
+    const word = this.randomItem(entry.words);
+    const difficultyHints = entry.hints[this.hintDifficulty] ?? [];
+    const hint = difficultyHints.length > 0 ? this.randomItem(difficultyHints) : 'SIN PISTA';
+
+    return { category: entry.category, hint, word };
+  }
+
+  private allEntries(): WordEntry[] {
+    return this.categorySources.flatMap((source) => source.entries);
   }
 
   private randomItem<T>(items: T[]): T {
@@ -310,7 +474,7 @@ export class AppComponent {
     this.passReady = false;
     this.passTimeoutId = window.setTimeout(() => {
       this.passReady = true;
-    }, 900);
+    }, 400);
   }
 
   private clearPassTimeout(): void {

@@ -1,0 +1,150 @@
+[
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "tecnologia",
+      "easy": ["Tecnología", "Electrónica", "Digital", "Dispositivo"],
+      "normal": ["Innovación", "Sistema", "Plataforma", "Producto"],
+      "hard": ["Ecosistema", "Integración", "Arquitectura", "Experiencia"]
+    },
+    "words": [
+      "Apple",
+      "Samsung",
+      "Google",
+      "Microsoft",
+      "Sony",
+      "Huawei",
+      "Xiaomi",
+      "LG"
+    ]
+  },
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "moda",
+      "easy": ["Ropa", "Moda", "Estilo", "Diseño"],
+      "normal": ["Colección", "Tendencia", "Marca", "Imagen"],
+      "hard": ["Identidad", "Estética", "Posicionamiento", "Firma"]
+    },
+    "words": [
+      "Nike",
+      "Adidas",
+      "Zara",
+      "H&M",
+      "Gucci",
+      "Prada",
+      "Levi's",
+      "Balenciaga"
+    ]
+  },
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "alimentacion",
+      "easy": ["Comida", "Bebida", "Consumo", "Producto"],
+      "normal": ["Sabor", "Receta", "Distribución", "Mercado"],
+      "hard": ["Hábito", "Preferencia", "Rutina", "Elección"]
+    },
+    "words": [
+      "Coca-Cola",
+      "Pepsi",
+      "Nestlé",
+      "Danone",
+      "Ferrero",
+      "Kellogg's",
+      "Red Bull",
+      "Heineken"
+    ]
+  },
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "automovil",
+      "easy": ["Coche", "Motor", "Vehículo", "Carretera"],
+      "normal": ["Conducción", "Diseño", "Ingeniería", "Modelo"],
+      "hard": ["Prestaciones", "Fiabilidad", "Movimiento", "Potencia"]
+    },
+    "words": [
+      "BMW",
+      "Mercedes",
+      "Audi",
+      "Toyota",
+      "Ford",
+      "Volkswagen",
+      "Tesla",
+      "Renault"
+    ]
+  },
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "deporte",
+      "easy": ["Deporte", "Actividad", "Rendimiento", "Acción"],
+      "normal": ["Competición", "Entrenamiento", "Equipamiento", "Uso"],
+      "hard": ["Disciplina", "Constancia", "Exigencia", "Preparación"]
+    },
+    "words": [
+      "Decathlon",
+      "Puma",
+      "Reebok",
+      "Under Armour",
+      "Asics",
+      "Salomon",
+      "New Balance"
+    ]
+  },
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "retail",
+      "easy": ["Tienda", "Compra", "Producto", "Precio"],
+      "normal": ["Catálogo", "Distribución", "Venta", "Servicio"],
+      "hard": ["Consumo", "Elección", "Acceso", "Disponibilidad"]
+    },
+    "words": [
+      "Amazon",
+      "IKEA",
+      "Carrefour",
+      "Lidl",
+      "El Corte Inglés",
+      "MediaMarkt",
+      "Aliexpress"
+    ]
+  },
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "entretenimiento",
+      "easy": ["Entretenimiento", "Contenido", "Pantalla", "Ocio"],
+      "normal": ["Plataforma", "Catálogo", "Producción", "Audiencia"],
+      "hard": ["Consumo", "Atención", "Formato", "Impacto"]
+    },
+    "words": [
+      "Netflix",
+      "Disney",
+      "HBO",
+      "Spotify",
+      "Amazon Prime",
+      "PlayStation",
+      "Nintendo"
+    ]
+  },
+  {
+    "category": "Marcas",
+    "sub": {
+      "id": "belleza_cuidado",
+      "easy": ["Cuidado", "Higiene", "Belleza", "Uso"],
+      "normal": ["Rutina", "Tratamiento", "Producto", "Aplicación"],
+      "hard": ["Sensación", "Resultado", "Percepción", "Hábito"]
+    },
+    "words": [
+      "L'Oréal",
+      "Nivea",
+      "Dove",
+      "Gillette",
+      "Pantene",
+      "Clinique",
+      "Maybelline"
+    ]
+  }
+]

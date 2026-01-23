@@ -1,0 +1,143 @@
+[
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "juegos_mesa",
+      "easy": ["Mesa", "Tablero", "Fichas", "Dados"],
+      "normal": ["Turnos", "Reglas", "Estrategia", "Movimiento"],
+      "hard": ["Sistema", "Ritmo", "Estructura", "Dinámica"]
+    },
+    "words": [
+      "Ajedrez",
+      "Damas",
+      "Monopoly",
+      "Cluedo",
+      "Risk",
+      "Catan",
+      "Scrabble",
+      "Trivial"
+    ]
+  },
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "cartas",
+      "easy": ["Cartas", "Baraja", "Mano", "Ronda"],
+      "normal": ["Apuesta", "Combinación", "Turno", "Orden"],
+      "hard": ["Lectura", "Probabilidad", "Decisión", "Gestión"]
+    },
+    "words": [
+      "Póker",
+      "Mus",
+      "Blackjack",
+      "Brisca",
+      "Tute",
+      "Solitario",
+      "UNO"
+    ]
+  },
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "videojuegos_accion",
+      "easy": ["Acción", "Pantalla", "Control", "Ritmo"],
+      "normal": ["Combate", "Reacción", "Nivel", "Mecánica"],
+      "hard": ["Precisión", "Fluidez", "Respuesta", "Intensidad"]
+    },
+    "words": [
+      "Call of Duty",
+      "Fortnite",
+      "God of War",
+      "GTA",
+      "Doom",
+      "Assassin's Creed",
+      "Halo"
+    ]
+  },
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "videojuegos_aventura",
+      "easy": ["Aventura", "Historia", "Mapa", "Exploración"],
+      "normal": ["Narrativa", "Mundo", "Progreso", "Descubrimiento"],
+      "hard": ["Viaje", "Contexto", "Experiencia", "Arco"]
+    },
+    "words": [
+      "Zelda",
+      "Uncharted",
+      "Tomb Raider",
+      "The Witcher",
+      "Skyrim",
+      "Red Dead Redemption"
+    ]
+  },
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "estrategia_simulacion",
+      "easy": ["Estrategia", "Plan", "Gestión", "Tiempo"],
+      "normal": ["Recursos", "Decisión", "Desarrollo", "Control"],
+      "hard": ["Optimización", "Equilibrio", "Sistema", "Proyección"]
+    },
+    "words": [
+      "Civilization",
+      "Age of Empires",
+      "SimCity",
+      "The Sims",
+      "StarCraft",
+      "Cities Skylines"
+    ]
+  },
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "party_social",
+      "easy": ["Grupo", "Risas", "Turno", "Juego"],
+      "normal": ["Interacción", "Caos", "Dinámica", "Ritmo"],
+      "hard": ["Comportamiento", "Observación", "Engaño", "Lectura"]
+    },
+    "words": [
+      "Pictionary",
+      "Tabú",
+      "Dixit",
+      "Party",
+      "Among Us",
+      "Impostor",
+      "Charadas"
+    ]
+  },
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "puzzles_logica",
+      "easy": ["Puzzle", "Piezas", "Forma", "Orden"],
+      "normal": ["Patrón", "Secuencia", "Lógica", "Resolución"],
+      "hard": ["Abstracción", "Relación", "Modelo", "Estructura"]
+    },
+    "words": [
+      "Sudoku",
+      "Tetris",
+      "Rubik",
+      "Puzzle",
+      "Nonograma",
+      "Kakuro"
+    ]
+  },
+  {
+    "category": "Juegos",
+    "sub": {
+      "id": "deportes_virtuales",
+      "easy": ["Deporte", "Equipo", "Partido", "Marcador"],
+      "normal": ["Competición", "Control", "Simulación", "Resultado"],
+      "hard": ["Ritmo", "Ejecución", "Precisión", "Flujo"]
+    },
+    "words": [
+      "FIFA",
+      "NBA 2K",
+      "PES",
+      "Gran Turismo",
+      "Forza",
+      "Mario Kart"
+    ]
+  }
+]

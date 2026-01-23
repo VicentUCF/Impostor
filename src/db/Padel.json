@@ -1,0 +1,157 @@
+[
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "golpes_fondo",
+      "easy": ["Base", "Rally", "Fondo", "Pelota"],
+      "normal": ["Cadencia", "Altura", "Dirección", "Efecto"],
+      "hard": ["Margen", "Tacto", "Templanza", "Gestión"]
+    },
+    "words": [
+      "Derecha",
+      "Revés",
+      "Globo",
+      "Bote pronto",
+      "Bote",
+      "Salida",
+      "Defensa",
+      "Control",
+      "Profundidad",
+      "Altura"
+    ]
+  },
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "golpes_red",
+      "easy": ["Cierre", "Final", "Punto", "Arriba"],
+      "normal": ["Timing", "Dirección", "Tacto", "Ángulo"],
+      "hard": ["Lectura", "Intención", "Instinto", "Ejecución"]
+    },
+    "words": [
+      "Volea",
+      "Remate",
+      "Bandeja",
+      "Víbora",
+      "Bloqueo",
+      "Presión",
+      "Ángulo",
+      "Colocación",
+      "Definición"
+    ]
+  },
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "paredes",
+      "easy": ["Rebote", "Vidrio", "Salida", "Rincón"],
+      "normal": ["Cálculo", "Trayectoria", "Altura", "Tiempo"],
+      "hard": ["Anticipación", "Reacción", "Lectura", "Ajuste"]
+    },
+    "words": [
+      "Pared",
+      "Cristal",
+      "Rebote",
+      "Salida",
+      "Doble pared",
+      "Tiempo",
+      "Trayectoria",
+      "Altura"
+    ]
+  },
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "situaciones_juego",
+      "easy": ["Fase", "Turno", "Momento", "Zona"],
+      "normal": ["Cambio", "Dinámica", "Balance", "Desorden"],
+      "hard": ["Riesgo", "Paciencia", "Decisión", "Lectura"]
+    },
+    "words": [
+      "Defensa",
+      "Ataque",
+      "Transición",
+      "Error",
+      "Presión",
+      "Riesgo",
+      "Paciencia",
+      "Cambio"
+    ]
+  },
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "errores_comunes",
+      "easy": ["Fallo", "Descontrol", "Prisa", "Nervios"],
+      "normal": ["Desorden", "Impulso", "Duda", "Tensión"],
+      "hard": ["Ansiedad", "Bloqueo", "Inercia", "Desconexión"]
+    },
+    "words": [
+      "Fallo",
+      "Marco",
+      "Red",
+      "Fuera",
+      "Prisa",
+      "Bloqueo",
+      "Duda",
+      "Ansiedad"
+    ]
+  },
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "tactica",
+      "easy": ["Plan", "Pareja", "Espacio", "Orden"],
+      "normal": ["Cobertura", "Sistema", "Ajuste", "Lectura"],
+      "hard": ["Adaptación", "Intención", "Estrategia", "Control"]
+    },
+    "words": [
+      "Colocación",
+      "Pareja",
+      "Espacio",
+      "Centro",
+      "Cobertura",
+      "Comunicación",
+      "Orden",
+      "Ritmo"
+    ]
+  },
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "fisico_mental",
+      "easy": ["Pulso", "Aire", "Piernas", "Foco"],
+      "normal": ["Resistencia", "Equilibrio", "Gestión", "Calma"],
+      "hard": ["Cabeza", "Templanza", "Confianza", "Rutina"]
+    },
+    "words": [
+      "Cansancio",
+      "Fuerza",
+      "Velocidad",
+      "Resistencia",
+      "Equilibrio",
+      "Tensión",
+      "Foco",
+      "Confianza"
+    ]
+  },
+  {
+    "category": "Padel",
+    "sub": {
+      "id": "club_xeresa",
+      "easy": ["Lugar", "Quedada", "Tarde", "Grupo"],
+      "normal": ["Reserva", "Turno", "Partida", "Ambiente"],
+      "hard": ["Costumbre", "Rutina", "Rollo", "Plan"]
+    },
+    "words": [
+      "PadelMixtoXeresa",
+      "Club",
+      "Pista",
+      "Partido",
+      "Reserva",
+      "Juego",
+      "Turno",
+      "Grupo"
+    ]
+  }
+]
