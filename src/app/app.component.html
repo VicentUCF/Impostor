@@ -43,7 +43,11 @@
           <div
             class="c-name-row"
             role="listitem"
-            *ngFor="let name of playerNames; let i = index; trackBy: trackByIndex"
+            *ngFor="
+              let name of playerNames;
+              let i = index;
+              trackBy: trackByIndex
+            "
             [class.c-name-row--filled]="name.trim().length > 0"
           >
             <div class="c-name-row__header">
@@ -111,7 +115,9 @@
             (click)="toggleShowCategory()"
           >
             <span class="c-toggle__label">MOSTRAR CATEGORIA</span>
-            <span class="c-toggle__state">{{ showCategory ? "SI" : "NO" }}</span>
+            <span class="c-toggle__state">{{
+              showCategory ? "SI" : "NO"
+            }}</span>
           </button>
           <button
             class="c-toggle"
@@ -185,11 +191,21 @@
             <div class="c-choice__row">
               <span class="c-choice__label">{{ source.label }}</span>
               <span class="c-choice__state">
-                {{ source.entries.length === 0 ? "VACIO" : source.enabled ? "INCLUIDO" : "FUERA" }}
+                {{
+                  source.entries.length === 0
+                    ? "VACIO"
+                    : source.enabled
+                    ? "INCLUIDO"
+                    : "FUERA"
+                }}
               </span>
             </div>
             <span class="c-choice__meta">
-              {{ source.entries.length === 0 ? "SIN DATOS" : source.entries.length + " TEMAS" }}
+              {{
+                source.entries.length === 0
+                  ? "SIN DATOS"
+                  : source.entries.length + " TEMAS"
+              }}
             </span>
           </button>
         </div>
@@ -276,8 +292,8 @@
 
       <div *ngSwitchCase="'round-live'" class="o-stack">
         <p class="c-eyebrow">RONDA EN CURSO</p>
-        <h1 class="c-title">CONVERSACION ACTIVA</h1>
-        <p class="c-note">CUANDO TERMINEN, REVELA</p>
+        <h1 class="c-title">ALGUIEN MIENTE</h1>
+        <p class="c-note">OBSERVEN. PREGUNTEN. DUDEN.</p>
         <button class="c-action" type="button" (click)="revealImpostors()">
           REVELAR IMPOSTOR
         </button>
@@ -308,7 +324,11 @@
         <button class="c-action" type="button" (click)="newRound()">
           OTRA PARTIDA
         </button>
-        <button class="c-action c-action--ghost" type="button" (click)="resetRound()">
+        <button
+          class="c-action c-action--ghost"
+          type="button"
+          (click)="resetRound()"
+        >
           NUEVA PARTIDA
         </button>
       </div>
