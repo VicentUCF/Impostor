@@ -294,7 +294,16 @@
         <p class="c-eyebrow">RONDA EN CURSO</p>
         <h1 class="c-title">ALGUIEN MIENTE</h1>
         <p class="c-note">OBSERVEN. PREGUNTEN. DUDEN.</p>
-        <button class="c-action" type="button" (click)="revealImpostors()">
+        <div class="c-timer">
+          <p class="c-timer__label">TIEMPO</p>
+          <p class="c-timer__value">{{ roundTimerLabel }}</p>
+        </div>
+        <button
+          class="c-action"
+          type="button"
+          [disabled]="!canReveal"
+          (click)="revealImpostors()"
+        >
           REVELAR IMPOSTOR
         </button>
       </div>

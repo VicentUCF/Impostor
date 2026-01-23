@@ -443,6 +443,33 @@ input[type='number'] {
   color: var(--color-text);
 }
 
+.c-timer {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-1);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+  text-align: center;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.c-timer__label {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.c-timer__value {
+  font-size: clamp(26px, 8vw, 40px);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .c-name-list {
   width: 100%;
   display: grid;

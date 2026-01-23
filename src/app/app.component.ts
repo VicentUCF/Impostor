@@ -191,6 +191,10 @@ export class AppComponent {
   hintDifficulty: Difficulty = 'normal';
   categorySources: CategorySource[] = buildSources();
 
+  roundSeconds = 0;
+  canReveal = false;
+  private roundTimerId: number | undefined;
+
   passReady = false;
   private passTimeoutId: number | undefined;
 
@@ -254,6 +258,10 @@ export class AppComponent {
 
   get impostorLabel(): string {
     return this.impostorNames.length === 1 ? 'IMPOSTOR' : 'IMPOSTORES';
+  }
+
+  get roundTimerLabel(): string {
+    return this.formatTime(this.roundSeconds);
   }
 
   goToPlayers(): void {
@@ -377,14 +385,17 @@ export class AppComponent {
 
   startRound(): void {
     this.screen = 'round-live';
+    this.startRoundTimer();
   }
 
   revealImpostors(): void {
+    this.clearRoundTimer();
     this.screen = 'reveal';
   }
 
   newRound(): void {
     this.clearPassTimeout();
+    this.clearRoundTimer();
     this.passReady = false;
     this.currentPlayer = 1;
     this.setupRound();
@@ -393,6 +404,7 @@ export class AppComponent {
 
   resetRound(): void {
     this.clearPassTimeout();
+    this.clearRoundTimer();
     this.passReady = false;
     this.currentPlayer = 1;
     this.playerNames = [];
@@ -477,10 +489,37 @@ export class AppComponent {
     }, 400);
   }
 
+  private startRoundTimer(): void {
+    this.clearRoundTimer();
+    this.roundSeconds = 0;
+    this.canReveal = false;
+    this.roundTimerId = window.setInterval(() => {
+      this.roundSeconds += 1;
+      if (this.roundSeconds >= 10) {
+        this.canReveal = true;
+      }
+    }, 1000);
+  }
+
   private clearPassTimeout(): void {
     if (this.passTimeoutId !== undefined) {
       window.clearTimeout(this.passTimeoutId);
       this.passTimeoutId = undefined;
     }
+  }
+
+  private clearRoundTimer(): void {
+    if (this.roundTimerId !== undefined) {
+      window.clearInterval(this.roundTimerId);
+      this.roundTimerId = undefined;
+    }
+    this.roundSeconds = 0;
+    this.canReveal = false;
+  }
+
+  private formatTime(totalSeconds: number): string {
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
   }
 }
