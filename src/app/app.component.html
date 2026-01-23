@@ -2,9 +2,11 @@
   <section class="o-screen">
     <ng-container [ngSwitch]="screen">
       <div *ngSwitchCase="'intro'" class="o-stack">
-        <p class="c-eyebrow">IMPOSTOR</p>
-        <h1 class="c-title">JUEGO SOCIAL DE DEDUCCION</h1>
-        <button class="c-action" type="button" (click)="goToPlayers()">INICIAR RONDA</button>
+        <p class="c-eyebrow">SILENCIO</p>
+        <h1 class="c-title">IMPOSTOR</h1>
+        <button class="c-action" type="button" (click)="goToPlayers()">
+          INICIAR RONDA
+        </button>
       </div>
 
       <div *ngSwitchCase="'players'" class="o-stack">
@@ -23,9 +25,55 @@
             [attr.max]="maxPlayers"
             aria-label="Total de jugadores"
           />
-          <span class="c-field__hint">MIN {{ minPlayers }} / MAX {{ maxPlayers }}</span>
+          <span class="c-field__hint"
+            >MIN {{ minPlayers }} / MAX {{ maxPlayers }}</span
+          >
         </label>
-        <button class="c-action" type="button" (click)="confirmPlayers()">CONTINUAR</button>
+        <button class="c-action" type="button" (click)="confirmPlayers()">
+          CONTINUAR
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'names'" class="o-stack o-stack--form">
+        <p class="c-eyebrow">
+          NOMBRES {{ filledNamesCount }} / {{ totalPlayers }}
+        </p>
+        <h1 class="c-title">LISTA</h1>
+        <div class="c-name-list" role="list">
+          <div
+            class="c-name-row"
+            role="listitem"
+            *ngFor="let name of playerNames; let i = index; trackBy: trackByIndex"
+            [class.c-name-row--filled]="name.trim().length > 0"
+          >
+            <div class="c-name-row__header">
+              <span class="c-name-row__label">JUGADOR {{ i + 1 }}</span>
+              <span class="c-name-row__status">
+                {{ name.trim() ? "LISTO" : "VACIO" }}
+              </span>
+            </div>
+            <input
+              class="c-input c-input--name"
+              type="text"
+              [value]="name"
+              (input)="updateName(i, $any($event.target).value)"
+              maxlength="18"
+              autocomplete="off"
+              autocapitalize="characters"
+              autocorrect="off"
+              spellcheck="false"
+              [attr.aria-label]="'Nombre jugador ' + (i + 1)"
+            />
+          </div>
+        </div>
+        <button
+          class="c-action"
+          type="button"
+          [disabled]="!allNamesFilled"
+          (click)="confirmNames()"
+        >
+          CONTINUAR
+        </button>
       </div>
 
       <div *ngSwitchCase="'impostors'" class="o-stack">
@@ -46,26 +94,35 @@
           />
           <span class="c-field__hint">MIN 1 / MAX {{ maxImpostors }}</span>
         </label>
-        <button class="c-action" type="button" (click)="confirmImpostors()">CONTINUAR</button>
+        <button class="c-action" type="button" (click)="confirmImpostors()">
+          CONTINUAR
+        </button>
       </div>
 
       <div *ngSwitchCase="'ready'" class="o-stack">
         <p class="c-eyebrow">PREPARA EL MOVIL</p>
         <h1 class="c-title">NADIE MIRA LA PANTALLA</h1>
-        <button class="c-action" type="button" (click)="startRoles()">EMPEZAR ROLES</button>
+        <button class="c-action" type="button" (click)="startRoles()">
+          EMPEZAR ROLES
+        </button>
       </div>
 
       <div *ngSwitchCase="'player-confirm'" class="o-stack">
         <p class="c-eyebrow">TURNO</p>
-        <h1 class="c-title">JUGADOR {{ currentPlayer }}</h1>
-        <p class="c-subtitle">SOLO TU DEBES MIRAR</p>
-        <button class="c-action" type="button" (click)="revealRole()">REVELAR ROL</button>
+        <h1 class="c-title">{{ currentPlayerName }}</h1>
+        <p class="c-subtitle">
+          JUGADOR {{ currentPlayer }} DE {{ totalPlayers }}
+        </p>
+        <p class="c-note">SOLO TU DEBES MIRAR</p>
+        <button class="c-action" type="button" (click)="revealRole()">
+          REVELAR ROL
+        </button>
       </div>
 
       <div *ngSwitchCase="'role-reveal'" class="o-stack">
         <p class="c-eyebrow">ROL</p>
         <h1 class="c-role" [class.c-role--impostor]="isImpostor">
-          {{ isImpostor ? 'IMPOSTOR' : 'EQUIPO' }}
+          {{ isImpostor ? "IMPOSTOR" : "EQUIPO" }}
         </h1>
         <div class="c-block">
           <p class="c-meta">CATEGORIA</p>
@@ -78,26 +135,65 @@
           <p class="c-value c-value--word">{{ word }}</p>
         </div>
         <p *ngIf="isImpostor" class="c-note">NO TIENES PALABRA</p>
-        <button class="c-action" type="button" (click)="hideRole()">OCULTAR Y PASAR</button>
+        <button class="c-action" type="button" (click)="hideRole()">
+          {{ hasNextPlayer ? "OCULTAR Y PASAR" : "CONTINUAR" }}
+        </button>
       </div>
 
       <div *ngSwitchCase="'pass-device'" class="o-stack">
         <p class="c-eyebrow">PASA EL MOVIL</p>
-        <h1 class="c-title">AL SIGUIENTE JUGADOR</h1>
+        <h1 class="c-title">AL SIGUIENTE</h1>
+        <p class="c-note" *ngIf="hasNextPlayer">SIGUE: {{ nextPlayerName }}</p>
+        <p class="c-note" *ngIf="!hasNextPlayer">TODOS LISTOS</p>
         <button
           class="c-action"
           type="button"
           [disabled]="!passReady"
           (click)="continueAfterPass()"
         >
-          {{ passReady ? 'LISTO' : 'ESPERA' }}
+          {{ passReady ? "LISTO" : "ESPERA" }}
         </button>
       </div>
 
-      <div *ngSwitchCase="'round-ready'" class="o-stack">
-        <p class="c-eyebrow">LISTO</p>
-        <h1 class="c-title">COMIENZA LA CONVERSACION</h1>
-        <button class="c-action" type="button" (click)="resetRound()">NUEVA RONDA</button>
+      <div *ngSwitchCase="'starter'" class="o-stack">
+        <p class="c-eyebrow">EMPIEZA</p>
+        <h1 class="c-name">{{ starterName }}</h1>
+        <button class="c-action" type="button" (click)="startRound()">
+          INICIAR RONDA
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'round-live'" class="o-stack">
+        <p class="c-eyebrow">RONDA EN CURSO</p>
+        <h1 class="c-title">CONVERSACION ACTIVA</h1>
+        <p class="c-note">CUANDO TERMINEN, REVELA</p>
+        <button class="c-action" type="button" (click)="revealImpostors()">
+          REVELAR IMPOSTOR
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'reveal'" class="o-stack">
+        <p class="c-eyebrow">RESULTADO</p>
+        <h1 class="c-title">{{ impostorLabel }}</h1>
+        <ul class="c-list">
+          <li class="c-list__item" *ngFor="let name of impostorNames">
+            {{ name }}
+          </li>
+        </ul>
+        <div class="c-block">
+          <p class="c-meta">PALABRA</p>
+          <p class="c-value c-value--word">{{ word }}</p>
+          <p class="c-meta">CATEGORIA</p>
+          <p class="c-value">{{ category }}</p>
+          <p class="c-meta">CLUSTER</p>
+          <p class="c-value">{{ cluster }}</p>
+        </div>
+        <button class="c-action" type="button" (click)="newRound()">
+          OTRA PARTIDA
+        </button>
+        <button class="c-action c-action--ghost" type="button" (click)="resetRound()">
+          NUEVA PARTIDA
+        </button>
       </div>
     </ng-container>
   </section>

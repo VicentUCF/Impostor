@@ -129,6 +129,12 @@ input[type='number'] {
   animation: screen-in var(--motion-slow) ease-out;
 }
 
+.o-stack--form {
+  align-items: stretch;
+  text-align: left;
+  gap: var(--space-4);
+}
+
 /* Components */
 .app {
   min-height: 100vh;
@@ -145,6 +151,13 @@ input[type='number'] {
   font-size: clamp(28px, 8vw, 46px);
   font-weight: 600;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.c-name {
+  font-size: clamp(30px, 10vw, 54px);
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -198,6 +211,11 @@ input[type='number'] {
   color: var(--color-text);
   font-size: 24px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.c-input--name {
+  text-align: left;
 }
 
 .c-input:focus-visible {
@@ -239,6 +257,13 @@ input[type='number'] {
   filter: none;
 }
 
+.c-action--ghost {
+  background: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: none;
+}
+
 .c-block {
   width: 100%;
   padding: var(--space-4);
@@ -272,6 +297,68 @@ input[type='number'] {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--color-muted);
+}
+
+.c-name-list {
+  width: 100%;
+  display: grid;
+  gap: var(--space-4);
+  max-height: 46vh;
+  overflow-y: auto;
+  padding-right: var(--space-1);
+}
+
+.c-name-row {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border-radius: var(--radius-1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+}
+
+.c-name-row--filled {
+  background: rgba(255, 59, 48, 0.08);
+  border-color: rgba(255, 59, 48, 0.6);
+}
+
+.c-name-row__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.c-name-row__label,
+.c-name-row__status {
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.c-name-row--filled .c-name-row__status {
+  color: var(--color-accent);
+}
+
+.c-list {
+  width: 100%;
+  display: grid;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.c-list__item {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* Utilities */
