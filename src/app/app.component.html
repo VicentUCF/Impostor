@@ -2,8 +2,8 @@
   <section class="o-screen">
     <ng-container [ngSwitch]="screen">
       <div *ngSwitchCase="'intro'" class="o-stack">
-        <p class="c-eyebrow">SILENCIO</p>
-        <h1 class="c-title">IMPOSTOR</h1>
+        <p class="c-eyebrow">El juego del impostor</p>
+        <h1 class="c-title">ALGO NO CUADRA</h1>
         <button class="c-action" type="button" (click)="goToPlayers()">
           INICIAR RONDA
         </button>
@@ -144,7 +144,9 @@
                 (click)="toggleShowHint()"
               >
                 <span class="c-toggle__label">MOSTRAR PISTA</span>
-                <span class="c-toggle__state">{{ showHint ? "SI" : "NO" }}</span>
+                <span class="c-toggle__state">{{
+                  showHint ? "SI" : "NO"
+                }}</span>
               </button>
             </div>
             <ng-container *ngIf="showHint">
@@ -273,6 +275,9 @@
           JUGADOR {{ currentPlayer }} DE {{ totalPlayers }}
         </p>
         <p class="c-note">SOLO TU DEBES MIRAR</p>
+        <p class="c-helper" *ngIf="showRolesInvertedHint">
+          PUEDE QUE NO SEAS QUIEN CREES QUE ERES
+        </p>
         <button class="c-action" type="button" (click)="revealRole()">
           REVELAR ROL
         </button>
@@ -290,16 +295,16 @@
         <div class="c-block" *ngIf="showCategory || (showHint && isImpostor)">
           <ng-container *ngIf="showCategory">
             <p class="c-meta">CATEGORIA</p>
-            <p class="c-value">{{ category }}</p>
+            <p class="c-value">{{ currentCategory }}</p>
           </ng-container>
           <ng-container *ngIf="showHint && isImpostor">
             <p class="c-meta">PISTA</p>
-            <p class="c-value">{{ hint }}</p>
+            <p class="c-value">{{ currentHint }}</p>
           </ng-container>
         </div>
         <div *ngIf="!isImpostor" class="c-block">
           <p class="c-meta">PALABRA</p>
-          <p class="c-value c-value--word">{{ word }}</p>
+          <p class="c-value c-value--word">{{ currentWord }}</p>
         </div>
         <p *ngIf="isImpostor" class="c-note">NO TIENES PALABRA</p>
         <button class="c-action" type="button" (click)="hideRole()">
@@ -355,18 +360,30 @@
             {{ name }}
           </li>
         </ul>
+        <div class="c-chaos" *ngIf="showChaosBanner">
+          <p class="c-chaos__eyebrow">RONDA ESPECIAL</p>
+          <p class="c-chaos__title">MODO CAOS ACTIVADO</p>
+        </div>
+        <div class="c-chaos c-chaos--message" *ngIf="showChaosMessage">
+          <p class="c-chaos__title">{{ chaosVariantMessage }}</p>
+          <ul class="c-chaos__list" *ngIf="chaosNamesToShow.length > 0">
+            <li class="c-chaos__name" *ngFor="let name of chaosNamesToShow">
+              {{ name }}
+            </li>
+          </ul>
+        </div>
         <div class="c-block">
           <p class="c-meta">PALABRA</p>
-          <p class="c-value c-value--word">{{ word }}</p>
+          <p class="c-value c-value--word">{{ revealWord }}</p>
         </div>
         <div class="c-block" *ngIf="showCategory || showHint">
           <ng-container *ngIf="showCategory">
             <p class="c-meta">CATEGORIA</p>
-            <p class="c-value">{{ category }}</p>
+            <p class="c-value">{{ revealCategory }}</p>
           </ng-container>
           <ng-container *ngIf="showHint">
             <p class="c-meta">PISTA</p>
-            <p class="c-value">{{ hint }}</p>
+            <p class="c-value">{{ revealHint }}</p>
           </ng-container>
         </div>
         <button class="c-action" type="button" (click)="newRound()">

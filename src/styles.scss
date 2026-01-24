@@ -1,5 +1,5 @@
 /* Settings */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 :root {
   --color-bg: #000000;
@@ -9,7 +9,7 @@
   --color-accent: #ff3b30;
   --color-informante: #2f6fff;
   --color-border: #1f1f1f;
-  --font-base: 'Space Grotesk', sans-serif;
+  --font-base: "Space Grotesk", sans-serif;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -36,6 +36,39 @@
   }
 }
 
+@keyframes chaos-banner-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes chaos-message-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes chaos-name-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Generic */
 *,
 *::before,
@@ -55,9 +88,16 @@ body {
   line-height: 1.4;
   color: var(--color-text);
   background-color: var(--color-bg);
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(255, 59, 48, 0.12), transparent 40%),
-    radial-gradient(circle at 85% 5%, rgba(255, 255, 255, 0.05), transparent 45%),
+  background-image: radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 59, 48, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(255, 255, 255, 0.05),
+      transparent 45%
+    ),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 45%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
@@ -100,7 +140,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -245,8 +285,8 @@ input[type='number'] {
   text-transform: uppercase;
   border: 1px solid transparent;
   box-shadow: var(--shadow-soft);
-  transition: transform var(--motion-fast) ease, box-shadow var(--motion-fast) ease,
-    filter var(--motion-fast) ease;
+  transition: transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease, filter var(--motion-fast) ease;
 }
 
 .c-action:active {
@@ -271,9 +311,10 @@ input[type='number'] {
   color: var(--color-muted);
   border-color: var(--color-border);
   box-shadow: none;
-  transition: background-color var(--motion-slow) ease, color var(--motion-slow) ease,
-    border-color var(--motion-slow) ease, transform var(--motion-fast) ease,
-    box-shadow var(--motion-fast) ease, filter var(--motion-fast) ease;
+  transition: background-color var(--motion-slow) ease,
+    color var(--motion-slow) ease, border-color var(--motion-slow) ease,
+    transform var(--motion-fast) ease, box-shadow var(--motion-fast) ease,
+    filter var(--motion-fast) ease;
 }
 
 .c-action--delay.c-action--ready {
@@ -298,6 +339,56 @@ input[type='number'] {
   border: 1px solid var(--color-border);
   display: grid;
   gap: var(--space-2);
+}
+
+.c-chaos {
+  width: 100%;
+  padding: var(--space-4);
+  border-radius: var(--radius-1);
+  border: 1px solid rgba(255, 59, 48, 0.55);
+  background: rgba(255, 59, 48, 0.1);
+  display: grid;
+  gap: var(--space-2);
+  text-align: center;
+  animation: chaos-banner-in 240ms ease-out;
+}
+
+.c-chaos--message {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  animation: chaos-message-in 220ms ease-out;
+}
+
+.c-chaos__eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.c-chaos__title {
+  font-size: clamp(18px, 6vw, 28px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.c-chaos__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.c-chaos__name {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: chaos-name-in 180ms ease-out;
 }
 
 .c-meta {
@@ -623,5 +714,11 @@ input[type='number'] {
 
   .c-action {
     transition: none;
+  }
+
+  .c-chaos,
+  .c-chaos--message,
+  .c-chaos__name {
+    animation: none;
   }
 }

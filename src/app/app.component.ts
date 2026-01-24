@@ -1,14 +1,13 @@
 import { Component, OnDestroy } from '@angular/core';
-import { assignRoles, formatTime, parseBoundedInt } from './utils/game-utils';
+import { formatTime, parseBoundedInt } from './utils/game-utils';
 import { GameTimerService } from './services/game-timer.service';
-import { ConfigPanel, Role, Screen } from './models/game-models';
+import { ConfigPanel, PlayerSecret, RoundConfig, RoundState, Screen } from './models/game-models';
 import { CategorySource, Difficulty, WordEntry } from './models/word-models';
 import {
   buildCategorySources,
-  collectActiveEntries,
-  collectAllEntries,
-  pickWordEntry
+  collectActiveEntries
 } from './utils/word-data';
+import { createRoundState } from './utils/game-engine';
 
 @Component({
   selector: 'app-root',
@@ -37,26 +36,105 @@ export class AppComponent implements OnDestroy {
 
   currentPlayer = 1;
   starterIndex = 0;
-  roles: Role[] = [];
-
-  category = '';
-  word = '';
-  hint = '';
+  roundState: RoundState | null = null;
 
   showCategory = true;
   showHint = true;
   hintDifficulty: Difficulty = 'normal';
+  chaosChanceBase = 0.2;
+  chaosChanceIncrement = 0.01;
   categorySources: CategorySource[] = buildCategorySources();
 
   roundSeconds = 0;
   canReveal = false;
 
   passReady = false;
+  chaosRevealStage: 'none' | 'banner' | 'message' = 'none';
+  chaosNamesVisible = 0;
+  roundsPlayed = 0;
+  private chaosTimeoutIds: number[] = [];
+  private chaosNamesIntervalId: number | undefined;
+  private readonly roundsPlayedKey = 'impostor.roundsPlayed';
 
-  constructor(private readonly timerService: GameTimerService) {}
+  constructor(private readonly timerService: GameTimerService) {
+    this.roundsPlayed = this.readRoundsPlayed();
+  }
 
   get isImpostor(): boolean {
-    return this.roles[this.currentPlayer - 1] === 'impostor';
+    return this.currentSecret?.role === 'impostor';
+  }
+
+  get currentSecret(): PlayerSecret | null {
+    return this.roundState?.secrets[this.currentPlayer - 1] ?? null;
+  }
+
+  get currentWord(): string {
+    return this.currentSecret?.word ?? '';
+  }
+
+  get currentHint(): string {
+    return this.currentSecret?.hint ?? '';
+  }
+
+  get currentCategory(): string {
+    return this.currentSecret?.category ?? '';
+  }
+
+  get revealWord(): string {
+    return this.roundState?.selectedEntry.word ?? '';
+  }
+
+  get revealHint(): string {
+    return this.roundState?.selectedEntry.hint ?? '';
+  }
+
+  get revealCategory(): string {
+    return this.roundState?.selectedEntry.category ?? '';
+  }
+
+  get isChaosRound(): boolean {
+    return this.roundState?.mode === 'chaos';
+  }
+
+  get isChaosRevealable(): boolean {
+    return (
+      this.roundState?.mode === 'chaos' &&
+      this.roundState?.variant !== 'roles-inverted' &&
+      this.roundState?.variant !== 'none'
+    );
+  }
+
+  get showChaosBanner(): boolean {
+    return this.isChaosRevealable && this.chaosRevealStage !== 'none';
+  }
+
+  get showChaosMessage(): boolean {
+    return this.isChaosRevealable && this.chaosRevealStage === 'message';
+  }
+
+  get chaosVariantMessage(): string {
+    switch (this.roundState?.variant) {
+      case 'no-impostor':
+        return 'NO HABIA IMPOSTOR';
+      case 'all-impostors':
+        return 'TODOS ERAIS IMPOSTORES';
+      case 'double-impostor':
+        return 'HABIA 2 IMPOSTORES';
+      default:
+        return '';
+    }
+  }
+
+  get chaosNamesToShow(): string[] {
+    if (!this.showChaosMessage || this.roundState?.variant !== 'double-impostor') {
+      return [];
+    }
+
+    return this.impostorNames.slice(0, this.chaosNamesVisible);
+  }
+
+  get showRolesInvertedHint(): boolean {
+    return this.roundState?.variant === 'roles-inverted';
   }
 
   get maxImpostors(): number {
@@ -104,11 +182,8 @@ export class AppComponent implements OnDestroy {
   }
 
   get impostorNames(): string[] {
-    return this.roles
-      .map((role, index) =>
-        role === 'impostor' ? this.playerNames[index] || `JUGADOR ${index + 1}` : null
-      )
-      .filter((name): name is string => name !== null);
+    const indexes = this.roundState?.impostorIndexes ?? [];
+    return indexes.map((index) => this.playerNames[index] || `JUGADOR ${index + 1}`);
   }
 
   get impostorLabel(): string {
@@ -249,12 +324,15 @@ export class AppComponent implements OnDestroy {
 
   revealImpostors(): void {
     this.clearRoundTimer();
+    this.incrementRoundsPlayed();
     this.screen = 'reveal';
+    this.startChaosReveal();
   }
 
   newRound(): void {
     this.clearPassTimeout();
     this.clearRoundTimer();
+    this.clearChaosReveal();
     this.passReady = false;
     this.currentPlayer = 1;
     this.setupRound();
@@ -264,14 +342,17 @@ export class AppComponent implements OnDestroy {
   resetRound(): void {
     this.clearPassTimeout();
     this.clearRoundTimer();
+    this.clearChaosReveal();
     this.passReady = false;
     this.currentPlayer = 1;
     this.playerNames = [];
+    this.roundState = null;
     this.screen = 'players';
   }
 
   ngOnDestroy(): void {
     this.timerService.clearAll();
+    this.clearChaosReveal();
   }
 
   trackByIndex(index: number): number {
@@ -283,17 +364,115 @@ export class AppComponent implements OnDestroy {
   }
 
   private setupRound(): void {
-    const entries = collectActiveEntries(this.categorySources);
-    const selection = pickWordEntry(
-      entries.length > 0 ? entries : collectAllEntries(this.categorySources),
-      this.hintDifficulty
+    const chaosChance = this.computeChaosChance();
+    const config: RoundConfig = {
+      showCategory: this.showCategory,
+      showHint: this.showHint,
+      hintDifficulty: this.hintDifficulty,
+      chaosChance
+    };
+
+    this.roundState = createRoundState({
+      totalPlayers: this.totalPlayers,
+      impostors: this.impostors,
+      sources: this.categorySources,
+      config
+    });
+    this.starterIndex = Math.floor(Math.random() * this.totalPlayers);
+  }
+
+  private computeChaosChance(): number {
+    const chance = this.chaosChanceBase + this.roundsPlayed * this.chaosChanceIncrement;
+    return Math.min(Math.max(chance, 0), 1);
+  }
+
+  private readRoundsPlayed(): number {
+    if (typeof window === 'undefined') {
+      return 0;
+    }
+
+    try {
+      const stored = window.sessionStorage.getItem(this.roundsPlayedKey);
+      const parsed = Number.parseInt(stored ?? '0', 10);
+      return Number.isNaN(parsed) ? 0 : Math.max(0, parsed);
+    } catch {
+      return 0;
+    }
+  }
+
+  private writeRoundsPlayed(value: number): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      window.sessionStorage.setItem(this.roundsPlayedKey, String(value));
+    } catch {
+      // Ignore storage errors (private mode, disabled storage).
+    }
+  }
+
+  private incrementRoundsPlayed(): void {
+    this.roundsPlayed += 1;
+    this.writeRoundsPlayed(this.roundsPlayed);
+  }
+
+  private startChaosReveal(): void {
+    this.clearChaosReveal();
+    this.chaosRevealStage = 'none';
+    this.chaosNamesVisible = 0;
+
+    if (!this.isChaosRevealable) {
+      return;
+    }
+
+    this.chaosTimeoutIds.push(
+      window.setTimeout(() => {
+        this.chaosRevealStage = 'banner';
+      }, 1000)
     );
 
-    this.category = selection.category;
-    this.word = selection.word;
-    this.hint = selection.hint;
-    this.roles = assignRoles(this.totalPlayers, this.impostors);
-    this.starterIndex = Math.floor(Math.random() * this.totalPlayers);
+    this.chaosTimeoutIds.push(
+      window.setTimeout(() => {
+        this.chaosRevealStage = 'message';
+        this.startChaosNamesReveal();
+      }, 1700)
+    );
+  }
+
+  private startChaosNamesReveal(): void {
+    if (this.roundState?.variant !== 'double-impostor') {
+      return;
+    }
+
+    const names = this.impostorNames;
+    if (names.length === 0) {
+      return;
+    }
+
+    this.chaosNamesVisible = 0;
+    this.chaosNamesIntervalId = window.setInterval(() => {
+      this.chaosNamesVisible += 1;
+      if (this.chaosNamesVisible >= names.length) {
+        if (this.chaosNamesIntervalId !== undefined) {
+          window.clearInterval(this.chaosNamesIntervalId);
+          this.chaosNamesIntervalId = undefined;
+        }
+      }
+    }, 700);
+  }
+
+  private clearChaosReveal(): void {
+    this.chaosTimeoutIds.forEach((timeoutId) => window.clearTimeout(timeoutId));
+    this.chaosTimeoutIds = [];
+
+    if (this.chaosNamesIntervalId !== undefined) {
+      window.clearInterval(this.chaosNamesIntervalId);
+      this.chaosNamesIntervalId = undefined;
+    }
+
+    this.chaosRevealStage = 'none';
+    this.chaosNamesVisible = 0;
   }
 
   private startPassDelay(): void {
