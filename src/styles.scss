@@ -300,6 +300,53 @@ input[type='number'] {
   gap: var(--space-2);
 }
 
+.c-chaos {
+  width: 100%;
+  padding: var(--space-4);
+  border-radius: var(--radius-1);
+  border: 1px solid rgba(255, 59, 48, 0.55);
+  background: rgba(255, 59, 48, 0.1);
+  display: grid;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.c-chaos--message {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.c-chaos__eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.c-chaos__title {
+  font-size: clamp(18px, 6vw, 28px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.c-chaos__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.c-chaos__name {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .c-meta {
   font-size: 12px;
   letter-spacing: 0.26em;
