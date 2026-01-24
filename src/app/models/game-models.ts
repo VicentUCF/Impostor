@@ -13,3 +13,5 @@ export type Screen =
   | 'reveal';
 
 export type Role = 'crew' | 'impostor';
+
+export type ConfigPanel = 'impostor' | 'themes';

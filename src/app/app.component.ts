@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { assignRoles, formatTime, parseBoundedInt } from './utils/game-utils';
 import { GameTimerService } from './services/game-timer.service';
-import { Screen, Role } from './models/game-models';
+import { ConfigPanel, Role, Screen } from './models/game-models';
 import { CategorySource, Difficulty, WordEntry } from './models/word-models';
 import {
   buildCategorySources,
@@ -18,6 +18,11 @@ import {
 export class AppComponent implements OnDestroy {
   title = 'Impostor';
   screen: Screen = 'intro';
+
+  configPanels: Record<ConfigPanel, boolean> = {
+    impostor: true,
+    themes: false
+  };
 
   minPlayers = 3;
   maxPlayers = 12;
@@ -163,6 +168,10 @@ export class AppComponent implements OnDestroy {
     this.impostorsInput = String(parsed);
 
     this.screen = 'config';
+  }
+
+  toggleConfigPanel(panel: ConfigPanel): void {
+    this.configPanels[panel] = !this.configPanels[panel];
   }
 
   toggleShowCategory(): void {

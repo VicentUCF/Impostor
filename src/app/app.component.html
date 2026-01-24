@@ -106,108 +106,147 @@
       <div *ngSwitchCase="'config'" class="o-stack o-stack--form">
         <p class="c-eyebrow">CONFIGURACION</p>
         <h1 class="c-title">PARTIDA</h1>
-        <div class="c-config">
+        <div
+          class="c-accordion"
+          [class.c-accordion--open]="configPanels.impostor"
+        >
           <button
-            class="c-toggle"
+            class="c-accordion__header"
             type="button"
-            [class.c-toggle--on]="showCategory"
-            [attr.aria-pressed]="showCategory"
-            (click)="toggleShowCategory()"
+            [attr.aria-expanded]="configPanels.impostor"
+            (click)="toggleConfigPanel('impostor')"
           >
-            <span class="c-toggle__label">MOSTRAR CATEGORIA</span>
-            <span class="c-toggle__state">{{
-              showCategory ? "SI" : "NO"
-            }}</span>
-          </button>
-          <button
-            class="c-toggle"
-            type="button"
-            [class.c-toggle--on]="showHint"
-            [attr.aria-pressed]="showHint"
-            (click)="toggleShowHint()"
-          >
-            <span class="c-toggle__label">MOSTRAR PISTA</span>
-            <span class="c-toggle__state">{{ showHint ? "SI" : "NO" }}</span>
-          </button>
-        </div>
-        <p class="c-section">DIFICULTAD DE PISTA</p>
-        <div class="c-choice-list c-choice-list--compact">
-          <button
-            class="c-choice"
-            type="button"
-            [class.c-choice--on]="hintDifficulty === 'easy'"
-            [attr.aria-pressed]="hintDifficulty === 'easy'"
-            (click)="setHintDifficulty('easy')"
-          >
-            <div class="c-choice__row">
-              <span class="c-choice__label">FACIL</span>
-              <span class="c-choice__state">
-                {{ hintDifficulty === "easy" ? "ACTIVA" : "" }}
-              </span>
-            </div>
-          </button>
-          <button
-            class="c-choice"
-            type="button"
-            [class.c-choice--on]="hintDifficulty === 'normal'"
-            [attr.aria-pressed]="hintDifficulty === 'normal'"
-            (click)="setHintDifficulty('normal')"
-          >
-            <div class="c-choice__row">
-              <span class="c-choice__label">NORMAL</span>
-              <span class="c-choice__state">
-                {{ hintDifficulty === "normal" ? "ACTIVA" : "" }}
-              </span>
-            </div>
-          </button>
-          <button
-            class="c-choice"
-            type="button"
-            [class.c-choice--on]="hintDifficulty === 'hard'"
-            [attr.aria-pressed]="hintDifficulty === 'hard'"
-            (click)="setHintDifficulty('hard')"
-          >
-            <div class="c-choice__row">
-              <span class="c-choice__label">DIFICIL</span>
-              <span class="c-choice__state">
-                {{ hintDifficulty === "hard" ? "ACTIVA" : "" }}
-              </span>
-            </div>
-          </button>
-        </div>
-        <p class="c-section">
-          CATEGORIAS {{ selectedSourcesCount }} / {{ totalSourcesCount }}
-        </p>
-        <div class="c-choice-list">
-          <button
-            class="c-choice"
-            type="button"
-            *ngFor="let source of categorySources; trackBy: trackBySource"
-            [class.c-choice--on]="source.enabled"
-            [attr.aria-pressed]="source.enabled"
-            [disabled]="source.entries.length === 0"
-            (click)="toggleCategory(source)"
-          >
-            <div class="c-choice__row">
-              <span class="c-choice__label">{{ source.label }}</span>
-              <span class="c-choice__state">
-                {{
-                  source.entries.length === 0
-                    ? "VACIO"
-                    : source.enabled
-                    ? "INCLUIDO"
-                    : "FUERA"
-                }}
-              </span>
-            </div>
-            <span class="c-choice__meta">
-              {{
-                source.entries.length === 0
-                  ? "SIN DATOS"
-                  : source.entries.length + " TEMAS"
-              }}
+            <span class="c-accordion__title">CONFIGURACION IMPOSTOR</span>
+            <span class="c-accordion__state">
+              {{ configPanels.impostor ? "ABIERTO" : "CERRADO" }}
             </span>
           </button>
+          <div class="c-accordion__body" *ngIf="configPanels.impostor">
+            <p class="c-section">DEFINE QUE VE EL IMPOSTOR</p>
+            <div class="c-config">
+              <button
+                class="c-toggle"
+                type="button"
+                [class.c-toggle--on]="showCategory"
+                [attr.aria-pressed]="showCategory"
+                (click)="toggleShowCategory()"
+              >
+                <span class="c-toggle__label">MOSTRAR CATEGORIA</span>
+                <span class="c-toggle__state">{{
+                  showCategory ? "SI" : "NO"
+                }}</span>
+              </button>
+              <button
+                class="c-toggle"
+                type="button"
+                [class.c-toggle--on]="showHint"
+                [attr.aria-pressed]="showHint"
+                (click)="toggleShowHint()"
+              >
+                <span class="c-toggle__label">MOSTRAR PISTA</span>
+                <span class="c-toggle__state">{{ showHint ? "SI" : "NO" }}</span>
+              </button>
+            </div>
+            <ng-container *ngIf="showHint">
+              <p class="c-section">DIFICULTAD DE PISTA</p>
+              <div class="c-choice-list c-choice-list--compact">
+                <button
+                  class="c-choice"
+                  type="button"
+                  [class.c-choice--on]="hintDifficulty === 'easy'"
+                  [attr.aria-pressed]="hintDifficulty === 'easy'"
+                  (click)="setHintDifficulty('easy')"
+                >
+                  <div class="c-choice__row">
+                    <span class="c-choice__label">FACIL</span>
+                    <span class="c-choice__state">
+                      {{ hintDifficulty === "easy" ? "ACTIVA" : "" }}
+                    </span>
+                  </div>
+                </button>
+                <button
+                  class="c-choice"
+                  type="button"
+                  [class.c-choice--on]="hintDifficulty === 'normal'"
+                  [attr.aria-pressed]="hintDifficulty === 'normal'"
+                  (click)="setHintDifficulty('normal')"
+                >
+                  <div class="c-choice__row">
+                    <span class="c-choice__label">NORMAL</span>
+                    <span class="c-choice__state">
+                      {{ hintDifficulty === "normal" ? "ACTIVA" : "" }}
+                    </span>
+                  </div>
+                </button>
+                <button
+                  class="c-choice"
+                  type="button"
+                  [class.c-choice--on]="hintDifficulty === 'hard'"
+                  [attr.aria-pressed]="hintDifficulty === 'hard'"
+                  (click)="setHintDifficulty('hard')"
+                >
+                  <div class="c-choice__row">
+                    <span class="c-choice__label">DIFICIL</span>
+                    <span class="c-choice__state">
+                      {{ hintDifficulty === "hard" ? "ACTIVA" : "" }}
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div
+          class="c-accordion"
+          [class.c-accordion--open]="configPanels.themes"
+        >
+          <button
+            class="c-accordion__header"
+            type="button"
+            [attr.aria-expanded]="configPanels.themes"
+            (click)="toggleConfigPanel('themes')"
+          >
+            <span class="c-accordion__title">CONFIGURACION DE TEMAS</span>
+            <span class="c-accordion__state">
+              {{ selectedSourcesCount }} / {{ totalSourcesCount }}
+            </span>
+          </button>
+          <div class="c-accordion__body" *ngIf="configPanels.themes">
+            <p class="c-section">
+              CATEGORIAS {{ selectedSourcesCount }} / {{ totalSourcesCount }}
+            </p>
+            <div class="c-choice-list">
+              <button
+                class="c-choice"
+                type="button"
+                *ngFor="let source of categorySources; trackBy: trackBySource"
+                [class.c-choice--on]="source.enabled"
+                [attr.aria-pressed]="source.enabled"
+                [disabled]="source.entries.length === 0"
+                (click)="toggleCategory(source)"
+              >
+                <div class="c-choice__row">
+                  <span class="c-choice__label">{{ source.label }}</span>
+                  <span class="c-choice__state">
+                    {{
+                      source.entries.length === 0
+                        ? "VACIO"
+                        : source.enabled
+                        ? "INCLUIDO"
+                        : "FUERA"
+                    }}
+                  </span>
+                </div>
+                <span class="c-choice__meta">
+                  {{
+                    source.entries.length === 0
+                      ? "SIN DATOS"
+                      : source.entries.length + " TEMAS"
+                  }}
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
         <button
           class="c-action"
