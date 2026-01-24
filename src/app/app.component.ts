@@ -41,7 +41,7 @@ export class AppComponent implements OnDestroy {
   showCategory = true;
   showHint = true;
   hintDifficulty: Difficulty = 'normal';
-  chaosChanceBase = 1;
+  chaosChanceBase = 0.2;
   chaosChanceIncrement = 0.01;
   categorySources: CategorySource[] = buildCategorySources();
 
