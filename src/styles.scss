@@ -486,14 +486,6 @@ input[type="number"] {
   text-align: center;
 }
 
-.c-chaos-seq__name {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  animation: chaos-name-in 180ms ease-out;
-}
-
 .c-normal-reveal {
   width: 100%;
   padding: var(--space-5) var(--space-4);
@@ -872,7 +864,6 @@ input[type="number"] {
   .c-chaos-seq__headline,
   .c-chaos-seq__message,
   .c-chaos-seq__closure,
-  .c-chaos-seq__name,
   .c-normal-reveal__name,
   .c-normal-reveal__closure,
   .c-normal-reveal--fade,

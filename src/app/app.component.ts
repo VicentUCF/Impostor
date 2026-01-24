@@ -41,7 +41,7 @@ export class AppComponent implements OnDestroy {
   showCategory = true;
   showHint = true;
   hintDifficulty: Difficulty = 'normal';
-  chaosChanceBase = 0.2;
+  chaosChanceBase = 1;
   chaosChanceIncrement = 0.01;
   categorySources: CategorySource[] = buildCategorySources();
 
@@ -198,7 +198,7 @@ export class AppComponent implements OnDestroy {
   }
 
   get showNormalFinalDetails(): boolean {
-    return this.normalRevealStage === 'transition' || this.normalRevealStage === 'final';
+    return this.normalRevealStage === 'final';
   }
 
   get normalRevealName(): string {
