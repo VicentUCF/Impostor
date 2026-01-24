@@ -24,15 +24,24 @@ Dentro de `activateChaosRound()`:
 
 ## Revelado del Modo Caos (dinamica)
 Secuencia obligatoria cuando la ronda Caos SI se revela:
-1) Se revela el impostor (o resultado normal).
-2) La pantalla se mantiene 1 segundo.
-3) Aparece:
-   - `RONDA ESPECIAL`
-   - `MODO CAOS ACTIVADO`
-4) Luego el mensaje especifico de la variante:
+1) Confirmacion falsa (0.5-1s):
+   - `EL IMPOSTOR ERA...`
+2) Pausa incomoda (0.8s).
+3) Glitch sutil (0.3s):
+   - Desplazamiento horizontal 2-3px.
+   - Parpadeo leve.
+   - Vibracion corta.
+4) Revelacion real (1.2s):
+   - `RONDA CAOS` (o `ESTA RONDA NO ERA NORMAL`).
+   - Color rojo tenue, fondo ligeramente distinto.
+5) Mensaje especifico (1.5-2s):
    - `NO HABIA IMPOSTOR`
    - `TODOS ERAIS IMPOSTORES`
    - `HABIA 2 IMPOSTORES`
+6) Descarga:
+   - `Por eso nada cuadraba.`
+
+Duracion total ideal: 4-6s.
 
 Excepcion:
 - `Roles invertidos` NO se revela nunca (ni "Ronda especial" ni "Modo caos").
@@ -114,7 +123,7 @@ for others:
 ```
 
 **Reglas**
-- Solo si hay 4+ jugadores.
+- Solo si hay 3+ jugadores.
 - No mostrar nunca "hay 2 impostores".
 
 **Revelado final (mensaje especifico)**

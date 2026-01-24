@@ -19,7 +19,7 @@ interface ChaosVariantWeight {
 const CHAOS_VARIANTS: ChaosVariantWeight[] = [
   { variant: 'no-impostor', weight: 35 },
   { variant: 'roles-inverted', weight: 30 },
-  { variant: 'double-impostor', weight: 20, minPlayers: 4 },
+  { variant: 'double-impostor', weight: 20, minPlayers: 3 },
   { variant: 'all-impostors', weight: 15 }
 ];
 

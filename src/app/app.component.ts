@@ -49,11 +49,14 @@ export class AppComponent implements OnDestroy {
   canReveal = false;
 
   passReady = false;
-  chaosRevealStage: 'none' | 'banner' | 'message' = 'none';
+  chaosRevealStage: 'none' | 'fake' | 'pause' | 'glitch' | 'reveal' | 'detail' | 'final' =
+    'none';
   chaosNamesVisible = 0;
+  normalRevealStage: 'none' | 'prep' | 'pause' | 'reveal' | 'final' = 'none';
   roundsPlayed = 0;
   private chaosTimeoutIds: number[] = [];
   private chaosNamesIntervalId: number | undefined;
+  private normalTimeoutIds: number[] = [];
   private readonly roundsPlayedKey = 'impostor.roundsPlayed';
 
   constructor(private readonly timerService: GameTimerService) {
@@ -104,12 +107,41 @@ export class AppComponent implements OnDestroy {
     );
   }
 
-  get showChaosBanner(): boolean {
-    return this.isChaosRevealable && this.chaosRevealStage !== 'none';
+  get showChaosFake(): boolean {
+    return (
+      this.isChaosRevealable &&
+      (this.chaosRevealStage === 'fake' ||
+        this.chaosRevealStage === 'pause' ||
+        this.chaosRevealStage === 'glitch')
+    );
   }
 
-  get showChaosMessage(): boolean {
-    return this.isChaosRevealable && this.chaosRevealStage === 'message';
+  get showChaosHeadline(): boolean {
+    return (
+      this.isChaosRevealable &&
+      (this.chaosRevealStage === 'reveal' ||
+        this.chaosRevealStage === 'detail' ||
+        this.chaosRevealStage === 'final')
+    );
+  }
+
+  get showChaosDetail(): boolean {
+    return (
+      this.isChaosRevealable &&
+      (this.chaosRevealStage === 'detail' || this.chaosRevealStage === 'final')
+    );
+  }
+
+  get showChaosFinalDetails(): boolean {
+    return this.isChaosRevealable && this.chaosRevealStage === 'final';
+  }
+
+  get isChaosGlitch(): boolean {
+    return this.isChaosRevealable && this.chaosRevealStage === 'glitch';
+  }
+
+  get chaosHeadline(): string {
+    return 'RONDA CAOS';
   }
 
   get chaosVariantMessage(): string {
@@ -126,11 +158,62 @@ export class AppComponent implements OnDestroy {
   }
 
   get chaosNamesToShow(): string[] {
-    if (!this.showChaosMessage || this.roundState?.variant !== 'double-impostor') {
+    if (!this.showChaosDetail || this.roundState?.variant !== 'double-impostor') {
       return [];
     }
 
     return this.impostorNames.slice(0, this.chaosNamesVisible);
+  }
+
+  get canExitReveal(): boolean {
+    if (this.isChaosRevealable) {
+      return this.showChaosFinalDetails;
+    }
+
+    return this.normalRevealStage === 'final' || this.normalRevealStage === 'none';
+  }
+
+  get showNormalLead(): boolean {
+    return this.normalRevealStage !== 'none';
+  }
+
+  get normalLeadText(): string {
+    const plural = this.impostorNames.length > 1;
+    const base = plural ? 'LOS IMPOSTORES ERAN' : 'EL IMPOSTOR ERA';
+    return this.normalRevealStage === 'prep' || this.normalRevealStage === 'pause'
+      ? `${base}...`
+      : base;
+  }
+
+  get showNormalName(): boolean {
+    return this.normalRevealStage === 'reveal' || this.normalRevealStage === 'final';
+  }
+
+  get showNormalClosure(): boolean {
+    return this.normalRevealStage === 'final';
+  }
+
+  get showNormalFinalDetails(): boolean {
+    return this.normalRevealStage === 'final';
+  }
+
+  get normalRevealName(): string {
+    if (this.impostorNames.length === 1) {
+      return this.impostorNames[0];
+    }
+
+    return this.impostorNames.length > 1 ? this.impostorLabel : '';
+  }
+
+  get showImpostorRevealSection(): boolean {
+    if (!this.isChaosRevealable) {
+      return true;
+    }
+
+    return (
+      this.roundState?.variant !== 'no-impostor' &&
+      this.roundState?.variant !== 'all-impostors'
+    );
   }
 
   get showRolesInvertedHint(): boolean {
@@ -326,13 +409,18 @@ export class AppComponent implements OnDestroy {
     this.clearRoundTimer();
     this.incrementRoundsPlayed();
     this.screen = 'reveal';
-    this.startChaosReveal();
+    if (this.isChaosRevealable) {
+      this.startChaosReveal();
+    } else {
+      this.startNormalReveal();
+    }
   }
 
   newRound(): void {
     this.clearPassTimeout();
     this.clearRoundTimer();
     this.clearChaosReveal();
+    this.clearNormalReveal();
     this.passReady = false;
     this.currentPlayer = 1;
     this.setupRound();
@@ -343,6 +431,7 @@ export class AppComponent implements OnDestroy {
     this.clearPassTimeout();
     this.clearRoundTimer();
     this.clearChaosReveal();
+    this.clearNormalReveal();
     this.passReady = false;
     this.currentPlayer = 1;
     this.playerNames = [];
@@ -353,6 +442,7 @@ export class AppComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.timerService.clearAll();
     this.clearChaosReveal();
+    this.clearNormalReveal();
   }
 
   trackByIndex(index: number): number {
@@ -419,6 +509,7 @@ export class AppComponent implements OnDestroy {
 
   private startChaosReveal(): void {
     this.clearChaosReveal();
+    this.clearNormalReveal();
     this.chaosRevealStage = 'none';
     this.chaosNamesVisible = 0;
 
@@ -426,17 +517,39 @@ export class AppComponent implements OnDestroy {
       return;
     }
 
+    this.chaosRevealStage = 'fake';
+
     this.chaosTimeoutIds.push(
       window.setTimeout(() => {
-        this.chaosRevealStage = 'banner';
-      }, 1000)
+        this.chaosRevealStage = 'pause';
+      }, 700)
     );
 
     this.chaosTimeoutIds.push(
       window.setTimeout(() => {
-        this.chaosRevealStage = 'message';
+        this.chaosRevealStage = 'glitch';
+        this.triggerVibration(30);
+      }, 1500)
+    );
+
+    this.chaosTimeoutIds.push(
+      window.setTimeout(() => {
+        this.chaosRevealStage = 'reveal';
+        this.triggerVibration(120);
+      }, 1800)
+    );
+
+    this.chaosTimeoutIds.push(
+      window.setTimeout(() => {
+        this.chaosRevealStage = 'detail';
         this.startChaosNamesReveal();
-      }, 1700)
+      }, 3000)
+    );
+
+    this.chaosTimeoutIds.push(
+      window.setTimeout(() => {
+        this.chaosRevealStage = 'final';
+      }, 4700)
     );
   }
 
@@ -475,6 +588,49 @@ export class AppComponent implements OnDestroy {
     this.chaosNamesVisible = 0;
   }
 
+  private startNormalReveal(): void {
+    this.clearNormalReveal();
+    this.clearChaosReveal();
+    this.normalRevealStage = 'prep';
+
+    this.normalTimeoutIds.push(
+      window.setTimeout(() => {
+        this.normalRevealStage = 'pause';
+      }, 600)
+    );
+
+    this.normalTimeoutIds.push(
+      window.setTimeout(() => {
+        this.normalRevealStage = 'reveal';
+        this.triggerVibration(20);
+      }, 1000)
+    );
+
+    this.normalTimeoutIds.push(
+      window.setTimeout(() => {
+        this.normalRevealStage = 'final';
+      }, 2200)
+    );
+  }
+
+  private clearNormalReveal(): void {
+    this.normalTimeoutIds.forEach((timeoutId) => window.clearTimeout(timeoutId));
+    this.normalTimeoutIds = [];
+    this.normalRevealStage = 'none';
+  }
+
+  private triggerVibration(pattern: number | number[]): void {
+    if (typeof navigator === 'undefined' || !('vibrate' in navigator)) {
+      return;
+    }
+
+    try {
+      navigator.vibrate(pattern);
+    } catch {
+      // Ignore vibration errors on unsupported devices.
+    }
+  }
+
   private startPassDelay(): void {
     this.passReady = false;
     this.timerService.startPassDelay(400, () => {
@@ -492,7 +648,7 @@ export class AppComponent implements OnDestroy {
       () => {
         this.canReveal = true;
       },
-      10
+      3
     );
   }
 
