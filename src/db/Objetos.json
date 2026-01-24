@@ -1,0 +1,128 @@
+[
+  {
+    "category": "Objetos",
+    "sub": {
+      "id": "hogar",
+      "easy": ["Casa", "Uso diario", "Interior", "Comodidad"],
+      "normal": ["Rutina", "Función", "Espacio", "Orden"],
+      "hard": ["Costumbre", "Necesidad", "Presencia", "Utilidad"]
+    },
+    "words": [
+      "Silla",
+      "Mesa",
+      "Sofá",
+      "Lámpara",
+      "Cojín",
+      "Cortina",
+      "Alfombra",
+      "Estantería",
+      "Espejo",
+      "Reloj"
+    ]
+  },
+  {
+    "category": "Objetos",
+    "sub": {
+      "id": "cocina",
+      "easy": ["Cocinar", "Comida", "Preparación", "Calor"],
+      "normal": ["Utensilio", "Receta", "Proceso", "Uso"],
+      "hard": ["Hábito", "Rutina", "Funcionalidad", "Soporte"]
+    },
+    "words": [
+      "Sartén",
+      "Cuchillo",
+      "Tenedor",
+      "Cuchara",
+      "Plato",
+      "Vaso",
+      "Taza",
+      "Olla",
+      "Tabla de cortar",
+      "Colador"
+    ]
+  },
+  {
+    "category": "Objetos",
+    "sub": {
+      "id": "oficina",
+      "easy": ["Trabajo", "Escritura", "Objeto", "Estudio"],
+      "normal": ["Organización", "Tarea", "Material", "Productividad"],
+      "hard": ["Enfoque", "Disciplina", "Proceso", "Constancia"]
+    },
+    "words": [
+      "Ordenador",
+      "Teclado",
+      "Ratón",
+      "Pantalla",
+      "Cuaderno",
+      "Bolígrafo",
+      "Agenda",
+      "Archivador",
+      "Impresora",
+      "Grapadora"
+    ]
+  },
+  {
+    "category": "Objetos",
+    "sub": {
+      "id": "higiene_personal",
+      "easy": ["Baño", "Cuidado", "Limpieza", "Mañana"],
+      "normal": ["Rutina", "Aseo", "Higiene", "Uso"],
+      "hard": ["Cuidado personal", "Constancia", "Autocontrol", "Hábitos"]
+    },
+    "words": [
+      "Cepillo de dientes",
+      "Pasta dental",
+      "Jabón",
+      "Champú",
+      "Toalla",
+      "Peine",
+      "Desodorante",
+      "Crema hidratante",
+      "Maquinilla",
+      "Secador"
+    ]
+  },
+  {
+    "category": "Objetos",
+    "sub": {
+      "id": "tecnologia",
+      "easy": ["Electrónico", "Tema", "Encendido", "Digital"],
+      "normal": ["Dispositivo", "Conexión", "Batería", "Uso diario"],
+      "hard": ["Dependencia", "Interacción", "Soporte", "Comunicación"]
+    },
+    "words": [
+      "Teléfono móvil",
+      "Auriculares",
+      "Cargador",
+      "Tablet",
+      "Televisor",
+      "Mando a distancia",
+      "Altavoz",
+      "Reloj inteligente",
+      "Router",
+      "Cámara digital"
+    ]
+  },
+  {
+    "category": "Objetos",
+    "sub": {
+      "id": "ropa_accesorios",
+      "easy": ["Vestir", "Diario", "Tela", "Uso"],
+      "normal": ["Estilo", "Conjunto", "Comodidad", "Protección"],
+      "hard": ["Identidad", "Expresión", "Preferencia", "Imagen"]
+    },
+    "words": [
+      "Camiseta",
+      "Pantalón",
+      "Zapatillas",
+      "Chaqueta",
+      "Calcetines",
+      "Cinturón",
+      "Gorra",
+      "Bufanda",
+      "Mochila",
+      "Gafas de sol"
+    ]
+  }
+]

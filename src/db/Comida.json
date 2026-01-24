@@ -1,0 +1,132 @@
+[
+  {
+    "category": "Comida",
+    "sub": {
+      "id": "platos_principales",
+      "easy": ["Caliente", "Salado", "Completo", "Sustancioso"],
+      "normal": ["Receta", "Tradición", "Cocción", "Sabor"],
+      "hard": ["Cultura", "Costumbre", "Confort", "Ritual"]
+    },
+    "words": [
+      "Hamburguesa",
+      "Paella",
+      "Lasaña",
+      "Curry",
+      "Ramen",
+      "Tacos",
+      "Risotto",
+      "Kebab",
+      "Goulash",
+      "Burrito",
+      "Moussaka",
+      "Chili con carne"
+    ]
+  },
+  {
+    "category": "Comida",
+    "sub": {
+      "id": "comida_rapida",
+      "easy": ["Rápido", "Informal", "Manos", "Objeto"],
+      "normal": ["Pedido", "Local", "Antojo", "Grasa"],
+      "hard": ["Impulso", "Inmediatez", "Exceso", "Tentación"]
+    },
+    "words": [
+      "Pizza",
+      "Hot dog",
+      "Patatas fritas",
+      "Nuggets",
+      "Doner",
+      "Empanadilla",
+      "Arepa",
+      "Sandwich",
+      "Nachos",
+      "Pollo frito"
+    ]
+  },
+  {
+    "category": "Comida",
+    "sub": {
+      "id": "postres",
+      "easy": ["Dulce", "Azúcar", "Final", "Tema"],
+      "normal": ["Horno", "Textura", "Capas", "Repostería"],
+      "hard": ["Placer", "Capricho", "Tentación", "Celebración"]
+    },
+    "words": [
+      "Tarta",
+      "Brownie",
+      "Helado",
+      "Flan",
+      "Churros",
+      "Cheesecake",
+      "Croissant",
+      "Magdalena",
+      "Galletas",
+      "Tiramisu",
+      "Bizcocho"
+    ]
+  },
+  {
+    "category": "Comida",
+    "sub": {
+      "id": "comida_saludable",
+      "easy": ["Ligero", "Natural", "Fresco", "Objeto"],
+      "normal": ["Equilibrio", "Nutrientes", "Dieta", "Energía"],
+      "hard": ["Bienestar", "Cuidado", "Rutina", "Disciplina"]
+    },
+    "words": [
+      "Ensalada",
+      "Poke",
+      "Quinoa",
+      "Verduras al vapor",
+      "Hummus",
+      "Sopa vegetal",
+      "Pechuga a la plancha",
+      "Aguacate",
+      "Yogur natural",
+      "Fruta fresca"
+    ]
+  },
+  {
+    "category": "Comida",
+    "sub": {
+      "id": "ingredientes_basicos",
+      "easy": ["Crudo", "Base", "Cocina", "Tema"],
+      "normal": ["Preparación", "Mezcla", "Sabor", "Textura"],
+      "hard": ["Origen", "Materia", "Elemento", "Esencia"]
+    },
+    "words": [
+      "Arroz",
+      "Pasta",
+      "Patata",
+      "Huevo",
+      "Queso",
+      "Tomate",
+      "Pollo",
+      "Carne picada",
+      "Cebolla",
+      "Ajo",
+      "Leche",
+      "Harina"
+    ]
+  },
+  {
+    "category": "Comida",
+    "sub": {
+      "id": "snacks",
+      "easy": ["Pequeño", "Rápido", "Entre horas", "Grupo"],
+      "normal": ["Picoteo", "Bolsa", "Crujiente", "Sal"],
+      "hard": ["Hábito", "Ansia", "Pausa", "Costumbre"]
+    },
+    "words": [
+      "Palomitas",
+      "Frutos secos",
+      "Chips",
+      "Galletas saladas",
+      "Aceitunas",
+      "Barrita energética",
+      "Crackers",
+      "Maíz tostado",
+      "Pretzels"
+    ]
+  }
+]

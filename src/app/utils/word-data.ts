@@ -6,6 +6,8 @@ import padelData from '../../db/Padel.json';
 import peliculasData from '../../db/Peliculas.json';
 import seriesData from '../../db/Series.json';
 import trabajosData from '../../db/Trabajos.json';
+import Comida from '../../db/Comida.json';
+import Objetos from '../../db/Objetos.json';
 import { randomItem } from './game-utils';
 import {
   CategorySource,
@@ -62,11 +64,6 @@ export const buildCategorySources = (): CategorySource[] => {
       raw: asEntries(deportesData)
     },
     {
-      id: 'escape-rooms',
-      fallbackLabel: 'Escape Room',
-      raw: asEntries(escapeRoomsData)
-    },
-    {
       id: 'juegos',
       fallbackLabel: 'Juegos',
       raw: asEntries(juegosData)
@@ -75,11 +72,6 @@ export const buildCategorySources = (): CategorySource[] => {
       id: 'marcas',
       fallbackLabel: 'Marcas',
       raw: asEntries(marcasData)
-    },
-    {
-      id: 'padel',
-      fallbackLabel: 'Padel',
-      raw: asEntries(padelData)
     },
     {
       id: 'peliculas',
@@ -95,7 +87,27 @@ export const buildCategorySources = (): CategorySource[] => {
       id: 'trabajos',
       fallbackLabel: 'Trabajos',
       raw: asEntries(trabajosData)
-    }
+    },
+    {
+      id: 'comida',
+      fallbackLabel: 'Comida',
+      raw: asEntries(Comida)
+    },
+    {
+      id: 'objetos',
+      fallbackLabel: 'Objetos',
+      raw: asEntries(Objetos)
+    },
+    {
+      id: 'padel',
+      fallbackLabel: 'Padel',
+      raw: asEntries(padelData)
+    },
+    {
+      id: 'escape-rooms',
+      fallbackLabel: 'Escape Room',
+      raw: asEntries(escapeRoomsData)
+    },
   ];
 
   return sources.map((source) => {
