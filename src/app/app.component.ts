@@ -52,7 +52,7 @@ export class AppComponent implements OnDestroy {
   chaosRevealStage: 'none' | 'fake' | 'pause' | 'glitch' | 'reveal' | 'detail' | 'final' =
     'none';
   chaosNamesVisible = 0;
-  normalRevealStage: 'none' | 'prep' | 'pause' | 'reveal' | 'final' = 'none';
+  normalRevealStage: 'none' | 'prep' | 'pause' | 'reveal' | 'transition' | 'final' = 'none';
   roundsPlayed = 0;
   private chaosTimeoutIds: number[] = [];
   private chaosNamesIntervalId: number | undefined;
@@ -173,8 +173,12 @@ export class AppComponent implements OnDestroy {
     return this.normalRevealStage === 'final' || this.normalRevealStage === 'none';
   }
 
+  get showNormalRevealBlock(): boolean {
+    return this.normalRevealStage !== 'none' && this.normalRevealStage !== 'final';
+  }
+
   get showNormalLead(): boolean {
-    return this.normalRevealStage !== 'none';
+    return this.showNormalRevealBlock;
   }
 
   get normalLeadText(): string {
@@ -186,15 +190,15 @@ export class AppComponent implements OnDestroy {
   }
 
   get showNormalName(): boolean {
-    return this.normalRevealStage === 'reveal' || this.normalRevealStage === 'final';
+    return this.normalRevealStage === 'reveal' || this.normalRevealStage === 'transition';
   }
 
   get showNormalClosure(): boolean {
-    return this.normalRevealStage === 'final';
+    return this.normalRevealStage === 'transition';
   }
 
   get showNormalFinalDetails(): boolean {
-    return this.normalRevealStage === 'final';
+    return this.normalRevealStage === 'transition' || this.normalRevealStage === 'final';
   }
 
   get normalRevealName(): string {
@@ -608,8 +612,14 @@ export class AppComponent implements OnDestroy {
 
     this.normalTimeoutIds.push(
       window.setTimeout(() => {
+        this.normalRevealStage = 'transition';
+      }, 1900)
+    );
+
+    this.normalTimeoutIds.push(
+      window.setTimeout(() => {
         this.normalRevealStage = 'final';
-      }, 2200)
+      }, 2400)
     );
   }
 
