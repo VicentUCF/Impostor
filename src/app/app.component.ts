@@ -41,7 +41,8 @@ export class AppComponent implements OnDestroy {
   showCategory = true;
   showHint = true;
   hintDifficulty: Difficulty = 'normal';
-  chaosChance = 0.2;
+  chaosChanceBase = 0.2;
+  chaosChanceIncrement = 0.01;
   categorySources: CategorySource[] = buildCategorySources();
 
   roundSeconds = 0;
@@ -50,10 +51,14 @@ export class AppComponent implements OnDestroy {
   passReady = false;
   chaosRevealStage: 'none' | 'banner' | 'message' = 'none';
   chaosNamesVisible = 0;
+  roundsPlayed = 0;
   private chaosTimeoutIds: number[] = [];
   private chaosNamesIntervalId: number | undefined;
+  private readonly roundsPlayedKey = 'impostor.roundsPlayed';
 
-  constructor(private readonly timerService: GameTimerService) {}
+  constructor(private readonly timerService: GameTimerService) {
+    this.roundsPlayed = this.readRoundsPlayed();
+  }
 
   get isImpostor(): boolean {
     return this.currentSecret?.role === 'impostor';
@@ -319,6 +324,7 @@ export class AppComponent implements OnDestroy {
 
   revealImpostors(): void {
     this.clearRoundTimer();
+    this.incrementRoundsPlayed();
     this.screen = 'reveal';
     this.startChaosReveal();
   }
@@ -358,11 +364,12 @@ export class AppComponent implements OnDestroy {
   }
 
   private setupRound(): void {
+    const chaosChance = this.computeChaosChance();
     const config: RoundConfig = {
       showCategory: this.showCategory,
       showHint: this.showHint,
       hintDifficulty: this.hintDifficulty,
-      chaosChance: this.chaosChance
+      chaosChance
     };
 
     this.roundState = createRoundState({
@@ -372,6 +379,42 @@ export class AppComponent implements OnDestroy {
       config
     });
     this.starterIndex = Math.floor(Math.random() * this.totalPlayers);
+  }
+
+  private computeChaosChance(): number {
+    const chance = this.chaosChanceBase + this.roundsPlayed * this.chaosChanceIncrement;
+    return Math.min(Math.max(chance, 0), 1);
+  }
+
+  private readRoundsPlayed(): number {
+    if (typeof window === 'undefined') {
+      return 0;
+    }
+
+    try {
+      const stored = window.sessionStorage.getItem(this.roundsPlayedKey);
+      const parsed = Number.parseInt(stored ?? '0', 10);
+      return Number.isNaN(parsed) ? 0 : Math.max(0, parsed);
+    } catch {
+      return 0;
+    }
+  }
+
+  private writeRoundsPlayed(value: number): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      window.sessionStorage.setItem(this.roundsPlayedKey, String(value));
+    } catch {
+      // Ignore storage errors (private mode, disabled storage).
+    }
+  }
+
+  private incrementRoundsPlayed(): void {
+    this.roundsPlayed += 1;
+    this.writeRoundsPlayed(this.roundsPlayed);
   }
 
   private startChaosReveal(): void {

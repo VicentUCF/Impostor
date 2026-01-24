@@ -2,8 +2,8 @@
   <section class="o-screen">
     <ng-container [ngSwitch]="screen">
       <div *ngSwitchCase="'intro'" class="o-stack">
-        <p class="c-eyebrow">SILENCIO</p>
-        <h1 class="c-title">IMPOSTOR</h1>
+        <p class="c-eyebrow">El juego del impostor</p>
+        <h1 class="c-title">ALGO NO CUADRA</h1>
         <button class="c-action" type="button" (click)="goToPlayers()">
           INICIAR RONDA
         </button>
@@ -144,7 +144,9 @@
                 (click)="toggleShowHint()"
               >
                 <span class="c-toggle__label">MOSTRAR PISTA</span>
-                <span class="c-toggle__state">{{ showHint ? "SI" : "NO" }}</span>
+                <span class="c-toggle__state">{{
+                  showHint ? "SI" : "NO"
+                }}</span>
               </button>
             </div>
             <ng-container *ngIf="showHint">

@@ -4,8 +4,12 @@
 Introducir un "Modo Caos" con variantes oficiales que se activan aleatoriamente. No se anuncian antes del debate y solo se revelan al final (segun variante).
 
 ## Sistema de activacion
-- Parametro interno: `chaosChance` (0-1).
-- Por ronda: `if random < chaosChance` => activar Modo Caos.
+- Parametros internos:
+  - `chaosChanceBase` (0-1).
+  - `chaosChanceIncrement` (aumento por partida, muy leve).
+- Probabilidad efectiva por ronda:
+  - `chaosChance = clamp(chaosChanceBase + roundsPlayed * chaosChanceIncrement)`
+- `roundsPlayed` se guarda en `sessionStorage` para no perderse al cambiar jugadores o reiniciar partida.
 - Si `chaosChance = 0`, nunca hay Caos.
 
 ## Variantes oficiales y pesos
@@ -141,7 +145,8 @@ Se necesita estado por jugador (secretos individuales) y engine de ronda:
 - El componente solo consulta el secreto del jugador actual.
 
 ### Paso 2 (activar param y activacion aleatoria)
-- Añadir `chaosChance` como parametro interno (sin UI).
+- Añadir `chaosChanceBase` y `chaosChanceIncrement` como parametros internos (sin UI).
+- Guardar `roundsPlayed` en `sessionStorage` y aumentarlo por partida completada.
 - Evaluar `random < chaosChance` al inicio de cada ronda.
 
 ### Paso 3 (variantes Caos)
@@ -153,13 +158,13 @@ Se necesita estado por jugador (secretos individuales) y engine de ronda:
 
 ## Criterios de aceptacion
 - Modo Caos solo se activa si `random < chaosChance`.
-- Activacion global de Caos con probabilidad definida por `chaosChance`.
+- Activacion global de Caos con probabilidad definida por base + incremento.
 - Variantes con pesos definidos.
 - Reveal final solo si aplica.
 - Dos impostores solo con 4+ jugadores.
 
 ## Testing minimo
-- 20+ rondas con chaosChance = 0 => nunca se activa.
-- 30+ rondas con chaosChance = 0.20 => aparece Caos en pocas rondas.
+- 20+ rondas con `chaosChanceBase = 0` y `chaosChanceIncrement = 0` => nunca se activa.
+- 30+ rondas con `chaosChanceBase = 0.20` y `chaosChanceIncrement > 0` => aparece Caos en pocas rondas y aumenta ligeramente con el tiempo.
 - Verificar que "Roles invertidos" no delata Caos al final.
 - Verificar que "2 impostores" solo ocurre con 4+ jugadores.
