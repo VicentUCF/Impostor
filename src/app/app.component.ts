@@ -1,35 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { assignRoles, formatTime, parseBoundedInt } from './utils/game-utils';
+import { GameTimerService } from './services/game-timer.service';
+import { Screen, Role } from './models/game-models';
+import { CategorySource, Difficulty, WordEntry } from './models/word-models';
 import {
-  CategorySource,
-  Difficulty,
-  WordEntry,
   buildCategorySources,
   collectActiveEntries,
   collectAllEntries,
   pickWordEntry
 } from './utils/word-data';
-import { Role, assignRoles, formatTime, parseBoundedInt } from './utils/game-utils';
-
-type Screen =
-  | 'intro'
-  | 'players'
-  | 'names'
-  | 'impostors'
-  | 'config'
-  | 'ready'
-  | 'player-confirm'
-  | 'role-reveal'
-  | 'pass-device'
-  | 'starter'
-  | 'round-live'
-  | 'reveal';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
   title = 'Impostor';
   screen: Screen = 'intro';
 
@@ -59,10 +45,10 @@ export class AppComponent {
 
   roundSeconds = 0;
   canReveal = false;
-  private roundTimerId: number | undefined;
 
   passReady = false;
-  private passTimeoutId: number | undefined;
+
+  constructor(private readonly timerService: GameTimerService) {}
 
   get isImpostor(): boolean {
     return this.roles[this.currentPlayer - 1] === 'impostor';
@@ -275,6 +261,10 @@ export class AppComponent {
     this.screen = 'players';
   }
 
+  ngOnDestroy(): void {
+    this.timerService.clearAll();
+  }
+
   trackByIndex(index: number): number {
     return index;
   }
@@ -298,37 +288,32 @@ export class AppComponent {
   }
 
   private startPassDelay(): void {
-    this.clearPassTimeout();
     this.passReady = false;
-    this.passTimeoutId = window.setTimeout(() => {
+    this.timerService.startPassDelay(400, () => {
       this.passReady = true;
-    }, 400);
+    });
   }
 
   private startRoundTimer(): void {
-    this.clearRoundTimer();
     this.roundSeconds = 0;
     this.canReveal = false;
-    this.roundTimerId = window.setInterval(() => {
-      this.roundSeconds += 1;
-      if (this.roundSeconds >= 10) {
+    this.timerService.startRoundTimer(
+      (seconds) => {
+        this.roundSeconds = seconds;
+      },
+      () => {
         this.canReveal = true;
-      }
-    }, 1000);
+      },
+      10
+    );
   }
 
   private clearPassTimeout(): void {
-    if (this.passTimeoutId !== undefined) {
-      window.clearTimeout(this.passTimeoutId);
-      this.passTimeoutId = undefined;
-    }
+    this.timerService.clearPassDelay();
   }
 
   private clearRoundTimer(): void {
-    if (this.roundTimerId !== undefined) {
-      window.clearInterval(this.roundTimerId);
-      this.roundTimerId = undefined;
-    }
+    this.timerService.clearRoundTimer();
     this.roundSeconds = 0;
     this.canReveal = false;
   }

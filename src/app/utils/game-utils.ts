@@ -1,4 +1,4 @@
-export type Role = 'crew' | 'impostor';
+import { Role } from '../models/game-models';
 
 export const parseBoundedInt = (
   value: string,

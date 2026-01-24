@@ -7,40 +7,15 @@ import peliculasData from '../../db/Peliculas.json';
 import seriesData from '../../db/Series.json';
 import trabajosData from '../../db/Trabajos.json';
 import { randomItem } from './game-utils';
-
-export type Difficulty = 'easy' | 'normal' | 'hard';
-
-interface WordSub {
-  id?: string;
-  easy?: string[];
-  normal?: string[];
-  hard?: string[];
-}
-
-interface WordEntryRaw {
-  category?: string;
-  sub?: WordSub;
-  words?: string[];
-}
-
-interface WordHints {
-  easy: string[];
-  normal: string[];
-  hard: string[];
-}
-
-export interface WordEntry {
-  category: string;
-  hints: WordHints;
-  words: string[];
-}
-
-export interface CategorySource {
-  id: string;
-  label: string;
-  entries: WordEntry[];
-  enabled: boolean;
-}
+import {
+  CategorySource,
+  Difficulty,
+  WordEntry,
+  WordEntryRaw,
+  WordHints,
+  WordSelection,
+  WordSub
+} from '../models/word-models';
 
 const EMPTY_HINT = 'SIN PISTA';
 
@@ -147,7 +122,7 @@ export const collectAllEntries = (sources: CategorySource[]): WordEntry[] =>
 export const pickWordEntry = (
   entries: WordEntry[],
   difficulty: Difficulty
-): { category: string; hint: string; word: string } => {
+): WordSelection => {
   if (entries.length === 0) {
     return { category: '', hint: '', word: '' };
   }
