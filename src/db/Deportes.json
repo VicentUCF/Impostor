@@ -3,7 +3,7 @@
     "category": "Deportes",
     "sub": {
       "id": "deportes_equipo",
-      "easy": ["Equipo", "Balón", "Campo", "Partido"],
+      "easy": ["Tema", "Género", "Campo", "Partido"],
       "normal": ["Colectivo", "Marcador", "Competición", "Turno"],
       "hard": ["Grupo", "Ritmo", "Sistema", "Estructura"]
     },
@@ -70,7 +70,6 @@
     "words": [
       "Portero",
       "Delantero",
-      "Defensa",
       "Centrocampista",
       "Árbitro",
       "Capitán",
@@ -87,8 +86,6 @@
       "hard": ["Objetivo", "Presión", "Expectativa", "Balance"]
     },
     "words": [
-      "Gol",
-      "Punto",
       "Récord",
       "Empate",
       "Derrota",
@@ -120,7 +117,7 @@
     "category": "Deportes",
     "sub": {
       "id": "material",
-      "easy": ["Material", "Equipo", "Objeto", "Uso"],
+      "easy": ["Lugar", "Acción", "Grupo", "Uso"],
       "normal": ["Herramienta", "Protección", "Accesorio", "Elemento"],
       "hard": ["Soporte", "Recurso", "Carga", "Medio"]
     },
@@ -143,15 +140,6 @@
       "normal": ["Resistencia", "Equilibrio", "Concentración", "Control"],
       "hard": ["Gestión", "Templanza", "Confianza", "Enfoque"]
     },
-    "words": [
-      "Fuerza",
-      "Velocidad",
-      "Resistencia",
-      "Agilidad",
-      "Reflejos",
-      "Concentración",
-      "Fatiga",
-      "Recuperación"
-    ]
+    "words": ["Agilidad", "Reflejos", "Fatiga", "Recuperación"]
   }
 ]

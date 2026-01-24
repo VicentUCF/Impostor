@@ -22,19 +22,11 @@
     "category": "Juegos",
     "sub": {
       "id": "cartas",
-      "easy": ["Cartas", "Baraja", "Mano", "Ronda"],
+      "easy": ["Tema", "Baraja", "Mano", "Ronda"],
       "normal": ["Apuesta", "Combinación", "Turno", "Orden"],
       "hard": ["Lectura", "Probabilidad", "Decisión", "Gestión"]
     },
-    "words": [
-      "Póker",
-      "Mus",
-      "Blackjack",
-      "Brisca",
-      "Tute",
-      "Solitario",
-      "UNO"
-    ]
+    "words": ["Póker", "Mus", "Blackjack", "Brisca", "Tute", "Solitario", "UNO"]
   },
   {
     "category": "Juegos",
@@ -92,7 +84,7 @@
     "category": "Juegos",
     "sub": {
       "id": "party_social",
-      "easy": ["Grupo", "Risas", "Turno", "Juego"],
+      "easy": ["Grupo", "Risas", "Turno", "Objeto"],
       "normal": ["Interacción", "Caos", "Dinámica", "Ritmo"],
       "hard": ["Comportamiento", "Observación", "Engaño", "Lectura"]
     },
@@ -110,18 +102,11 @@
     "category": "Juegos",
     "sub": {
       "id": "puzzles_logica",
-      "easy": ["Puzzle", "Piezas", "Forma", "Orden"],
+      "easy": ["Lugar", "Piezas", "Forma", "Orden"],
       "normal": ["Patrón", "Secuencia", "Lógica", "Resolución"],
       "hard": ["Abstracción", "Relación", "Modelo", "Estructura"]
     },
-    "words": [
-      "Sudoku",
-      "Tetris",
-      "Rubik",
-      "Puzzle",
-      "Nonograma",
-      "Kakuro"
-    ]
+    "words": ["Sudoku", "Tetris", "Rubik", "Puzzle", "Nonograma", "Kakuro"]
   },
   {
     "category": "Juegos",
@@ -131,13 +116,6 @@
       "normal": ["Competición", "Control", "Simulación", "Resultado"],
       "hard": ["Ritmo", "Ejecución", "Precisión", "Flujo"]
     },
-    "words": [
-      "FIFA",
-      "NBA 2K",
-      "PES",
-      "Gran Turismo",
-      "Forza",
-      "Mario Kart"
-    ]
+    "words": ["FIFA", "NBA 2K", "PES", "Gran Turismo", "Forza", "Mario Kart"]
   }
 ]

@@ -3,8 +3,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "terror",
-      "easy": ["Terror", "Miedo", "Sustos", "Oscuridad"],
-      "normal": ["Terror", "Sombra", "Tensión", "Silencio"],
+      "easy": ["Terror", "Miedo", "Sustos", "Lugar"],
+      "normal": ["Tema", "Entorno", "Dinámica", "Contexto"],
       "hard": ["Ambiente", "Noche", "Ruido", "Límite"]
     },
     "words": [
@@ -34,8 +34,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "hotel",
-      "easy": ["Hotel", "Recepción", "Habitación", "Ascensor"],
-      "normal": ["Hotel", "Alojamiento", "Pasillo", "Llave"],
+      "easy": ["Hotel", "Tema", "Lugar", "Objeto"],
+      "normal": ["Entorno", "Dinámica", "Contexto", "Función"],
       "hard": ["Lugar", "Puerta", "Entrada", "Estancia"]
     },
     "words": [
@@ -64,8 +64,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "clinica",
-      "easy": ["Clínica", "Hospital", "Paciente", "Jeringa"],
-      "normal": ["Clínica", "Tratamiento", "Expediente", "Bata"],
+      "easy": ["Tema", "Lugar", "Grupo", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
       "hard": ["Salud", "Sala", "Control", "Pulso"]
     },
     "words": [
@@ -95,9 +95,9 @@
     "category": "Escape Room",
     "sub": {
       "id": "thriller",
-      "easy": ["Asesino", "Trampa", "Prueba", "Tiempo"],
-      "normal": ["Caso", "Pista", "Amenaza", "Máscara"],
-      "hard": ["Riesgo", "Señal", "Huella", "Duda"]
+      "easy": ["Tema", "Acción", "Objeto", "Lugar"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
+      "hard": ["Riesgo", "Proceso", "Estructura", "Percepción"]
     },
     "words": [
       "SAW",
@@ -125,8 +125,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "mitologia",
-      "easy": ["Mitología", "Barca", "Río", "Tumba"],
-      "normal": ["Caronte", "Moneda", "Cripta", "Oráculo"],
+      "easy": ["Mitología", "Tema", "Lugar", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Mito", "Paso", "Rito", "Umbral"]
     },
     "words": [
@@ -153,9 +153,9 @@
     "category": "Escape Room",
     "sub": {
       "id": "espiritus",
-      "easy": ["Fantasma", "Ouija", "Ritual", "Vela"],
-      "normal": ["Espíritu", "Sombra", "Médium", "Sal"],
-      "hard": ["Señal", "Frío", "Ruido", "Presencia"]
+      "easy": ["Fantasma", "Tema", "Acción", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
+      "hard": ["Proceso", "Percepción", "Tensión", "Presencia"]
     },
     "words": [
       "Fantasmas",
@@ -180,9 +180,9 @@
     "category": "Escape Room",
     "sub": {
       "id": "prision",
-      "easy": ["Prisión", "Celda", "Rejas", "Fuga"],
-      "normal": ["Encierro", "Candado", "Vigilante", "Plano"],
-      "hard": ["Salida", "Norma", "Turno", "Control"]
+      "easy": ["Prisión", "Lugar", "Objeto", "Acción"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
+      "hard": ["Proceso", "Norma", "Turno", "Control"]
     },
     "words": [
       "El secreto de Alcatraz",
@@ -207,8 +207,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "ciencia",
-      "easy": ["Laboratorio", "Virus", "Vacuna", "Experimento"],
-      "normal": ["Muestra", "Reactivo", "Antídoto", "Contención"],
+      "easy": ["Tema", "Lugar", "Objeto", "Acción"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Prueba", "Cambio", "Dato", "Proceso"]
     },
     "words": [
@@ -234,8 +234,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "espacio",
-      "easy": ["Espacio", "Nave", "Oxígeno", "Láser"],
-      "normal": ["Estación", "Radar", "Señal", "Coordenadas"],
+      "easy": ["Espacio", "Tema", "Lugar", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Distancia", "Vacío", "Pulso", "Órbita"]
     },
     "words": [
@@ -261,9 +261,9 @@
     "category": "Escape Room",
     "sub": {
       "id": "portales",
-      "easy": ["Portal", "Dimensión", "Umbral", "Pasadizo"],
-      "normal": ["Runas", "Sello", "Vórtice", "Anomalía"],
-      "hard": ["Paso", "Cambio", "Eco", "Grieta"]
+      "easy": ["Portal", "Tema", "Lugar", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
+      "hard": ["Paso", "Cambio", "Estructura", "Percepción"]
     },
     "words": [
       "Portales",
@@ -288,9 +288,9 @@
     "category": "Escape Room",
     "sub": {
       "id": "fantasia",
-      "easy": ["Magia", "Dragón", "Hechizo", "Poción"],
-      "normal": ["Varita", "Grimorio", "Amuleto", "Encanto"],
-      "hard": ["Mito", "Poder", "Sello", "Runa"]
+      "easy": ["Magia", "Tema", "Acción", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
+      "hard": ["Mito", "Poder", "Estructura", "Percepción"]
     },
     "words": [
       "Las maravillas de Alicia",
@@ -314,9 +314,9 @@
     "category": "Escape Room",
     "sub": {
       "id": "aventura",
-      "easy": ["Aventura", "Tesoro", "Mapa", "Templo"],
-      "normal": ["Reliquia", "Ruinas", "Ídolo", "Expedición"],
-      "hard": ["Ruta", "Pista", "Viaje", "Hallazgo"]
+      "easy": ["Aventura", "Tema", "Lugar", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
+      "hard": ["Ruta", "Proceso", "Viaje", "Hallazgo"]
     },
     "words": [
       "El tesoro del Jaguar",
@@ -340,8 +340,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "misterio",
-      "easy": ["Misterio", "Pista", "Enigma", "Clave"],
-      "normal": ["Deducción", "Archivo", "Sello", "Mensaje"],
+      "easy": ["Misterio", "Tema", "Acción", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Detalle", "Indicio", "Orden", "Signo"]
     },
     "words": [
@@ -365,8 +365,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "comedia",
-      "easy": ["Comedia", "Parodia", "Broma", "Caos"],
-      "normal": ["Disfraz", "Guion", "Actor", "Cámara"],
+      "easy": ["Comedia", "Tema", "Acción", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Giro", "Ruido", "Risa", "Escena"]
     },
     "words": [
@@ -389,8 +389,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "mecanica",
-      "easy": ["Candado", "Llave", "Palanca", "Botón"],
-      "normal": ["Engranaje", "Sensor", "Interruptor", "Panel"],
+      "easy": ["Tema", "Lugar", "Acción", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Mecanismo", "Contacto", "Pieza", "Ajuste"]
     },
     "words": [
@@ -417,8 +417,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "codigos",
-      "easy": ["Código", "Clave", "Número", "Patrón"],
-      "normal": ["Secuencia", "Cifrado", "Matriz", "Símbolo"],
+      "easy": ["Tema", "Lugar", "Acción", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Orden", "Regla", "Serie", "Forma"]
     },
     "words": [
@@ -441,8 +441,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "atrezzo",
-      "easy": ["Atrezzo", "Máscara", "Radio", "Teléfono"],
-      "normal": ["Maletín", "Armario", "Cuadro", "Espejo"],
+      "easy": ["Atrezzo", "Tema", "Acción", "Objeto"],
+      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
       "hard": ["Objeto", "Detalle", "Pieza", "Cosa"]
     },
     "words": [
@@ -466,8 +466,8 @@
     "category": "Escape Room",
     "sub": {
       "id": "tiempo",
-      "easy": ["Tiempo", "Alarma", "Cronómetro", "Cuenta"],
-      "normal": ["Prisa", "Presión", "Límite", "Urgencia"],
+      "easy": ["Tiempo", "Tema", "Objeto", "Cuenta"],
+      "normal": ["Contexto", "Presión", "Límite", "Urgencia"],
       "hard": ["Ritmo", "Pulso", "Momento", "Tramo"]
     },
     "words": [

@@ -115,14 +115,7 @@
       "normal": ["Conducción", "Trayecto", "Servicio", "Movimiento"],
       "hard": ["Dirección", "Logística", "Flujo", "Recorrido"]
     },
-    "words": [
-      "Conductor",
-      "Piloto",
-      "Maquinista",
-      "Repartidor",
-      "Mensajero",
-      "Transportista"
-    ]
+    "words": ["Conductor", "Piloto", "Maquinista", "Mensajero", "Transportista"]
   },
   {
     "category": "Trabajos",
@@ -150,14 +143,7 @@
       "normal": ["Gestión", "Organización", "Planificación", "Dirección"],
       "hard": ["Estrategia", "Decisión", "Liderazgo", "Responsabilidad"]
     },
-    "words": [
-      "Gerente",
-      "Director",
-      "Administrador",
-      "Supervisor",
-      "Coordinador",
-      "Responsable"
-    ]
+    "words": ["Gerente", "Director", "Supervisor", "Coordinador", "Responsable"]
   },
   {
     "category": "Trabajos",

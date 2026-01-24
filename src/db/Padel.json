@@ -3,8 +3,8 @@
     "category": "Padel",
     "sub": {
       "id": "golpes_fondo",
-      "easy": ["Base", "Rally", "Fondo", "Pelota"],
-      "normal": ["Cadencia", "Altura", "Dirección", "Efecto"],
+      "easy": ["Base", "Rally", "Fondo", "Objeto"],
+      "normal": ["Cadencia", "Contexto", "Dirección", "Efecto"],
       "hard": ["Margen", "Tacto", "Templanza", "Gestión"]
     },
     "words": [
@@ -24,8 +24,8 @@
     "category": "Padel",
     "sub": {
       "id": "golpes_red",
-      "easy": ["Cierre", "Final", "Punto", "Arriba"],
-      "normal": ["Timing", "Dirección", "Tacto", "Ángulo"],
+      "easy": ["Cierre", "Final", "Lugar", "Arriba"],
+      "normal": ["Ritmo", "Dirección", "Entorno", "Función"],
       "hard": ["Lectura", "Intención", "Instinto", "Ejecución"]
     },
     "words": [
@@ -44,8 +44,8 @@
     "category": "Padel",
     "sub": {
       "id": "paredes",
-      "easy": ["Rebote", "Vidrio", "Salida", "Rincón"],
-      "normal": ["Cálculo", "Trayectoria", "Altura", "Tiempo"],
+      "easy": ["Acción", "Vidrio", "Tema", "Rincón"],
+      "normal": ["Cálculo", "Trayectoria", "Ritmo", "Estilo"],
       "hard": ["Anticipación", "Reacción", "Lectura", "Ajuste"]
     },
     "words": [
@@ -64,8 +64,8 @@
     "sub": {
       "id": "situaciones_juego",
       "easy": ["Fase", "Turno", "Momento", "Zona"],
-      "normal": ["Cambio", "Dinámica", "Balance", "Desorden"],
-      "hard": ["Riesgo", "Paciencia", "Decisión", "Lectura"]
+      "normal": ["Entorno", "Dinámica", "Balance", "Desorden"],
+      "hard": ["Proceso", "Percepción", "Decisión", "Lectura"]
     },
     "words": [
       "Defensa",
@@ -82,9 +82,9 @@
     "category": "Padel",
     "sub": {
       "id": "errores_comunes",
-      "easy": ["Fallo", "Descontrol", "Prisa", "Nervios"],
-      "normal": ["Desorden", "Impulso", "Duda", "Tensión"],
-      "hard": ["Ansiedad", "Bloqueo", "Inercia", "Desconexión"]
+      "easy": ["Acción", "Descontrol", "Prisa", "Nervios"],
+      "normal": ["Desorden", "Impulso", "Contexto", "Tensión"],
+      "hard": ["Tensión", "Modelo", "Inercia", "Desconexión"]
     },
     "words": [
       "Fallo",
@@ -101,7 +101,7 @@
     "category": "Padel",
     "sub": {
       "id": "tactica",
-      "easy": ["Plan", "Pareja", "Espacio", "Orden"],
+      "easy": ["Plan", "Grupo", "Objeto", "Lugar"],
       "normal": ["Cobertura", "Sistema", "Ajuste", "Lectura"],
       "hard": ["Adaptación", "Intención", "Estrategia", "Control"]
     },
@@ -120,9 +120,9 @@
     "category": "Padel",
     "sub": {
       "id": "fisico_mental",
-      "easy": ["Pulso", "Aire", "Piernas", "Foco"],
-      "normal": ["Resistencia", "Equilibrio", "Gestión", "Calma"],
-      "hard": ["Cabeza", "Templanza", "Confianza", "Rutina"]
+      "easy": ["Pulso", "Aire", "Piernas", "Objeto"],
+      "normal": ["Resistencia", "Equilibrio", "Entorno", "Calma"],
+      "hard": ["Cabeza", "Templanza", "Estructura", "Rutina"]
     },
     "words": [
       "Cansancio",
