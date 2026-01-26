@@ -1,5 +1,15 @@
 /* Settings */
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Space Grotesk";
+  src:
+    url("/assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.woff2")
+      format("woff2"),
+    url("/assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf")
+      format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --color-bg: #000000;
