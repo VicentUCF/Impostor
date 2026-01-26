@@ -9,6 +9,13 @@ import {
 } from './utils/word-data';
 import { createRoundState } from './utils/game-engine';
 
+interface SavedConfig {
+  showCategory?: boolean;
+  showHint?: boolean;
+  hintDifficulty?: Difficulty;
+  categoryEnabled?: Record<string, boolean>;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -59,9 +66,16 @@ export class AppComponent implements OnDestroy {
   private normalTimeoutIds: number[] = [];
   private roleRevealTimeoutId: number | undefined;
   private readonly roundsPlayedKey = 'impostor.roundsPlayed';
+  private readonly configStorageKey = 'impostor.config';
+  private readonly totalPlayersKey = 'impostor.totalPlayers';
+  private readonly impostorsKey = 'impostor.impostors';
+  private readonly playerNamesKey = 'impostor.playerNames';
 
   constructor(private readonly timerService: GameTimerService) {
     this.roundsPlayed = this.readRoundsPlayed();
+    this.loadSavedPlayerCounts();
+    this.loadSavedPlayerNames();
+    this.loadSavedConfig();
   }
 
   get isImpostor(): boolean {
@@ -305,11 +319,15 @@ export class AppComponent implements OnDestroy {
       { length: this.totalPlayers },
       (_, index) => this.playerNames[index] || ''
     );
+    this.persistPlayerNames();
+    this.persistPlayerCounts();
+    this.persistConfig();
     this.screen = 'names';
   }
 
   updateName(index: number, value: string): void {
     this.playerNames[index] = value;
+    this.persistPlayerNames();
   }
 
   confirmNames(): void {
@@ -330,6 +348,8 @@ export class AppComponent implements OnDestroy {
     this.impostors = parsed;
     this.impostorsInput = String(parsed);
 
+    this.persistPlayerCounts();
+    this.persistConfig();
     this.screen = 'config';
   }
 
@@ -339,14 +359,17 @@ export class AppComponent implements OnDestroy {
 
   toggleShowCategory(): void {
     this.showCategory = !this.showCategory;
+    this.persistConfig();
   }
 
   toggleShowHint(): void {
     this.showHint = !this.showHint;
+    this.persistConfig();
   }
 
   setHintDifficulty(difficulty: Difficulty): void {
     this.hintDifficulty = difficulty;
+    this.persistConfig();
   }
 
   toggleCategory(source: CategorySource): void {
@@ -355,6 +378,7 @@ export class AppComponent implements OnDestroy {
     }
 
     source.enabled = !source.enabled;
+    this.persistConfig();
   }
 
   confirmConfig(): void {
@@ -363,6 +387,7 @@ export class AppComponent implements OnDestroy {
     }
 
     this.setupRound();
+    this.persistConfig();
     this.screen = 'ready';
   }
 
@@ -430,6 +455,7 @@ export class AppComponent implements OnDestroy {
     this.clearRoleReveal();
     this.currentPlayer = 1;
     this.playerNames = [];
+    this.clearSavedPlayerNames();
     this.roundState = null;
     this.screen = 'players';
   }
@@ -501,6 +527,194 @@ export class AppComponent implements OnDestroy {
   private incrementRoundsPlayed(): void {
     this.roundsPlayed += 1;
     this.writeRoundsPlayed(this.roundsPlayed);
+  }
+
+  private loadSavedConfig(): void {
+    const saved = this.readSavedConfig();
+    if (!saved) {
+      return;
+    }
+
+    if (typeof saved.showCategory === 'boolean') {
+      this.showCategory = saved.showCategory;
+    }
+
+    if (typeof saved.showHint === 'boolean') {
+      this.showHint = saved.showHint;
+    }
+
+    if (saved.hintDifficulty === 'easy' || saved.hintDifficulty === 'normal' || saved.hintDifficulty === 'hard') {
+      this.hintDifficulty = saved.hintDifficulty;
+    }
+
+    if (saved.categoryEnabled && typeof saved.categoryEnabled === 'object') {
+      this.categorySources = this.categorySources.map((source) => {
+        const enabled = saved.categoryEnabled?.[source.id];
+        if (typeof enabled === 'boolean' && source.entries.length > 0) {
+          return { ...source, enabled };
+        }
+
+        return source;
+      });
+    }
+  }
+
+  private persistConfig(): void {
+    const payload: SavedConfig = {
+      showCategory: this.showCategory,
+      showHint: this.showHint,
+      hintDifficulty: this.hintDifficulty,
+      categoryEnabled: this.categorySources.reduce<Record<string, boolean>>((acc, source) => {
+        acc[source.id] = source.enabled;
+        return acc;
+      }, {})
+    };
+
+    this.writeSavedConfig(payload);
+  }
+
+  private loadSavedPlayerCounts(): void {
+    const storedPlayers = this.readSessionValue(this.totalPlayersKey);
+    if (storedPlayers !== null) {
+      const parsedPlayers = parseBoundedInt(
+        storedPlayers,
+        this.minPlayers,
+        this.maxPlayers,
+        this.totalPlayers
+      );
+      this.totalPlayers = parsedPlayers;
+      this.totalPlayersInput = String(parsedPlayers);
+    }
+
+    const storedImpostors = this.readSessionValue(this.impostorsKey);
+    if (storedImpostors !== null) {
+      const parsedImpostors = parseBoundedInt(
+        storedImpostors,
+        1,
+        this.maxImpostors,
+        this.impostors
+      );
+      this.impostors = parsedImpostors;
+      this.impostorsInput = String(parsedImpostors);
+    }
+  }
+
+  private persistPlayerCounts(): void {
+    this.writeSessionValue(this.totalPlayersKey, this.totalPlayers);
+    this.writeSessionValue(this.impostorsKey, this.impostors);
+  }
+
+  private loadSavedPlayerNames(): void {
+    const stored = this.readSessionJson(this.playerNamesKey);
+    if (!Array.isArray(stored)) {
+      return;
+    }
+
+    const names = stored.filter((entry): entry is string => typeof entry === 'string');
+    if (names.length === 0) {
+      return;
+    }
+
+    this.playerNames = Array.from(
+      { length: this.totalPlayers },
+      (_, index) => names[index] ?? ''
+    );
+  }
+
+  private persistPlayerNames(): void {
+    this.writeSessionJson(this.playerNamesKey, this.playerNames);
+  }
+
+  private clearSavedPlayerNames(): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      window.sessionStorage.removeItem(this.playerNamesKey);
+    } catch {
+      // Ignore storage errors.
+    }
+  }
+
+  private readSessionJson(key: string): unknown {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+
+    try {
+      const stored = window.sessionStorage.getItem(key);
+      if (!stored) {
+        return null;
+      }
+      return JSON.parse(stored);
+    } catch {
+      return null;
+    }
+  }
+
+  private writeSessionJson(key: string, value: unknown): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      window.sessionStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      // Ignore storage errors.
+    }
+  }
+
+  private readSessionValue(key: string): string | null {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+
+    try {
+      return window.sessionStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  }
+
+  private writeSessionValue(key: string, value: number): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      window.sessionStorage.setItem(key, String(value));
+    } catch {
+      // Ignore storage errors.
+    }
+  }
+
+  private readSavedConfig(): SavedConfig | null {
+    if (typeof window === 'undefined') {
+      return null;
+    }
+
+    try {
+      const stored = window.localStorage.getItem(this.configStorageKey);
+      if (!stored) {
+        return null;
+      }
+      return JSON.parse(stored) as SavedConfig;
+    } catch {
+      return null;
+    }
+  }
+
+  private writeSavedConfig(config: SavedConfig): void {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    try {
+      window.localStorage.setItem(this.configStorageKey, JSON.stringify(config));
+    } catch {
+      // Ignore storage errors.
+    }
   }
 
   private startChaosReveal(): void {
