@@ -48,15 +48,16 @@ export class AppComponent implements OnDestroy {
   roundSeconds = 0;
   canReveal = false;
 
-  passReady = false;
   chaosRevealStage: 'none' | 'fake' | 'pause' | 'glitch' | 'reveal' | 'detail' | 'final' =
     'none';
   chaosNamesVisible = 0;
   normalRevealStage: 'none' | 'prep' | 'pause' | 'reveal' | 'transition' | 'final' = 'none';
+  roleRevealPending = false;
   roundsPlayed = 0;
   private chaosTimeoutIds: number[] = [];
   private chaosNamesIntervalId: number | undefined;
   private normalTimeoutIds: number[] = [];
+  private roleRevealTimeoutId: number | undefined;
   private readonly roundsPlayedKey = 'impostor.roundsPlayed';
 
   constructor(private readonly timerService: GameTimerService) {
@@ -366,13 +367,21 @@ export class AppComponent implements OnDestroy {
   }
 
   startRoles(): void {
-    this.passReady = false;
+    this.clearRoleReveal();
     this.currentPlayer = 1;
     this.screen = 'player-confirm';
   }
 
-  revealRole(): void {
-    this.screen = 'role-reveal';
+  startRoleReveal(): void {
+    if (this.roleRevealPending) {
+      return;
+    }
+
+    this.clearRoleReveal();
+    this.roleRevealPending = true;
+    this.roleRevealTimeoutId = window.setTimeout(() => {
+      this.revealRole();
+    }, 240);
   }
 
   hideRole(): void {
@@ -383,24 +392,6 @@ export class AppComponent implements OnDestroy {
     }
 
     this.clearPassTimeout();
-    this.passReady = false;
-    this.screen = 'starter';
-  }
-
-  continueAfterPass(): void {
-    if (!this.passReady) {
-      return;
-    }
-
-    this.clearPassTimeout();
-    this.passReady = false;
-
-    if (this.currentPlayer < this.totalPlayers) {
-      this.currentPlayer += 1;
-      this.screen = 'player-confirm';
-      return;
-    }
-
     this.screen = 'starter';
   }
 
@@ -425,7 +416,7 @@ export class AppComponent implements OnDestroy {
     this.clearRoundTimer();
     this.clearChaosReveal();
     this.clearNormalReveal();
-    this.passReady = false;
+    this.clearRoleReveal();
     this.currentPlayer = 1;
     this.setupRound();
     this.screen = 'ready';
@@ -436,7 +427,7 @@ export class AppComponent implements OnDestroy {
     this.clearRoundTimer();
     this.clearChaosReveal();
     this.clearNormalReveal();
-    this.passReady = false;
+    this.clearRoleReveal();
     this.currentPlayer = 1;
     this.playerNames = [];
     this.roundState = null;
@@ -447,6 +438,7 @@ export class AppComponent implements OnDestroy {
     this.timerService.clearAll();
     this.clearChaosReveal();
     this.clearNormalReveal();
+    this.clearRoleReveal();
   }
 
   trackByIndex(index: number): number {
@@ -629,6 +621,20 @@ export class AppComponent implements OnDestroy {
     this.normalRevealStage = 'none';
   }
 
+  private revealRole(): void {
+    this.clearRoleReveal();
+    this.screen = 'role-reveal';
+  }
+
+  private clearRoleReveal(): void {
+    if (this.roleRevealTimeoutId !== undefined) {
+      window.clearTimeout(this.roleRevealTimeoutId);
+      this.roleRevealTimeoutId = undefined;
+    }
+
+    this.roleRevealPending = false;
+  }
+
   private triggerVibration(pattern: number | number[]): void {
     if (typeof navigator === 'undefined' || !('vibrate' in navigator)) {
       return;
@@ -642,10 +648,21 @@ export class AppComponent implements OnDestroy {
   }
 
   private startPassDelay(): void {
-    this.passReady = false;
-    this.timerService.startPassDelay(400, () => {
-      this.passReady = true;
+    this.timerService.startPassDelay(700, () => {
+      this.advanceAfterPass();
     });
+  }
+
+  private advanceAfterPass(): void {
+    this.clearPassTimeout();
+
+    if (this.currentPlayer < this.totalPlayers) {
+      this.currentPlayer += 1;
+      this.screen = 'player-confirm';
+      return;
+    }
+
+    this.screen = 'starter';
   }
 
   private startRoundTimer(): void {

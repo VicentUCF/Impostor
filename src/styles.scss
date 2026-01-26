@@ -152,6 +152,43 @@
   }
 }
 
+@keyframes pass-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-bump {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes reveal-flash {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
 /* Generic */
 *,
 *::before,
@@ -311,6 +348,11 @@ input[type="number"] {
   color: var(--color-informante);
 }
 
+.c-role--glitch {
+  display: inline-block;
+  animation: chaos-glitch 300ms linear;
+}
+
 .c-field {
   width: 100%;
   display: flex;
@@ -387,6 +429,27 @@ input[type="number"] {
   border-color: var(--color-border);
   box-shadow: none;
   filter: none;
+}
+
+.c-action--reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-action--reveal::after {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.35), transparent 60%);
+  opacity: 0;
+}
+
+.c-action--reveal.c-action--reveal-active {
+  animation: reveal-bump 240ms ease-out;
+}
+
+.c-action--reveal.c-action--reveal-active::after {
+  animation: reveal-flash 240ms ease-out;
 }
 
 .c-action--delay {
@@ -735,6 +798,14 @@ input[type="number"] {
   color: var(--color-text);
 }
 
+.c-pass-device .c-eyebrow {
+  animation: pass-in 200ms ease-out;
+}
+
+.c-pass-device .c-pass-name {
+  animation: pass-in 200ms ease-out 80ms both;
+}
+
 .c-timer {
   width: 100%;
   padding: var(--space-3) var(--space-4);
@@ -864,10 +935,16 @@ input[type="number"] {
   .c-chaos-seq__headline,
   .c-chaos-seq__message,
   .c-chaos-seq__closure,
+  .c-chaos-seq__name,
+  .c-role--glitch,
   .c-normal-reveal__name,
   .c-normal-reveal__closure,
   .c-normal-reveal--fade,
-  .c-normal-final {
+  .c-normal-final,
+  .c-pass-device .c-eyebrow,
+  .c-pass-device .c-pass-name,
+  .c-action--reveal.c-action--reveal-active,
+  .c-action--reveal.c-action--reveal-active::after {
     animation: none;
   }
 }

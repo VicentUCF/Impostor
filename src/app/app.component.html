@@ -275,7 +275,13 @@
           JUGADOR {{ currentPlayer }} DE {{ totalPlayers }}
         </p>
         <p class="c-note">SOLO TU DEBES MIRAR</p>
-        <button class="c-action" type="button" (click)="revealRole()">
+        <button
+          class="c-action c-action--reveal"
+          type="button"
+          [class.c-action--reveal-active]="roleRevealPending"
+          [disabled]="roleRevealPending"
+          (click)="startRoleReveal()"
+        >
           REVELAR ROL
         </button>
       </div>
@@ -286,6 +292,7 @@
           class="c-role"
           [class.c-role--impostor]="isImpostor"
           [class.c-role--informante]="!isImpostor"
+          [class.c-role--glitch]="isImpostor"
         >
           {{ isImpostor ? "IMPOSTOR" : "INFORMANTE" }}
         </h1>
@@ -309,18 +316,9 @@
         </button>
       </div>
 
-      <div *ngSwitchCase="'pass-device'" class="o-stack o-stack--instant">
+      <div *ngSwitchCase="'pass-device'" class="o-stack o-stack--instant c-pass-device">
         <p class="c-eyebrow">PASA EL MOVIL</p>
         <p class="c-pass-name">A {{ nextPlayerName }}</p>
-        <button
-          class="c-action c-action--delay"
-          type="button"
-          [class.c-action--ready]="passReady"
-          [disabled]="!passReady"
-          (click)="continueAfterPass()"
-        >
-          CONTINUAR
-        </button>
       </div>
 
       <div *ngSwitchCase="'starter'" class="o-stack">
