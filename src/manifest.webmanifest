@@ -25,13 +25,13 @@
   "screenshots": [
     {
       "src": "assets/screenshots/screen-mobile.png",
-      "sizes": "1080x1920",
+      "sizes": "2160x3840",
       "type": "image/png",
       "label": "Vista mobile"
     },
     {
       "src": "assets/screenshots/screen-wide.png",
-      "sizes": "1920x1080",
+      "sizes": "3840x2160",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Vista wide"
