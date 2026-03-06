@@ -1,150 +1,674 @@
 [
   {
+    "id": "apple",
     "category": "Marcas",
-    "sub": {
-      "id": "tecnologia",
-      "easy": ["Tecnología", "Electrónica", "Digital", "Dispositivo"],
-      "normal": ["Innovación", "Sistema", "Plataforma", "Producto"],
-      "hard": ["Ecosistema", "Integración", "Arquitectura", "Experiencia"]
-    },
-    "words": [
-      "Apple",
+    "subcategory": "Tecnología",
+    "word": "Apple",
+    "similarWords": [
       "Samsung",
-      "Google",
       "Microsoft",
-      "Sony",
-      "Huawei",
-      "Xiaomi",
-      "LG"
-    ]
+      "Google"
+    ],
+    "hints": {
+      "easy": [
+        "iPhone",
+        "Mac",
+        "Manzana"
+      ],
+      "normal": [
+        "iOS",
+        "AirPods",
+        "AppStore"
+      ],
+      "hard": [
+        "Aluminio",
+        "Minimalismo",
+        "Keynote"
+      ]
+    }
   },
   {
+    "id": "samsung",
     "category": "Marcas",
-    "sub": {
-      "id": "moda",
-      "easy": ["Ropa", "Moda", "Estilo", "Diseño"],
-      "normal": ["Colección", "Tendencia", "Marca", "Imagen"],
-      "hard": ["Identidad", "Estética", "Posicionamiento", "Firma"]
-    },
-    "words": [
-      "Nike",
+    "subcategory": "Tecnología",
+    "word": "Samsung",
+    "similarWords": [
+      "Apple",
+      "Xiaomi",
+      "Huawei"
+    ],
+    "hints": {
+      "easy": [
+        "Galaxy",
+        "Android",
+        "Pantalla"
+      ],
+      "normal": [
+        "OLED",
+        "Corea",
+        "Fold"
+      ],
+      "hard": [
+        "Pen",
+        "Curvo",
+        "Ultra"
+      ]
+    }
+  },
+  {
+    "id": "google",
+    "category": "Marcas",
+    "subcategory": "Tecnología",
+    "word": "Google",
+    "similarWords": [
+      "Microsoft",
+      "Apple",
+      "Amazon"
+    ],
+    "hints": {
+      "easy": [
+        "Buscador",
+        "Internet",
+        "Logo"
+      ],
+      "normal": [
+        "Gmail",
+        "Maps",
+        "Android"
+      ],
+      "hard": [
+        "Algoritmo",
+        "Resultados",
+        "Indexar"
+      ]
+    }
+  },
+  {
+    "id": "microsoft",
+    "category": "Marcas",
+    "subcategory": "Tecnología",
+    "word": "Microsoft",
+    "similarWords": [
+      "Apple",
+      "Google",
+      "Sony"
+    ],
+    "hints": {
+      "easy": [
+        "Windows",
+        "PC",
+        "Office"
+      ],
+      "normal": [
+        "Excel",
+        "Teams",
+        "Azure"
+      ],
+      "hard": [
+        "Corporativo",
+        "Licencia",
+        "Sistema"
+      ]
+    }
+  },
+  {
+    "id": "sony",
+    "category": "Marcas",
+    "subcategory": "Tecnología",
+    "word": "Sony",
+    "similarWords": [
+      "Nintendo",
+      "Samsung",
+      "Microsoft"
+    ],
+    "hints": {
+      "easy": [
+        "PlayStation",
+        "Consola",
+        "Mandos"
+      ],
+      "normal": [
+        "Cámara",
+        "Auriculares",
+        "Japón"
+      ],
+      "hard": [
+        "Sensor",
+        "Entretenimiento",
+        "Estudio"
+      ]
+    }
+  },
+  {
+    "id": "huawei",
+    "category": "Marcas",
+    "subcategory": "Tecnología",
+    "word": "Huawei",
+    "similarWords": [
+      "Xiaomi",
+      "Samsung",
+      "Apple"
+    ],
+    "hints": {
+      "easy": [
+        "Móvil",
+        "China",
+        "Cámara"
+      ],
+      "normal": [
+        "Harmony",
+        "Telecom",
+        "Redes"
+      ],
+      "hard": [
+        "Restricción",
+        "Chip",
+        "Infraestructura"
+      ]
+    }
+  },
+  {
+    "id": "xiaomi",
+    "category": "Marcas",
+    "subcategory": "Tecnología",
+    "word": "Xiaomi",
+    "similarWords": [
+      "Huawei",
+      "Samsung",
+      "Apple"
+    ],
+    "hints": {
+      "easy": [
+        "Móvil",
+        "China",
+        "Precio"
+      ],
+      "normal": [
+        "MIUI",
+        "Patinete",
+        "Gadgets"
+      ],
+      "hard": [
+        "Ecosistema",
+        "Hogar",
+        "Barato"
+      ]
+    }
+  },
+  {
+    "id": "lg",
+    "category": "Marcas",
+    "subcategory": "Tecnología",
+    "word": "LG",
+    "similarWords": [
+      "Samsung",
+      "Sony",
+      "Huawei"
+    ],
+    "hints": {
+      "easy": [
+        "Televisor",
+        "Pantalla",
+        "Electrodoméstico"
+      ],
+      "normal": [
+        "OLED",
+        "Corea",
+        "Panel"
+      ],
+      "hard": [
+        "Salón",
+        "Lavadora",
+        "Electrónica"
+      ]
+    }
+  },
+  {
+    "id": "nike",
+    "category": "Marcas",
+    "subcategory": "Moda",
+    "word": "Nike",
+    "similarWords": [
       "Adidas",
-      "Zara",
+      "Puma",
+      "Reebok"
+    ],
+    "hints": {
+      "easy": [
+        "Zapatillas",
+        "Deporte",
+        "Logo"
+      ],
+      "normal": [
+        "Air",
+        "Jordan",
+        "Running"
+      ],
+      "hard": [
+        "Swoosh",
+        "Cancha",
+        "Patrocinio"
+      ]
+    }
+  },
+  {
+    "id": "adidas",
+    "category": "Marcas",
+    "subcategory": "Moda",
+    "word": "Adidas",
+    "similarWords": [
+      "Nike",
+      "Puma",
+      "Reebok"
+    ],
+    "hints": {
+      "easy": [
+        "Zapatillas",
+        "Deporte",
+        "Rayas"
+      ],
+      "normal": [
+        "Originals",
+        "Chándal",
+        "Running"
+      ],
+      "hard": [
+        "Tres",
+        "Alemania",
+        "Clásico"
+      ]
+    }
+  },
+  {
+    "id": "zara",
+    "category": "Marcas",
+    "subcategory": "Moda",
+    "word": "Zara",
+    "similarWords": [
       "H&M",
       "Gucci",
-      "Prada",
-      "Levi's",
-      "Balenciaga"
-    ]
+      "Prada"
+    ],
+    "hints": {
+      "easy": [
+        "Ropa",
+        "Tienda",
+        "Moda"
+      ],
+      "normal": [
+        "Colección",
+        "Escaparate",
+        "Tendencia"
+      ],
+      "hard": [
+        "Inditex",
+        "Rotación",
+        "Maniquí"
+      ]
+    }
   },
   {
+    "id": "hm",
     "category": "Marcas",
-    "sub": {
-      "id": "alimentacion",
-      "easy": ["Comida", "Bebida", "Consumo", "Producto"],
-      "normal": ["Sabor", "Receta", "Distribución", "Mercado"],
-      "hard": ["Hábito", "Preferencia", "Rutina", "Elección"]
-    },
-    "words": [
-      "Coca-Cola",
+    "subcategory": "Moda",
+    "word": "H&M",
+    "similarWords": [
+      "Zara",
+      "Gucci",
+      "Prada"
+    ],
+    "hints": {
+      "easy": [
+        "Ropa",
+        "Tienda",
+        "Moda"
+      ],
+      "normal": [
+        "Colección",
+        "Escaparate",
+        "Tendencia"
+      ],
+      "hard": [
+        "Suecia",
+        "Básicos",
+        "Precio"
+      ]
+    }
+  },
+  {
+    "id": "gucci",
+    "category": "Marcas",
+    "subcategory": "Moda",
+    "word": "Gucci",
+    "similarWords": [
+      "Prada",
+      "Balenciaga",
+      "Zara"
+    ],
+    "hints": {
+      "easy": [
+        "Lujo",
+        "Bolso",
+        "Moda"
+      ],
+      "normal": [
+        "Pasarela",
+        "Diseño",
+        "Italia"
+      ],
+      "hard": [
+        "Doble",
+        "Verde",
+        "Rojo"
+      ]
+    }
+  },
+  {
+    "id": "prada",
+    "category": "Marcas",
+    "subcategory": "Moda",
+    "word": "Prada",
+    "similarWords": [
+      "Gucci",
+      "Balenciaga",
+      "Zara"
+    ],
+    "hints": {
+      "easy": [
+        "Lujo",
+        "Moda",
+        "Bolso"
+      ],
+      "normal": [
+        "Pasarela",
+        "Italia",
+        "Diseño"
+      ],
+      "hard": [
+        "Milán",
+        "Minimalismo",
+        "Alta"
+      ]
+    }
+  },
+  {
+    "id": "levis",
+    "category": "Marcas",
+    "subcategory": "Moda",
+    "word": "Levi's",
+    "similarWords": [
+      "Zara",
+      "H&M",
+      "Nike"
+    ],
+    "hints": {
+      "easy": [
+        "Vaqueros",
+        "Pantalón",
+        "Denim"
+      ],
+      "normal": [
+        "501",
+        "Etiqueta",
+        "Clásico"
+      ],
+      "hard": [
+        "Rojo",
+        "Bolsillo",
+        "Oeste"
+      ]
+    }
+  },
+  {
+    "id": "balenciaga",
+    "category": "Marcas",
+    "subcategory": "Moda",
+    "word": "Balenciaga",
+    "similarWords": [
+      "Gucci",
+      "Prada",
+      "Nike"
+    ],
+    "hints": {
+      "easy": [
+        "Lujo",
+        "Moda",
+        "Zapatillas"
+      ],
+      "normal": [
+        "Pasarela",
+        "Diseño",
+        "Marca"
+      ],
+      "hard": [
+        "Oversize",
+        "Negro",
+        "París"
+      ]
+    }
+  },
+  {
+    "id": "cocacola",
+    "category": "Marcas",
+    "subcategory": "Alimentación",
+    "word": "Coca-Cola",
+    "similarWords": [
       "Pepsi",
-      "Nestlé",
+      "Red Bull",
+      "Nestlé"
+    ],
+    "hints": {
+      "easy": [
+        "Refresco",
+        "Rojo",
+        "Lata"
+      ],
+      "normal": [
+        "Burbuja",
+        "Botella",
+        "Azúcar"
+      ],
+      "hard": [
+        "Navidad",
+        "Polar",
+        "Clásica"
+      ]
+    }
+  },
+  {
+    "id": "pepsi",
+    "category": "Marcas",
+    "subcategory": "Alimentación",
+    "word": "Pepsi",
+    "similarWords": [
+      "Coca-Cola",
+      "Red Bull",
+      "Nestlé"
+    ],
+    "hints": {
+      "easy": [
+        "Refresco",
+        "Lata",
+        "Azul"
+      ],
+      "normal": [
+        "Burbuja",
+        "Cola",
+        "Botella"
+      ],
+      "hard": [
+        "Competencia",
+        "Superbowl",
+        "Alternativa"
+      ]
+    }
+  },
+  {
+    "id": "nestle",
+    "category": "Marcas",
+    "subcategory": "Alimentación",
+    "word": "Nestlé",
+    "similarWords": [
       "Danone",
       "Ferrero",
+      "Kellogg's"
+    ],
+    "hints": {
+      "easy": [
+        "Comida",
+        "Chocolate",
+        "Marca"
+      ],
+      "normal": [
+        "Cereal",
+        "Leche",
+        "Productos"
+      ],
+      "hard": [
+        "Suiza",
+        "Multinacional",
+        "Despensa"
+      ]
+    }
+  },
+  {
+    "id": "danone",
+    "category": "Marcas",
+    "subcategory": "Alimentación",
+    "word": "Danone",
+    "similarWords": [
+      "Nestlé",
+      "Ferrero",
+      "Kellogg's"
+    ],
+    "hints": {
+      "easy": [
+        "Yogur",
+        "Lácteo",
+        "Marca"
+      ],
+      "normal": [
+        "Actimel",
+        "Botella",
+        "Nevera"
+      ],
+      "hard": [
+        "Fermento",
+        "Desayuno",
+        "Frío"
+      ]
+    }
+  },
+  {
+    "id": "ferrero",
+    "category": "Marcas",
+    "subcategory": "Alimentación",
+    "word": "Ferrero",
+    "similarWords": [
+      "Nestlé",
       "Kellogg's",
-      "Red Bull",
+      "Danone"
+    ],
+    "hints": {
+      "easy": [
+        "Chocolate",
+        "Bombón",
+        "Dulce"
+      ],
+      "normal": [
+        "Avellana",
+        "Caja",
+        "Regalo"
+      ],
+      "hard": [
+        "Dorado",
+        "Navidad",
+        "Crema"
+      ]
+    }
+  },
+  {
+    "id": "kelloggs",
+    "category": "Marcas",
+    "subcategory": "Alimentación",
+    "word": "Kellogg's",
+    "similarWords": [
+      "Nestlé",
+      "Danone",
+      "Ferrero"
+    ],
+    "hints": {
+      "easy": [
+        "Cereales",
+        "Desayuno",
+        "Caja"
+      ],
+      "normal": [
+        "Leche",
+        "Copos",
+        "Maíz"
+      ],
+      "hard": [
+        "Tigre",
+        "Crujiente",
+        "Mañana"
+      ]
+    }
+  },
+  {
+    "id": "redbull",
+    "category": "Marcas",
+    "subcategory": "Alimentación",
+    "word": "Red Bull",
+    "similarWords": [
+      "Coca-Cola",
+      "Pepsi",
       "Heineken"
-    ]
+    ],
+    "hints": {
+      "easy": [
+        "Energía",
+        "Lata",
+        "Bebida"
+      ],
+      "normal": [
+        "Cafeína",
+        "Azúcar",
+        "Fiesta"
+      ],
+      "hard": [
+        "Alas",
+        "Extremo",
+        "Noche"
+      ]
+    }
   },
   {
+    "id": "heineken",
     "category": "Marcas",
-    "sub": {
-      "id": "automovil",
-      "easy": ["Coche", "Motor", "Vehículo", "Carretera"],
-      "normal": ["Conducción", "Diseño", "Ingeniería", "Modelo"],
-      "hard": ["Prestaciones", "Fiabilidad", "Movimiento", "Potencia"]
-    },
-    "words": [
-      "BMW",
-      "Mercedes",
-      "Audi",
-      "Toyota",
-      "Ford",
-      "Volkswagen",
-      "Tesla",
-      "Renault"
-    ]
-  },
-  {
-    "category": "Marcas",
-    "sub": {
-      "id": "deporte",
-      "easy": ["Deporte", "Actividad", "Rendimiento", "Acción"],
-      "normal": ["Competición", "Entrenamiento", "Equipamiento", "Uso"],
-      "hard": ["Disciplina", "Constancia", "Exigencia", "Preparación"]
-    },
-    "words": [
-      "Decathlon",
-      "Puma",
-      "Reebok",
-      "Under Armour",
-      "Asics",
-      "Salomon",
-      "New Balance"
-    ]
-  },
-  {
-    "category": "Marcas",
-    "sub": {
-      "id": "retail",
-      "easy": ["Tienda", "Compra", "Producto", "Precio"],
-      "normal": ["Catálogo", "Distribución", "Venta", "Servicio"],
-      "hard": ["Consumo", "Elección", "Acceso", "Disponibilidad"]
-    },
-    "words": [
-      "Amazon",
-      "IKEA",
-      "Carrefour",
-      "Lidl",
-      "El Corte Inglés",
-      "MediaMarkt",
-      "Aliexpress"
-    ]
-  },
-  {
-    "category": "Marcas",
-    "sub": {
-      "id": "entretenimiento",
-      "easy": ["Entretenimiento", "Contenido", "Pantalla", "Ocio"],
-      "normal": ["Plataforma", "Catálogo", "Producción", "Audiencia"],
-      "hard": ["Consumo", "Atención", "Formato", "Impacto"]
-    },
-    "words": [
-      "Netflix",
-      "Disney",
-      "HBO",
-      "Spotify",
-      "Amazon Prime",
-      "PlayStation",
-      "Nintendo"
-    ]
-  },
-  {
-    "category": "Marcas",
-    "sub": {
-      "id": "belleza_cuidado",
-      "easy": ["Cuidado", "Higiene", "Belleza", "Uso"],
-      "normal": ["Rutina", "Tratamiento", "Producto", "Aplicación"],
-      "hard": ["Sensación", "Resultado", "Percepción", "Hábito"]
-    },
-    "words": [
-      "L'Oréal",
-      "Nivea",
-      "Dove",
-      "Gillette",
-      "Pantene",
-      "Clinique",
-      "Maybelline"
-    ]
+    "subcategory": "Alimentación",
+    "word": "Heineken",
+    "similarWords": [
+      "Red Bull",
+      "Coca-Cola",
+      "Pepsi"
+    ],
+    "hints": {
+      "easy": [
+        "Cerveza",
+        "Botella",
+        "Bar"
+      ],
+      "normal": [
+        "Espuma",
+        "Lúpulo",
+        "Fría"
+      ],
+      "hard": [
+        "Verde",
+        "Holanda",
+        "Brindis"
+      ]
+    }
   }
 ]

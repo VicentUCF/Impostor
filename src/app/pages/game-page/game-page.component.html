@@ -1,0 +1,440 @@
+<main class="game-page" role="main">
+  <section class="game-screen">
+    <ng-container [ngSwitch]="screen">
+      <div *ngSwitchCase="'intro'" class="game-stack">
+        <p class="game-eyebrow">El juego del impostor</p>
+        <h1 class="game-title">ALGO NO CUADRA</h1>
+        <button class="game-action" type="button" (click)="goToPlayers()">
+          INICIAR RONDA
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'players'" class="game-stack">
+        <p class="game-eyebrow">CONFIGURACION</p>
+        <h1 class="game-title">JUGADORES</h1>
+        <label class="game-field">
+          <span class="game-field__label">TOTAL</span>
+          <input
+            class="game-input"
+            type="number"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            [value]="totalPlayersInput"
+            (input)="totalPlayersInput = $any($event.target).value"
+            [attr.min]="minPlayers"
+            [attr.max]="maxPlayers"
+            aria-label="Total de jugadores"
+          />
+          <span class="game-field__hint">MIN {{ minPlayers }} / MAX {{ maxPlayers }}</span>
+        </label>
+        <button class="game-action" type="button" (click)="confirmPlayers()">
+          CONTINUAR
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'names'" class="game-stack game-stack--form">
+        <p class="game-eyebrow">
+          NOMBRES {{ filledNamesCount }} / {{ totalPlayers }}
+        </p>
+        <h1 class="game-title">LISTA</h1>
+        <div class="game-name-list" role="list">
+          <div
+            class="game-name-row"
+            role="listitem"
+            *ngFor="let name of playerNames; let i = index; trackBy: trackByIndex"
+            [class.game-name-row--filled]="name.trim().length > 0"
+          >
+            <div class="game-name-row__header">
+              <span class="game-name-row__label">JUGADOR {{ i + 1 }}</span>
+              <span class="game-name-row__status">
+                {{ name.trim() ? "LISTO" : "VACIO" }}
+              </span>
+            </div>
+            <input
+              class="game-input game-input--name"
+              type="text"
+              [value]="name"
+              (input)="updateName(i, $any($event.target).value)"
+              maxlength="18"
+              autocomplete="off"
+              autocapitalize="characters"
+              autocorrect="off"
+              spellcheck="false"
+              [attr.aria-label]="'Nombre jugador ' + (i + 1)"
+            />
+          </div>
+        </div>
+        <button
+          class="game-action"
+          type="button"
+          [disabled]="!allNamesFilled"
+          (click)="confirmNames()"
+        >
+          CONTINUAR
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'impostors'" class="game-stack">
+        <p class="game-eyebrow">CONFIGURACION</p>
+        <h1 class="game-title">IMPOSTORES</h1>
+        <label class="game-field">
+          <span class="game-field__label">TOTAL</span>
+          <input
+            class="game-input"
+            type="number"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            [value]="impostorsInput"
+            (input)="impostorsInput = $any($event.target).value"
+            [attr.min]="1"
+            [attr.max]="maxImpostors"
+            aria-label="Total de impostores"
+          />
+          <span class="game-field__hint">MIN 1 / MAX {{ maxImpostors }}</span>
+        </label>
+        <button class="game-action" type="button" (click)="confirmImpostors()">
+          CONTINUAR
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'config'" class="game-stack game-stack--form">
+        <p class="game-eyebrow">CONFIGURACION</p>
+        <h1 class="game-title">PARTIDA</h1>
+        <div
+          class="game-accordion"
+          [class.game-accordion--open]="configPanels.impostor"
+        >
+          <button
+            class="game-accordion__header"
+            type="button"
+            [attr.aria-expanded]="configPanels.impostor"
+            (click)="toggleConfigPanel('impostor')"
+          >
+            <span class="game-accordion__title">CONFIGURACION IMPOSTOR</span>
+            <span class="game-accordion__state">
+              {{ configPanels.impostor ? "ABIERTO" : "CERRADO" }}
+            </span>
+          </button>
+          <div class="game-accordion__body" *ngIf="configPanels.impostor">
+            <p class="game-section">DEFINE QUE VE EL IMPOSTOR</p>
+            <div class="game-config">
+              <button
+                class="game-toggle"
+                type="button"
+                [class.game-toggle--on]="showCategory"
+                [attr.aria-pressed]="showCategory"
+                (click)="toggleShowCategory()"
+              >
+                <span class="game-toggle__label">MOSTRAR CATEGORIA</span>
+                <span class="game-toggle__state">{{ showCategory ? "SI" : "NO" }}</span>
+              </button>
+              <button
+                class="game-toggle"
+                type="button"
+                [class.game-toggle--on]="showHint"
+                [attr.aria-pressed]="showHint"
+                (click)="toggleShowHint()"
+              >
+                <span class="game-toggle__label">MOSTRAR PISTA</span>
+                <span class="game-toggle__state">{{ showHint ? "SI" : "NO" }}</span>
+              </button>
+            </div>
+            <ng-container *ngIf="showHint">
+              <p class="game-section">DIFICULTAD DE PISTA</p>
+              <div class="game-choice-list game-choice-list--compact">
+                <button
+                  class="game-choice"
+                  type="button"
+                  [class.game-choice--on]="hintDifficulty === 'easy'"
+                  [attr.aria-pressed]="hintDifficulty === 'easy'"
+                  (click)="setHintDifficulty('easy')"
+                >
+                  <div class="game-choice__row">
+                    <span class="game-choice__label">FACIL</span>
+                    <span class="game-choice__state">
+                      {{ hintDifficulty === "easy" ? "ACTIVA" : "" }}
+                    </span>
+                  </div>
+                </button>
+                <button
+                  class="game-choice"
+                  type="button"
+                  [class.game-choice--on]="hintDifficulty === 'normal'"
+                  [attr.aria-pressed]="hintDifficulty === 'normal'"
+                  (click)="setHintDifficulty('normal')"
+                >
+                  <div class="game-choice__row">
+                    <span class="game-choice__label">NORMAL</span>
+                    <span class="game-choice__state">
+                      {{ hintDifficulty === "normal" ? "ACTIVA" : "" }}
+                    </span>
+                  </div>
+                </button>
+                <button
+                  class="game-choice"
+                  type="button"
+                  [class.game-choice--on]="hintDifficulty === 'hard'"
+                  [attr.aria-pressed]="hintDifficulty === 'hard'"
+                  (click)="setHintDifficulty('hard')"
+                >
+                  <div class="game-choice__row">
+                    <span class="game-choice__label">DIFICIL</span>
+                    <span class="game-choice__state">
+                      {{ hintDifficulty === "hard" ? "ACTIVA" : "" }}
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="game-accordion" [class.game-accordion--open]="configPanels.themes">
+          <button
+            class="game-accordion__header"
+            type="button"
+            [attr.aria-expanded]="configPanels.themes"
+            (click)="toggleConfigPanel('themes')"
+          >
+            <span class="game-accordion__title">CONFIGURACION DE TEMAS</span>
+            <span class="game-accordion__state">
+              {{ selectedSourcesCount }} / {{ totalSourcesCount }}
+            </span>
+          </button>
+          <div class="game-accordion__body" *ngIf="configPanels.themes">
+            <p class="game-section">
+              CATEGORIAS {{ selectedSourcesCount }} / {{ totalSourcesCount }}
+            </p>
+            <div class="game-choice-list">
+              <button
+                class="game-choice"
+                type="button"
+                *ngFor="let source of categorySources; trackBy: trackBySource"
+                [class.game-choice--on]="source.enabled"
+                [attr.aria-pressed]="source.enabled"
+                [disabled]="source.entries.length === 0"
+                (click)="toggleCategory(source)"
+              >
+                <div class="game-choice__row">
+                  <span class="game-choice__label">{{ source.label }}</span>
+                  <span class="game-choice__state">
+                    {{
+                      source.entries.length === 0
+                        ? "VACIO"
+                        : source.enabled
+                        ? "INCLUIDO"
+                        : "FUERA"
+                    }}
+                  </span>
+                </div>
+                <span class="game-choice__meta">
+                  {{
+                    source.entries.length === 0
+                      ? "SIN DATOS"
+                      : source.entries.length + " TEMAS"
+                  }}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          class="game-action"
+          type="button"
+          [disabled]="!canConfirmConfig"
+          (click)="confirmConfig()"
+        >
+          CONTINUAR
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'ready'" class="game-stack">
+        <p class="game-eyebrow">PREPARA EL MOVIL</p>
+        <h1 class="game-title">NADIE MIRA LA PANTALLA</h1>
+        <button class="game-action" type="button" (click)="startRoles()">
+          EMPEZAR ROLES
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'player-confirm'" class="game-stack">
+        <p class="game-eyebrow">TURNO</p>
+        <h1 class="game-title">{{ currentPlayerName }}</h1>
+        <p class="game-subtitle">JUGADOR {{ currentPlayer }} DE {{ totalPlayers }}</p>
+        <p class="game-note">SOLO TU DEBES MIRAR</p>
+        <button
+          class="game-action game-action--reveal"
+          type="button"
+          [class.game-action--reveal-active]="roleRevealPending"
+          [disabled]="roleRevealPending"
+          (click)="startRoleReveal()"
+        >
+          REVELAR ROL
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'role-reveal'" class="game-stack">
+        <p class="game-eyebrow">ROL</p>
+        <h1
+          class="game-role"
+          [class.game-role--impostor]="isImpostor"
+          [class.game-role--informante]="!isImpostor"
+          [class.game-role--glitch]="isImpostor"
+        >
+          {{ isImpostor ? "IMPOSTOR" : "INFORMANTE" }}
+        </h1>
+        <div class="game-block" *ngIf="showCategory || (showHint && isImpostor)">
+          <ng-container *ngIf="showCategory">
+            <p class="game-meta">CATEGORIA</p>
+            <p class="game-value">{{ currentCategory }}</p>
+          </ng-container>
+          <ng-container *ngIf="showHint && isImpostor">
+            <p class="game-meta">PISTA</p>
+            <p class="game-value">{{ currentHint }}</p>
+          </ng-container>
+        </div>
+        <div *ngIf="!isImpostor" class="game-block">
+          <p class="game-meta">PALABRA</p>
+          <p class="game-value game-value--word">{{ currentWord }}</p>
+        </div>
+        <p *ngIf="isImpostor" class="game-note">NO TIENES PALABRA</p>
+        <button class="game-action" type="button" (click)="hideRole()">
+          {{ hasNextPlayer ? "OCULTAR Y PASAR" : "CONTINUAR" }}
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'pass-device'" class="game-stack game-stack--instant game-pass-device">
+        <p class="game-eyebrow">PASA EL MOVIL</p>
+        <p class="game-pass-name">A {{ nextPlayerName }}</p>
+      </div>
+
+      <div *ngSwitchCase="'starter'" class="game-stack">
+        <p class="game-eyebrow">EMPIEZA</p>
+        <h1 class="game-name">{{ starterName }}</h1>
+        <button class="game-action" type="button" (click)="startRound()">
+          INICIAR RONDA
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'round-live'" class="game-stack">
+        <p class="game-eyebrow">RONDA EN CURSO</p>
+        <h1 class="game-title">ALGUIEN MIENTE</h1>
+        <p class="game-note">OBSERVEN. PREGUNTEN. DUDEN.</p>
+        <div class="game-timer">
+          <p class="game-timer__label">TIEMPO</p>
+          <p class="game-timer__value">{{ roundTimerLabel }}</p>
+        </div>
+        <button
+          class="game-action"
+          type="button"
+          [disabled]="!canReveal"
+          (click)="revealImpostors()"
+        >
+          REVELAR IMPOSTOR
+        </button>
+      </div>
+
+      <div *ngSwitchCase="'reveal'" class="game-stack">
+        <ng-container *ngIf="isChaosRevealable; else normalReveal">
+          <div
+            class="game-chaos-seq"
+            [class.game-chaos-seq--glitch]="isChaosGlitch"
+            [class.game-chaos-seq--active]="showChaosHeadline"
+          >
+            <p class="game-chaos-seq__fake" *ngIf="showChaosFake">EL IMPOSTOR ERA...</p>
+            <p class="game-chaos-seq__headline" *ngIf="showChaosHeadline">
+              {{ chaosHeadline }}
+            </p>
+            <p class="game-chaos-seq__message" *ngIf="showChaosDetail">
+              {{ chaosVariantMessage }}
+            </p>
+            <p class="game-chaos-seq__closure" *ngIf="showChaosDetail">
+              POR ESO ALGO NO CUADRABA
+            </p>
+          </div>
+          <ng-container *ngIf="showChaosFinalDetails">
+            <ng-container *ngIf="showImpostorRevealSection">
+              <p class="game-eyebrow">RESULTADO</p>
+              <h1 class="game-title">{{ impostorLabel }}</h1>
+              <ul class="game-list" *ngIf="impostorNames.length > 0">
+                <li class="game-list__item" *ngFor="let name of impostorNames">
+                  {{ name }}
+                </li>
+              </ul>
+            </ng-container>
+            <div class="game-block">
+              <p class="game-meta">PALABRA</p>
+              <p class="game-value game-value--word">{{ revealWord }}</p>
+            </div>
+            <div class="game-block" *ngIf="showCategory || showHint">
+              <ng-container *ngIf="showCategory">
+                <p class="game-meta">CATEGORIA</p>
+                <p class="game-value">{{ revealCategory }}</p>
+              </ng-container>
+              <ng-container *ngIf="showHint">
+                <p class="game-meta">PISTA</p>
+                <p class="game-value">{{ revealHint }}</p>
+              </ng-container>
+            </div>
+          </ng-container>
+        </ng-container>
+        <ng-template #normalReveal>
+          <div
+            class="game-normal-reveal"
+            *ngIf="showNormalRevealBlock"
+            [class.game-normal-reveal--fade]="normalRevealStage === 'transition'"
+          >
+            <p class="game-normal-reveal__lead">{{ normalLeadText }}</p>
+            <p class="game-normal-reveal__name" *ngIf="showNormalName">
+              {{ normalRevealName }}
+            </p>
+            <p class="game-normal-reveal__closure" *ngIf="showNormalClosure">
+              BIEN JUGADO.
+            </p>
+          </div>
+          <ng-container *ngIf="showNormalFinalDetails">
+            <div class="game-normal-final">
+              <ng-container *ngIf="showImpostorRevealSection">
+                <p class="game-eyebrow">RESULTADO</p>
+                <h1 class="game-title">{{ impostorLabel }}</h1>
+                <ul class="game-list" *ngIf="impostorNames.length > 0">
+                  <li class="game-list__item" *ngFor="let name of impostorNames">
+                    {{ name }}
+                  </li>
+                </ul>
+              </ng-container>
+              <div class="game-block">
+                <p class="game-meta">PALABRA</p>
+                <p class="game-value game-value--word">{{ revealWord }}</p>
+              </div>
+              <div class="game-block" *ngIf="showCategory || showHint">
+                <ng-container *ngIf="showCategory">
+                  <p class="game-meta">CATEGORIA</p>
+                  <p class="game-value">{{ revealCategory }}</p>
+                </ng-container>
+                <ng-container *ngIf="showHint">
+                  <p class="game-meta">PISTA</p>
+                  <p class="game-value">{{ revealHint }}</p>
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+        </ng-template>
+        <button
+          class="game-action"
+          type="button"
+          [disabled]="!canExitReveal"
+          (click)="newRound()"
+        >
+          OTRA PARTIDA
+        </button>
+        <button
+          class="game-action game-action--ghost"
+          type="button"
+          [disabled]="!canExitReveal"
+          (click)="resetRound()"
+        >
+          NUEVA PARTIDA
+        </button>
+      </div>
+    </ng-container>
+  </section>
+</main>

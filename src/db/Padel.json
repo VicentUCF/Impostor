@@ -1,157 +1,618 @@
 [
   {
+    "id": "derecha",
     "category": "Padel",
-    "sub": {
-      "id": "golpes_fondo",
-      "easy": ["Base", "Rally", "Fondo", "Objeto"],
-      "normal": ["Cadencia", "Contexto", "Dirección", "Efecto"],
-      "hard": ["Margen", "Tacto", "Templanza", "Gestión"]
-    },
-    "words": [
-      "Derecha",
+    "subcategory": "Golpes",
+    "word": "Derecha",
+    "similarWords": [
       "Revés",
-      "Globo",
-      "Bote pronto",
-      "Bote",
-      "Salida",
-      "Defensa",
-      "Control",
-      "Profundidad",
-      "Altura"
-    ]
+      "Volea",
+      "Bandeja"
+    ],
+    "hints": {
+      "easy": [
+        "Golpe",
+        "Brazo",
+        "Fondo"
+      ],
+      "normal": [
+        "Drive",
+        "Cruzar",
+        "Golpear"
+      ],
+      "hard": [
+        "Dominante",
+        "Preparación",
+        "Control"
+      ]
+    }
   },
   {
+    "id": "reves",
     "category": "Padel",
-    "sub": {
-      "id": "golpes_red",
-      "easy": ["Cierre", "Final", "Lugar", "Arriba"],
-      "normal": ["Ritmo", "Dirección", "Entorno", "Función"],
-      "hard": ["Lectura", "Intención", "Instinto", "Ejecución"]
-    },
-    "words": [
-      "Volea",
+    "subcategory": "Golpes",
+    "word": "Revés",
+    "similarWords": [
+      "Derecha",
+      "Bandeja",
+      "Volea"
+    ],
+    "hints": {
+      "easy": [
+        "Golpe",
+        "Contrario",
+        "Brazo"
+      ],
+      "normal": [
+        "Dos",
+        "Cruzar",
+        "Fondo"
+      ],
+      "hard": [
+        "Cambio",
+        "Ajuste",
+        "Defensa"
+      ]
+    }
+  },
+  {
+    "id": "volea",
+    "category": "Padel",
+    "subcategory": "Golpes red",
+    "word": "Volea",
+    "similarWords": [
       "Remate",
       "Bandeja",
-      "Víbora",
-      "Bloqueo",
-      "Presión",
-      "Ángulo",
-      "Colocación",
-      "Definición"
-    ]
+      "Víbora"
+    ],
+    "hints": {
+      "easy": [
+        "Red",
+        "Aire",
+        "Golpe"
+      ],
+      "normal": [
+        "Bloquear",
+        "Rápido",
+        "Cerca"
+      ],
+      "hard": [
+        "Reflejos",
+        "Presión",
+        "Instinto"
+      ]
+    }
   },
   {
+    "id": "remate",
     "category": "Padel",
-    "sub": {
-      "id": "paredes",
-      "easy": ["Acción", "Vidrio", "Tema", "Rincón"],
-      "normal": ["Cálculo", "Trayectoria", "Ritmo", "Estilo"],
-      "hard": ["Anticipación", "Reacción", "Lectura", "Ajuste"]
-    },
-    "words": [
-      "Pared",
+    "subcategory": "Golpes red",
+    "word": "Remate",
+    "similarWords": [
+      "Bandeja",
+      "Víbora",
+      "Globo"
+    ],
+    "hints": {
+      "easy": [
+        "Arriba",
+        "Fuerte",
+        "Punto"
+      ],
+      "normal": [
+        "Saltar",
+        "Potencia",
+        "Cerrar"
+      ],
+      "hard": [
+        "Explosión",
+        "Final",
+        "Definir"
+      ]
+    }
+  },
+  {
+    "id": "bandeja",
+    "category": "Padel",
+    "subcategory": "Golpes red",
+    "word": "Bandeja",
+    "similarWords": [
+      "Víbora",
+      "Remate",
+      "Globo"
+    ],
+    "hints": {
+      "easy": [
+        "Arriba",
+        "Control",
+        "Red"
+      ],
+      "normal": [
+        "Defensa",
+        "Globo",
+        "Colocar"
+      ],
+      "hard": [
+        "Paciencia",
+        "Ritmo",
+        "Gestión"
+      ]
+    }
+  },
+  {
+    "id": "vibora",
+    "category": "Padel",
+    "subcategory": "Golpes red",
+    "word": "Víbora",
+    "similarWords": [
+      "Bandeja",
+      "Remate",
+      "Volea"
+    ],
+    "hints": {
+      "easy": [
+        "Efecto",
+        "Arriba",
+        "Golpe"
+      ],
+      "normal": [
+        "Cortar",
+        "Presión",
+        "Rápido"
+      ],
+      "hard": [
+        "Ángulo",
+        "Caída",
+        "Control"
+      ]
+    }
+  },
+  {
+    "id": "globo",
+    "category": "Padel",
+    "subcategory": "Golpes fondo",
+    "word": "Globo",
+    "similarWords": [
+      "Remate",
+      "Bandeja",
+      "Víbora"
+    ],
+    "hints": {
+      "easy": [
+        "Alto",
+        "Superar",
+        "Red"
+      ],
+      "normal": [
+        "Defensa",
+        "Fondo",
+        "Lento"
+      ],
+      "hard": [
+        "Altura",
+        "Tiempo",
+        "Retroceder"
+      ]
+    }
+  },
+  {
+    "id": "pared",
+    "category": "Padel",
+    "subcategory": "Pista",
+    "word": "Pared",
+    "similarWords": [
       "Cristal",
       "Rebote",
-      "Salida",
-      "Doble pared",
-      "Tiempo",
-      "Trayectoria",
-      "Altura"
-    ]
+      "Salida"
+    ],
+    "hints": {
+      "easy": [
+        "Vidrio",
+        "Rebote",
+        "Pista"
+      ],
+      "normal": [
+        "Leer",
+        "Defensa",
+        "Tiempo"
+      ],
+      "hard": [
+        "Ángulo",
+        "Trayectoria",
+        "Reacción"
+      ]
+    }
   },
   {
+    "id": "cristal",
     "category": "Padel",
-    "sub": {
-      "id": "situaciones_juego",
-      "easy": ["Fase", "Turno", "Momento", "Zona"],
-      "normal": ["Entorno", "Dinámica", "Balance", "Desorden"],
-      "hard": ["Proceso", "Percepción", "Decisión", "Lectura"]
-    },
-    "words": [
-      "Defensa",
-      "Ataque",
-      "Transición",
-      "Error",
-      "Presión",
-      "Riesgo",
-      "Paciencia",
-      "Cambio"
-    ]
+    "subcategory": "Pista",
+    "word": "Cristal",
+    "similarWords": [
+      "Pared",
+      "Rebote",
+      "Salida"
+    ],
+    "hints": {
+      "easy": [
+        "Vidrio",
+        "Transparente",
+        "Pista"
+      ],
+      "normal": [
+        "Rebote",
+        "Fondo",
+        "Defensa"
+      ],
+      "hard": [
+        "Lectura",
+        "Ángulo",
+        "Tiempo"
+      ]
+    }
   },
   {
+    "id": "rebote",
     "category": "Padel",
-    "sub": {
-      "id": "errores_comunes",
-      "easy": ["Acción", "Descontrol", "Prisa", "Nervios"],
-      "normal": ["Desorden", "Impulso", "Contexto", "Tensión"],
-      "hard": ["Tensión", "Modelo", "Inercia", "Desconexión"]
-    },
-    "words": [
-      "Fallo",
-      "Marco",
+    "subcategory": "Paredes",
+    "word": "Rebote",
+    "similarWords": [
+      "Bote",
+      "Cristal",
+      "Salida"
+    ],
+    "hints": {
+      "easy": [
+        "Pared",
+        "Pelota",
+        "Volver"
+      ],
+      "normal": [
+        "Cristal",
+        "Trayectoria",
+        "Tiempo"
+      ],
+      "hard": [
+        "Lectura",
+        "Cálculo",
+        "Reacción"
+      ]
+    }
+  },
+  {
+    "id": "pista",
+    "category": "Padel",
+    "subcategory": "Infraestructura",
+    "word": "Pista",
+    "similarWords": [
       "Red",
-      "Fuera",
-      "Prisa",
-      "Bloqueo",
-      "Duda",
-      "Ansiedad"
-    ]
+      "Cristal",
+      "Partido"
+    ],
+    "hints": {
+      "easy": [
+        "Suelo",
+        "Red",
+        "Cristal"
+      ],
+      "normal": [
+        "Rectángulo",
+        "Líneas",
+        "Juego"
+      ],
+      "hard": [
+        "Espacio",
+        "Superficie",
+        "Encuentro"
+      ]
+    }
   },
   {
+    "id": "red",
     "category": "Padel",
-    "sub": {
-      "id": "tactica",
-      "easy": ["Plan", "Grupo", "Objeto", "Lugar"],
-      "normal": ["Cobertura", "Sistema", "Ajuste", "Lectura"],
-      "hard": ["Adaptación", "Intención", "Estrategia", "Control"]
-    },
-    "words": [
-      "Colocación",
-      "Pareja",
-      "Espacio",
-      "Centro",
-      "Cobertura",
-      "Comunicación",
-      "Orden",
-      "Ritmo"
-    ]
-  },
-  {
-    "category": "Padel",
-    "sub": {
-      "id": "fisico_mental",
-      "easy": ["Pulso", "Aire", "Piernas", "Objeto"],
-      "normal": ["Resistencia", "Equilibrio", "Entorno", "Calma"],
-      "hard": ["Cabeza", "Templanza", "Estructura", "Rutina"]
-    },
-    "words": [
-      "Cansancio",
-      "Fuerza",
-      "Velocidad",
-      "Resistencia",
-      "Equilibrio",
-      "Tensión",
-      "Foco",
-      "Confianza"
-    ]
-  },
-  {
-    "category": "Padel",
-    "sub": {
-      "id": "club_xeresa",
-      "easy": ["Lugar", "Quedada", "Tarde", "Grupo"],
-      "normal": ["Reserva", "Turno", "Partida", "Ambiente"],
-      "hard": ["Costumbre", "Rutina", "Rollo", "Plan"]
-    },
-    "words": [
-      "PadelMixtoXeresa",
-      "Club",
+    "subcategory": "Infraestructura",
+    "word": "Red",
+    "similarWords": [
+      "Volea",
       "Pista",
-      "Partido",
-      "Reserva",
-      "Juego",
-      "Turno",
-      "Grupo"
-    ]
+      "Remate"
+    ],
+    "hints": {
+      "easy": [
+        "Centro",
+        "Dividir",
+        "Pista"
+      ],
+      "normal": [
+        "Golpear",
+        "Altura",
+        "Paso"
+      ],
+      "hard": [
+        "Tensión",
+        "Cinta",
+        "Separar"
+      ]
+    }
+  },
+  {
+    "id": "pelota",
+    "category": "Padel",
+    "subcategory": "Material",
+    "word": "Pelota",
+    "similarWords": [
+      "Pala",
+      "Bote",
+      "Golpe"
+    ],
+    "hints": {
+      "easy": [
+        "Amarilla",
+        "Bote",
+        "Golpear"
+      ],
+      "normal": [
+        "Presión",
+        "Fieltro",
+        "Rebote"
+      ],
+      "hard": [
+        "Spin",
+        "Velocidad",
+        "Trayectoria"
+      ]
+    }
+  },
+  {
+    "id": "pala",
+    "category": "Padel",
+    "subcategory": "Material",
+    "word": "Pala",
+    "similarWords": [
+      "Pelota",
+      "Grip",
+      "Overgrip"
+    ],
+    "hints": {
+      "easy": [
+        "Golpear",
+        "Agujeros",
+        "Empuñadura"
+      ],
+      "normal": [
+        "Carbono",
+        "Control",
+        "Potencia"
+      ],
+      "hard": [
+        "Balance",
+        "Sweetspot",
+        "Marco"
+      ]
+    }
+  },
+  {
+    "id": "overgrip",
+    "category": "Padel",
+    "subcategory": "Material",
+    "word": "Overgrip",
+    "similarWords": [
+      "Grip",
+      "Pala",
+      "Muñequera"
+    ],
+    "hints": {
+      "easy": [
+        "Empuñadura",
+        "Pala",
+        "Enrollar"
+      ],
+      "normal": [
+        "Sudor",
+        "Cambio",
+        "Blanco"
+      ],
+      "hard": [
+        "Agarre",
+        "Sensación",
+        "Control"
+      ]
+    }
+  },
+  {
+    "id": "ale_galan",
+    "category": "Padel",
+    "subcategory": "Jugadores",
+    "word": "Ale Galán",
+    "similarWords": [
+      "Juan Lebrón",
+      "Tapia",
+      "Coello"
+    ],
+    "hints": {
+      "easy": [
+        "Jugador",
+        "Madrid",
+        "Drive"
+      ],
+      "normal": [
+        "Número",
+        "Pareja",
+        "WPT"
+      ],
+      "hard": [
+        "Dominio",
+        "Potencia",
+        "Ranking"
+      ]
+    }
+  },
+  {
+    "id": "juan_lebron",
+    "category": "Padel",
+    "subcategory": "Jugadores",
+    "word": "Juan Lebrón",
+    "similarWords": [
+      "Ale Galán",
+      "Tapia",
+      "Coello"
+    ],
+    "hints": {
+      "easy": [
+        "Jugador",
+        "España",
+        "Drive"
+      ],
+      "normal": [
+        "Carácter",
+        "Velocidad",
+        "Top"
+      ],
+      "hard": [
+        "Genio",
+        "Explosivo",
+        "Número"
+      ]
+    }
+  },
+  {
+    "id": "agustin_tapia",
+    "category": "Padel",
+    "subcategory": "Jugadores",
+    "word": "Agustín Tapia",
+    "similarWords": [
+      "Coello",
+      "Galán",
+      "Lebrón"
+    ],
+    "hints": {
+      "easy": [
+        "Jugador",
+        "Argentina",
+        "Reves"
+      ],
+      "normal": [
+        "Magia",
+        "Ranking",
+        "Top"
+      ],
+      "hard": [
+        "Talento",
+        "Creatividad",
+        "Instinto"
+      ]
+    }
+  },
+  {
+    "id": "arturo_coello",
+    "category": "Padel",
+    "subcategory": "Jugadores",
+    "word": "Arturo Coello",
+    "similarWords": [
+      "Tapia",
+      "Galán",
+      "Lebrón"
+    ],
+    "hints": {
+      "easy": [
+        "Jugador",
+        "Altura",
+        "Remate"
+      ],
+      "normal": [
+        "España",
+        "Potencia",
+        "Número"
+      ],
+      "hard": [
+        "Dominio",
+        "Explosión",
+        "Ranking"
+      ]
+    }
+  },
+  {
+    "id": "tapia_coello",
+    "category": "Padel",
+    "subcategory": "Parejas",
+    "word": "Tapia Coello",
+    "similarWords": [
+      "Lebrón Galán",
+      "Superpibes",
+      "Chingotto Paquito"
+    ],
+    "hints": {
+      "easy": [
+        "Pareja",
+        "Número",
+        "Padel"
+      ],
+      "normal": [
+        "Dominio",
+        "Ranking",
+        "Torneos"
+      ],
+      "hard": [
+        "Invencibles",
+        "Circuito",
+        "Top"
+      ]
+    }
+  },
+  {
+    "id": "world_padel_tour",
+    "category": "Padel",
+    "subcategory": "Circuitos",
+    "word": "World Padel Tour",
+    "similarWords": [
+      "Premier Padel",
+      "Torneo",
+      "Ranking"
+    ],
+    "hints": {
+      "easy": [
+        "Circuito",
+        "Profesional",
+        "Padel"
+      ],
+      "normal": [
+        "Torneos",
+        "Jugadores",
+        "Ranking"
+      ],
+      "hard": [
+        "Escenario",
+        "Competición",
+        "Historia"
+      ]
+    }
+  },
+  {
+    "id": "premier_padel",
+    "category": "Padel",
+    "subcategory": "Circuitos",
+    "word": "Premier Padel",
+    "similarWords": [
+      "World Padel Tour",
+      "Torneo",
+      "Ranking"
+    ],
+    "hints": {
+      "easy": [
+        "Circuito",
+        "Padel",
+        "Profesional"
+      ],
+      "normal": [
+        "Torneos",
+        "Ranking",
+        "Jugadores"
+      ],
+      "hard": [
+        "Qatar",
+        "Circuito",
+        "Élite"
+      ]
+    }
   }
 ]

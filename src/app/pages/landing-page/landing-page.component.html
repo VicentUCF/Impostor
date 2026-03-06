@@ -1,0 +1,178 @@
+<main class="landing-page" role="main">
+  <section class="landing-hero">
+    <div class="landing-nav">
+      <a class="landing-brand" routerLink="/">Algo No Cuadra</a>
+      <a class="landing-nav__link" routerLink="/jugar">Jugar</a>
+    </div>
+
+    <div class="landing-hero__grid">
+      <div class="landing-copy">
+        <p class="landing-kicker">Juego del impostor para movil</p>
+        <h1 class="landing-title">ALGO NO CUADRA</h1>
+        <p class="landing-lede">
+          Reparte secretos, siembra dudas y dispara una partida en menos de un
+          minuto. Un solo movil. Un grupo alrededor. Demasiadas caras inocentes.
+        </p>
+
+        <div class="landing-cta">
+          <a class="landing-button landing-button--primary" routerLink="/jugar">
+            JUGAR UNA PARTIDA
+          </a>
+          <a class="landing-button landing-button--ghost" href="#reglas">
+            VER REGLAS
+          </a>
+        </div>
+
+        <ul class="landing-highlights" aria-label="Datos clave del juego">
+          <li>3 a 12 jugadores</li>
+          <li>1 movil</li>
+          <li>Categorias y pistas</li>
+          <li>Modo Caos</li>
+        </ul>
+      </div>
+
+      <aside class="landing-showcase" aria-label="Resumen de experiencia">
+        <div class="landing-showcase__card landing-showcase__card--accent">
+          <p class="landing-showcase__eyebrow">PARTY GAME</p>
+          <p class="landing-showcase__title">ALGUIEN ESTA FAROLEANDO</p>
+          <p class="landing-showcase__body">
+            Ideal para cenas, escapadas, previas y grupos que disfrutan leyendo
+            gestos, improvisando pistas y sospechando de todos.
+          </p>
+        </div>
+        <div class="landing-showcase__stack">
+          <div class="landing-mini-card">
+            <span class="landing-mini-card__label">ROL</span>
+            <strong>IMPOSTOR</strong>
+          </div>
+          <div class="landing-mini-card">
+            <span class="landing-mini-card__label">OBJETIVO</span>
+            <strong>MENTIR SIN TEMBLAR</strong>
+          </div>
+          <div class="landing-mini-card landing-mini-card--chaos">
+            <span class="landing-mini-card__label">ALERTA</span>
+            <strong>MODO CAOS ACTIVO</strong>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="landing-band">
+    <div class="landing-band__item">
+      <span>Rapido de montar</span>
+      <strong>Empieza en segundos</strong>
+    </div>
+    <div class="landing-band__item">
+      <span>Escalable</span>
+      <strong>De 3 a 12 personas</strong>
+    </div>
+    <div class="landing-band__item">
+      <span>Rejugable</span>
+      <strong>Temas + caos aleatorio</strong>
+    </div>
+  </section>
+
+  <section class="landing-section">
+    <div class="landing-section__head">
+      <p class="landing-section__eyebrow">Como se juega</p>
+      <h2>Una ronda clara. Una conversacion cada vez mas rara.</h2>
+    </div>
+    <div class="landing-steps">
+      <article class="landing-step" *ngFor="let step of steps">
+        <p class="landing-step__index">{{ step.index }}</p>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.body }}</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="landing-section" id="reglas">
+    <div class="landing-section__head">
+      <p class="landing-section__eyebrow">Reglas</p>
+      <h2>Todo lo necesario para vender la mentira correcta.</h2>
+    </div>
+
+    <div class="landing-rules">
+      <article class="landing-rule-card">
+        <h3>Base del juego</h3>
+        <p>
+          La mayoria recibe una palabra secreta. El impostor no la conoce. A
+          partir de ahi toca hablar, escuchar y detectar quien esta intentando
+          encajar demasiado fuerte.
+        </p>
+      </article>
+      <article class="landing-rule-card">
+        <h3>Configuracion flexible</h3>
+        <p>
+          Puedes decidir cuantos impostores hay, si el impostor ve la categoria
+          y si ademas recibe una pista facil, normal o dificil.
+        </p>
+      </article>
+      <article class="landing-rule-card">
+        <h3>Ritmo de partida</h3>
+        <p>
+          El temporizador marca el pulso. La revelacion llega cuando el grupo ya
+          esta dudando de todo y cualquiera parece culpable.
+        </p>
+      </article>
+      <article class="landing-rule-card">
+        <h3>Listo para grupos</h3>
+        <p>
+          No necesitas baraja, dados ni preparacion. Solo pasar el movil, leer
+          en secreto y dejar que la tension haga el resto.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="landing-section landing-section--chaos">
+    <div class="landing-chaos">
+      <div class="landing-chaos__copy">
+        <p class="landing-section__eyebrow">Modo Caos</p>
+        <h2>Cuando la mesa cree entender el juego, el juego cambia la mesa.</h2>
+        <p>
+          El Modo Caos promociona la mejor parte de Algo No Cuadra: los giros que
+          obligan a reinterpretarlo todo. No es solo una skin. Es la capa que
+          convierte una ronda buena en una anecdota que el grupo repite semanas.
+        </p>
+        <a class="landing-button landing-button--primary" routerLink="/jugar">
+          PROBAR EL MODO CAOS
+        </a>
+      </div>
+
+      <div class="landing-chaos__grid">
+        <article class="landing-chaos-card" *ngFor="let feature of chaosFeatures">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.body }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-section" id="faq">
+    <div class="landing-section__head">
+      <p class="landing-section__eyebrow">FAQ</p>
+      <h2>Lo que la gente busca antes de darle al boton.</h2>
+    </div>
+
+    <div class="landing-faq">
+      <details class="landing-faq__item" *ngFor="let faq of faqs">
+        <summary>{{ faq.question }}</summary>
+        <p>{{ faq.answer }}</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="landing-final">
+    <p class="landing-final__eyebrow">Listos para jugar</p>
+    <h2>Si tu grupo disfruta dudando de sus amigos, ya tienes plan.</h2>
+    <p>
+      Abre una ronda, reparte el movil y deja que alguien intente fingir que sabe
+      exactamente de que estais hablando.
+    </p>
+    <a class="landing-button landing-button--primary" routerLink="/jugar">
+      EMPEZAR PARTIDA
+    </a>
+  </section>
+</main>

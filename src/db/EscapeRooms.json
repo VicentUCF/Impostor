@@ -1,486 +1,3451 @@
 [
   {
+    "id": "psicofonia",
     "category": "Escape Room",
-    "sub": {
-      "id": "terror",
-      "easy": ["Terror", "Miedo", "Sustos", "Lugar"],
-      "normal": ["Tema", "Entorno", "Dinámica", "Contexto"],
-      "hard": ["Ambiente", "Noche", "Ruido", "Límite"]
-    },
-    "words": [
-      "Psicofonía",
-      "Paranoia",
-      "Kilómetro 18",
-      "Años oscuros",
-      "Casa maldita",
-      "Haunted house",
-      "No respires",
-      "Sótano",
-      "Sombras",
-      "Susurro",
-      "Alucinación",
-      "Ansiedad",
-      "Pánico",
-      "Eco",
-      "Silencio",
-      "Pasillo",
-      "Habitación cerrada",
-      "Vigilancia",
-      "Linterna",
-      "Respiración"
-    ]
+    "subcategory": "Terror",
+    "word": "Psicofonía",
+    "similarWords": ["Susurro", "Eco", "Silencio", "Respiración"],
+    "hints": {
+      "easy": ["Voces", "Grabadora", "Fantasma"],
+      "normal": ["Audio", "Estática", "Mensaje"],
+      "hard": ["Auriculares", "Noche", "Ruido"]
+    }
   },
   {
+    "id": "paranoia",
     "category": "Escape Room",
-    "sub": {
-      "id": "hotel",
-      "easy": ["Hotel", "Tema", "Lugar", "Objeto"],
-      "normal": ["Entorno", "Dinámica", "Contexto", "Función"],
-      "hard": ["Lugar", "Puerta", "Entrada", "Estancia"]
-    },
-    "words": [
-      "Hotel de los suicidas",
-      "Recepción",
-      "Habitación 13",
-      "Llave maestra",
-      "Pasillo infinito",
-      "Ascensor",
-      "Timbre",
-      "Maleta",
-      "Libro de registro",
-      "Portero",
-      "Puerta entornada",
-      "Cadena",
-      "Cerrojo",
-      "Cortinas",
-      "Espejo",
-      "Moqueta",
-      "Habitación",
-      "Niebla",
-      "Check-in"
-    ]
+    "subcategory": "Terror",
+    "word": "Paranoia",
+    "similarWords": ["Ansiedad", "Pánico", "Alucinación", "Vigilancia"],
+    "hints": {
+      "easy": ["Miedo", "Desconfianza", "Obsesión"],
+      "normal": ["Sospecha", "Miradas", "Tensión"],
+      "hard": ["Aislado", "Insomnio", "Latido"]
+    }
   },
   {
+    "id": "kilometro_18",
     "category": "Escape Room",
-    "sub": {
-      "id": "clinica",
-      "easy": ["Tema", "Lugar", "Grupo", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
-      "hard": ["Salud", "Sala", "Control", "Pulso"]
-    },
-    "words": [
-      "Psyquiatricum",
-      "Los inocentes",
-      "Clínica",
-      "Paciente",
-      "Camilla",
-      "Bata",
-      "Jeringa",
-      "Electroshock",
-      "Expediente",
-      "Diagnóstico",
-      "Pulsera",
-      "Enfermería",
-      "Sala de espera",
-      "Quirófano",
-      "Morgue",
-      "Sedante",
-      "Terapia",
-      "Monitor",
-      "Medicamento",
-      "Habitación acolchada"
-    ]
+    "subcategory": "Terror",
+    "word": "Kilómetro 18",
+    "similarWords": ["Casa maldita", "Haunted house", "No respires"],
+    "hints": {
+      "easy": ["Carretera", "Señal", "Noche"],
+      "normal": ["Asfalto", "Desvío", "Oscuridad"],
+      "hard": ["Viaje", "Curva", "Madrugada"]
+    }
   },
   {
+    "id": "anos_oscuros",
     "category": "Escape Room",
-    "sub": {
-      "id": "thriller",
-      "easy": ["Tema", "Acción", "Objeto", "Lugar"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
-      "hard": ["Riesgo", "Proceso", "Estructura", "Percepción"]
-    },
-    "words": [
-      "SAW",
-      "The Hammer Killer",
-      "El asesino",
-      "Cinta",
-      "Prueba",
-      "Amenaza",
-      "Cronómetro",
-      "Trampa",
-      "Coartada",
-      "Sospechoso",
-      "Huella",
-      "Interrogatorio",
-      "Informe",
-      "Caso",
-      "Evidencia",
-      "Cuchillo",
-      "Máscara",
-      "Guantes",
-      "Cinta adhesiva"
-    ]
+    "subcategory": "Terror",
+    "word": "Años oscuros",
+    "similarWords": ["Sombras", "Silencio", "Casa maldita"],
+    "hints": {
+      "easy": ["Pasado", "Oscuridad", "Miedo"],
+      "normal": ["Recuerdos", "Época", "Trauma"],
+      "hard": ["Infancia", "Archivo", "Secreto"]
+    }
   },
   {
+    "id": "casa_maldita",
     "category": "Escape Room",
-    "sub": {
-      "id": "mitologia",
-      "easy": ["Mitología", "Tema", "Lugar", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Mito", "Paso", "Rito", "Umbral"]
-    },
-    "words": [
-      "Caronte",
-      "Barca",
-      "Moneda",
-      "Río",
-      "Oráculo",
-      "Tumba",
-      "Cripta",
-      "Sarcófago",
-      "Epitafio",
-      "Cementerio",
-      "Altar",
-      "Velo",
-      "Lamento",
-      "Campana",
-      "Amuleto",
-      "Incienso",
-      "Cenizas"
-    ]
+    "subcategory": "Terror",
+    "word": "Casa maldita",
+    "similarWords": ["Haunted house", "Sótano", "Pasillo", "Habitación cerrada"],
+    "hints": {
+      "easy": ["Casa", "Fantasma", "Maldición"],
+      "normal": ["Puertas", "Crujidos", "Polvo"],
+      "hard": ["Herencia", "Vecinos", "Abandono"]
+    }
   },
   {
+    "id": "haunted_house",
     "category": "Escape Room",
-    "sub": {
-      "id": "espiritus",
-      "easy": ["Fantasma", "Tema", "Acción", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
-      "hard": ["Proceso", "Percepción", "Tensión", "Presencia"]
-    },
-    "words": [
-      "Fantasmas",
-      "Ouija",
-      "Médium",
-      "Séance",
-      "Exorcismo",
-      "Ritual",
-      "Pentagrama",
-      "Vela",
-      "Sal",
-      "Invocación",
-      "Aparición",
-      "Poltergeist",
-      "Susurros",
-      "Sombra",
-      "Talismán",
-      "Círculo"
-    ]
+    "subcategory": "Terror",
+    "word": "Haunted house",
+    "similarWords": ["Casa maldita", "Sombras", "Susurro"],
+    "hints": {
+      "easy": ["Casa", "Sustos", "Espíritus"],
+      "normal": ["Mansión", "Pasillos", "Ruinas"],
+      "hard": ["Tormenta", "Retratos", "Velo"]
+    }
   },
   {
+    "id": "no_respires",
     "category": "Escape Room",
-    "sub": {
-      "id": "prision",
-      "easy": ["Prisión", "Lugar", "Objeto", "Acción"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Función"],
-      "hard": ["Proceso", "Norma", "Turno", "Control"]
-    },
-    "words": [
-      "El secreto de Alcatraz",
-      "Celda",
-      "Rejas",
-      "Candado",
-      "Llave",
-      "Uniforme",
-      "Sirena",
-      "Vigilante",
-      "Patio",
-      "Túnel",
-      "Plano",
-      "Ronda",
-      "Cámara",
-      "Fichaje",
-      "Reglamento",
-      "Escape"
-    ]
+    "subcategory": "Terror",
+    "word": "No respires",
+    "similarWords": ["Respiración", "Silencio", "Pánico"],
+    "hints": {
+      "easy": ["Silencio", "Ocultarse", "Aire"],
+      "normal": ["Sigilo", "Contener", "Oscuro"],
+      "hard": ["Pulso", "Espera", "Inmóvil"]
+    }
   },
   {
+    "id": "sotano",
     "category": "Escape Room",
-    "sub": {
-      "id": "ciencia",
-      "easy": ["Tema", "Lugar", "Objeto", "Acción"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Prueba", "Cambio", "Dato", "Proceso"]
-    },
-    "words": [
-      "Laboratorio",
-      "Resident Corporation",
-      "Experimento",
-      "Muestra",
-      "Probeta",
-      "Microscopio",
-      "Antídoto",
-      "Virus",
-      "Vacuna",
-      "Reactivo",
-      "Centrífuga",
-      "Contención",
-      "Alarma",
-      "Cámara estéril",
-      "Mutación",
-      "Suero"
-    ]
+    "subcategory": "Terror",
+    "word": "Sótano",
+    "similarWords": ["Pasillo", "Habitación cerrada", "Casa maldita"],
+    "hints": {
+      "easy": ["Escaleras", "Abajo", "Oscuro"],
+      "normal": ["Humedad", "Caldera", "Trastero"],
+      "hard": ["Moho", "Bombilla", "Eco"]
+    }
   },
   {
+    "id": "sombras",
     "category": "Escape Room",
-    "sub": {
-      "id": "espacio",
-      "easy": ["Espacio", "Tema", "Lugar", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Distancia", "Vacío", "Pulso", "Órbita"]
-    },
-    "words": [
-      "Alien invaders",
-      "Nave",
-      "Oxígeno",
-      "Gravedad",
-      "Señal",
-      "Radar",
-      "Estación",
-      "Cápsula",
-      "Criogenia",
-      "Escotilla",
-      "Astronauta",
-      "Coordenadas",
-      "Láser",
-      "Circuito",
-      "Satélite",
-      "Colonia"
-    ]
+    "subcategory": "Terror",
+    "word": "Sombras",
+    "similarWords": ["Silencio", "Susurro", "Eco", "Alucinación"],
+    "hints": {
+      "easy": ["Oscuridad", "Figura", "Pared"],
+      "normal": ["Silueta", "Luz", "Movimiento"],
+      "hard": ["Rincón", "Parpadeo", "Duda"]
+    }
   },
   {
+    "id": "susurro",
     "category": "Escape Room",
-    "sub": {
-      "id": "portales",
-      "easy": ["Portal", "Tema", "Lugar", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Paso", "Cambio", "Estructura", "Percepción"]
-    },
-    "words": [
-      "Portales",
-      "Portales Malfoy",
-      "Umbral",
-      "Dimensión",
-      "Espejo",
-      "Fractura",
-      "Anomalía",
-      "Vórtice",
-      "Sello",
-      "Runas",
-      "Pasadizo",
-      "Símbolo",
-      "Coordenada",
-      "Pared falsa",
-      "Habitación oculta",
-      "Regreso"
-    ]
+    "subcategory": "Terror",
+    "word": "Susurro",
+    "similarWords": ["Psicofonía", "Respiración", "Silencio"],
+    "hints": {
+      "easy": ["Voz", "Bajo", "Oído"],
+      "normal": ["Cerca", "Secreto", "Murmullo"],
+      "hard": ["Nuca", "Pasillo", "Quietud"]
+    }
   },
   {
+    "id": "alucinacion",
     "category": "Escape Room",
-    "sub": {
-      "id": "fantasia",
-      "easy": ["Magia", "Tema", "Acción", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Mito", "Poder", "Estructura", "Percepción"]
-    },
-    "words": [
-      "Las maravillas de Alicia",
-      "Anillo del dragón",
-      "El último dragón",
-      "Mortífagos",
-      "Varita",
-      "Hechizo",
-      "Poción",
-      "Caldero",
-      "Grimorio",
-      "Pergamino",
-      "Hechicero",
-      "Criatura",
-      "Castillo",
-      "Cristal",
-      "Encantamiento"
-    ]
+    "subcategory": "Terror",
+    "word": "Alucinación",
+    "similarWords": ["Paranoia", "Ansiedad", "Sombras"],
+    "hints": {
+      "easy": ["Ver", "Falso", "Mente"],
+      "normal": ["Engaño", "Visión", "Confusión"],
+      "hard": ["Desvelo", "Pulso", "Duda"]
+    }
   },
   {
+    "id": "ansiedad",
     "category": "Escape Room",
-    "sub": {
-      "id": "aventura",
-      "easy": ["Aventura", "Tema", "Lugar", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Ruta", "Proceso", "Viaje", "Hallazgo"]
-    },
-    "words": [
-      "El tesoro del Jaguar",
-      "Jardín del buda",
-      "Mazmorra",
-      "Reliquias",
-      "Las reliquias de Judi",
-      "Mapa",
-      "Brújula",
-      "Ídolo",
-      "Ruinas",
-      "Templo",
-      "Antorcha",
-      "Cofre",
-      "Gema",
-      "Estatua",
-      "Expedición"
-    ]
+    "subcategory": "Terror",
+    "word": "Ansiedad",
+    "similarWords": ["Pánico", "Paranoia", "Respiración"],
+    "hints": {
+      "easy": ["Nervios", "Miedo", "Ahogo"],
+      "normal": ["Pulso", "Inquietud", "Sudor"],
+      "hard": ["Espera", "Presión", "Pecho"]
+    }
   },
   {
+    "id": "panico",
     "category": "Escape Room",
-    "sub": {
-      "id": "misterio",
-      "easy": ["Misterio", "Tema", "Acción", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Detalle", "Indicio", "Orden", "Signo"]
-    },
-    "words": [
-      "La herencia del panteón",
-      "La guarida",
-      "Pista",
-      "Enigma",
-      "Deducción",
-      "Diario",
-      "Carta",
-      "Sello",
-      "Testamento",
-      "Cuadro",
-      "Caja fuerte",
-      "Clave",
-      "Mensaje",
-      "Archivo"
-    ]
+    "subcategory": "Terror",
+    "word": "Pánico",
+    "similarWords": ["Ansiedad", "Paranoia", "Respiración"],
+    "hints": {
+      "easy": ["Terror", "Grito", "Caos"],
+      "normal": ["Huida", "Descontrol", "Sudor"],
+      "hard": ["Multitud", "Latido", "Urgencia"]
+    }
   },
   {
+    "id": "eco",
     "category": "Escape Room",
-    "sub": {
-      "id": "comedia",
-      "easy": ["Comedia", "Tema", "Acción", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Giro", "Ruido", "Risa", "Escena"]
-    },
-    "words": [
-      "Remigio VS Trump",
-      "La película",
-      "La tienda del señor Miyagi",
-      "Confusión",
-      "Disfraz",
-      "Improvisación",
-      "Broma",
-      "Parodia",
-      "Caos",
-      "Guion",
-      "Actor",
-      "Cámara",
-      "Aplausos"
-    ]
+    "subcategory": "Terror",
+    "word": "Eco",
+    "similarWords": ["Psicofonía", "Silencio", "Pasillo"],
+    "hints": {
+      "easy": ["Sonido", "Rebote", "Vacío"],
+      "normal": ["Paredes", "Hueco", "Resonancia"],
+      "hard": ["Túnel", "Bóveda", "Lejanía"]
+    }
   },
   {
+    "id": "silencio",
     "category": "Escape Room",
-    "sub": {
-      "id": "mecanica",
-      "easy": ["Tema", "Lugar", "Acción", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Mecanismo", "Contacto", "Pieza", "Ajuste"]
-    },
-    "words": [
-      "Candado",
-      "Llave",
-      "Cierre",
-      "Cerrojo",
-      "Imán",
-      "Polea",
-      "Engranaje",
-      "Interruptor",
-      "Palanca",
-      "Botón",
-      "Cajón",
-      "Caja fuerte",
-      "Bisagra",
-      "Panel",
-      "Cable",
-      "Batería",
-      "Sensor"
-    ]
+    "subcategory": "Terror",
+    "word": "Silencio",
+    "similarWords": ["Respiración", "Susurro", "No respires"],
+    "hints": {
+      "easy": ["Callado", "Ruido", "Nada"],
+      "normal": ["Quietud", "Espera", "Tensión"],
+      "hard": ["Contener", "Oír", "Inmóvil"]
+    }
   },
   {
+    "id": "pasillo",
     "category": "Escape Room",
-    "sub": {
-      "id": "codigos",
-      "easy": ["Tema", "Lugar", "Acción", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Orden", "Regla", "Serie", "Forma"]
-    },
-    "words": [
-      "Código",
-      "Combinación",
-      "Patrón",
-      "Secuencia",
-      "Anagrama",
-      "Cifrado",
-      "Clave",
-      "Coordenadas",
-      "Ultravioleta",
-      "Número",
-      "Símbolo",
-      "Matriz",
-      "Lógica"
-    ]
+    "subcategory": "Terror",
+    "word": "Pasillo",
+    "similarWords": ["Sótano", "Habitación cerrada", "Puerta entornada"],
+    "hints": {
+      "easy": ["Puertas", "Largo", "Caminar"],
+      "normal": ["Moqueta", "Oscuro", "Cruce"],
+      "hard": ["Esquinas", "Bombilla", "Eco"]
+    }
   },
   {
+    "id": "habitacion_cerrada",
     "category": "Escape Room",
-    "sub": {
-      "id": "atrezzo",
-      "easy": ["Atrezzo", "Tema", "Acción", "Objeto"],
-      "normal": ["Dinámica", "Contexto", "Entorno", "Ritmo"],
-      "hard": ["Objeto", "Detalle", "Pieza", "Cosa"]
-    },
-    "words": [
-      "Máscara",
-      "Guantes",
-      "Cadena",
-      "Cuerda",
-      "Candil",
-      "Espejo",
-      "Cuadro",
-      "Reloj",
-      "Libro",
-      "Radio",
-      "Teléfono",
-      "Maletín",
-      "Armario",
-      "Pared falsa"
-    ]
+    "subcategory": "Terror",
+    "word": "Habitación cerrada",
+    "similarWords": ["Sótano", "Pasillo", "Cerrojo"],
+    "hints": {
+      "easy": ["Puerta", "Llave", "Dentro"],
+      "normal": ["Encierro", "Misterio", "Candado"],
+      "hard": ["Golpes", "Mirilla", "Espera"]
+    }
   },
   {
+    "id": "vigilancia",
     "category": "Escape Room",
-    "sub": {
-      "id": "tiempo",
-      "easy": ["Tiempo", "Tema", "Objeto", "Cuenta"],
-      "normal": ["Contexto", "Presión", "Límite", "Urgencia"],
-      "hard": ["Ritmo", "Pulso", "Momento", "Tramo"]
-    },
-    "words": [
-      "Cronómetro",
-      "Cuenta atrás",
-      "Alarma",
-      "Prisa",
-      "Tensión",
-      "Adrenalina",
-      "Bloqueo",
-      "Último intento",
-      "Oscuridad",
-      "Salida"
-    ]
+    "subcategory": "Terror",
+    "word": "Vigilancia",
+    "similarWords": ["Paranoia", "Vigilante", "Cámara"],
+    "hints": {
+      "easy": ["Mirar", "Control", "Cámara"],
+      "normal": ["Observación", "Guardia", "Pantallas"],
+      "hard": ["Parpadeo", "Esquina", "Presencia"]
+    }
+  },
+  {
+    "id": "linterna",
+    "category": "Escape Room",
+    "subcategory": "Terror",
+    "word": "Linterna",
+    "similarWords": ["Oscuridad", "Pasillo", "Sótano"],
+    "hints": {
+      "easy": ["Luz", "Pilas", "Mano"],
+      "normal": ["Haz", "Oscuro", "Buscar"],
+      "hard": ["Titilar", "Pasos", "Noche"]
+    }
+  },
+  {
+    "id": "respiracion",
+    "category": "Escape Room",
+    "subcategory": "Terror",
+    "word": "Respiración",
+    "similarWords": ["Silencio", "Susurro", "Ansiedad", "No respires"],
+    "hints": {
+      "easy": ["Aire", "Pulmones", "Sonido"],
+      "normal": ["Agitada", "Pecho", "Ahogo"],
+      "hard": ["Contener", "Espera", "Nuca"]
+    }
+  },
+
+  {
+    "id": "hotel_de_los_suicidas",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Hotel de los suicidas",
+    "similarWords": ["Habitación 13", "Recepción", "Pasillo infinito"],
+    "hints": {
+      "easy": ["Hotel", "Maldición", "Habitaciones"],
+      "normal": ["Registro", "Pasillos", "Tragedia"],
+      "hard": ["Letrero", "Recepción", "Niebla"]
+    }
+  },
+  {
+    "id": "recepcion",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Recepción",
+    "similarWords": ["Check-in", "Portero", "Libro de registro"],
+    "hints": {
+      "easy": ["Mostrador", "Llaves", "Entrada"],
+      "normal": ["Campana", "Reservas", "Vestíbulo"],
+      "hard": ["Llegada", "Maletas", "Espera"]
+    }
+  },
+  {
+    "id": "habitacion_13",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Habitación 13",
+    "similarWords": ["Habitación", "Puerta entornada", "Hotel de los suicidas"],
+    "hints": {
+      "easy": ["Puerta", "Número", "Hotel"],
+      "normal": ["Llave", "Pasillo", "Mala suerte"],
+      "hard": ["Planta", "Noche", "Golpes"]
+    }
+  },
+  {
+    "id": "llave_maestra",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Llave maestra",
+    "similarWords": ["Llave", "Cerrojo", "Recepción"],
+    "hints": {
+      "easy": ["Llave", "Abrir", "Todas"],
+      "normal": ["Habitaciones", "Metal", "Recepción"],
+      "hard": ["Anilla", "Pasillos", "Acceso"]
+    }
+  },
+  {
+    "id": "pasillo_infinito",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Pasillo infinito",
+    "similarWords": ["Pasillo", "Ascensor", "Puerta entornada"],
+    "hints": {
+      "easy": ["Pasillo", "Largo", "Puertas"],
+      "normal": ["Bucle", "Moqueta", "Repetición"],
+      "hard": ["Esquinas", "Desorienta", "Andar"]
+    }
+  },
+  {
+    "id": "ascensor",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Ascensor",
+    "similarWords": ["Recepción", "Habitación", "Check-in"],
+    "hints": {
+      "easy": ["Botones", "Plantas", "Puertas"],
+      "normal": ["Cabina", "Subir", "Bajar"],
+      "hard": ["Espejo", "Campana", "Atasco"]
+    }
+  },
+  {
+    "id": "timbre",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Timbre",
+    "similarWords": ["Recepción", "Portero", "Puerta entornada"],
+    "hints": {
+      "easy": ["Sonido", "Pulsar", "Puerta"],
+      "normal": ["Campanilla", "Entrada", "Aviso"],
+      "hard": ["Recepción", "Llegada", "Espera"]
+    }
+  },
+  {
+    "id": "maleta",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Maleta",
+    "similarWords": ["Check-in", "Recepción", "Habitación"],
+    "hints": {
+      "easy": ["Viaje", "Ropa", "Asa"],
+      "normal": ["Ruedas", "Equipaje", "Cerrar"],
+      "hard": ["Llegada", "Vestíbulo", "Pasillo"]
+    }
+  },
+  {
+    "id": "libro_de_registro",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Libro de registro",
+    "similarWords": ["Recepción", "Check-in", "Portero"],
+    "hints": {
+      "easy": ["Libro", "Nombres", "Firmas"],
+      "normal": ["Recepción", "Huéspedes", "Fechas"],
+      "hard": ["Reserva", "Vestíbulo", "Tinta"]
+    }
+  },
+  {
+    "id": "portero",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Portero",
+    "similarWords": ["Recepción", "Vigilancia", "Check-in"],
+    "hints": {
+      "easy": ["Entrada", "Uniforme", "Puerta"],
+      "normal": ["Saluda", "Equipaje", "Hotel"],
+      "hard": ["Vestíbulo", "Turno", "Propina"]
+    }
+  },
+  {
+    "id": "puerta_entornada",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Puerta entornada",
+    "similarWords": ["Habitación 13", "Pasillo", "Cerrojo"],
+    "hints": {
+      "easy": ["Puerta", "Abierta", "Poco"],
+      "normal": ["Rendija", "Pasillo", "Sombra"],
+      "hard": ["Mirada", "Silencio", "Madera"]
+    }
+  },
+  {
+    "id": "cadena",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Cadena",
+    "similarWords": ["Cerrojo", "Llave maestra", "Puerta entornada"],
+    "hints": {
+      "easy": ["Metal", "Enlazada", "Puerta"],
+      "normal": ["Seguridad", "Cierre", "Tope"],
+      "hard": ["Crujido", "Tensión", "Anillas"]
+    }
+  },
+  {
+    "id": "cerrojo",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Cerrojo",
+    "similarWords": ["Cadena", "Llave maestra", "Puerta entornada"],
+    "hints": {
+      "easy": ["Cierre", "Puerta", "Metal"],
+      "normal": ["Bloqueo", "Pestillo", "Seguridad"],
+      "hard": ["Deslizar", "Dentro", "Tope"]
+    }
+  },
+  {
+    "id": "cortinas",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Cortinas",
+    "similarWords": ["Espejo", "Habitación", "Niebla"],
+    "hints": {
+      "easy": ["Tela", "Ventana", "Tapar"],
+      "normal": ["Pliegues", "Oscurecer", "Barra"],
+      "hard": ["Corriente", "Sombra", "Habitación"]
+    }
+  },
+  {
+    "id": "espejo",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Espejo",
+    "similarWords": ["Habitación", "Ascensor", "Cortinas"],
+    "hints": {
+      "easy": ["Reflejo", "Cristal", "Cara"],
+      "normal": ["Marco", "Mirarse", "Pared"],
+      "hard": ["Manchas", "Niebla", "Silueta"]
+    }
+  },
+  {
+    "id": "moqueta",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Moqueta",
+    "similarWords": ["Pasillo infinito", "Habitación", "Recepción"],
+    "hints": {
+      "easy": ["Suelo", "Tela", "Pasillo"],
+      "normal": ["Pisadas", "Hotel", "Blanda"],
+      "hard": ["Roja", "Polvo", "Silencio"]
+    }
+  },
+  {
+    "id": "habitacion",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Habitación",
+    "similarWords": ["Habitación 13", "Recepción", "Check-in"],
+    "hints": {
+      "easy": ["Cama", "Puerta", "Hotel"],
+      "normal": ["Llave", "Baño", "Noche"],
+      "hard": ["Estancia", "Maleta", "Descanso"]
+    }
+  },
+  {
+    "id": "niebla",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Niebla",
+    "similarWords": ["Cortinas", "Pasillo infinito", "Hotel de los suicidas"],
+    "hints": {
+      "easy": ["Blanco", "Bruma", "Ver"],
+      "normal": ["Difuso", "Frío", "Cubrir"],
+      "hard": ["Farolas", "Madrugada", "Siluetas"]
+    }
+  },
+  {
+    "id": "check_in",
+    "category": "Escape Room",
+    "subcategory": "Hotel",
+    "word": "Check-in",
+    "similarWords": ["Recepción", "Libro de registro", "Maleta"],
+    "hints": {
+      "easy": ["Llegada", "Registro", "Hotel"],
+      "normal": ["Mostrador", "Reserva", "Firma"],
+      "hard": ["Vestíbulo", "Espera", "Entrada"]
+    }
+  },
+
+  {
+    "id": "psyquiatricum",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Psyquiatricum",
+    "similarWords": ["Los inocentes", "Clínica", "Habitación acolchada"],
+    "hints": {
+      "easy": ["Psiquiátrico", "Pacientes", "Terror"],
+      "normal": ["Expedientes", "Batas", "Pasillos"],
+      "hard": ["Turno", "Pulsera", "Monitor"]
+    }
+  },
+  {
+    "id": "los_inocentes",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Los inocentes",
+    "similarWords": ["Psyquiatricum", "Paciente", "Sala de espera"],
+    "hints": {
+      "easy": ["Clínica", "Pacientes", "Terror"],
+      "normal": ["Médicos", "Diagnóstico", "Expediente"],
+      "hard": ["Batas", "Turno", "Silencio"]
+    }
+  },
+  {
+    "id": "clinica",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Clínica",
+    "similarWords": ["Enfermería", "Quirófano", "Sala de espera"],
+    "hints": {
+      "easy": ["Hospital", "Médicos", "Pacientes"],
+      "normal": ["Consultas", "Salas", "Tratamiento"],
+      "hard": ["Turnos", "Pasillos", "Urgencia"]
+    }
+  },
+  {
+    "id": "paciente",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Paciente",
+    "similarWords": ["Pulsera", "Camilla", "Diagnóstico"],
+    "hints": {
+      "easy": ["Persona", "Hospital", "Enfermo"],
+      "normal": ["Ingreso", "Tratamiento", "Pulsera"],
+      "hard": ["Espera", "Dolor", "Historial"]
+    }
+  },
+  {
+    "id": "camilla",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Camilla",
+    "similarWords": ["Quirófano", "Paciente", "Sala de espera"],
+    "hints": {
+      "easy": ["Ruedas", "Tumbar", "Hospital"],
+      "normal": ["Traslado", "Sábanas", "Urgencia"],
+      "hard": ["Pasillos", "Empujar", "Reposo"]
+    }
+  },
+  {
+    "id": "bata",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Bata",
+    "similarWords": ["Enfermería", "Quirófano", "Paciente"],
+    "hints": {
+      "easy": ["Ropa", "Blanca", "Médico"],
+      "normal": ["Bolsillos", "Hospital", "Uniforme"],
+      "hard": ["Turno", "Pasillos", "Consulta"]
+    }
+  },
+  {
+    "id": "jeringa",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Jeringa",
+    "similarWords": ["Sedante", "Medicamento", "Electroshock"],
+    "hints": {
+      "easy": ["Aguja", "Inyección", "Plástico"],
+      "normal": ["Dosis", "Brazo", "Émbolo"],
+      "hard": ["Bandeja", "Pulso", "Desinfectar"]
+    }
+  },
+  {
+    "id": "electroshock",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Electroshock",
+    "similarWords": ["Sedante", "Terapia", "Monitor"],
+    "hints": {
+      "easy": ["Electricidad", "Tratamiento", "Paciente"],
+      "normal": ["Descarga", "Médico", "Camilla"],
+      "hard": ["Pulso", "Sala", "Control"]
+    }
+  },
+  {
+    "id": "expediente",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Expediente",
+    "similarWords": ["Diagnóstico", "Paciente", "Archivo"],
+    "hints": {
+      "easy": ["Carpeta", "Datos", "Paciente"],
+      "normal": ["Informes", "Historial", "Diagnóstico"],
+      "hard": ["Archivador", "Firmas", "Consulta"]
+    }
+  },
+  {
+    "id": "diagnostico",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Diagnóstico",
+    "similarWords": ["Expediente", "Paciente", "Medicamento"],
+    "hints": {
+      "easy": ["Enfermedad", "Médico", "Resultado"],
+      "normal": ["Síntomas", "Informe", "Pruebas"],
+      "hard": ["Consulta", "Conclusión", "Tratamiento"]
+    }
+  },
+  {
+    "id": "pulsera",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Pulsera",
+    "similarWords": ["Paciente", "Enfermería", "Monitor"],
+    "hints": {
+      "easy": ["Muñeca", "Hospital", "Nombre"],
+      "normal": ["Identificación", "Plástico", "Ingreso"],
+      "hard": ["Turno", "Pasillo", "Control"]
+    }
+  },
+  {
+    "id": "enfermeria",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Enfermería",
+    "similarWords": ["Clínica", "Sala de espera", "Medicamento"],
+    "hints": {
+      "easy": ["Nurses", "Hospital", "Sala"],
+      "normal": ["Medicinas", "Mostrador", "Curas"],
+      "hard": ["Turno", "Carro", "Timbre"]
+    }
+  },
+  {
+    "id": "sala_de_espera",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Sala de espera",
+    "similarWords": ["Recepción", "Paciente", "Clínica"],
+    "hints": {
+      "easy": ["Sillas", "Esperar", "Pacientes"],
+      "normal": ["Turno", "Revistas", "Recepción"],
+      "hard": ["Tos", "Pantalla", "Retraso"]
+    }
+  },
+  {
+    "id": "quirofano",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Quirófano",
+    "similarWords": ["Camilla", "Morgue", "Monitor"],
+    "hints": {
+      "easy": ["Operación", "Médicos", "Sala"],
+      "normal": ["Lámparas", "Guantes", "Bisturí"],
+      "hard": ["Estéril", "Foco", "Mascarillas"]
+    }
+  },
+  {
+    "id": "morgue",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Morgue",
+    "similarWords": ["Quirófano", "Camilla", "Clínica"],
+    "hints": {
+      "easy": ["Cadáver", "Hospital", "Frío"],
+      "normal": ["Cajones", "Autopsia", "Sótano"],
+      "hard": ["Silencio", "Metal", "Etiqueta"]
+    }
+  },
+  {
+    "id": "sedante",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Sedante",
+    "similarWords": ["Jeringa", "Medicamento", "Terapia"],
+    "hints": {
+      "easy": ["Dormir", "Medicina", "Calmar"],
+      "normal": ["Dosis", "Inyección", "Efecto"],
+      "hard": ["Párpados", "Turno", "Quietud"]
+    }
+  },
+  {
+    "id": "terapia",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Terapia",
+    "similarWords": ["Diagnóstico", "Paciente", "Sedante"],
+    "hints": {
+      "easy": ["Tratamiento", "Hablar", "Mejorar"],
+      "normal": ["Sesión", "Psicólogo", "Proceso"],
+      "hard": ["Confianza", "Silla", "Rutina"]
+    }
+  },
+  {
+    "id": "monitor",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Monitor",
+    "similarWords": ["Pulsera", "Electroshock", "Quirófano"],
+    "hints": {
+      "easy": ["Pantalla", "Pulso", "Hospital"],
+      "normal": ["Pitido", "Signos", "Cables"],
+      "hard": ["Números", "Sala", "Luz"]
+    }
+  },
+  {
+    "id": "medicamento",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Medicamento",
+    "similarWords": ["Sedante", "Jeringa", "Diagnóstico"],
+    "hints": {
+      "easy": ["Pastilla", "Curar", "Farmacia"],
+      "normal": ["Dosis", "Receta", "Caja"],
+      "hard": ["Prospecto", "Consulta", "Tratamiento"]
+    }
+  },
+  {
+    "id": "habitacion_acolchada",
+    "category": "Escape Room",
+    "subcategory": "Clínica",
+    "word": "Habitación acolchada",
+    "similarWords": ["Paciente", "Psyquiatricum", "Sala de espera"],
+    "hints": {
+      "easy": ["Paredes", "Blando", "Encierro"],
+      "normal": ["Seguridad", "Psiquiátrico", "Aislamiento"],
+      "hard": ["Silencio", "Golpes", "Vacía"]
+    }
+  },
+
+  {
+    "id": "saw",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "SAW",
+    "similarWords": ["The Hammer Killer", "Trampa", "Cronómetro"],
+    "hints": {
+      "easy": ["Trampas", "Juegos", "Terror"],
+      "normal": ["Máscara", "Tiempo", "Pruebas"],
+      "hard": ["Cadenas", "Sierra", "Elección"]
+    }
+  },
+  {
+    "id": "the_hammer_killer",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "The Hammer Killer",
+    "similarWords": ["El asesino", "Cuchillo", "Sospechoso"],
+    "hints": {
+      "easy": ["Asesino", "Martillo", "Caso"],
+      "normal": ["Huellas", "Crimen", "Víctimas"],
+      "hard": ["Archivo", "Interrogatorio", "Noche"]
+    }
+  },
+  {
+    "id": "el_asesino",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "El asesino",
+    "similarWords": ["The Hammer Killer", "Sospechoso", "Cuchillo"],
+    "hints": {
+      "easy": ["Matar", "Crimen", "Sospechoso"],
+      "normal": ["Oculto", "Huida", "Evidencia"],
+      "hard": ["Perfil", "Motivo", "Noche"]
+    }
+  },
+  {
+    "id": "cinta",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Cinta",
+    "similarWords": ["Cinta adhesiva", "Informe", "Prueba"],
+    "hints": {
+      "easy": ["Rollo", "Tira", "Pegar"],
+      "normal": ["Vídeo", "Grabación", "Escena"],
+      "hard": ["Rebobinar", "Mesa", "Pistas"]
+    }
+  },
+  {
+    "id": "prueba",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Prueba",
+    "similarWords": ["Evidencia", "Caso", "Trampa"],
+    "hints": {
+      "easy": ["Test", "Demostrar", "Reto"],
+      "normal": ["Examen", "Comprobar", "Superar"],
+      "hard": ["Límite", "Presión", "Tiempo"]
+    }
+  },
+  {
+    "id": "amenaza",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Amenaza",
+    "similarWords": ["Pánico", "Trampa", "Máscara"],
+    "hints": {
+      "easy": ["Peligro", "Miedo", "Aviso"],
+      "normal": ["Daño", "Mensaje", "Riesgo"],
+      "hard": ["Tensión", "Voz", "Cuenta"]
+    }
+  },
+  {
+    "id": "cronometro",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Cronómetro",
+    "similarWords": ["Cuenta atrás", "Alarma", "Prisa"],
+    "hints": {
+      "easy": ["Tiempo", "Segundos", "Reloj"],
+      "normal": ["Límite", "Cuenta", "Urgencia"],
+      "hard": ["Presión", "Pitido", "Final"]
+    }
+  },
+  {
+    "id": "trampa",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Trampa",
+    "similarWords": ["SAW", "Prueba", "Amenaza"],
+    "hints": {
+      "easy": ["Engaño", "Peligro", "Caer"],
+      "normal": ["Mecanismo", "Oculta", "Daño"],
+      "hard": ["Elección", "Error", "Consecuencia"]
+    }
+  },
+  {
+    "id": "coartada",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Coartada",
+    "similarWords": ["Sospechoso", "Interrogatorio", "Caso"],
+    "hints": {
+      "easy": ["Excusa", "Lugar", "Hora"],
+      "normal": ["Mentira", "Declaración", "Álibi"],
+      "hard": ["Versión", "Fiscal", "Duda"]
+    }
+  },
+  {
+    "id": "sospechoso",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Sospechoso",
+    "similarWords": ["Coartada", "Interrogatorio", "El asesino"],
+    "hints": {
+      "easy": ["Persona", "Crimen", "Duda"],
+      "normal": ["Motivo", "Interrogar", "Pistas"],
+      "hard": ["Miradas", "Silencio", "Nervios"]
+    }
+  },
+  {
+    "id": "huella",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Huella",
+    "similarWords": ["Evidencia", "Caso", "Guantes"],
+    "hints": {
+      "easy": ["Dedo", "Marca", "Pista"],
+      "normal": ["Superficie", "Polvo", "Forense"],
+      "hard": ["Lupa", "Mesa", "Látex"]
+    }
+  },
+  {
+    "id": "interrogatorio",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Interrogatorio",
+    "similarWords": ["Sospechoso", "Coartada", "Informe"],
+    "hints": {
+      "easy": ["Preguntas", "Sospechoso", "Policía"],
+      "normal": ["Sala", "Presión", "Declaración"],
+      "hard": ["Mesa", "Foco", "Silencio"]
+    }
+  },
+  {
+    "id": "informe",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Informe",
+    "similarWords": ["Caso", "Evidencia", "Expediente"],
+    "hints": {
+      "easy": ["Documento", "Datos", "Caso"],
+      "normal": ["Conclusiones", "Firmas", "Pruebas"],
+      "hard": ["Carpeta", "Despacho", "Análisis"]
+    }
+  },
+  {
+    "id": "caso",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Caso",
+    "similarWords": ["Informe", "Evidencia", "Sospechoso"],
+    "hints": {
+      "easy": ["Crimen", "Investigar", "Policía"],
+      "normal": ["Pistas", "Archivo", "Resolver"],
+      "hard": ["Despacho", "Fotos", "Corcho"]
+    }
+  },
+  {
+    "id": "evidencia",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Evidencia",
+    "similarWords": ["Prueba", "Huella", "Caso"],
+    "hints": {
+      "easy": ["Prueba", "Pista", "Objeto"],
+      "normal": ["Forense", "Caso", "Demuestra"],
+      "hard": ["Bolsa", "Etiqueta", "Mesa"]
+    }
+  },
+  {
+    "id": "cuchillo",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Cuchillo",
+    "similarWords": ["Máscara", "Guantes", "El asesino"],
+    "hints": {
+      "easy": ["Hoja", "Cortar", "Metal"],
+      "normal": ["Mango", "Arma", "Sangre"],
+      "hard": ["Cocina", "Brillo", "Prueba"]
+    }
+  },
+  {
+    "id": "mascara",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Máscara",
+    "similarWords": ["Guantes", "Cuchillo", "SAW"],
+    "hints": {
+      "easy": ["Cara", "Cubrir", "Disfraz"],
+      "normal": ["Identidad", "Ocultar", "Goma"],
+      "hard": ["Respirar", "Sombra", "Escena"]
+    }
+  },
+  {
+    "id": "guantes",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Guantes",
+    "similarWords": ["Máscara", "Huella", "Cuchillo"],
+    "hints": {
+      "easy": ["Manos", "Dedos", "Protección"],
+      "normal": ["Látex", "Ocultar", "Huella"],
+      "hard": ["Escena", "Bolsillo", "Forense"]
+    }
+  },
+  {
+    "id": "cinta_adhesiva",
+    "category": "Escape Room",
+    "subcategory": "Thriller",
+    "word": "Cinta adhesiva",
+    "similarWords": ["Cinta", "Trampa", "Amenaza"],
+    "hints": {
+      "easy": ["Pegar", "Rollo", "Plástico"],
+      "normal": ["Sellar", "Boca", "Atar"],
+      "hard": ["Silla", "Ruido", "Tensión"]
+    }
+  },
+
+  {
+    "id": "caronte",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Caronte",
+    "similarWords": ["Barca", "Moneda", "Río"],
+    "hints": {
+      "easy": ["Barquero", "Muertos", "Río"],
+      "normal": ["Moneda", "Inframundo", "Paso"],
+      "hard": ["Orilla", "Nieblas", "Umbral"]
+    }
+  },
+  {
+    "id": "barca",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Barca",
+    "similarWords": ["Caronte", "Río", "Moneda"],
+    "hints": {
+      "easy": ["Agua", "Remar", "Madera"],
+      "normal": ["Orilla", "Cruzar", "Pasaje"],
+      "hard": ["Niebla", "Silencio", "Travesía"]
+    }
+  },
+  {
+    "id": "moneda",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Moneda",
+    "similarWords": ["Caronte", "Amuleto", "Altar"],
+    "hints": {
+      "easy": ["Metal", "Cara", "Pago"],
+      "normal": ["Óbolo", "Brillo", "Rito"],
+      "hard": ["Boca", "Tumba", "Paso"]
+    }
+  },
+  {
+    "id": "rio",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Río",
+    "similarWords": ["Barca", "Caronte", "Cementerio"],
+    "hints": {
+      "easy": ["Agua", "Corriente", "Orilla"],
+      "normal": ["Cruzar", "Caudal", "Niebla"],
+      "hard": ["Umbral", "Travesía", "Silencio"]
+    }
+  },
+  {
+    "id": "oraculo",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Oráculo",
+    "similarWords": ["Altar", "Incienso", "Amuleto"],
+    "hints": {
+      "easy": ["Profecía", "Visiones", "Templo"],
+      "normal": ["Respuesta", "Destino", "Pregunta"],
+      "hard": ["Humo", "Eco", "Piedra"]
+    }
+  },
+  {
+    "id": "tumba",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Tumba",
+    "similarWords": ["Cripta", "Sarcófago", "Epitafio"],
+    "hints": {
+      "easy": ["Muerto", "Lápida", "Tierra"],
+      "normal": ["Entierro", "Cementerio", "Flores"],
+      "hard": ["Silencio", "Noche", "Descanso"]
+    }
+  },
+  {
+    "id": "cripta",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Cripta",
+    "similarWords": ["Tumba", "Sarcófago", "Cementerio"],
+    "hints": {
+      "easy": ["Subterráneo", "Tumbas", "Piedra"],
+      "normal": ["Bóveda", "Oscuro", "Iglesia"],
+      "hard": ["Velas", "Frío", "Ecos"]
+    }
+  },
+  {
+    "id": "sarcofago",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Sarcófago",
+    "similarWords": ["Tumba", "Cripta", "Epitafio"],
+    "hints": {
+      "easy": ["Ataúd", "Piedra", "Antiguo"],
+      "normal": ["Relieves", "Tapa", "Tumba"],
+      "hard": ["Polvo", "Grietas", "Rito"]
+    }
+  },
+  {
+    "id": "epitafio",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Epitafio",
+    "similarWords": ["Tumba", "Lamento", "Cementerio"],
+    "hints": {
+      "easy": ["Texto", "Lápida", "Muerto"],
+      "normal": ["Inscripción", "Nombre", "Frase"],
+      "hard": ["Piedra", "Desgaste", "Recuerdo"]
+    }
+  },
+  {
+    "id": "cementerio",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Cementerio",
+    "similarWords": ["Tumba", "Cripta", "Campana"],
+    "hints": {
+      "easy": ["Tumbas", "Muertos", "Lápidas"],
+      "normal": ["Cruces", "Niebla", "Silencio"],
+      "hard": ["Cuervos", "Noche", "Senderos"]
+    }
+  },
+  {
+    "id": "altar",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Altar",
+    "similarWords": ["Incienso", "Velo", "Amuleto"],
+    "hints": {
+      "easy": ["Mesa", "Ritual", "Velas"],
+      "normal": ["Ofrendas", "Piedra", "Templo"],
+      "hard": ["Plegaria", "Humo", "Paso"]
+    }
+  },
+  {
+    "id": "velo",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Velo",
+    "similarWords": ["Lamento", "Altar", "Campana"],
+    "hints": {
+      "easy": ["Tela", "Cubrir", "Blanco"],
+      "normal": ["Cara", "Novia", "Transparente"],
+      "hard": ["Brisa", "Umbral", "Rito"]
+    }
+  },
+  {
+    "id": "lamento",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Lamento",
+    "similarWords": ["Eco", "Susurro", "Campana"],
+    "hints": {
+      "easy": ["Llanto", "Dolor", "Tristeza"],
+      "normal": ["Gemido", "Queja", "Pena"],
+      "hard": ["Lejanía", "Noche", "Ruinas"]
+    }
+  },
+  {
+    "id": "campana",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Campana",
+    "similarWords": ["Lamento", "Cementerio", "Altar"],
+    "hints": {
+      "easy": ["Metal", "Sonar", "Iglesia"],
+      "normal": ["Cuerda", "Tañido", "Torre"],
+      "hard": ["Niebla", "Funeral", "Eco"]
+    }
+  },
+  {
+    "id": "amuleto",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Amuleto",
+    "similarWords": ["Moneda", "Talismán", "Altar"],
+    "hints": {
+      "easy": ["Objeto", "Protección", "Colgar"],
+      "normal": ["Suerte", "Símbolo", "Piedra"],
+      "hard": ["Cuello", "Rito", "Herencia"]
+    }
+  },
+  {
+    "id": "incienso",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Incienso",
+    "similarWords": ["Altar", "Oráculo", "Vela"],
+    "hints": {
+      "easy": ["Humo", "Aroma", "Quemar"],
+      "normal": ["Varilla", "Ritual", "Templo"],
+      "hard": ["Espiras", "Silencio", "Plegaria"]
+    }
+  },
+  {
+    "id": "cenizas",
+    "category": "Escape Room",
+    "subcategory": "Mitología",
+    "word": "Cenizas",
+    "similarWords": ["Incienso", "Lamento", "Tumba"],
+    "hints": {
+      "easy": ["Gris", "Quemado", "Polvo"],
+      "normal": ["Restos", "Urna", "Fuego"],
+      "hard": ["Brisa", "Dedos", "Rito"]
+    }
+  },
+
+  {
+    "id": "fantasmas",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Fantasmas",
+    "similarWords": ["Aparición", "Poltergeist", "Sombra"],
+    "hints": {
+      "easy": ["Espíritus", "Transparentes", "Muertos"],
+      "normal": ["Presencia", "Frío", "Susurros"],
+      "hard": ["Pasillos", "Noche", "Ruido"]
+    }
+  },
+  {
+    "id": "ouija",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Ouija",
+    "similarWords": ["Médium", "Séance", "Invocación"],
+    "hints": {
+      "easy": ["Tabla", "Espíritus", "Letras"],
+      "normal": ["Vaso", "Preguntas", "Dedos"],
+      "hard": ["Mesa", "Velas", "Silencio"]
+    }
+  },
+  {
+    "id": "medium",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Médium",
+    "similarWords": ["Séance", "Ouija", "Exorcismo"],
+    "hints": {
+      "easy": ["Persona", "Espíritus", "Hablar"],
+      "normal": ["Canal", "Trance", "Sesión"],
+      "hard": ["Velas", "Mesa", "Presencia"]
+    }
+  },
+  {
+    "id": "seance",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Séance",
+    "similarWords": ["Médium", "Ouija", "Invocación"],
+    "hints": {
+      "easy": ["Sesión", "Espíritus", "Mesa"],
+      "normal": ["Velas", "Trance", "Invocar"],
+      "hard": ["Manos", "Círculo", "Silencio"]
+    }
+  },
+  {
+    "id": "exorcismo",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Exorcismo",
+    "similarWords": ["Ritual", "Invocación", "Médium"],
+    "hints": {
+      "easy": ["Demonio", "Expulsar", "Ritual"],
+      "normal": ["Oraciones", "Agua", "Cruz"],
+      "hard": ["Sacerdote", "Latín", "Temblor"]
+    }
+  },
+  {
+    "id": "ritual",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Ritual",
+    "similarWords": ["Exorcismo", "Invocación", "Pentagrama"],
+    "hints": {
+      "easy": ["Ceremonia", "Velas", "Pasos"],
+      "normal": ["Símbolos", "Círculo", "Repetir"],
+      "hard": ["Medianoche", "Plegaria", "Umbral"]
+    }
+  },
+  {
+    "id": "pentagrama",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Pentagrama",
+    "similarWords": ["Círculo", "Ritual", "Sal"],
+    "hints": {
+      "easy": ["Estrella", "Símbolo", "Cinco"],
+      "normal": ["Tiza", "Suelo", "Invocar"],
+      "hard": ["Velas", "Centro", "Rito"]
+    }
+  },
+  {
+    "id": "vela",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Vela",
+    "similarWords": ["Incienso", "Ritual", "Ouija"],
+    "hints": {
+      "easy": ["Cera", "Llama", "Luz"],
+      "normal": ["Mecha", "Derretir", "Oscuridad"],
+      "hard": ["Parpadeo", "Mesa", "Invocar"]
+    }
+  },
+  {
+    "id": "sal",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Sal",
+    "similarWords": ["Círculo", "Pentagrama", "Talismán"],
+    "hints": {
+      "easy": ["Blanca", "Cristales", "Cocina"],
+      "normal": ["Línea", "Protección", "Suelo"],
+      "hard": ["Puertas", "Barrera", "Rito"]
+    }
+  },
+  {
+    "id": "invocacion",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Invocación",
+    "similarWords": ["Ritual", "Ouija", "Aparición"],
+    "hints": {
+      "easy": ["Llamar", "Espíritus", "Ritual"],
+      "normal": ["Palabras", "Entidad", "Sesión"],
+      "hard": ["Voz", "Velas", "Medianoche"]
+    }
+  },
+  {
+    "id": "aparicion",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Aparición",
+    "similarWords": ["Fantasmas", "Sombra", "Poltergeist"],
+    "hints": {
+      "easy": ["Figura", "Repente", "Ver"],
+      "normal": ["Silueta", "Presencia", "Manifestación"],
+      "hard": ["Espejo", "Pasillo", "Parpadeo"]
+    }
+  },
+  {
+    "id": "poltergeist",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Poltergeist",
+    "similarWords": ["Fantasmas", "Aparición", "Susurros"],
+    "hints": {
+      "easy": ["Espíritu", "Objetos", "Mover"],
+      "normal": ["Golpes", "Ruido", "Caos"],
+      "hard": ["Puertas", "Cristales", "Noche"]
+    }
+  },
+  {
+    "id": "susurros",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Susurros",
+    "similarWords": ["Sombra", "Aparición", "Fantasmas"],
+    "hints": {
+      "easy": ["Voces", "Bajas", "Oído"],
+      "normal": ["Pasillo", "Murmullos", "Cerca"],
+      "hard": ["Nuca", "Quietud", "Presencia"]
+    }
+  },
+  {
+    "id": "sombra",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Sombra",
+    "similarWords": ["Aparición", "Fantasmas", "Susurros"],
+    "hints": {
+      "easy": ["Oscuro", "Figura", "Pared"],
+      "normal": ["Silueta", "Luz", "Rincón"],
+      "hard": ["Parpadeo", "Duda", "Presencia"]
+    }
+  },
+  {
+    "id": "talisman",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Talismán",
+    "similarWords": ["Amuleto", "Sal", "Círculo"],
+    "hints": {
+      "easy": ["Objeto", "Protección", "Colgar"],
+      "normal": ["Símbolo", "Energía", "Suerte"],
+      "hard": ["Bolsillo", "Rito", "Herencia"]
+    }
+  },
+  {
+    "id": "circulo",
+    "category": "Escape Room",
+    "subcategory": "Espíritus",
+    "word": "Círculo",
+    "similarWords": ["Pentagrama", "Sal", "Ritual"],
+    "hints": {
+      "easy": ["Redondo", "Línea", "Centro"],
+      "normal": ["Protección", "Suelo", "Tiza"],
+      "hard": ["Velas", "Paso", "Barrera"]
+    }
+  },
+
+  {
+    "id": "el_secreto_de_alcatraz",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "El secreto de Alcatraz",
+    "similarWords": ["Celda", "Rejas", "Escape"],
+    "hints": {
+      "easy": ["Prisión", "Isla", "Fuga"],
+      "normal": ["Reclusos", "Guardias", "Túneles"],
+      "hard": ["Sirena", "Niebla", "Ronda"]
+    }
+  },
+  {
+    "id": "celda",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Celda",
+    "similarWords": ["Rejas", "Candado", "Llave"],
+    "hints": {
+      "easy": ["Prisión", "Cama", "Recluso"],
+      "normal": ["Puerta", "Pequeña", "Encierro"],
+      "hard": ["Pasos", "Noche", "Silencio"]
+    }
+  },
+  {
+    "id": "rejas",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Rejas",
+    "similarWords": ["Celda", "Candado", "Vigilante"],
+    "hints": {
+      "easy": ["Barras", "Metal", "Prisión"],
+      "normal": ["Separar", "Ventana", "Encierro"],
+      "hard": ["Sombras", "Frío", "Golpes"]
+    }
+  },
+  {
+    "id": "candado",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Candado",
+    "similarWords": ["Llave", "Rejas", "Cerrojo"],
+    "hints": {
+      "easy": ["Cerrar", "Metal", "Llave"],
+      "normal": ["Arco", "Bloqueo", "Puerta"],
+      "hard": ["Óxido", "Cadena", "Clic"]
+    }
+  },
+  {
+    "id": "llave",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Llave",
+    "similarWords": ["Candado", "Cerrojo", "Escape"],
+    "hints": {
+      "easy": ["Abrir", "Metal", "Puerta"],
+      "normal": ["Dientes", "Cerrar", "Girar"],
+      "hard": ["Bolsillo", "Anilla", "Cerrojo"]
+    }
+  },
+  {
+    "id": "uniforme",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Uniforme",
+    "similarWords": ["Vigilante", "Fichaje", "Reglamento"],
+    "hints": {
+      "easy": ["Ropa", "Igual", "Prisión"],
+      "normal": ["Rayas", "Tela", "Recluso"],
+      "hard": ["Turno", "Lavandería", "Patio"]
+    }
+  },
+  {
+    "id": "sirena",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Sirena",
+    "similarWords": ["Alarma", "Escape", "Vigilante"],
+    "hints": {
+      "easy": ["Ruido", "Alarma", "Fuerte"],
+      "normal": ["Emergencia", "Aviso", "Altavoz"],
+      "hard": ["Patio", "Caos", "Carreras"]
+    }
+  },
+  {
+    "id": "vigilante",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Vigilante",
+    "similarWords": ["Vigilancia", "Ronda", "Cámara"],
+    "hints": {
+      "easy": ["Guardia", "Prisión", "Mirar"],
+      "normal": ["Linterna", "Llaves", "Turno"],
+      "hard": ["Pasillos", "Silbato", "Botas"]
+    }
+  },
+  {
+    "id": "patio",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Patio",
+    "similarWords": ["Ronda", "Vigilante", "Uniforme"],
+    "hints": {
+      "easy": ["Aire libre", "Prisión", "Reclusos"],
+      "normal": ["Muros", "Paseo", "Hora"],
+      "hard": ["Silbato", "Canasta", "Rutina"]
+    }
+  },
+  {
+    "id": "tunel",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Túnel",
+    "similarWords": ["Plano", "Escape", "Candado"],
+    "hints": {
+      "easy": ["Paso", "Subterráneo", "Oscuro"],
+      "normal": ["Excavar", "Fuga", "Tierra"],
+      "hard": ["Cucharas", "Silencio", "Noche"]
+    }
+  },
+  {
+    "id": "plano",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Plano",
+    "similarWords": ["Túnel", "Cámara", "Escape"],
+    "hints": {
+      "easy": ["Mapa", "Dibujo", "Lugares"],
+      "normal": ["Ruta", "Medidas", "Papel"],
+      "hard": ["Doblado", "Mesa", "Fuga"]
+    }
+  },
+  {
+    "id": "ronda",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Ronda",
+    "similarWords": ["Vigilante", "Cámara", "Patio"],
+    "hints": {
+      "easy": ["Vuelta", "Guardia", "Pasillo"],
+      "normal": ["Control", "Turno", "Recorrido"],
+      "hard": ["Botas", "Linterna", "Noche"]
+    }
+  },
+  {
+    "id": "camara",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Cámara",
+    "similarWords": ["Vigilancia", "Ronda", "Plano"],
+    "hints": {
+      "easy": ["Grabar", "Lente", "Pantalla"],
+      "normal": ["Vigilancia", "Techo", "Cable"],
+      "hard": ["Parpadeo", "Monitor", "Esquina"]
+    }
+  },
+  {
+    "id": "fichaje",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Fichaje",
+    "similarWords": ["Reglamento", "Uniforme", "Vigilante"],
+    "hints": {
+      "easy": ["Foto", "Datos", "Registro"],
+      "normal": ["Archivo", "Huella", "Ingreso"],
+      "hard": ["Mostrador", "Número", "Expediente"]
+    }
+  },
+  {
+    "id": "reglamento",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Reglamento",
+    "similarWords": ["Fichaje", "Vigilante", "Escape"],
+    "hints": {
+      "easy": ["Normas", "Reglas", "Prisión"],
+      "normal": ["Prohibido", "Cumplir", "Disciplina"],
+      "hard": ["Tablón", "Sanción", "Rutina"]
+    }
+  },
+  {
+    "id": "escape",
+    "category": "Escape Room",
+    "subcategory": "Prisión",
+    "word": "Escape",
+    "similarWords": ["Túnel", "Llave", "Sirena"],
+    "hints": {
+      "easy": ["Huir", "Salir", "Fuga"],
+      "normal": ["Plan", "Libertad", "Riesgo"],
+      "hard": ["Noche", "Silencio", "Sirenas"]
+    }
+  },
+
+  {
+    "id": "laboratorio",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Laboratorio",
+    "similarWords": ["Experimento", "Probeta", "Microscopio"],
+    "hints": {
+      "easy": ["Ciencia", "Mesas", "Batas"],
+      "normal": ["Reactivos", "Tubos", "Ensayos"],
+      "hard": ["Estéril", "Ventilación", "Protocolo"]
+    }
+  },
+  {
+    "id": "resident_corporation",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Resident Corporation",
+    "similarWords": ["Virus", "Mutación", "Contención"],
+    "hints": {
+      "easy": ["Corporación", "Virus", "Laboratorio"],
+      "normal": ["Experimentos", "Antídoto", "Alarma"],
+      "hard": ["Traje", "Estéril", "Emergencia"]
+    }
+  },
+  {
+    "id": "experimento",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Experimento",
+    "similarWords": ["Muestra", "Reactivo", "Probeta"],
+    "hints": {
+      "easy": ["Prueba", "Ciencia", "Resultado"],
+      "normal": ["Hipótesis", "Laboratorio", "Ensayo"],
+      "hard": ["Protocolo", "Errores", "Muestra"]
+    }
+  },
+  {
+    "id": "muestra",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Muestra",
+    "similarWords": ["Experimento", "Reactivo", "Virus"],
+    "hints": {
+      "easy": ["Parte", "Prueba", "Frasco"],
+      "normal": ["Análisis", "Etiqueta", "Laboratorio"],
+      "hard": ["Pinzas", "Congelador", "Registro"]
+    }
+  },
+  {
+    "id": "probeta",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Probeta",
+    "similarWords": ["Reactivo", "Muestra", "Centrífuga"],
+    "hints": {
+      "easy": ["Tubo", "Cristal", "Líquido"],
+      "normal": ["Medir", "Graduada", "Vertido"],
+      "hard": ["Estante", "Burbujas", "Mesa"]
+    }
+  },
+  {
+    "id": "microscopio",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Microscopio",
+    "similarWords": ["Muestra", "Laboratorio", "Virus"],
+    "hints": {
+      "easy": ["Lente", "Ver", "Pequeño"],
+      "normal": ["Aumento", "Portaobjetos", "Enfoque"],
+      "hard": ["Ocular", "Luz", "Muestra"]
+    }
+  },
+  {
+    "id": "antidoto",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Antídoto",
+    "similarWords": ["Vacuna", "Suero", "Virus"],
+    "hints": {
+      "easy": ["Curar", "Veneno", "Remedio"],
+      "normal": ["Neutralizar", "Dosis", "Salvar"],
+      "hard": ["Tiempo", "Urgencia", "Vial"]
+    }
+  },
+  {
+    "id": "virus",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Virus",
+    "similarWords": ["Vacuna", "Antídoto", "Mutación"],
+    "hints": {
+      "easy": ["Contagio", "Enfermedad", "Microbio"],
+      "normal": ["Transmisión", "Infección", "Mutar"],
+      "hard": ["Cuarentena", "Brote", "Traje"]
+    }
+  },
+  {
+    "id": "vacuna",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Vacuna",
+    "similarWords": ["Antídoto", "Suero", "Virus"],
+    "hints": {
+      "easy": ["Inyección", "Protección", "Enfermedad"],
+      "normal": ["Dosis", "Inmunidad", "Jeringa"],
+      "hard": ["Campaña", "Vial", "Brazo"]
+    }
+  },
+  {
+    "id": "reactivo",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Reactivo",
+    "similarWords": ["Probeta", "Muestra", "Experimento"],
+    "hints": {
+      "easy": ["Química", "Líquido", "Mezclar"],
+      "normal": ["Color", "Reacción", "Frasco"],
+      "hard": ["Goteo", "Etiqueta", "Mesa"]
+    }
+  },
+  {
+    "id": "centrifuga",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Centrífuga",
+    "similarWords": ["Probeta", "Muestra", "Laboratorio"],
+    "hints": {
+      "easy": ["Girar", "Máquina", "Tubos"],
+      "normal": ["Separar", "Velocidad", "Laboratorio"],
+      "hard": ["Tapa", "Vibración", "Motor"]
+    }
+  },
+  {
+    "id": "contencion",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Contención",
+    "similarWords": ["Cámara estéril", "Alarma", "Virus"],
+    "hints": {
+      "easy": ["Controlar", "Encerrar", "Peligro"],
+      "normal": ["Barrera", "Protocolo", "Seguridad"],
+      "hard": ["Puertas", "Trajes", "Emergencia"]
+    }
+  },
+  {
+    "id": "alarma",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Alarma",
+    "similarWords": ["Contención", "Cronómetro", "Salida"],
+    "hints": {
+      "easy": ["Sonido", "Aviso", "Peligro"],
+      "normal": ["Sirena", "Luces", "Emergencia"],
+      "hard": ["Pasillos", "Rojo", "Protocolo"]
+    }
+  },
+  {
+    "id": "camara_esteril",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Cámara estéril",
+    "similarWords": ["Contención", "Laboratorio", "Virus"],
+    "hints": {
+      "easy": ["Sala", "Limpia", "Cristal"],
+      "normal": ["Aislamiento", "Traje", "Filtros"],
+      "hard": ["Descontaminar", "Presión", "Puertas"]
+    }
+  },
+  {
+    "id": "mutacion",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Mutación",
+    "similarWords": ["Virus", "Experimento", "Suero"],
+    "hints": {
+      "easy": ["Cambio", "Genética", "ADN"],
+      "normal": ["Alteración", "Laboratorio", "Evolución"],
+      "hard": ["Error", "Prueba", "Síntomas"]
+    }
+  },
+  {
+    "id": "suero",
+    "category": "Escape Room",
+    "subcategory": "Ciencia",
+    "word": "Suero",
+    "similarWords": ["Vacuna", "Antídoto", "Reactivo"],
+    "hints": {
+      "easy": ["Líquido", "Vial", "Medicina"],
+      "normal": ["Inyección", "Transparente", "Dosis"],
+      "hard": ["Nevera", "Urgencia", "Bandeja"]
+    }
+  },
+
+  {
+    "id": "alien_invaders",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Alien invaders",
+    "similarWords": ["Nave", "Señal", "Radar"],
+    "hints": {
+      "easy": ["Aliens", "Ataque", "Espacio"],
+      "normal": ["Nave", "Radar", "Colonias"],
+      "hard": ["Sirenas", "Cabina", "Órbita"]
+    }
+  },
+  {
+    "id": "nave",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Nave",
+    "similarWords": ["Estación", "Cápsula", "Escotilla"],
+    "hints": {
+      "easy": ["Espacio", "Viajar", "Metal"],
+      "normal": ["Cabina", "Motores", "Estrellas"],
+      "hard": ["Órbita", "Vacío", "Alarma"]
+    }
+  },
+  {
+    "id": "oxigeno",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Oxígeno",
+    "similarWords": ["Gravedad", "Astronauta", "Cápsula"],
+    "hints": {
+      "easy": ["Respirar", "Aire", "Tanque"],
+      "normal": ["Casco", "Nivel", "Supervivencia"],
+      "hard": ["Pitido", "Traje", "Vacío"]
+    }
+  },
+  {
+    "id": "gravedad",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Gravedad",
+    "similarWords": ["Oxígeno", "Criogenia", "Cápsula"],
+    "hints": {
+      "easy": ["Caer", "Peso", "Fuerza"],
+      "normal": ["Flotar", "Espacio", "Atracción"],
+      "hard": ["Órbita", "Vacío", "Cabina"]
+    }
+  },
+  {
+    "id": "senal",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Señal",
+    "similarWords": ["Radar", "Coordenadas", "Satélite"],
+    "hints": {
+      "easy": ["Mensaje", "Radio", "Antena"],
+      "normal": ["Frecuencia", "Emitir", "Recibir"],
+      "hard": ["Ruido", "Cabina", "Lejanía"]
+    }
+  },
+  {
+    "id": "radar",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Radar",
+    "similarWords": ["Señal", "Satélite", "Coordenadas"],
+    "hints": {
+      "easy": ["Pantalla", "Detección", "Puntos"],
+      "normal": ["Barrido", "Antena", "Objetivo"],
+      "hard": ["Cabina", "Pitido", "Órbita"]
+    }
+  },
+  {
+    "id": "estacion",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Estación",
+    "similarWords": ["Nave", "Colonia", "Cápsula"],
+    "hints": {
+      "easy": ["Espacio", "Módulos", "Orbitar"],
+      "normal": ["Acoplar", "Paneles", "Cabina"],
+      "hard": ["Turnos", "Vacío", "Pasillos"]
+    }
+  },
+  {
+    "id": "capsula",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Cápsula",
+    "similarWords": ["Criogenia", "Nave", "Escotilla"],
+    "hints": {
+      "easy": ["Pequeña", "Cabina", "Asiento"],
+      "normal": ["Escape", "Reentrada", "Botones"],
+      "hard": ["Aislado", "Vacío", "Sacudida"]
+    }
+  },
+  {
+    "id": "criogenia",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Criogenia",
+    "similarWords": ["Cápsula", "Oxígeno", "Estación"],
+    "hints": {
+      "easy": ["Frío", "Dormir", "Cápsula"],
+      "normal": ["Congelar", "Largo", "Viaje"],
+      "hard": ["Vapor", "Despertar", "Futuro"]
+    }
+  },
+  {
+    "id": "escotilla",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Escotilla",
+    "similarWords": ["Nave", "Cápsula", "Estación"],
+    "hints": {
+      "easy": ["Puerta", "Metal", "Nave"],
+      "normal": ["Sellar", "Compartimento", "Abrir"],
+      "hard": ["Vacío", "Palanca", "Presión"]
+    }
+  },
+  {
+    "id": "astronauta",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Astronauta",
+    "similarWords": ["Oxígeno", "Nave", "Gravedad"],
+    "hints": {
+      "easy": ["Traje", "Espacio", "Casco"],
+      "normal": ["Misión", "Gravedad", "Nave"],
+      "hard": ["Órbita", "Silencio", "Vacío"]
+    }
+  },
+  {
+    "id": "coordenadas",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Coordenadas",
+    "similarWords": ["Señal", "Radar", "Satélite"],
+    "hints": {
+      "easy": ["Números", "Ubicación", "Punto"],
+      "normal": ["Mapa", "Navegar", "Destino"],
+      "hard": ["Pantalla", "Ruta", "Cálculo"]
+    }
+  },
+  {
+    "id": "laser",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Láser",
+    "similarWords": ["Circuito", "Señal", "Radar"],
+    "hints": {
+      "easy": ["Luz", "Rojo", "Rayo"],
+      "normal": ["Precisión", "Sensor", "Cortar"],
+      "hard": ["Alarma", "Haz", "Seguridad"]
+    }
+  },
+  {
+    "id": "circuito",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Circuito",
+    "similarWords": ["Láser", "Satélite", "Radar"],
+    "hints": {
+      "easy": ["Cables", "Placa", "Electricidad"],
+      "normal": ["Conectar", "Soldar", "Sistema"],
+      "hard": ["Panel", "Chispa", "Reparación"]
+    }
+  },
+  {
+    "id": "satelite",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Satélite",
+    "similarWords": ["Radar", "Señal", "Órbita"],
+    "hints": {
+      "easy": ["Espacio", "Antena", "Orbitar"],
+      "normal": ["Señal", "Paneles", "Transmisión"],
+      "hard": ["Lejanía", "Trayectoria", "Vacío"]
+    }
+  },
+  {
+    "id": "colonia",
+    "category": "Escape Room",
+    "subcategory": "Espacio",
+    "word": "Colonia",
+    "similarWords": ["Estación", "Nave", "Alien invaders"],
+    "hints": {
+      "easy": ["Población", "Espacio", "Base"],
+      "normal": ["Módulos", "Supervivientes", "Planeta"],
+      "hard": ["Rutina", "Cúpulas", "Lejanía"]
+    }
+  },
+
+  {
+    "id": "portales",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Portales",
+    "similarWords": ["Portales Malfoy", "Umbral", "Dimensión"],
+    "hints": {
+      "easy": ["Paso", "Mundos", "Abrir"],
+      "normal": ["Dimensiones", "Cruzar", "Anomalía"],
+      "hard": ["Vórtice", "Umbral", "Regreso"]
+    }
+  },
+  {
+    "id": "portales_malfoy",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Portales Malfoy",
+    "similarWords": ["Portales", "Runas", "Umbral"],
+    "hints": {
+      "easy": ["Portales", "Magia", "Paso"],
+      "normal": ["Runas", "Espejos", "Cambio"],
+      "hard": ["Fracturas", "Pasadizo", "Retorno"]
+    }
+  },
+  {
+    "id": "umbral",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Umbral",
+    "similarWords": ["Portales", "Pasadizo", "Regreso"],
+    "hints": {
+      "easy": ["Puerta", "Paso", "Entrada"],
+      "normal": ["Límite", "Cruzar", "Borde"],
+      "hard": ["Decisión", "Cambio", "Parpadeo"]
+    }
+  },
+  {
+    "id": "dimension",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Dimensión",
+    "similarWords": ["Portales", "Anomalía", "Vórtice"],
+    "hints": {
+      "easy": ["Mundo", "Realidad", "Espacio"],
+      "normal": ["Paralela", "Distinta", "Cruzar"],
+      "hard": ["Desfase", "Reflejo", "Cambio"]
+    }
+  },
+  {
+    "id": "espejo",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Espejo",
+    "similarWords": ["Dimensión", "Pared falsa", "Habitación oculta"],
+    "hints": {
+      "easy": ["Reflejo", "Cristal", "Cara"],
+      "normal": ["Marco", "Brillo", "Duplicar"],
+      "hard": ["Paso", "Silueta", "Anomalía"]
+    }
+  },
+  {
+    "id": "fractura",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Fractura",
+    "similarWords": ["Anomalía", "Vórtice", "Sello"],
+    "hints": {
+      "easy": ["Ruptura", "Grieta", "Romper"],
+      "normal": ["Fisura", "Apertura", "Separar"],
+      "hard": ["Realidad", "Brillo", "Borde"]
+    }
+  },
+  {
+    "id": "anomalia",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Anomalía",
+    "similarWords": ["Fractura", "Vórtice", "Dimensión"],
+    "hints": {
+      "easy": ["Error", "Extraño", "Cambio"],
+      "normal": ["Inestable", "Fenómeno", "Raro"],
+      "hard": ["Lecturas", "Brillo", "Distorsión"]
+    }
+  },
+  {
+    "id": "vortice",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Vórtice",
+    "similarWords": ["Portales", "Anomalía", "Dimensión"],
+    "hints": {
+      "easy": ["Girar", "Centro", "Absorber"],
+      "normal": ["Espiral", "Portal", "Vacío"],
+      "hard": ["Ruido", "Aire", "Succión"]
+    }
+  },
+  {
+    "id": "sello",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Sello",
+    "similarWords": ["Runas", "Símbolo", "Coordenada"],
+    "hints": {
+      "easy": ["Marca", "Cerrar", "Símbolo"],
+      "normal": ["Estampar", "Bloqueo", "Rito"],
+      "hard": ["Cera", "Documento", "Portal"]
+    }
+  },
+  {
+    "id": "runas",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Runas",
+    "similarWords": ["Símbolo", "Sello", "Coordenada"],
+    "hints": {
+      "easy": ["Símbolos", "Piedra", "Antiguo"],
+      "normal": ["Tallar", "Magia", "Idioma"],
+      "hard": ["Muro", "Brillo", "Secuencia"]
+    }
+  },
+  {
+    "id": "pasadizo",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Pasadizo",
+    "similarWords": ["Umbral", "Pared falsa", "Habitación oculta"],
+    "hints": {
+      "easy": ["Paso", "Oculto", "Pared"],
+      "normal": ["Secreto", "Estrecho", "Cruzar"],
+      "hard": ["Polvo", "Bisagra", "Sombra"]
+    }
+  },
+  {
+    "id": "simbolo",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Símbolo",
+    "similarWords": ["Runas", "Sello", "Coordenada"],
+    "hints": {
+      "easy": ["Signo", "Dibujo", "Marca"],
+      "normal": ["Código", "Figura", "Interpretar"],
+      "hard": ["Muro", "Patrón", "Pista"]
+    }
+  },
+  {
+    "id": "coordenada",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Coordenada",
+    "similarWords": ["Símbolo", "Runas", "Regreso"],
+    "hints": {
+      "easy": ["Punto", "Mapa", "Ubicación"],
+      "normal": ["Números", "Destino", "Ruta"],
+      "hard": ["Cálculo", "Panel", "Regreso"]
+    }
+  },
+  {
+    "id": "pared_falsa",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Pared falsa",
+    "similarWords": ["Pasadizo", "Habitación oculta", "Espejo"],
+    "hints": {
+      "easy": ["Pared", "Secreta", "Abrir"],
+      "normal": ["Hueco", "Oculta", "Panel"],
+      "hard": ["Golpe", "Resuena", "Bisagra"]
+    }
+  },
+  {
+    "id": "habitacion_oculta",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Habitación oculta",
+    "similarWords": ["Pared falsa", "Pasadizo", "Regreso"],
+    "hints": {
+      "easy": ["Cuarto", "Secreto", "Escondido"],
+      "normal": ["Trasera", "Descubrir", "Panel"],
+      "hard": ["Polvo", "Candil", "Sorpresa"]
+    }
+  },
+  {
+    "id": "regreso",
+    "category": "Escape Room",
+    "subcategory": "Portales",
+    "word": "Regreso",
+    "similarWords": ["Umbral", "Portales", "Coordenada"],
+    "hints": {
+      "easy": ["Volver", "Retornar", "Casa"],
+      "normal": ["Camino", "Destino", "Puerta"],
+      "hard": ["Añoranza", "Ruta", "Último"]
+    }
+  },
+
+  {
+    "id": "las_maravillas_de_alicia",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Las maravillas de Alicia",
+    "similarWords": ["Mortífagos", "Varita", "Hechizo"],
+    "hints": {
+      "easy": ["Alicia", "Fantasia", "Maravillas"],
+      "normal": ["Sombrerero", "Conejo", "Reina"],
+      "hard": ["Té", "Cartas", "Madriguera"]
+    }
+  },
+  {
+    "id": "anillo_del_dragon",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Anillo del dragón",
+    "similarWords": ["El último dragón", "Cristal", "Hechicero"],
+    "hints": {
+      "easy": ["Anillo", "Dragón", "Magia"],
+      "normal": ["Tesoro", "Poder", "Reliquia"],
+      "hard": ["Fuego", "Garra", "Herencia"]
+    }
+  },
+  {
+    "id": "el_ultimo_dragon",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "El último dragón",
+    "similarWords": ["Anillo del dragón", "Criatura", "Castillo"],
+    "hints": {
+      "easy": ["Dragón", "Fantasia", "Fuego"],
+      "normal": ["Criatura", "Escamas", "Castillo"],
+      "hard": ["Huevos", "Montañas", "Leyenda"]
+    }
+  },
+  {
+    "id": "mortifagos",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Mortífagos",
+    "similarWords": ["Varita", "Hechizo", "Hechicero"],
+    "hints": {
+      "easy": ["Magia", "Oscuros", "Capuchas"],
+      "normal": ["Marca", "Varitas", "Maldad"],
+      "hard": ["Máscaras", "Reunión", "Bosque"]
+    }
+  },
+  {
+    "id": "varita",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Varita",
+    "similarWords": ["Hechizo", "Poción", "Hechicero"],
+    "hints": {
+      "easy": ["Madera", "Magia", "Mano"],
+      "normal": ["Apuntar", "Lanzar", "Chispa"],
+      "hard": ["Bosque", "Duelo", "Funda"]
+    }
+  },
+  {
+    "id": "hechizo",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Hechizo",
+    "similarWords": ["Varita", "Encantamiento", "Poción"],
+    "hints": {
+      "easy": ["Magia", "Palabras", "Lanzar"],
+      "normal": ["Conjuro", "Efecto", "Varita"],
+      "hard": ["Latín", "Duelo", "Chispa"]
+    }
+  },
+  {
+    "id": "pocion",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Poción",
+    "similarWords": ["Caldero", "Hechizo", "Grimorio"],
+    "hints": {
+      "easy": ["Líquido", "Magia", "Beber"],
+      "normal": ["Ingredientes", "Burbujea", "Frasco"],
+      "hard": ["Vapor", "Estante", "Receta"]
+    }
+  },
+  {
+    "id": "caldero",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Caldero",
+    "similarWords": ["Poción", "Grimorio", "Cristal"],
+    "hints": {
+      "easy": ["Olla", "Magia", "Hervir"],
+      "normal": ["Poción", "Metal", "Fuego"],
+      "hard": ["Burbujeo", "Gancho", "Humo"]
+    }
+  },
+  {
+    "id": "grimorio",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Grimorio",
+    "similarWords": ["Pergamino", "Hechizo", "Poción"],
+    "hints": {
+      "easy": ["Libro", "Magia", "Conjuros"],
+      "normal": ["Páginas", "Antiguo", "Recetas"],
+      "hard": ["Polvo", "Estante", "Candil"]
+    }
+  },
+  {
+    "id": "pergamino",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Pergamino",
+    "similarWords": ["Grimorio", "Hechizo", "Cristal"],
+    "hints": {
+      "easy": ["Papel", "Rollo", "Antiguo"],
+      "normal": ["Tinta", "Escribir", "Mapa"],
+      "hard": ["Sello", "Mesa", "Polvo"]
+    }
+  },
+  {
+    "id": "hechicero",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Hechicero",
+    "similarWords": ["Varita", "Hechizo", "Mortífagos"],
+    "hints": {
+      "easy": ["Mago", "Conjuros", "Barba"],
+      "normal": ["Sabio", "Túnica", "Poder"],
+      "hard": ["Torre", "Aprendiz", "Báculo"]
+    }
+  },
+  {
+    "id": "criatura",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Criatura",
+    "similarWords": ["El último dragón", "Castillo", "Cristal"],
+    "hints": {
+      "easy": ["Ser", "Bestia", "Fantasia"],
+      "normal": ["Garras", "Cola", "Extraña"],
+      "hard": ["Bosque", "Cueva", "Huellas"]
+    }
+  },
+  {
+    "id": "castillo",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Castillo",
+    "similarWords": ["Cristal", "Hechicero", "El último dragón"],
+    "hints": {
+      "easy": ["Torre", "Piedra", "Rey"],
+      "normal": ["Murallas", "Puente", "Salón"],
+      "hard": ["Bandera", "Antorchas", "Trono"]
+    }
+  },
+  {
+    "id": "cristal",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Cristal",
+    "similarWords": ["Anillo del dragón", "Encantamiento", "Poción"],
+    "hints": {
+      "easy": ["Brillo", "Piedra", "Transparente"],
+      "normal": ["Energía", "Gema", "Reflejo"],
+      "hard": ["Pedestal", "Luz", "Caverna"]
+    }
+  },
+  {
+    "id": "encantamiento",
+    "category": "Escape Room",
+    "subcategory": "Fantasía",
+    "word": "Encantamiento",
+    "similarWords": ["Hechizo", "Varita", "Poción"],
+    "hints": {
+      "easy": ["Magia", "Efecto", "Conjuro"],
+      "normal": ["Poder", "Duración", "Lanzar"],
+      "hard": ["Susurro", "Brillo", "Aura"]
+    }
+  },
+
+  {
+    "id": "el_tesoro_del_jaguar",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "El tesoro del Jaguar",
+    "similarWords": ["Jardín del buda", "Reliquias", "Templo"],
+    "hints": {
+      "easy": ["Tesoro", "Jaguar", "Aventura"],
+      "normal": ["Selva", "Mapa", "Templo"],
+      "hard": ["Lianas", "Ruinas", "Expedición"]
+    }
+  },
+  {
+    "id": "jardin_del_buda",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Jardín del buda",
+    "similarWords": ["Templo", "Ruinas", "Expedición"],
+    "hints": {
+      "easy": ["Jardín", "Buda", "Aventura"],
+      "normal": ["Templo", "Piedras", "Sendero"],
+      "hard": ["Silencio", "Linternas", "Loto"]
+    }
+  },
+  {
+    "id": "mazmorra",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Mazmorra",
+    "similarWords": ["Cofre", "Antorcha", "Templo"],
+    "hints": {
+      "easy": ["Oscura", "Subterránea", "Celdas"],
+      "normal": ["Piedra", "Cadenas", "Humedad"],
+      "hard": ["Antorchas", "Eco", "Pasos"]
+    }
+  },
+  {
+    "id": "reliquias",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Reliquias",
+    "similarWords": ["Las reliquias de Judi", "Ídolo", "Gema"],
+    "hints": {
+      "easy": ["Objetos", "Antiguos", "Valiosos"],
+      "normal": ["Tesoro", "Historia", "Hallazgo"],
+      "hard": ["Pedestal", "Polvo", "Museo"]
+    }
+  },
+  {
+    "id": "las_reliquias_de_judi",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Las reliquias de Judi",
+    "similarWords": ["Reliquias", "Mapa", "Expedición"],
+    "hints": {
+      "easy": ["Reliquias", "Aventura", "Tesoro"],
+      "normal": ["Mapa", "Búsqueda", "Pistas"],
+      "hard": ["Notas", "Baúl", "Ruta"]
+    }
+  },
+  {
+    "id": "mapa",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Mapa",
+    "similarWords": ["Brújula", "Expedición", "Ruinas"],
+    "hints": {
+      "easy": ["Papel", "Ruta", "Lugares"],
+      "normal": ["X", "Camino", "Orientar"],
+      "hard": ["Doblado", "Mochila", "Selva"]
+    }
+  },
+  {
+    "id": "brujula",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Brújula",
+    "similarWords": ["Mapa", "Expedición", "Ruinas"],
+    "hints": {
+      "easy": ["Norte", "Aguja", "Orientar"],
+      "normal": ["Metal", "Viaje", "Dirección"],
+      "hard": ["Mochila", "Bosque", "Ruta"]
+    }
+  },
+  {
+    "id": "idolo",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Ídolo",
+    "similarWords": ["Estatua", "Reliquias", "Templo"],
+    "hints": {
+      "easy": ["Figura", "Oro", "Adorar"],
+      "normal": ["Pedestal", "Antiguo", "Tesoro"],
+      "hard": ["Trampa", "Polvo", "Sala"]
+    }
+  },
+  {
+    "id": "ruinas",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Ruinas",
+    "similarWords": ["Templo", "Expedición", "Estatua"],
+    "hints": {
+      "easy": ["Piedras", "Antiguas", "Rotas"],
+      "normal": ["Selva", "Restos", "Columnas"],
+      "hard": ["Musgo", "Lianas", "Silencio"]
+    }
+  },
+  {
+    "id": "templo",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Templo",
+    "similarWords": ["Ruinas", "Ídolo", "Cofre"],
+    "hints": {
+      "easy": ["Piedra", "Antiguo", "Sagrado"],
+      "normal": ["Columnas", "Altar", "Escalinata"],
+      "hard": ["Lianas", "Eco", "Pedestal"]
+    }
+  },
+  {
+    "id": "antorcha",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Antorcha",
+    "similarWords": ["Mazmorra", "Templo", "Cofre"],
+    "hints": {
+      "easy": ["Fuego", "Palo", "Luz"],
+      "normal": ["Llama", "Oscuridad", "Explorar"],
+      "hard": ["Paredes", "Humo", "Cuevas"]
+    }
+  },
+  {
+    "id": "cofre",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Cofre",
+    "similarWords": ["Gema", "Tesoro", "Candado"],
+    "hints": {
+      "easy": ["Caja", "Tesoro", "Abrir"],
+      "normal": ["Madera", "Metal", "Candado"],
+      "hard": ["Monedas", "Mapa", "Hallazgo"]
+    }
+  },
+  {
+    "id": "gema",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Gema",
+    "similarWords": ["Cristal", "Cofre", "Reliquias"],
+    "hints": {
+      "easy": ["Piedra", "Brillo", "Valiosa"],
+      "normal": ["Color", "Tesoro", "Tallada"],
+      "hard": ["Pedestal", "Luz", "Hallazgo"]
+    }
+  },
+  {
+    "id": "estatua",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Estatua",
+    "similarWords": ["Ídolo", "Ruinas", "Templo"],
+    "hints": {
+      "easy": ["Figura", "Piedra", "Quieta"],
+      "normal": ["Escultura", "Pedestal", "Antigua"],
+      "hard": ["Musgo", "Grietas", "Sala"]
+    }
+  },
+  {
+    "id": "expedicion",
+    "category": "Escape Room",
+    "subcategory": "Aventura",
+    "word": "Expedición",
+    "similarWords": ["Mapa", "Brújula", "Ruinas"],
+    "hints": {
+      "easy": ["Viaje", "Equipo", "Explorar"],
+      "normal": ["Mochilas", "Ruta", "Descubrir"],
+      "hard": ["Selva", "Campamento", "Hallazgo"]
+    }
+  },
+
+  {
+    "id": "la_herencia_del_panteon",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "La herencia del panteón",
+    "similarWords": ["La guarida", "Testamento", "Caja fuerte"],
+    "hints": {
+      "easy": ["Herencia", "Panteón", "Misterio"],
+      "normal": ["Familia", "Claves", "Documentos"],
+      "hard": ["Polvo", "Lápidas", "Secreto"]
+    }
+  },
+  {
+    "id": "la_guarida",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "La guarida",
+    "similarWords": ["Pista", "Enigma", "Archivo"],
+    "hints": {
+      "easy": ["Escondite", "Secreto", "Misterio"],
+      "normal": ["Refugio", "Pistas", "Oculto"],
+      "hard": ["Sótano", "Polvo", "Candado"]
+    }
+  },
+  {
+    "id": "pista",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Pista",
+    "similarWords": ["Enigma", "Deducción", "Clave"],
+    "hints": {
+      "easy": ["Ayuda", "Señal", "Encontrar"],
+      "normal": ["Indicio", "Resolver", "Buscar"],
+      "hard": ["Corcho", "Hilo", "Detalles"]
+    }
+  },
+  {
+    "id": "enigma",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Enigma",
+    "similarWords": ["Pista", "Deducción", "Clave"],
+    "hints": {
+      "easy": ["Acertijo", "Misterio", "Resolver"],
+      "normal": ["Oculto", "Pensar", "Difícil"],
+      "hard": ["Patrón", "Orden", "Detalles"]
+    }
+  },
+  {
+    "id": "deduccion",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Deducción",
+    "similarWords": ["Pista", "Enigma", "Mensaje"],
+    "hints": {
+      "easy": ["Pensar", "Concluir", "Pistas"],
+      "normal": ["Lógica", "Razonar", "Unir"],
+      "hard": ["Silencio", "Mesa", "Detalles"]
+    }
+  },
+  {
+    "id": "diario",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Diario",
+    "similarWords": ["Carta", "Archivo", "Mensaje"],
+    "hints": {
+      "easy": ["Libro", "Escribir", "Días"],
+      "normal": ["Páginas", "Confesiones", "Fecha"],
+      "hard": ["Tinta", "Cajón", "Secreto"]
+    }
+  },
+  {
+    "id": "carta",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Carta",
+    "similarWords": ["Diario", "Sello", "Mensaje"],
+    "hints": {
+      "easy": ["Papel", "Sobre", "Mensaje"],
+      "normal": ["Escribir", "Enviar", "Firma"],
+      "hard": ["Buzón", "Perfume", "Doblez"]
+    }
+  },
+  {
+    "id": "sello",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Sello",
+    "similarWords": ["Carta", "Testamento", "Clave"],
+    "hints": {
+      "easy": ["Marca", "Cera", "Cerrar"],
+      "normal": ["Sobre", "Escudo", "Estampar"],
+      "hard": ["Calor", "Documento", "Herencia"]
+    }
+  },
+  {
+    "id": "testamento",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Testamento",
+    "similarWords": ["Herencia", "Carta", "Archivo"],
+    "hints": {
+      "easy": ["Herencia", "Firma", "Documento"],
+      "normal": ["Última", "Voluntad", "Notario"],
+      "hard": ["Familia", "Sello", "Cajón"]
+    }
+  },
+  {
+    "id": "cuadro",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Cuadro",
+    "similarWords": ["Caja fuerte", "Pared falsa", "Mensaje"],
+    "hints": {
+      "easy": ["Pintura", "Marco", "Pared"],
+      "normal": ["Retrato", "Colgar", "Lienzo"],
+      "hard": ["Detrás", "Polvo", "Gancho"]
+    }
+  },
+  {
+    "id": "caja_fuerte",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Caja fuerte",
+    "similarWords": ["Clave", "Código", "Testamento"],
+    "hints": {
+      "easy": ["Metal", "Dinero", "Abrir"],
+      "normal": ["Combinación", "Puerta", "Cerrar"],
+      "hard": ["Despacho", "Cuadro", "Herencia"]
+    }
+  },
+  {
+    "id": "clave",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Clave",
+    "similarWords": ["Código", "Pista", "Enigma"],
+    "hints": {
+      "easy": ["Solución", "Número", "Importante"],
+      "normal": ["Abrir", "Resolver", "Patrón"],
+      "hard": ["Anotar", "Recordar", "Último"]
+    }
+  },
+  {
+    "id": "mensaje",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Mensaje",
+    "similarWords": ["Carta", "Diario", "Clave"],
+    "hints": {
+      "easy": ["Texto", "Comunicar", "Leer"],
+      "normal": ["Oculto", "Papel", "Aviso"],
+      "hard": ["Espejo", "Ultravioleta", "Señal"]
+    }
+  },
+  {
+    "id": "archivo",
+    "category": "Escape Room",
+    "subcategory": "Misterio",
+    "word": "Archivo",
+    "similarWords": ["Diario", "Testamento", "Expediente"],
+    "hints": {
+      "easy": ["Papeles", "Carpeta", "Guardar"],
+      "normal": ["Documentos", "Orden", "Cajón"],
+      "hard": ["Polvo", "Archivador", "Fechas"]
+    }
+  },
+
+  {
+    "id": "remigio_vs_trump",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Remigio VS Trump",
+    "similarWords": ["La película", "Broma", "Parodia"],
+    "hints": {
+      "easy": ["Comedia", "Enfrentamiento", "Personajes"],
+      "normal": ["Parodia", "Guion", "Caos"],
+      "hard": ["Aplausos", "Cámara", "Improvisación"]
+    }
+  },
+  {
+    "id": "la_pelicula",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "La película",
+    "similarWords": ["Actor", "Cámara", "Guion"],
+    "hints": {
+      "easy": ["Cine", "Rodaje", "Comedia"],
+      "normal": ["Escenas", "Actor", "Cámara"],
+      "hard": ["Claqueta", "Tomas", "Aplausos"]
+    }
+  },
+  {
+    "id": "la_tienda_del_senor_miyagi",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "La tienda del señor Miyagi",
+    "similarWords": ["Disfraz", "Improvisación", "La película"],
+    "hints": {
+      "easy": ["Tienda", "Comedia", "Miyagi"],
+      "normal": ["Objetos", "Caos", "Parodia"],
+      "hard": ["Mostrador", "Clientes", "Improvisar"]
+    }
+  },
+  {
+    "id": "confusion",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Confusión",
+    "similarWords": ["Caos", "Improvisación", "Broma"],
+    "hints": {
+      "easy": ["Lío", "No entender", "Caos"],
+      "normal": ["Malentendido", "Mezcla", "Errores"],
+      "hard": ["Voces", "Escena", "Risas"]
+    }
+  },
+  {
+    "id": "disfraz",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Disfraz",
+    "similarWords": ["Actor", "Parodia", "Broma"],
+    "hints": {
+      "easy": ["Ropa", "Personaje", "Ocultar"],
+      "normal": ["Peluca", "Traje", "Cambio"],
+      "hard": ["Fiesta", "Escena", "Risas"]
+    }
+  },
+  {
+    "id": "improvisacion",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Improvisación",
+    "similarWords": ["Guion", "Actor", "Confusión"],
+    "hints": {
+      "easy": ["Inventar", "Momento", "Actuar"],
+      "normal": ["Sin plan", "Escena", "Reacción"],
+      "hard": ["Risas", "Público", "Caos"]
+    }
+  },
+  {
+    "id": "broma",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Broma",
+    "similarWords": ["Parodia", "Caos", "Confusión"],
+    "hints": {
+      "easy": ["Risa", "Chiste", "Engaño"],
+      "normal": ["Gracia", "Picar", "Reír"],
+      "hard": ["Carcajadas", "Escena", "Amigos"]
+    }
+  },
+  {
+    "id": "parodia",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Parodia",
+    "similarWords": ["Broma", "Disfraz", "La película"],
+    "hints": {
+      "easy": ["Imitar", "Risa", "Burla"],
+      "normal": ["Versión", "Ridícula", "Humor"],
+      "hard": ["Referencias", "Escena", "Público"]
+    }
+  },
+  {
+    "id": "caos",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Caos",
+    "similarWords": ["Confusión", "Improvisación", "Broma"],
+    "hints": {
+      "easy": ["Desorden", "Lío", "Ruido"],
+      "normal": ["Locura", "Mezcla", "Prisas"],
+      "hard": ["Escena", "Risas", "Gritos"]
+    }
+  },
+  {
+    "id": "guion",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Guion",
+    "similarWords": ["Actor", "Cámara", "La película"],
+    "hints": {
+      "easy": ["Texto", "Escena", "Actor"],
+      "normal": ["Diálogos", "Páginas", "Historia"],
+      "hard": ["Rodaje", "Tomas", "Ensayo"]
+    }
+  },
+  {
+    "id": "actor",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Actor",
+    "similarWords": ["Guion", "Cámara", "Disfraz"],
+    "hints": {
+      "easy": ["Persona", "Interpretar", "Película"],
+      "normal": ["Escena", "Rodaje", "Personaje"],
+      "hard": ["Claqueta", "Tomas", "Público"]
+    }
+  },
+  {
+    "id": "camara",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Cámara",
+    "similarWords": ["Actor", "Guion", "La película"],
+    "hints": {
+      "easy": ["Grabar", "Lente", "Vídeo"],
+      "normal": ["Rodaje", "Plano", "Escena"],
+      "hard": ["Trípode", "Acción", "Tomas"]
+    }
+  },
+  {
+    "id": "aplausos",
+    "category": "Escape Room",
+    "subcategory": "Comedia",
+    "word": "Aplausos",
+    "similarWords": ["Actor", "La película", "Broma"],
+    "hints": {
+      "easy": ["Manos", "Sonido", "Público"],
+      "normal": ["Ovación", "Escena", "Final"],
+      "hard": ["Teatro", "Risas", "Éxito"]
+    }
+  },
+
+  {
+    "id": "candado",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Candado",
+    "similarWords": ["Llave", "Cierre", "Cerrojo"],
+    "hints": {
+      "easy": ["Metal", "Cerrar", "Llave"],
+      "normal": ["Arco", "Bloqueo", "Puerta"],
+      "hard": ["Óxido", "Cadena", "Clic"]
+    }
+  },
+  {
+    "id": "llave",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Llave",
+    "similarWords": ["Candado", "Cerrojo", "Cierre"],
+    "hints": {
+      "easy": ["Abrir", "Metal", "Puerta"],
+      "normal": ["Dientes", "Girar", "Cerrar"],
+      "hard": ["Anilla", "Bolsillo", "Cerrojo"]
+    }
+  },
+  {
+    "id": "cierre",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Cierre",
+    "similarWords": ["Cerrojo", "Candado", "Llave"],
+    "hints": {
+      "easy": ["Cerrar", "Bloquear", "Puerta"],
+      "normal": ["Mecanismo", "Pestillo", "Ajuste"],
+      "hard": ["Tope", "Presión", "Encaje"]
+    }
+  },
+  {
+    "id": "cerrojo",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Cerrojo",
+    "similarWords": ["Cierre", "Llave", "Candado"],
+    "hints": {
+      "easy": ["Puerta", "Metal", "Bloquear"],
+      "normal": ["Pestillo", "Deslizar", "Seguridad"],
+      "hard": ["Dentro", "Tope", "Clic"]
+    }
+  },
+  {
+    "id": "iman",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Imán",
+    "similarWords": ["Sensor", "Cable", "Panel"],
+    "hints": {
+      "easy": ["Metal", "Pegarse", "Atracción"],
+      "normal": ["Magnético", "Tira", "Fuerza"],
+      "hard": ["Nevera", "Brújula", "Polaridad"]
+    }
+  },
+  {
+    "id": "polea",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Polea",
+    "similarWords": ["Engranaje", "Cable", "Palanca"],
+    "hints": {
+      "easy": ["Rueda", "Cuerda", "Subir"],
+      "normal": ["Carga", "Girar", "Sistema"],
+      "hard": ["Techo", "Gancho", "Tensión"]
+    }
+  },
+  {
+    "id": "engranaje",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Engranaje",
+    "similarWords": ["Polea", "Palanca", "Panel"],
+    "hints": {
+      "easy": ["Rueda", "Dientes", "Girar"],
+      "normal": ["Mecánico", "Encajar", "Motor"],
+      "hard": ["Aceite", "Eje", "Chirrido"]
+    }
+  },
+  {
+    "id": "interruptor",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Interruptor",
+    "similarWords": ["Botón", "Cable", "Batería"],
+    "hints": {
+      "easy": ["Luz", "Encender", "Pared"],
+      "normal": ["Subir", "Bajar", "Corriente"],
+      "hard": ["Chasquido", "Panel", "Palanca"]
+    }
+  },
+  {
+    "id": "palanca",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Palanca",
+    "similarWords": ["Botón", "Polea", "Interruptor"],
+    "hints": {
+      "easy": ["Mover", "Brazo", "Subir"],
+      "normal": ["Fuerza", "Accionar", "Bajar"],
+      "hard": ["Resistencia", "Eje", "Tensión"]
+    }
+  },
+  {
+    "id": "boton",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Botón",
+    "similarWords": ["Interruptor", "Panel", "Sensor"],
+    "hints": {
+      "easy": ["Pulsar", "Pequeño", "Circular"],
+      "normal": ["Accionar", "Encender", "Superficie"],
+      "hard": ["Click", "Panel", "Luz"]
+    }
+  },
+  {
+    "id": "cajon",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Cajón",
+    "similarWords": ["Caja fuerte", "Panel", "Llave"],
+    "hints": {
+      "easy": ["Mueble", "Abrir", "Guardar"],
+      "normal": ["Tirador", "Madera", "Corredera"],
+      "hard": ["Escritorio", "Fondo", "Tope"]
+    }
+  },
+  {
+    "id": "caja_fuerte",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Caja fuerte",
+    "similarWords": ["Cajón", "Llave", "Cierre"],
+    "hints": {
+      "easy": ["Metal", "Cerrar", "Dinero"],
+      "normal": ["Combinación", "Puerta", "Código"],
+      "hard": ["Pared", "Despacho", "Bisagra"]
+    }
+  },
+  {
+    "id": "bisagra",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Bisagra",
+    "similarWords": ["Puerta", "Panel", "Cierre"],
+    "hints": {
+      "easy": ["Metal", "Girar", "Puerta"],
+      "normal": ["Unión", "Tornillos", "Abrir"],
+      "hard": ["Chirrido", "Marco", "Pivote"]
+    }
+  },
+  {
+    "id": "panel",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Panel",
+    "similarWords": ["Botón", "Interruptor", "Cable"],
+    "hints": {
+      "easy": ["Superficie", "Botones", "Pared"],
+      "normal": ["Control", "Abrir", "Cubierta"],
+      "hard": ["Tornillos", "Bisagra", "Circuito"]
+    }
+  },
+  {
+    "id": "cable",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Cable",
+    "similarWords": ["Batería", "Interruptor", "Sensor"],
+    "hints": {
+      "easy": ["Hilo", "Electricidad", "Conectar"],
+      "normal": ["Aislamiento", "Corriente", "Cortar"],
+      "hard": ["Pelado", "Chispa", "Panel"]
+    }
+  },
+  {
+    "id": "bateria",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Batería",
+    "similarWords": ["Cable", "Interruptor", "Sensor"],
+    "hints": {
+      "easy": ["Energía", "Pilas", "Cargar"],
+      "normal": ["Voltaje", "Corriente", "Terminal"],
+      "hard": ["Recambio", "Polaridad", "Panel"]
+    }
+  },
+  {
+    "id": "sensor",
+    "category": "Escape Room",
+    "subcategory": "Mecánica",
+    "word": "Sensor",
+    "similarWords": ["Botón", "Cable", "Panel"],
+    "hints": {
+      "easy": ["Detectar", "Luz", "Movimiento"],
+      "normal": ["Señal", "Activar", "Automático"],
+      "hard": ["Haz", "Puerta", "Parpadeo"]
+    }
+  },
+
+  {
+    "id": "codigo",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Código",
+    "similarWords": ["Combinación", "Clave", "Secuencia"],
+    "hints": {
+      "easy": ["Números", "Abrir", "Secreto"],
+      "normal": ["Patrón", "Introducir", "Acceso"],
+      "hard": ["Memoria", "Panel", "Orden"]
+    }
+  },
+  {
+    "id": "combinacion",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Combinación",
+    "similarWords": ["Código", "Secuencia", "Número"],
+    "hints": {
+      "easy": ["Varios", "Números", "Abrir"],
+      "normal": ["Orden", "Correcta", "Candado"],
+      "hard": ["Giros", "Intentos", "Memoria"]
+    }
+  },
+  {
+    "id": "patron",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Patrón",
+    "similarWords": ["Secuencia", "Matriz", "Lógica"],
+    "hints": {
+      "easy": ["Repetición", "Forma", "Orden"],
+      "normal": ["Serie", "Detectar", "Regla"],
+      "hard": ["Cuadrícula", "Simetría", "Pista"]
+    }
+  },
+  {
+    "id": "secuencia",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Secuencia",
+    "similarWords": ["Patrón", "Combinación", "Número"],
+    "hints": {
+      "easy": ["Orden", "Pasos", "Serie"],
+      "normal": ["Continuar", "Correcta", "Regla"],
+      "hard": ["Ritmo", "Memoria", "Errores"]
+    }
+  },
+  {
+    "id": "anagrama",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Anagrama",
+    "similarWords": ["Cifrado", "Clave", "Lógica"],
+    "hints": {
+      "easy": ["Letras", "Palabra", "Mezclar"],
+      "normal": ["Reordenar", "Idioma", "Resolver"],
+      "hard": ["Papel", "Pista", "Diccionario"]
+    }
+  },
+  {
+    "id": "cifrado",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Cifrado",
+    "similarWords": ["Anagrama", "Clave", "Código"],
+    "hints": {
+      "easy": ["Ocultar", "Mensaje", "Código"],
+      "normal": ["Desencriptar", "Sustituir", "Letras"],
+      "hard": ["Tabla", "Símbolos", "Descifrar"]
+    }
+  },
+  {
+    "id": "clave",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Clave",
+    "similarWords": ["Código", "Combinación", "Cifrado"],
+    "hints": {
+      "easy": ["Importante", "Solución", "Acceso"],
+      "normal": ["Pista", "Palabra", "Abrir"],
+      "hard": ["Última", "Anotar", "Recordar"]
+    }
+  },
+  {
+    "id": "coordenadas",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Coordenadas",
+    "similarWords": ["Número", "Matriz", "Código"],
+    "hints": {
+      "easy": ["Punto", "Mapa", "Ubicación"],
+      "normal": ["Ejes", "Casillas", "Posición"],
+      "hard": ["Cuadrícula", "Lectura", "Ruta"]
+    }
+  },
+  {
+    "id": "ultravioleta",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Ultravioleta",
+    "similarWords": ["Símbolo", "Mensaje", "Clave"],
+    "hints": {
+      "easy": ["Luz", "Morado", "Invisible"],
+      "normal": ["Tinta", "Revelar", "Linterna"],
+      "hard": ["Oscuro", "Pared", "Buscar"]
+    }
+  },
+  {
+    "id": "numero",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Número",
+    "similarWords": ["Código", "Combinación", "Secuencia"],
+    "hints": {
+      "easy": ["Cifra", "Contar", "Valor"],
+      "normal": ["Dígito", "Serie", "Panel"],
+      "hard": ["Memoria", "Orden", "Pista"]
+    }
+  },
+  {
+    "id": "simbolo",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Símbolo",
+    "similarWords": ["Matriz", "Patrón", "Clave"],
+    "hints": {
+      "easy": ["Signo", "Figura", "Marca"],
+      "normal": ["Interpretar", "Idioma", "Dibujar"],
+      "hard": ["Muro", "Secuencia", "Pista"]
+    }
+  },
+  {
+    "id": "matriz",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Matriz",
+    "similarWords": ["Patrón", "Coordenadas", "Lógica"],
+    "hints": {
+      "easy": ["Cuadrícula", "Filas", "Columnas"],
+      "normal": ["Casillas", "Orden", "Tabla"],
+      "hard": ["Cruces", "Lectura", "Serie"]
+    }
+  },
+  {
+    "id": "logica",
+    "category": "Escape Room",
+    "subcategory": "Códigos",
+    "word": "Lógica",
+    "similarWords": ["Patrón", "Anagrama", "Secuencia"],
+    "hints": {
+      "easy": ["Pensar", "Razón", "Resolver"],
+      "normal": ["Deducción", "Regla", "Problema"],
+      "hard": ["Silencio", "Mesa", "Orden"]
+    }
+  },
+
+  {
+    "id": "mascara",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Máscara",
+    "similarWords": ["Guantes", "Cadena", "Espejo"],
+    "hints": {
+      "easy": ["Cara", "Cubrir", "Disfraz"],
+      "normal": ["Goma", "Ojos", "Identidad"],
+      "hard": ["Percha", "Escena", "Sombra"]
+    }
+  },
+  {
+    "id": "guantes",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Guantes",
+    "similarWords": ["Máscara", "Cadena", "Maletín"],
+    "hints": {
+      "easy": ["Manos", "Dedos", "Ponerse"],
+      "normal": ["Tela", "Látex", "Protección"],
+      "hard": ["Bolsillo", "Mesa", "Disfraz"]
+    }
+  },
+  {
+    "id": "cadena",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Cadena",
+    "similarWords": ["Cuerda", "Candil", "Armario"],
+    "hints": {
+      "easy": ["Metal", "Eslabones", "Colgar"],
+      "normal": ["Peso", "Cerrar", "Arrastrar"],
+      "hard": ["Ruido", "Suelo", "Oscuro"]
+    }
+  },
+  {
+    "id": "cuerda",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Cuerda",
+    "similarWords": ["Cadena", "Candil", "Armario"],
+    "hints": {
+      "easy": ["Fibra", "Atar", "Nudo"],
+      "normal": ["Enrollar", "Tensión", "Colgar"],
+      "hard": ["Techo", "Sujetar", "Desgaste"]
+    }
+  },
+  {
+    "id": "candil",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Candil",
+    "similarWords": ["Radio", "Reloj", "Libro"],
+    "hints": {
+      "easy": ["Luz", "Aceite", "Antiguo"],
+      "normal": ["Llama", "Metal", "Oscuridad"],
+      "hard": ["Mesa", "Polvo", "Rincones"]
+    }
+  },
+  {
+    "id": "espejo",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Espejo",
+    "similarWords": ["Cuadro", "Armario", "Máscara"],
+    "hints": {
+      "easy": ["Reflejo", "Cristal", "Cara"],
+      "normal": ["Marco", "Pared", "Brillo"],
+      "hard": ["Polvo", "Silueta", "Habitación"]
+    }
+  },
+  {
+    "id": "cuadro",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Cuadro",
+    "similarWords": ["Espejo", "Libro", "Pared falsa"],
+    "hints": {
+      "easy": ["Marco", "Pintura", "Pared"],
+      "normal": ["Lienzo", "Colgar", "Retrato"],
+      "hard": ["Gancho", "Polvo", "Detrás"]
+    }
+  },
+  {
+    "id": "reloj",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Reloj",
+    "similarWords": ["Radio", "Teléfono", "Libro"],
+    "hints": {
+      "easy": ["Hora", "Agujas", "Tic"],
+      "normal": ["Esfera", "Pared", "Tiempo"],
+      "hard": ["Campanadas", "Madrugada", "Mesa"]
+    }
+  },
+  {
+    "id": "libro",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Libro",
+    "similarWords": ["Radio", "Cuadro", "Maletín"],
+    "hints": {
+      "easy": ["Páginas", "Leer", "Tapa"],
+      "normal": ["Lomo", "Texto", "Estante"],
+      "hard": ["Polvo", "Marca", "Cajón"]
+    }
+  },
+  {
+    "id": "radio",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Radio",
+    "similarWords": ["Teléfono", "Reloj", "Candil"],
+    "hints": {
+      "easy": ["Sonido", "Antena", "Música"],
+      "normal": ["Frecuencia", "Dial", "Altavoz"],
+      "hard": ["Estática", "Mesa", "Noche"]
+    }
+  },
+  {
+    "id": "telefono",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Teléfono",
+    "similarWords": ["Radio", "Maletín", "Reloj"],
+    "hints": {
+      "easy": ["Llamar", "Auricular", "Número"],
+      "normal": ["Cable", "Tono", "Mesa"],
+      "hard": ["Timbre", "Pasillo", "Mensaje"]
+    }
+  },
+  {
+    "id": "maletin",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Maletín",
+    "similarWords": ["Libro", "Teléfono", "Guantes"],
+    "hints": {
+      "easy": ["Asa", "Cerrar", "Transportar"],
+      "normal": ["Código", "Documentos", "Negro"],
+      "hard": ["Mesa", "Despacho", "Click"]
+    }
+  },
+  {
+    "id": "armario",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Armario",
+    "similarWords": ["Pared falsa", "Cuadro", "Espejo"],
+    "hints": {
+      "easy": ["Mueble", "Puertas", "Ropa"],
+      "normal": ["Madera", "Perchas", "Abrir"],
+      "hard": ["Bisagras", "Oscuro", "Rincón"]
+    }
+  },
+  {
+    "id": "pared_falsa",
+    "category": "Escape Room",
+    "subcategory": "Atrezzo",
+    "word": "Pared falsa",
+    "similarWords": ["Armario", "Cuadro", "Espejo"],
+    "hints": {
+      "easy": ["Pared", "Secreta", "Abrir"],
+      "normal": ["Hueco", "Oculta", "Panel"],
+      "hard": ["Golpe", "Resuena", "Bisagra"]
+    }
+  },
+
+  {
+    "id": "cronometro",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Cronómetro",
+    "similarWords": ["Cuenta atrás", "Alarma", "Último intento"],
+    "hints": {
+      "easy": ["Tiempo", "Segundos", "Reloj"],
+      "normal": ["Cuenta", "Límite", "Urgencia"],
+      "hard": ["Pitido", "Presión", "Final"]
+    }
+  },
+  {
+    "id": "cuenta_atras",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Cuenta atrás",
+    "similarWords": ["Cronómetro", "Último intento", "Prisa"],
+    "hints": {
+      "easy": ["Números", "Bajar", "Tiempo"],
+      "normal": ["Final", "Urgencia", "Límite"],
+      "hard": ["Últimos", "Latidos", "Presión"]
+    }
+  },
+  {
+    "id": "alarma",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Alarma",
+    "similarWords": ["Cronómetro", "Salida", "Tensión"],
+    "hints": {
+      "easy": ["Sonido", "Aviso", "Ruido"],
+      "normal": ["Sirena", "Emergencia", "Activar"],
+      "hard": ["Rojo", "Pitidos", "Pasillos"]
+    }
+  },
+  {
+    "id": "prisa",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Prisa",
+    "similarWords": ["Tensión", "Adrenalina", "Último intento"],
+    "hints": {
+      "easy": ["Rápido", "Correr", "Tiempo"],
+      "normal": ["Urgencia", "Apuro", "Límite"],
+      "hard": ["Respirar", "Errores", "Sudor"]
+    }
+  },
+  {
+    "id": "tension",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Tensión",
+    "similarWords": ["Prisa", "Adrenalina", "Bloqueo"],
+    "hints": {
+      "easy": ["Nervios", "Presión", "Estrés"],
+      "normal": ["Pulso", "Inquietud", "Espera"],
+      "hard": ["Silencio", "Miradas", "Final"]
+    }
+  },
+  {
+    "id": "adrenalina",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Adrenalina",
+    "similarWords": ["Prisa", "Tensión", "Último intento"],
+    "hints": {
+      "easy": ["Energía", "Subidón", "Nervios"],
+      "normal": ["Pulso", "Excitación", "Acción"],
+      "hard": ["Latido", "Final", "Respirar"]
+    }
+  },
+  {
+    "id": "bloqueo",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Bloqueo",
+    "similarWords": ["Tensión", "Prisa", "Último intento"],
+    "hints": {
+      "easy": ["Parar", "Mente", "No seguir"],
+      "normal": ["Atasco", "Pensar", "Error"],
+      "hard": ["Silencio", "Presión", "Mirada"]
+    }
+  },
+  {
+    "id": "ultimo_intento",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Último intento",
+    "similarWords": ["Cuenta atrás", "Prisa", "Salida"],
+    "hints": {
+      "easy": ["Última", "Oportunidad", "Probar"],
+      "normal": ["Final", "Riesgo", "Todo"],
+      "hard": ["Miradas", "Silencio", "Segundos"]
+    }
+  },
+  {
+    "id": "oscuridad",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Oscuridad",
+    "similarWords": ["Salida", "Alarma", "Bloqueo"],
+    "hints": {
+      "easy": ["Negro", "Luz", "No ver"],
+      "normal": ["Sombras", "Apagón", "Pasillo"],
+      "hard": ["Respirar", "Espera", "Silencio"]
+    }
+  },
+  {
+    "id": "salida",
+    "category": "Escape Room",
+    "subcategory": "Tiempo",
+    "word": "Salida",
+    "similarWords": ["Cuenta atrás", "Cronómetro", "Último intento"],
+    "hints": {
+      "easy": ["Puerta", "Salir", "Final"],
+      "normal": ["Escapar", "Meta", "Abrir"],
+      "hard": ["Últimos", "Pasos", "Aire"]
+    }
   }
 ]

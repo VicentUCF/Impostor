@@ -1,121 +1,755 @@
 [
   {
+    "id": "ajedrez",
     "category": "Juegos",
-    "sub": {
-      "id": "juegos_mesa",
-      "easy": ["Mesa", "Tablero", "Fichas", "Dados"],
-      "normal": ["Turnos", "Reglas", "Estrategia", "Movimiento"],
-      "hard": ["Sistema", "Ritmo", "Estructura", "Dinámica"]
-    },
-    "words": [
-      "Ajedrez",
+    "subcategory": "Juegos de mesa",
+    "word": "Ajedrez",
+    "similarWords": [
       "Damas",
-      "Monopoly",
-      "Cluedo",
       "Risk",
+      "Catan"
+    ],
+    "hints": {
+      "easy": [
+        "Rey",
+        "Tablero",
+        "Piezas"
+      ],
+      "normal": [
+        "Jaque",
+        "Mate",
+        "Apertura"
+      ],
+      "hard": [
+        "Silencio",
+        "Duelo",
+        "Reloj"
+      ]
+    }
+  },
+  {
+    "id": "damas",
+    "category": "Juegos",
+    "subcategory": "Juegos de mesa",
+    "word": "Damas",
+    "similarWords": [
+      "Ajedrez",
       "Catan",
-      "Scrabble",
+      "Risk"
+    ],
+    "hints": {
+      "easy": [
+        "Tablero",
+        "Fichas",
+        "Diagonal"
+      ],
+      "normal": [
+        "Salto",
+        "Corona",
+        "Captura"
+      ],
+      "hard": [
+        "Blanco",
+        "Negro",
+        "Turno"
+      ]
+    }
+  },
+  {
+    "id": "monopoly",
+    "category": "Juegos",
+    "subcategory": "Juegos de mesa",
+    "word": "Monopoly",
+    "similarWords": [
+      "Catan",
+      "Risk",
       "Trivial"
-    ]
+    ],
+    "hints": {
+      "easy": [
+        "Dinero",
+        "Calles",
+        "Dados"
+      ],
+      "normal": [
+        "Alquiler",
+        "Hotel",
+        "Propiedad"
+      ],
+      "hard": [
+        "Banca",
+        "Hipoteca",
+        "Ruina"
+      ]
+    }
   },
   {
+    "id": "cluedo",
     "category": "Juegos",
-    "sub": {
-      "id": "cartas",
-      "easy": ["Tema", "Baraja", "Mano", "Ronda"],
-      "normal": ["Apuesta", "Combinación", "Turno", "Orden"],
-      "hard": ["Lectura", "Probabilidad", "Decisión", "Gestión"]
-    },
-    "words": ["Póker", "Mus", "Blackjack", "Brisca", "Tute", "Solitario", "UNO"]
+    "subcategory": "Juegos de mesa",
+    "word": "Cluedo",
+    "similarWords": [
+      "Trivial",
+      "Risk",
+      "Catan"
+    ],
+    "hints": {
+      "easy": [
+        "Asesino",
+        "Arma",
+        "Habitación"
+      ],
+      "normal": [
+        "Sospecha",
+        "Pista",
+        "Carta"
+      ],
+      "hard": [
+        "Deducción",
+        "Secreto",
+        "Mesa"
+      ]
+    }
   },
   {
+    "id": "risk",
     "category": "Juegos",
-    "sub": {
-      "id": "videojuegos_accion",
-      "easy": ["Acción", "Pantalla", "Control", "Ritmo"],
-      "normal": ["Combate", "Reacción", "Nivel", "Mecánica"],
-      "hard": ["Precisión", "Fluidez", "Respuesta", "Intensidad"]
-    },
-    "words": [
-      "Call of Duty",
-      "Fortnite",
-      "God of War",
-      "GTA",
-      "Doom",
-      "Assassin's Creed",
-      "Halo"
-    ]
-  },
-  {
-    "category": "Juegos",
-    "sub": {
-      "id": "videojuegos_aventura",
-      "easy": ["Aventura", "Historia", "Mapa", "Exploración"],
-      "normal": ["Narrativa", "Mundo", "Progreso", "Descubrimiento"],
-      "hard": ["Viaje", "Contexto", "Experiencia", "Arco"]
-    },
-    "words": [
-      "Zelda",
-      "Uncharted",
-      "Tomb Raider",
-      "The Witcher",
-      "Skyrim",
-      "Red Dead Redemption"
-    ]
-  },
-  {
-    "category": "Juegos",
-    "sub": {
-      "id": "estrategia_simulacion",
-      "easy": ["Estrategia", "Plan", "Gestión", "Tiempo"],
-      "normal": ["Recursos", "Decisión", "Desarrollo", "Control"],
-      "hard": ["Optimización", "Equilibrio", "Sistema", "Proyección"]
-    },
-    "words": [
+    "subcategory": "Juegos de mesa",
+    "word": "Risk",
+    "similarWords": [
+      "Catan",
       "Civilization",
-      "Age of Empires",
-      "SimCity",
-      "The Sims",
-      "StarCraft",
-      "Cities Skylines"
-    ]
+      "Monopoly"
+    ],
+    "hints": {
+      "easy": [
+        "Mapa",
+        "Ejército",
+        "Dados"
+      ],
+      "normal": [
+        "Territorio",
+        "Conquista",
+        "Continente"
+      ],
+      "hard": [
+        "Campaña",
+        "Alianza",
+        "Dominio"
+      ]
+    }
   },
   {
+    "id": "catan",
     "category": "Juegos",
-    "sub": {
-      "id": "party_social",
-      "easy": ["Grupo", "Risas", "Turno", "Objeto"],
-      "normal": ["Interacción", "Caos", "Dinámica", "Ritmo"],
-      "hard": ["Comportamiento", "Observación", "Engaño", "Lectura"]
-    },
-    "words": [
+    "subcategory": "Juegos de mesa",
+    "word": "Catan",
+    "similarWords": [
+      "Risk",
+      "Monopoly",
+      "Civilization"
+    ],
+    "hints": {
+      "easy": [
+        "Hexágonos",
+        "Recursos",
+        "Carreteras"
+      ],
+      "normal": [
+        "Comercio",
+        "Ladrillo",
+        "Puerto"
+      ],
+      "hard": [
+        "Colonos",
+        "Isla",
+        "Trueque"
+      ]
+    }
+  },
+  {
+    "id": "scrabble",
+    "category": "Juegos",
+    "subcategory": "Juegos de mesa",
+    "word": "Scrabble",
+    "similarWords": [
+      "Trivial",
       "Pictionary",
-      "Tabú",
-      "Dixit",
-      "Party",
-      "Among Us",
-      "Impostor",
-      "Charadas"
-    ]
+      "Tabú"
+    ],
+    "hints": {
+      "easy": [
+        "Letras",
+        "Palabras",
+        "Tablero"
+      ],
+      "normal": [
+        "Puntos",
+        "Casillas",
+        "Diccionario"
+      ],
+      "hard": [
+        "Atril",
+        "Vocabulario",
+        "Triple"
+      ]
+    }
   },
   {
+    "id": "trivial",
     "category": "Juegos",
-    "sub": {
-      "id": "puzzles_logica",
-      "easy": ["Lugar", "Piezas", "Forma", "Orden"],
-      "normal": ["Patrón", "Secuencia", "Lógica", "Resolución"],
-      "hard": ["Abstracción", "Relación", "Modelo", "Estructura"]
-    },
-    "words": ["Sudoku", "Tetris", "Rubik", "Puzzle", "Nonograma", "Kakuro"]
+    "subcategory": "Juegos de mesa",
+    "word": "Trivial",
+    "similarWords": [
+      "Scrabble",
+      "Cluedo",
+      "Pictionary"
+    ],
+    "hints": {
+      "easy": [
+        "Preguntas",
+        "Categorías",
+        "Dados"
+      ],
+      "normal": [
+        "Respuesta",
+        "Cultura",
+        "Tarjeta"
+      ],
+      "hard": [
+        "Quesitos",
+        "Ronda",
+        "Saber"
+      ]
+    }
   },
   {
+    "id": "poker",
     "category": "Juegos",
-    "sub": {
-      "id": "deportes_virtuales",
-      "easy": ["Deporte", "Equipo", "Partido", "Marcador"],
-      "normal": ["Competición", "Control", "Simulación", "Resultado"],
-      "hard": ["Ritmo", "Ejecución", "Precisión", "Flujo"]
-    },
-    "words": ["FIFA", "NBA 2K", "PES", "Gran Turismo", "Forza", "Mario Kart"]
+    "subcategory": "Cartas",
+    "word": "Póker",
+    "similarWords": [
+      "Blackjack",
+      "Mus",
+      "UNO"
+    ],
+    "hints": {
+      "easy": [
+        "Cartas",
+        "Apuesta",
+        "Mano"
+      ],
+      "normal": [
+        "Escalera",
+        "Farol",
+        "River"
+      ],
+      "hard": [
+        "Fichas",
+        "Mesa",
+        "Mirada"
+      ]
+    }
+  },
+  {
+    "id": "mus",
+    "category": "Juegos",
+    "subcategory": "Cartas",
+    "word": "Mus",
+    "similarWords": [
+      "Brisca",
+      "Póker"
+    ],
+    "hints": {
+      "easy": [
+        "Baraja",
+        "Parejas",
+        "Cartas"
+      ],
+      "normal": [
+        "Grande",
+        "Chica",
+        "Envido"
+      ],
+      "hard": [
+        "Señas",
+        "Mesa",
+        "Taberna"
+      ]
+    }
+  },
+  {
+    "id": "blackjack",
+    "category": "Juegos",
+    "subcategory": "Cartas",
+    "word": "Blackjack",
+    "similarWords": [
+      "Póker",
+      "Solitario",
+      "UNO"
+    ],
+    "hints": {
+      "easy": [
+        "Veintiuno",
+        "Cartas",
+        "Casino"
+      ],
+      "normal": [
+        "Crupier",
+        "Plantarse",
+        "Baraja"
+      ],
+      "hard": [
+        "Mesa",
+        "Apuesta",
+        "Seguro"
+      ]
+    }
+  },
+  {
+    "id": "brisca",
+    "category": "Juegos",
+    "subcategory": "Cartas",
+    "word": "Brisca",
+    "similarWords": [
+      "Mus",
+      "UNO"
+    ],
+    "hints": {
+      "easy": [
+        "Cartas",
+        "Baraja",
+        "Triunfo"
+      ],
+      "normal": [
+        "Baza",
+        "Puntos",
+        "Ronda"
+      ],
+      "hard": [
+        "As",
+        "Sota",
+        "Mesa"
+      ]
+    }
+  },
+  {
+    "id": "solitario",
+    "category": "Juegos",
+    "subcategory": "Cartas",
+    "word": "Solitario",
+    "similarWords": [
+      "Póker",
+      "Blackjack",
+      "UNO"
+    ],
+    "hints": {
+      "easy": [
+        "Cartas",
+        "Solo",
+        "Mesa"
+      ],
+      "normal": [
+        "Columnas",
+        "Orden",
+        "Rojo"
+      ],
+      "hard": [
+        "Paciencia",
+        "Baraja",
+        "Tiempo"
+      ]
+    }
+  },
+  {
+    "id": "uno",
+    "category": "Juegos",
+    "subcategory": "Cartas",
+    "word": "UNO",
+    "similarWords": [
+      "Brisca",
+      "Póker"
+    ],
+    "hints": {
+      "easy": [
+        "Colores",
+        "Cartas",
+        "Número"
+      ],
+      "normal": [
+        "Roba",
+        "Salta",
+        "Cambio"
+      ],
+      "hard": [
+        "Grito",
+        "Mesa",
+        "Familia"
+      ]
+    }
+  },
+  {
+    "id": "call_of_duty",
+    "category": "Juegos",
+    "subcategory": "Videojuegos acción",
+    "word": "Call of Duty",
+    "similarWords": [
+      "Halo",
+      "Doom",
+      "Fortnite"
+    ],
+    "hints": {
+      "easy": [
+        "Armas",
+        "Soldados",
+        "Disparos"
+      ],
+      "normal": [
+        "Misión",
+        "Multijugador",
+        "Mapa"
+      ],
+      "hard": [
+        "Escuadrón",
+        "Respawn",
+        "Cobertura"
+      ]
+    }
+  },
+  {
+    "id": "fortnite",
+    "category": "Juegos",
+    "subcategory": "Videojuegos acción",
+    "word": "Fortnite",
+    "similarWords": [
+      "Call of Duty",
+      "Halo",
+      "GTA"
+    ],
+    "hints": {
+      "easy": [
+        "Construir",
+        "Isla",
+        "Batalla"
+      ],
+      "normal": [
+        "Tormenta",
+        "Botín",
+        "Escuadra"
+      ],
+      "hard": [
+        "Caída",
+        "Baile",
+        "Supervivencia"
+      ]
+    }
+  },
+  {
+    "id": "god_of_war",
+    "category": "Juegos",
+    "subcategory": "Videojuegos acción",
+    "word": "God of War",
+    "similarWords": [
+      "Assassins Creed",
+      "Zelda",
+      "Skyrim"
+    ],
+    "hints": {
+      "easy": [
+        "Hacha",
+        "Dioses",
+        "Combate"
+      ],
+      "normal": [
+        "Mitología",
+        "Viaje",
+        "Batalla"
+      ],
+      "hard": [
+        "Venganza",
+        "Padre",
+        "Destino"
+      ]
+    }
+  },
+  {
+    "id": "gta",
+    "category": "Juegos",
+    "subcategory": "Videojuegos acción",
+    "word": "GTA",
+    "similarWords": [
+      "Call of Duty",
+      "Red Dead Redemption",
+      "Fortnite"
+    ],
+    "hints": {
+      "easy": [
+        "Ciudad",
+        "Coches",
+        "Crimen"
+      ],
+      "normal": [
+        "Misiones",
+        "Policía",
+        "Mapa"
+      ],
+      "hard": [
+        "Caos",
+        "Radio",
+        "Calles"
+      ]
+    }
+  },
+  {
+    "id": "doom",
+    "category": "Juegos",
+    "subcategory": "Videojuegos acción",
+    "word": "Doom",
+    "similarWords": [
+      "Halo",
+      "Call of Duty",
+      "Fortnite"
+    ],
+    "hints": {
+      "easy": [
+        "Demonios",
+        "Armas",
+        "Disparos"
+      ],
+      "normal": [
+        "Infierno",
+        "Pasillos",
+        "Velocidad"
+      ],
+      "hard": [
+        "Metal",
+        "Arcade",
+        "Furia"
+      ]
+    }
+  },
+  {
+    "id": "assassins_creed",
+    "category": "Juegos",
+    "subcategory": "Videojuegos acción",
+    "word": "Assassin's Creed",
+    "similarWords": [
+      "God of War",
+      "Uncharted",
+      "Skyrim"
+    ],
+    "hints": {
+      "easy": [
+        "Capucha",
+        "Asesino",
+        "Cuchilla"
+      ],
+      "normal": [
+        "Sigilo",
+        "Torres",
+        "Historia"
+      ],
+      "hard": [
+        "Hermandad",
+        "Memoria",
+        "Salto"
+      ]
+    }
+  },
+  {
+    "id": "halo",
+    "category": "Juegos",
+    "subcategory": "Videojuegos acción",
+    "word": "Halo",
+    "similarWords": [
+      "Doom",
+      "Call of Duty",
+      "Fortnite"
+    ],
+    "hints": {
+      "easy": [
+        "Espacio",
+        "Soldado",
+        "Armas"
+      ],
+      "normal": [
+        "Alien",
+        "Armadura",
+        "Misiones"
+      ],
+      "hard": [
+        "Orbita",
+        "Escuadrón",
+        "Base"
+      ]
+    }
+  },
+  {
+    "id": "zelda",
+    "category": "Juegos",
+    "subcategory": "Videojuegos aventura",
+    "word": "Zelda",
+    "similarWords": [
+      "Skyrim",
+      "The Witcher",
+      "Uncharted"
+    ],
+    "hints": {
+      "easy": [
+        "Espada",
+        "Reino",
+        "Héroe"
+      ],
+      "normal": [
+        "Mazmorras",
+        "Puzzle",
+        "Mapa"
+      ],
+      "hard": [
+        "Aventura",
+        "Explorar",
+        "Destino"
+      ]
+    }
+  },
+  {
+    "id": "uncharted",
+    "category": "Juegos",
+    "subcategory": "Videojuegos aventura",
+    "word": "Uncharted",
+    "similarWords": [
+      "Tomb Raider",
+      "Red Dead Redemption",
+      "Zelda"
+    ],
+    "hints": {
+      "easy": [
+        "Tesoro",
+        "Aventura",
+        "Explorar"
+      ],
+      "normal": [
+        "Ruinas",
+        "Disparos",
+        "Mapa"
+      ],
+      "hard": [
+        "Viaje",
+        "Selva",
+        "Descubrimiento"
+      ]
+    }
+  },
+  {
+    "id": "tomb_raider",
+    "category": "Juegos",
+    "subcategory": "Videojuegos aventura",
+    "word": "Tomb Raider",
+    "similarWords": [
+      "Uncharted",
+      "Zelda",
+      "The Witcher"
+    ],
+    "hints": {
+      "easy": [
+        "Ruinas",
+        "Aventura",
+        "Tumba"
+      ],
+      "normal": [
+        "Explorar",
+        "Pistolas",
+        "Selva"
+      ],
+      "hard": [
+        "Relic",
+        "Acantilado",
+        "Antorcha"
+      ]
+    }
+  },
+  {
+    "id": "the_witcher",
+    "category": "Juegos",
+    "subcategory": "Videojuegos aventura",
+    "word": "The Witcher",
+    "similarWords": [
+      "Skyrim",
+      "Zelda",
+      "God of War"
+    ],
+    "hints": {
+      "easy": [
+        "Espadas",
+        "Monstruos",
+        "Magia"
+      ],
+      "normal": [
+        "Contratos",
+        "Poción",
+        "Reinos"
+      ],
+      "hard": [
+        "Taberna",
+        "Cazador",
+        "Criaturas"
+      ]
+    }
+  },
+  {
+    "id": "skyrim",
+    "category": "Juegos",
+    "subcategory": "Videojuegos aventura",
+    "word": "Skyrim",
+    "similarWords": [
+      "The Witcher",
+      "Zelda",
+      "Red Dead Redemption"
+    ],
+    "hints": {
+      "easy": [
+        "Dragones",
+        "Espada",
+        "Magia"
+      ],
+      "normal": [
+        "Montañas",
+        "Misiones",
+        "Reinos"
+      ],
+      "hard": [
+        "Cueva",
+        "Montaña",
+        "Explorar"
+      ]
+    }
+  },
+  {
+    "id": "red_dead_redemption",
+    "category": "Juegos",
+    "subcategory": "Videojuegos aventura",
+    "word": "Red Dead Redemption",
+    "similarWords": [
+      "GTA",
+      "Uncharted",
+      "Skyrim"
+    ],
+    "hints": {
+      "easy": [
+        "Vaqueros",
+        "Caballo",
+        "Revólver"
+      ],
+      "normal": [
+        "Oeste",
+        "Bandidos",
+        "Mapa"
+      ],
+      "hard": [
+        "Duelo",
+        "Polvo",
+        "Forajido"
+      ]
+    }
   }
 ]

@@ -1,132 +1,1795 @@
 [
   {
+    "id": "hamburguesa",
     "category": "Comida",
-    "sub": {
-      "id": "platos_principales",
-      "easy": ["Caliente", "Salado", "Completo", "Sustancioso"],
-      "normal": ["Receta", "Tradición", "Cocción", "Sabor"],
-      "hard": ["Cultura", "Costumbre", "Confort", "Ritual"]
-    },
-    "words": [
-      "Hamburguesa",
-      "Paella",
-      "Lasaña",
-      "Curry",
-      "Ramen",
-      "Tacos",
-      "Risotto",
-      "Kebab",
-      "Goulash",
-      "Burrito",
-      "Moussaka",
-      "Chili con carne"
-    ]
-  },
-  {
-    "category": "Comida",
-    "sub": {
-      "id": "comida_rapida",
-      "easy": ["Rápido", "Informal", "Manos", "Objeto"],
-      "normal": ["Pedido", "Local", "Antojo", "Grasa"],
-      "hard": ["Impulso", "Inmediatez", "Exceso", "Tentación"]
-    },
-    "words": [
+    "subcategory": "Platos principales",
+    "word": "Hamburguesa",
+    "similarWords": [
       "Pizza",
       "Hot dog",
-      "Patatas fritas",
-      "Nuggets",
-      "Doner",
-      "Empanadilla",
-      "Arepa",
-      "Sandwich",
+      "Kebab",
+      "Sandwich"
+    ],
+    "hints": {
+      "easy": [
+        "Pan",
+        "Carne",
+        "Queso"
+      ],
+      "normal": [
+        "Plancha",
+        "Menú",
+        "Doble"
+      ],
+      "hard": [
+        "Servilleta",
+        "Bandeja",
+        "Manos"
+      ]
+    }
+  },
+  {
+    "id": "paella",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Paella",
+    "similarWords": [
+      "Risotto",
+      "Ramen",
+      "Curry"
+    ],
+    "hints": {
+      "easy": [
+        "Arroz",
+        "Marisco",
+        "Azafrán"
+      ],
+      "normal": [
+        "Valencia",
+        "Leña",
+        "Paellera"
+      ],
+      "hard": [
+        "Domingo",
+        "Familia",
+        "Centro"
+      ]
+    }
+  },
+  {
+    "id": "lasana",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Lasaña",
+    "similarWords": [
+      "Moussaka",
+      "Pizza",
+      "Pasta"
+    ],
+    "hints": {
+      "easy": [
+        "Capas",
+        "Pasta",
+        "Carne"
+      ],
+      "normal": [
+        "Horno",
+        "Fuente",
+        "Gratinado"
+      ],
+      "hard": [
+        "Bandeja",
+        "Porción",
+        "Cuchillo"
+      ]
+    }
+  },
+  {
+    "id": "curry",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Curry",
+    "similarWords": [
+      "Goulash",
+      "Chili con carne",
+      "Ramen"
+    ],
+    "hints": {
+      "easy": [
+        "Especias",
+        "Arroz",
+        "Salsa"
+      ],
+      "normal": [
+        "India",
+        "Cúrcuma",
+        "Picante"
+      ],
+      "hard": [
+        "Olla",
+        "Invierno",
+        "Vapor"
+      ]
+    }
+  },
+  {
+    "id": "ramen",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Ramen",
+    "similarWords": [
+      "Udon",
+      "Pho",
+      "Sopa"
+    ],
+    "hints": {
+      "easy": [
+        "Fideos",
+        "Caldo",
+        "Huevo"
+      ],
+      "normal": [
+        "Japón",
+        "Bol",
+        "Palillos"
+      ],
+      "hard": [
+        "Sorbo",
+        "Barra",
+        "Invierno"
+      ]
+    }
+  },
+  {
+    "id": "tacos",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Tacos",
+    "similarWords": [
+      "Burrito",
       "Nachos",
-      "Pollo frito"
-    ]
+      "Quesadilla"
+    ],
+    "hints": {
+      "easy": [
+        "Tortilla",
+        "Carne",
+        "México"
+      ],
+      "normal": [
+        "Cilantro",
+        "Lima",
+        "Puesto"
+      ],
+      "hard": [
+        "Fiesta",
+        "Manos",
+        "Noche"
+      ]
+    }
   },
   {
+    "id": "risotto",
     "category": "Comida",
-    "sub": {
-      "id": "postres",
-      "easy": ["Dulce", "Azúcar", "Final", "Tema"],
-      "normal": ["Horno", "Textura", "Capas", "Repostería"],
-      "hard": ["Placer", "Capricho", "Tentación", "Celebración"]
-    },
-    "words": [
-      "Tarta",
-      "Brownie",
-      "Helado",
-      "Flan",
-      "Churros",
+    "subcategory": "Platos principales",
+    "word": "Risotto",
+    "similarWords": [
+      "Paella",
+      "Arroz",
+      "Pasta"
+    ],
+    "hints": {
+      "easy": [
+        "Arroz",
+        "Cremoso",
+        "Queso"
+      ],
+      "normal": [
+        "Italia",
+        "Caldo",
+        "Remover"
+      ],
+      "hard": [
+        "Cena",
+        "Plato",
+        "Silencio"
+      ]
+    }
+  },
+  {
+    "id": "kebab",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Kebab",
+    "similarWords": [
+      "Doner",
+      "Burrito",
+      "Sandwich"
+    ],
+    "hints": {
+      "easy": [
+        "Pita",
+        "Carne",
+        "Salsa"
+      ],
+      "normal": [
+        "Turco",
+        "Cuchillo",
+        "Mostrador"
+      ],
+      "hard": [
+        "Calle",
+        "Noche",
+        "Antojo"
+      ]
+    }
+  },
+  {
+    "id": "goulash",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Goulash",
+    "similarWords": [
+      "Curry",
+      "Estofado",
+      "Chili con carne"
+    ],
+    "hints": {
+      "easy": [
+        "Carne",
+        "Guiso",
+        "Pimentón"
+      ],
+      "normal": [
+        "Hungría",
+        "Olla",
+        "Espeso"
+      ],
+      "hard": [
+        "Invierno",
+        "Campo",
+        "Cuchara"
+      ]
+    }
+  },
+  {
+    "id": "burrito",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Burrito",
+    "similarWords": [
+      "Tacos",
+      "Wrap",
+      "Kebab"
+    ],
+    "hints": {
+      "easy": [
+        "Tortilla",
+        "Arroz",
+        "Frijoles"
+      ],
+      "normal": [
+        "Enrollado",
+        "México",
+        "Grande"
+      ],
+      "hard": [
+        "Aluminio",
+        "Manos",
+        "Antojo"
+      ]
+    }
+  },
+  {
+    "id": "moussaka",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Moussaka",
+    "similarWords": [
+      "Lasaña",
+      "Goulash",
+      "Canelones"
+    ],
+    "hints": {
+      "easy": [
+        "Berenjena",
+        "Carne",
+        "Capas"
+      ],
+      "normal": [
+        "Grecia",
+        "Horno",
+        "Bechamel"
+      ],
+      "hard": [
+        "Bandeja",
+        "Cena",
+        "Mediterráneo"
+      ]
+    }
+  },
+  {
+    "id": "chili_con_carne",
+    "category": "Comida",
+    "subcategory": "Platos principales",
+    "word": "Chili con carne",
+    "similarWords": [
+      "Goulash",
+      "Curry",
+      "Tacos"
+    ],
+    "hints": {
+      "easy": [
+        "Carne",
+        "Frijoles",
+        "Picante"
+      ],
+      "normal": [
+        "Rojo",
+        "Olla",
+        "Comino"
+      ],
+      "hard": [
+        "Texas",
+        "Invierno",
+        "Cuchara"
+      ]
+    }
+  },
+  {
+    "id": "pizza",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Pizza",
+    "similarWords": [
+      "Hamburguesa",
+      "Sandwich",
+      "Hot dog"
+    ],
+    "hints": {
+      "easy": [
+        "Masa",
+        "Queso",
+        "Tomate"
+      ],
+      "normal": [
+        "Horno",
+        "Porción",
+        "Caja"
+      ],
+      "hard": [
+        "Viernes",
+        "Película",
+        "Compartir"
+      ]
+    }
+  },
+  {
+    "id": "hot_dog",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Hot dog",
+    "similarWords": [
+      "Hamburguesa",
+      "Sandwich",
+      "Kebab"
+    ],
+    "hints": {
+      "easy": [
+        "Salchicha",
+        "Pan",
+        "Mostaza"
+      ],
+      "normal": [
+        "Carrito",
+        "Ketchup",
+        "Estadio"
+      ],
+      "hard": [
+        "Calle",
+        "Servilleta",
+        "Rápido"
+      ]
+    }
+  },
+  {
+    "id": "patatas_fritas",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Patatas fritas",
+    "similarWords": [
+      "Nuggets",
+      "Nachos",
+      "Chips"
+    ],
+    "hints": {
+      "easy": [
+        "Patata",
+        "Aceite",
+        "Sal"
+      ],
+      "normal": [
+        "Freidora",
+        "Bastones",
+        "Ketchup"
+      ],
+      "hard": [
+        "Bolsa",
+        "Crujido",
+        "Compartir"
+      ]
+    }
+  },
+  {
+    "id": "nuggets",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Nuggets",
+    "similarWords": [
+      "Pollo frito",
+      "Patatas fritas",
+      "Hamburguesa"
+    ],
+    "hints": {
+      "easy": [
+        "Pollo",
+        "Rebozado",
+        "Caja"
+      ],
+      "normal": [
+        "Freidora",
+        "Salsa",
+        "Bocado"
+      ],
+      "hard": [
+        "Niños",
+        "Menú",
+        "Dip"
+      ]
+    }
+  },
+  {
+    "id": "doner",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Doner",
+    "similarWords": [
+      "Kebab",
+      "Burrito",
+      "Sandwich"
+    ],
+    "hints": {
+      "easy": [
+        "Carne",
+        "Pan",
+        "Salsa"
+      ],
+      "normal": [
+        "Vertical",
+        "Cuchillo",
+        "Turco"
+      ],
+      "hard": [
+        "Calle",
+        "Mostrador",
+        "Noche"
+      ]
+    }
+  },
+  {
+    "id": "empanadilla",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Empanadilla",
+    "similarWords": [
+      "Croqueta",
+      "Nachos",
+      "Arepa"
+    ],
+    "hints": {
+      "easy": [
+        "Masa",
+        "Relleno",
+        "Frita"
+      ],
+      "normal": [
+        "Media",
+        "Borde",
+        "Dorado"
+      ],
+      "hard": [
+        "Bocado",
+        "Bar",
+        "Picoteo"
+      ]
+    }
+  },
+  {
+    "id": "arepa",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Arepa",
+    "similarWords": [
+      "Sandwich",
+      "Burrito",
+      "Tacos"
+    ],
+    "hints": {
+      "easy": [
+        "Maíz",
+        "Pan",
+        "Relleno"
+      ],
+      "normal": [
+        "Venezuela",
+        "Plancha",
+        "Redonda"
+      ],
+      "hard": [
+        "Desayuno",
+        "Manos",
+        "Calle"
+      ]
+    }
+  },
+  {
+    "id": "sandwich",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Sandwich",
+    "similarWords": [
+      "Hamburguesa",
+      "Hot dog",
+      "Kebab"
+    ],
+    "hints": {
+      "easy": [
+        "Pan",
+        "Jamón",
+        "Queso"
+      ],
+      "normal": [
+        "Lonchas",
+        "Triángulo",
+        "Tostado"
+      ],
+      "hard": [
+        "Merienda",
+        "Oficina",
+        "Servilleta"
+      ]
+    }
+  },
+  {
+    "id": "nachos",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Nachos",
+    "similarWords": [
+      "Tacos",
+      "Chips",
+      "Patatas fritas"
+    ],
+    "hints": {
+      "easy": [
+        "Maíz",
+        "Triángulos",
+        "Queso"
+      ],
+      "normal": [
+        "Dip",
+        "Guacamole",
+        "Bandeja"
+      ],
+      "hard": [
+        "Bar",
+        "Película",
+        "Compartir"
+      ]
+    }
+  },
+  {
+    "id": "pollo_frito",
+    "category": "Comida",
+    "subcategory": "Comida rápida",
+    "word": "Pollo frito",
+    "similarWords": [
+      "Nuggets",
+      "Hamburguesa",
+      "Patatas fritas"
+    ],
+    "hints": {
+      "easy": [
+        "Pollo",
+        "Rebozado",
+        "Aceite"
+      ],
+      "normal": [
+        "Crujiente",
+        "Cubeta",
+        "Freidora"
+      ],
+      "hard": [
+        "Servilleta",
+        "Manos",
+        "Cadena"
+      ]
+    }
+  },
+  {
+    "id": "tarta",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Tarta",
+    "similarWords": [
       "Cheesecake",
-      "Croissant",
-      "Magdalena",
-      "Galletas",
-      "Tiramisu",
-      "Bizcocho"
-    ]
+      "Bizcocho",
+      "Brownie"
+    ],
+    "hints": {
+      "easy": [
+        "Velas",
+        "Cumpleaños",
+        "Porción"
+      ],
+      "normal": [
+        "Horno",
+        "Capas",
+        "Crema"
+      ],
+      "hard": [
+        "Celebración",
+        "Cuchillo",
+        "Mesa"
+      ]
+    }
   },
   {
+    "id": "brownie",
     "category": "Comida",
-    "sub": {
-      "id": "comida_saludable",
-      "easy": ["Ligero", "Natural", "Fresco", "Objeto"],
-      "normal": ["Equilibrio", "Nutrientes", "Dieta", "Energía"],
-      "hard": ["Bienestar", "Cuidado", "Rutina", "Disciplina"]
-    },
-    "words": [
-      "Ensalada",
+    "subcategory": "Postres",
+    "word": "Brownie",
+    "similarWords": [
+      "Bizcocho",
+      "Galletas",
+      "Tarta"
+    ],
+    "hints": {
+      "easy": [
+        "Chocolate",
+        "Cuadrado",
+        "Horno"
+      ],
+      "normal": [
+        "Nuez",
+        "Denso",
+        "Molde"
+      ],
+      "hard": [
+        "Merienda",
+        "Café",
+        "Cuchillo"
+      ]
+    }
+  },
+  {
+    "id": "helado",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Helado",
+    "similarWords": [
+      "Yogur",
+      "Tarta",
+      "Brownie"
+    ],
+    "hints": {
+      "easy": [
+        "Frío",
+        "Bola",
+        "Cono"
+      ],
+      "normal": [
+        "Sabores",
+        "Cuchara",
+        "Verano"
+      ],
+      "hard": [
+        "Playa",
+        "Niños",
+        "Goteo"
+      ]
+    }
+  },
+  {
+    "id": "flan",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Flan",
+    "similarWords": [
+      "Tarta",
+      "Bizcocho",
+      "Cheesecake"
+    ],
+    "hints": {
+      "easy": [
+        "Huevo",
+        "Caramelo",
+        "Molde"
+      ],
+      "normal": [
+        "Temblor",
+        "Horno",
+        "Postre"
+      ],
+      "hard": [
+        "Abuela",
+        "Cuchara",
+        "Domingo"
+      ]
+    }
+  },
+  {
+    "id": "churros",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Churros",
+    "similarWords": [
+      "Croissant",
+      "Galletas",
+      "Magdalena"
+    ],
+    "hints": {
+      "easy": [
+        "Masa",
+        "Azúcar",
+        "Frito"
+      ],
+      "normal": [
+        "Chocolate",
+        "Largo",
+        "Desayuno"
+      ],
+      "hard": [
+        "Invierno",
+        "Calle",
+        "Madrugada"
+      ]
+    }
+  },
+  {
+    "id": "cheesecake",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Cheesecake",
+    "similarWords": [
+      "Tarta",
+      "Flan",
+      "Bizcocho"
+    ],
+    "hints": {
+      "easy": [
+        "Queso",
+        "Base",
+        "Crema"
+      ],
+      "normal": [
+        "Horno",
+        "Molde",
+        "Frutos"
+      ],
+      "hard": [
+        "Café",
+        "Porción",
+        "Mesa"
+      ]
+    }
+  },
+  {
+    "id": "croissant",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Croissant",
+    "similarWords": [
+      "Magdalena",
+      "Bizcocho",
+      "Churros"
+    ],
+    "hints": {
+      "easy": [
+        "Hojaldre",
+        "Mantequilla",
+        "Media"
+      ],
+      "normal": [
+        "Francia",
+        "Capas",
+        "Desayuno"
+      ],
+      "hard": [
+        "Café",
+        "Panadería",
+        "Mañana"
+      ]
+    }
+  },
+  {
+    "id": "magdalena",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Magdalena",
+    "similarWords": [
+      "Bizcocho",
+      "Galletas",
+      "Croissant"
+    ],
+    "hints": {
+      "easy": [
+        "Molde",
+        "Azúcar",
+        "Esponjoso"
+      ],
+      "normal": [
+        "Desayuno",
+        "Horno",
+        "Papel"
+      ],
+      "hard": [
+        "Café",
+        "Merienda",
+        "Mañana"
+      ]
+    }
+  },
+  {
+    "id": "galletas",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Galletas",
+    "similarWords": [
+      "Brownie",
+      "Magdalena",
+      "Bizcocho"
+    ],
+    "hints": {
+      "easy": [
+        "Crujiente",
+        "Horno",
+        "Chocolate"
+      ],
+      "normal": [
+        "Caja",
+        "Merienda",
+        "Leche"
+      ],
+      "hard": [
+        "Niños",
+        "Paquete",
+        "Café"
+      ]
+    }
+  },
+  {
+    "id": "tiramisu",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Tiramisu",
+    "similarWords": [
+      "Cheesecake",
+      "Tarta",
+      "Flan"
+    ],
+    "hints": {
+      "easy": [
+        "Café",
+        "Cacao",
+        "Capas"
+      ],
+      "normal": [
+        "Italia",
+        "Mascarpone",
+        "Bizcocho"
+      ],
+      "hard": [
+        "Cena",
+        "Porción",
+        "Mesa"
+      ]
+    }
+  },
+  {
+    "id": "bizcocho",
+    "category": "Comida",
+    "subcategory": "Postres",
+    "word": "Bizcocho",
+    "similarWords": [
+      "Magdalena",
+      "Tarta",
+      "Brownie"
+    ],
+    "hints": {
+      "easy": [
+        "Huevo",
+        "Harina",
+        "Horno"
+      ],
+      "normal": [
+        "Molde",
+        "Esponja",
+        "Azúcar"
+      ],
+      "hard": [
+        "Desayuno",
+        "Café",
+        "Cuchillo"
+      ]
+    }
+  },
+  {
+    "id": "ensalada",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Ensalada",
+    "similarWords": [
       "Poke",
       "Quinoa",
-      "Verduras al vapor",
-      "Hummus",
-      "Sopa vegetal",
-      "Pechuga a la plancha",
-      "Aguacate",
-      "Yogur natural",
-      "Fruta fresca"
-    ]
+      "Verduras al vapor"
+    ],
+    "hints": {
+      "easy": [
+        "Lechuga",
+        "Tomate",
+        "Aceite"
+      ],
+      "normal": [
+        "Bol",
+        "Frío",
+        "Mezcla"
+      ],
+      "hard": [
+        "Verano",
+        "Dieta",
+        "Ligero"
+      ]
+    }
   },
   {
+    "id": "poke",
     "category": "Comida",
-    "sub": {
-      "id": "ingredientes_basicos",
-      "easy": ["Crudo", "Base", "Cocina", "Tema"],
-      "normal": ["Preparación", "Mezcla", "Sabor", "Textura"],
-      "hard": ["Origen", "Materia", "Elemento", "Esencia"]
-    },
-    "words": [
+    "subcategory": "Comida saludable",
+    "word": "Poke",
+    "similarWords": [
+      "Ensalada",
+      "Quinoa",
+      "Arroz"
+    ],
+    "hints": {
+      "easy": [
+        "Arroz",
+        "Pescado",
+        "Bol"
+      ],
+      "normal": [
+        "Hawái",
+        "Crudo",
+        "Cubos"
+      ],
+      "hard": [
+        "Colores",
+        "Cuchara",
+        "Frío"
+      ]
+    }
+  },
+  {
+    "id": "quinoa",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Quinoa",
+    "similarWords": [
+      "Arroz",
+      "Cuscús",
+      "Avena"
+    ],
+    "hints": {
+      "easy": [
+        "Grano",
+        "Semillas",
+        "Bol"
+      ],
+      "normal": [
+        "Andes",
+        "Proteína",
+        "Cocer"
+      ],
+      "hard": [
+        "Dieta",
+        "Fitness",
+        "Ligero"
+      ]
+    }
+  },
+  {
+    "id": "verduras_al_vapor",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Verduras al vapor",
+    "similarWords": [
+      "Ensalada",
+      "Sopa vegetal",
+      "Pechuga a la plancha"
+    ],
+    "hints": {
+      "easy": [
+        "Brócoli",
+        "Zanahoria",
+        "Vapor"
+      ],
+      "normal": [
+        "Olla",
+        "Salud",
+        "Cocción"
+      ],
+      "hard": [
+        "Dieta",
+        "Ligero",
+        "Fitness"
+      ]
+    }
+  },
+  {
+    "id": "hummus",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Hummus",
+    "similarWords": [
+      "Guacamole",
+      "Salsa",
+      "Puré"
+    ],
+    "hints": {
+      "easy": [
+        "Garbanzos",
+        "Puré",
+        "Crema"
+      ],
+      "normal": [
+        "Tahini",
+        "Limón",
+        "Oriente"
+      ],
+      "hard": [
+        "Dip",
+        "Pan",
+        "Picoteo"
+      ]
+    }
+  },
+  {
+    "id": "sopa_vegetal",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Sopa vegetal",
+    "similarWords": [
+      "Ensalada",
+      "Verduras al vapor",
+      "Caldo"
+    ],
+    "hints": {
+      "easy": [
+        "Caldo",
+        "Verduras",
+        "Cuchara"
+      ],
+      "normal": [
+        "Olla",
+        "Vapor",
+        "Caliente"
+      ],
+      "hard": [
+        "Invierno",
+        "Ligero",
+        "Cena"
+      ]
+    }
+  },
+  {
+    "id": "pechuga_a_la_plancha",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Pechuga a la plancha",
+    "similarWords": [
+      "Pollo",
+      "Verduras al vapor",
+      "Ensalada"
+    ],
+    "hints": {
+      "easy": [
+        "Pollo",
+        "Plancha",
+        "Carne"
+      ],
+      "normal": [
+        "Fitness",
+        "Proteína",
+        "Dieta"
+      ],
+      "hard": [
+        "Gimnasio",
+        "Tupper",
+        "Cena"
+      ]
+    }
+  },
+  {
+    "id": "aguacate",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Aguacate",
+    "similarWords": [
+      "Fruta fresca",
+      "Tomate",
+      "Hummus"
+    ],
+    "hints": {
+      "easy": [
+        "Verde",
+        "Hueso",
+        "Pulpa"
+      ],
+      "normal": [
+        "Tostada",
+        "Guacamole",
+        "Cuchillo"
+      ],
+      "hard": [
+        "Brunch",
+        "Moda",
+        "Foto"
+      ]
+    }
+  },
+  {
+    "id": "yogur_natural",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Yogur natural",
+    "similarWords": [
+      "Helado",
+      "Leche",
+      "Fruta fresca"
+    ],
+    "hints": {
+      "easy": [
+        "Leche",
+        "Blanco",
+        "Vaso"
+      ],
+      "normal": [
+        "Fermento",
+        "Cuchara",
+        "Frío"
+      ],
+      "hard": [
+        "Desayuno",
+        "Dieta",
+        "Fitness"
+      ]
+    }
+  },
+  {
+    "id": "fruta_fresca",
+    "category": "Comida",
+    "subcategory": "Comida saludable",
+    "word": "Fruta fresca",
+    "similarWords": [
+      "Yogur natural",
+      "Aguacate",
+      "Ensalada"
+    ],
+    "hints": {
+      "easy": [
+        "Manzana",
+        "Plátano",
+        "Naranja"
+      ],
+      "normal": [
+        "Vitaminas",
+        "Mercado",
+        "Cesta"
+      ],
+      "hard": [
+        "Verano",
+        "Postre",
+        "Ligero"
+      ]
+    }
+  },
+  {
+    "id": "arroz",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Arroz",
+    "similarWords": [
+      "Pasta",
+      "Quinoa",
+      "Cuscús"
+    ],
+    "hints": {
+      "easy": [
+        "Grano",
+        "Blanco",
+        "Cocer"
+      ],
+      "normal": [
+        "Paella",
+        "Bol",
+        "Asia"
+      ],
+      "hard": [
+        "Guarnición",
+        "Palillos",
+        "Saco"
+      ]
+    }
+  },
+  {
+    "id": "pasta",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Pasta",
+    "similarWords": [
+      "Arroz",
+      "Lasaña",
+      "Risotto"
+    ],
+    "hints": {
+      "easy": [
+        "Fideos",
+        "Hervir",
+        "Trigo"
+      ],
+      "normal": [
+        "Italia",
+        "Colador",
+        "Salsa"
+      ],
+      "hard": [
+        "Cena",
+        "Plato",
+        "Cuchara"
+      ]
+    }
+  },
+  {
+    "id": "patata",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Patata",
+    "similarWords": [
       "Arroz",
       "Pasta",
-      "Patata",
-      "Huevo",
-      "Queso",
-      "Tomate",
-      "Pollo",
-      "Carne picada",
-      "Cebolla",
-      "Ajo",
-      "Leche",
-      "Harina"
-    ]
+      "Tomate"
+    ],
+    "hints": {
+      "easy": [
+        "Tierra",
+        "Tubérculo",
+        "Pelar"
+      ],
+      "normal": [
+        "Freír",
+        "Hervir",
+        "Cubo"
+      ],
+      "hard": [
+        "Campo",
+        "Saco",
+        "Cuchillo"
+      ]
+    }
   },
   {
+    "id": "huevo",
     "category": "Comida",
-    "sub": {
-      "id": "snacks",
-      "easy": ["Pequeño", "Rápido", "Entre horas", "Grupo"],
-      "normal": ["Picoteo", "Bolsa", "Crujiente", "Sal"],
-      "hard": ["Hábito", "Ansia", "Pausa", "Costumbre"]
-    },
-    "words": [
-      "Palomitas",
+    "subcategory": "Ingredientes básicos",
+    "word": "Huevo",
+    "similarWords": [
+      "Leche",
+      "Harina",
+      "Queso"
+    ],
+    "hints": {
+      "easy": [
+        "Cáscara",
+        "Yema",
+        "Clara"
+      ],
+      "normal": [
+        "Gallina",
+        "Sartén",
+        "Desayuno"
+      ],
+      "hard": [
+        "Cartón",
+        "Granja",
+        "Cuchara"
+      ]
+    }
+  },
+  {
+    "id": "queso",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Queso",
+    "similarWords": [
+      "Leche",
+      "Mantequilla",
+      "Yogur"
+    ],
+    "hints": {
+      "easy": [
+        "Leche",
+        "Amarillo",
+        "Cuña"
+      ],
+      "normal": [
+        "Curado",
+        "Rallado",
+        "Tabla"
+      ],
+      "hard": [
+        "Bodega",
+        "Corte",
+        "Cena"
+      ]
+    }
+  },
+  {
+    "id": "tomate",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Tomate",
+    "similarWords": [
+      "Cebolla",
+      "Ajo",
+      "Aguacate"
+    ],
+    "hints": {
+      "easy": [
+        "Rojo",
+        "Semillas",
+        "Pulpa"
+      ],
+      "normal": [
+        "Huerto",
+        "Salsa",
+        "Ensalada"
+      ],
+      "hard": [
+        "Verano",
+        "Caja",
+        "Mercado"
+      ]
+    }
+  },
+  {
+    "id": "pollo",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Pollo",
+    "similarWords": [
+      "Carne picada",
+      "Pechuga a la plancha",
+      "Huevo"
+    ],
+    "hints": {
+      "easy": [
+        "Ave",
+        "Carne",
+        "Pluma"
+      ],
+      "normal": [
+        "Granja",
+        "Horno",
+        "Muslo"
+      ],
+      "hard": [
+        "Domingo",
+        "Bandeja",
+        "Cena"
+      ]
+    }
+  },
+  {
+    "id": "carne_picada",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Carne picada",
+    "similarWords": [
+      "Pollo",
+      "Hamburguesa",
+      "Burrito"
+    ],
+    "hints": {
+      "easy": [
+        "Carne",
+        "Molida",
+        "Roja"
+      ],
+      "normal": [
+        "Sartén",
+        "Albóndiga",
+        "Relleno"
+      ],
+      "hard": [
+        "Carnicería",
+        "Bandeja",
+        "Cuchillo"
+      ]
+    }
+  },
+  {
+    "id": "cebolla",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Cebolla",
+    "similarWords": [
+      "Ajo",
+      "Tomate",
+      "Patata"
+    ],
+    "hints": {
+      "easy": [
+        "Capas",
+        "Blanca",
+        "Bulbo"
+      ],
+      "normal": [
+        "Cortar",
+        "Sartén",
+        "Olor"
+      ],
+      "hard": [
+        "Lágrimas",
+        "Tabla",
+        "Cuchillo"
+      ]
+    }
+  },
+  {
+    "id": "ajo",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Ajo",
+    "similarWords": [
+      "Cebolla",
+      "Tomate",
+      "Aceite"
+    ],
+    "hints": {
+      "easy": [
+        "Diente",
+        "Blanco",
+        "Bulbo"
+      ],
+      "normal": [
+        "Sofrito",
+        "Olor",
+        "Cuchillo"
+      ],
+      "hard": [
+        "Mortero",
+        "Cocina",
+        "Salsa"
+      ]
+    }
+  },
+  {
+    "id": "leche",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Leche",
+    "similarWords": [
+      "Yogur natural",
+      "Queso",
+      "Huevo"
+    ],
+    "hints": {
+      "easy": [
+        "Blanco",
+        "Vaca",
+        "Líquido"
+      ],
+      "normal": [
+        "Vaso",
+        "Desayuno",
+        "Frío"
+      ],
+      "hard": [
+        "Cartón",
+        "Nevera",
+        "Cereal"
+      ]
+    }
+  },
+  {
+    "id": "harina",
+    "category": "Comida",
+    "subcategory": "Ingredientes básicos",
+    "word": "Harina",
+    "similarWords": [
+      "Huevo",
+      "Leche",
+      "Pasta"
+    ],
+    "hints": {
+      "easy": [
+        "Polvo",
+        "Trigo",
+        "Blanca"
+      ],
+      "normal": [
+        "Amasar",
+        "Molino",
+        "Bol"
+      ],
+      "hard": [
+        "Panadería",
+        "Mesa",
+        "Manos"
+      ]
+    }
+  },
+  {
+    "id": "palomitas",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Palomitas",
+    "similarWords": [
+      "Nachos",
+      "Chips",
+      "Pretzels"
+    ],
+    "hints": {
+      "easy": [
+        "Maíz",
+        "Blanco",
+        "Crujiente"
+      ],
+      "normal": [
+        "Microondas",
+        "Bol",
+        "Sal"
+      ],
+      "hard": [
+        "Cine",
+        "Película",
+        "Sofá"
+      ]
+    }
+  },
+  {
+    "id": "frutos_secos",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Frutos secos",
+    "similarWords": [
+      "Chips",
+      "Crackers",
+      "Pretzels"
+    ],
+    "hints": {
+      "easy": [
+        "Nuez",
+        "Almendra",
+        "Cáscara"
+      ],
+      "normal": [
+        "Bolsa",
+        "Sal",
+        "Puñado"
+      ],
+      "hard": [
+        "Bar",
+        "Mesa",
+        "Picoteo"
+      ]
+    }
+  },
+  {
+    "id": "chips",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Chips",
+    "similarWords": [
+      "Patatas fritas",
+      "Nachos",
+      "Crackers"
+    ],
+    "hints": {
+      "easy": [
+        "Patata",
+        "Fina",
+        "Crujiente"
+      ],
+      "normal": [
+        "Bolsa",
+        "Sal",
+        "Aperitivo"
+      ],
+      "hard": [
+        "Sofá",
+        "Película",
+        "Manos"
+      ]
+    }
+  },
+  {
+    "id": "galletas_saladas",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Galletas saladas",
+    "similarWords": [
+      "Crackers",
+      "Pretzels",
+      "Chips"
+    ],
+    "hints": {
+      "easy": [
+        "Harina",
+        "Crujiente",
+        "Sal"
+      ],
+      "normal": [
+        "Caja",
+        "Cuadrado",
+        "Bol"
+      ],
+      "hard": [
+        "Queso",
+        "Bar",
+        "Picoteo"
+      ]
+    }
+  },
+  {
+    "id": "aceitunas",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Aceitunas",
+    "similarWords": [
       "Frutos secos",
       "Chips",
+      "Crackers"
+    ],
+    "hints": {
+      "easy": [
+        "Verde",
+        "Hueso",
+        "Aceite"
+      ],
+      "normal": [
+        "Tapas",
+        "Bol",
+        "Salmuera"
+      ],
+      "hard": [
+        "Bar",
+        "Mesa",
+        "Vermú"
+      ]
+    }
+  },
+  {
+    "id": "barrita_energetica",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Barrita energética",
+    "similarWords": [
+      "Frutos secos",
+      "Galletas",
+      "Crackers"
+    ],
+    "hints": {
+      "easy": [
+        "Barra",
+        "Cereal",
+        "Dulce"
+      ],
+      "normal": [
+        "Bolsa",
+        "Deporte",
+        "Energía"
+      ],
+      "hard": [
+        "Mochila",
+        "Excursión",
+        "Fitness"
+      ]
+    }
+  },
+  {
+    "id": "crackers",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Crackers",
+    "similarWords": [
       "Galletas saladas",
-      "Aceitunas",
-      "Barrita energética",
+      "Pretzels",
+      "Chips"
+    ],
+    "hints": {
+      "easy": [
+        "Harina",
+        "Crujiente",
+        "Sal"
+      ],
+      "normal": [
+        "Cuadrado",
+        "Caja",
+        "Bol"
+      ],
+      "hard": [
+        "Queso",
+        "Bar",
+        "Picoteo"
+      ]
+    }
+  },
+  {
+    "id": "maiz_tostado",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Maíz tostado",
+    "similarWords": [
+      "Palomitas",
+      "Frutos secos",
+      "Chips"
+    ],
+    "hints": {
+      "easy": [
+        "Maíz",
+        "Duro",
+        "Crujiente"
+      ],
+      "normal": [
+        "Bolsa",
+        "Sal",
+        "Bol"
+      ],
+      "hard": [
+        "Bar",
+        "Mesa",
+        "Picoteo"
+      ]
+    }
+  },
+  {
+    "id": "pretzels",
+    "category": "Comida",
+    "subcategory": "Snacks",
+    "word": "Pretzels",
+    "similarWords": [
       "Crackers",
-      "Maíz tostado",
-      "Pretzels"
-    ]
+      "Chips",
+      "Galletas saladas"
+    ],
+    "hints": {
+      "easy": [
+        "Lazo",
+        "Pan",
+        "Sal"
+      ],
+      "normal": [
+        "Alemania",
+        "Crujiente",
+        "Bol"
+      ],
+      "hard": [
+        "Bar",
+        "Cerveza",
+        "Picoteo"
+      ]
+    }
   }
 ]

@@ -1,145 +1,729 @@
 [
   {
+    "id": "futbol",
     "category": "Deportes",
-    "sub": {
-      "id": "deportes_equipo",
-      "easy": ["Tema", "Género", "Campo", "Partido"],
-      "normal": ["Colectivo", "Marcador", "Competición", "Turno"],
-      "hard": ["Grupo", "Ritmo", "Sistema", "Estructura"]
-    },
-    "words": [
-      "Fútbol",
-      "Baloncesto",
-      "Balonmano",
-      "Hockey",
-      "Rugby",
-      "Voleibol",
-      "Waterpolo",
-      "Béisbol",
-      "Críquet"
-    ]
+    "subcategory": "Deportes de equipo",
+    "word": "Fútbol",
+    "similarWords": ["Baloncesto", "Rugby", "Hockey", "Balonmano"],
+    "hints": {
+      "easy": ["Balón", "Portería", "Césped"],
+      "normal": ["Fuerajuego", "Córner", "Once"],
+      "hard": ["Afición", "Domingo", "Estadio"]
+    }
   },
   {
+    "id": "baloncesto",
     "category": "Deportes",
-    "sub": {
-      "id": "deportes_individuales",
-      "easy": ["Individual", "Pista", "Marca", "Tiempo"],
-      "normal": ["Rendimiento", "Registro", "Prueba", "Resultado"],
-      "hard": ["Control", "Constancia", "Precisión", "Gestión"]
-    },
-    "words": [
-      "Tenis",
-      "Atletismo",
-      "Natación",
-      "Ciclismo",
-      "Boxeo",
-      "Judo",
-      "Gimnasia",
-      "Escalada",
-      "Halterofilia"
-    ]
+    "subcategory": "Deportes de equipo",
+    "word": "Baloncesto",
+    "similarWords": ["Balonmano", "Voleibol", "Fútbol"],
+    "hints": {
+      "easy": ["Canasta", "Bote", "Parqué"],
+      "normal": ["Triple", "Tablero", "Quinteto"],
+      "hard": ["Pabellón", "Zapatillas", "Tiempo"]
+    }
   },
   {
+    "id": "balonmano",
     "category": "Deportes",
-    "sub": {
-      "id": "acciones_juego",
-      "easy": ["Acción", "Movimiento", "Juego", "Inicio"],
-      "normal": ["Ejecución", "Respuesta", "Reacción", "Cambio"],
-      "hard": ["Decisión", "Lectura", "Timing", "Elección"]
-    },
-    "words": [
-      "Pase",
-      "Disparo",
-      "Salto",
-      "Carrera",
-      "Bloqueo",
-      "Defensa",
-      "Ataque",
-      "Finta",
-      "Gol"
-    ]
+    "subcategory": "Deportes de equipo",
+    "word": "Balonmano",
+    "similarWords": ["Baloncesto", "Waterpolo", "Fútbol"],
+    "hints": {
+      "easy": ["Manos", "Portería", "Balón"],
+      "normal": ["Pabellón", "Seis", "Lanzamiento"],
+      "hard": ["Resina", "Contacto", "Área"]
+    }
   },
   {
+    "id": "hockey",
     "category": "Deportes",
-    "sub": {
-      "id": "posiciones_roles",
-      "easy": ["Rol", "Zona", "Lugar", "Puesto"],
-      "normal": ["Función", "Responsabilidad", "Demarcación", "Tarea"],
-      "hard": ["Perfil", "Especialización", "Cobertura", "Enfoque"]
-    },
-    "words": [
-      "Portero",
-      "Delantero",
-      "Centrocampista",
-      "Árbitro",
-      "Capitán",
-      "Entrenador",
-      "Suplente"
-    ]
+    "subcategory": "Deportes de equipo",
+    "word": "Hockey",
+    "similarWords": ["Rugby", "Fútbol", "Críquet"],
+    "hints": {
+      "easy": ["Stick", "Portería", "Equipo"],
+      "normal": ["Disco", "Hierba", "Casco"],
+      "hard": ["Banquillo", "Golpeo", "Protección"]
+    }
   },
   {
+    "id": "rugby",
     "category": "Deportes",
-    "sub": {
-      "id": "objetivos_resultados",
-      "easy": ["Resultado", "Punto", "Victoria", "Final"],
-      "normal": ["Clasificación", "Ronda", "Logro", "Meta"],
-      "hard": ["Objetivo", "Presión", "Expectativa", "Balance"]
-    },
-    "words": [
-      "Récord",
-      "Empate",
-      "Derrota",
-      "Clasificación",
-      "Medalla",
-      "Trofeo"
-    ]
+    "subcategory": "Deportes de equipo",
+    "word": "Rugby",
+    "similarWords": ["Fútbol", "Balonmano", "Hockey"],
+    "hints": {
+      "easy": ["Ovalado", "Ensayo", "Placaje"],
+      "normal": ["Melé", "Palos", "Camiseta"],
+      "hard": ["Barro", "Contacto", "Tercer"]
+    }
   },
   {
+    "id": "voleibol",
     "category": "Deportes",
-    "sub": {
-      "id": "instalaciones",
-      "easy": ["Lugar", "Pista", "Campo", "Gradas"],
-      "normal": ["Recinto", "Zona", "Superficie", "Espacio"],
-      "hard": ["Entorno", "Marco", "Área", "Contexto"]
-    },
-    "words": [
-      "Estadio",
-      "Pabellón",
-      "Piscina",
-      "Circuito",
-      "Cancha",
-      "Tatami",
-      "Velódromo",
-      "Ring"
-    ]
+    "subcategory": "Deportes de equipo",
+    "word": "Voleibol",
+    "similarWords": ["Baloncesto", "Waterpolo", "Balonmano"],
+    "hints": {
+      "easy": ["Red", "Remate", "Saque"],
+      "normal": ["Rotación", "Bloqueo", "Cancha"],
+      "hard": ["Arena", "Recepción", "Set"]
+    }
   },
   {
+    "id": "waterpolo",
     "category": "Deportes",
-    "sub": {
-      "id": "material",
-      "easy": ["Lugar", "Acción", "Grupo", "Uso"],
-      "normal": ["Herramienta", "Protección", "Accesorio", "Elemento"],
-      "hard": ["Soporte", "Recurso", "Carga", "Medio"]
-    },
-    "words": [
-      "Balón",
-      "Raqueta",
-      "Bicicleta",
-      "Casco",
-      "Guantes",
-      "Red",
-      "Zapatillas",
-      "Cronómetro"
-    ]
+    "subcategory": "Deportes de equipo",
+    "word": "Waterpolo",
+    "similarWords": ["Natación", "Balonmano", "Voleibol"],
+    "hints": {
+      "easy": ["Agua", "Portería", "Balón"],
+      "normal": ["Piscina", "Gorro", "Flotar"],
+      "hard": ["Chapoteo", "Calle", "Boya"]
+    }
   },
   {
+    "id": "beisbol",
     "category": "Deportes",
-    "sub": {
-      "id": "fisico_mental",
-      "easy": ["Físico", "Fuerza", "Velocidad", "Aire"],
-      "normal": ["Resistencia", "Equilibrio", "Concentración", "Control"],
-      "hard": ["Gestión", "Templanza", "Confianza", "Enfoque"]
-    },
-    "words": ["Agilidad", "Reflejos", "Fatiga", "Recuperación"]
+    "subcategory": "Deportes de equipo",
+    "word": "Béisbol",
+    "similarWords": ["Críquet", "Hockey", "Fútbol"],
+    "hints": {
+      "easy": ["Bate", "Base", "Pelota"],
+      "normal": ["Diamante", "Guante", "Lanzador"],
+      "hard": ["Entrada", "Grada", "Home"]
+    }
+  },
+  {
+    "id": "criquet",
+    "category": "Deportes",
+    "subcategory": "Deportes de equipo",
+    "word": "Críquet",
+    "similarWords": ["Béisbol", "Hockey", "Rugby"],
+    "hints": {
+      "easy": ["Bate", "Pelota", "Wicket"],
+      "normal": ["Lanzador", "Inglaterra", "Campo"],
+      "hard": ["Blanco", "Té", "Turno"]
+    }
+  },
+
+  {
+    "id": "tenis",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Tenis",
+    "similarWords": ["Pádel", "Bádminton", "Gimnasia"],
+    "hints": {
+      "easy": ["Raqueta", "Red", "Pelota"],
+      "normal": ["Saque", "Set", "Arcilla"],
+      "hard": ["Silencio", "Línea", "Individual"]
+    }
+  },
+  {
+    "id": "atletismo",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Atletismo",
+    "similarWords": ["Ciclismo", "Natación", "Gimnasia"],
+    "hints": {
+      "easy": ["Pista", "Carrera", "Marca"],
+      "normal": ["Vallas", "Crono", "Salto"],
+      "hard": ["Calles", "Tacos", "Meta"]
+    }
+  },
+  {
+    "id": "natacion",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Natación",
+    "similarWords": ["Waterpolo", "Atletismo", "Ciclismo"],
+    "hints": {
+      "easy": ["Piscina", "Gafas", "Agua"],
+      "normal": ["Crol", "Calle", "Viraje"],
+      "hard": ["Gorro", "Corchera", "Salida"]
+    }
+  },
+  {
+    "id": "ciclismo",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Ciclismo",
+    "similarWords": ["Atletismo", "Halterofilia", "Escalada"],
+    "hints": {
+      "easy": ["Bicicleta", "Pedales", "Casco"],
+      "normal": ["Pelotón", "Puerto", "Sprint"],
+      "hard": ["Maillot", "Rueda", "Asfalto"]
+    }
+  },
+  {
+    "id": "boxeo",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Boxeo",
+    "similarWords": ["Judo", "Halterofilia", "Gimnasia"],
+    "hints": {
+      "easy": ["Guantes", "Puños", "Ring"],
+      "normal": ["Asalto", "Esquina", "Gancho"],
+      "hard": ["Campana", "Sombra", "Vendaje"]
+    }
+  },
+  {
+    "id": "judo",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Judo",
+    "similarWords": ["Boxeo", "Gimnasia", "Escalada"],
+    "hints": {
+      "easy": ["Tatami", "Llave", "Kimono"],
+      "normal": ["Proyección", "Cinturón", "Agarre"],
+      "hard": ["Respeto", "Dojo", "Caída"]
+    }
+  },
+  {
+    "id": "gimnasia",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Gimnasia",
+    "similarWords": ["Atletismo", "Judo", "Escalada"],
+    "hints": {
+      "easy": ["Suelo", "Aro", "Pirueta"],
+      "normal": ["Barra", "Flexibilidad", "Rutina"],
+      "hard": ["Jurado", "Malla", "Equilibrio"]
+    }
+  },
+  {
+    "id": "escalada",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Escalada",
+    "similarWords": ["Gimnasia", "Ciclismo", "Halterofilia"],
+    "hints": {
+      "easy": ["Roca", "Arnés", "Pared"],
+      "normal": ["Presa", "Magnesio", "Cuerda"],
+      "hard": ["Altura", "Bloque", "Vértigo"]
+    }
+  },
+  {
+    "id": "halterofilia",
+    "category": "Deportes",
+    "subcategory": "Deportes individuales",
+    "word": "Halterofilia",
+    "similarWords": ["Boxeo", "Gimnasia", "Ciclismo"],
+    "hints": {
+      "easy": ["Barra", "Peso", "Discos"],
+      "normal": ["Arrancada", "Tarima", "Fuerza"],
+      "hard": ["Tiza", "Jurado", "Explosión"]
+    }
+  },
+
+  {
+    "id": "pase",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Pase",
+    "similarWords": ["Disparo", "Ataque", "Finta"],
+    "hints": {
+      "easy": ["Compañero", "Balón", "Enviar"],
+      "normal": ["Hueco", "Asistencia", "Precisión"],
+      "hard": ["Visión", "Apoyo", "Circulación"]
+    }
+  },
+  {
+    "id": "disparo",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Disparo",
+    "similarWords": ["Gol", "Ataque", "Pase"],
+    "hints": {
+      "easy": ["Portería", "Chutar", "Potencia"],
+      "normal": ["Remate", "Lejano", "Rebote"],
+      "hard": ["Intento", "Ocasión", "Parada"]
+    }
+  },
+  {
+    "id": "salto",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Salto",
+    "similarWords": ["Carrera", "Bloqueo", "Disparo"],
+    "hints": {
+      "easy": ["Aire", "Piernas", "Impulso"],
+      "normal": ["Altura", "Caída", "Despegue"],
+      "hard": ["Vertical", "Tiempo", "Recepción"]
+    }
+  },
+  {
+    "id": "carrera",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Carrera",
+    "similarWords": ["Salto", "Ataque", "Defensa"],
+    "hints": {
+      "easy": ["Velocidad", "Piernas", "Meta"],
+      "normal": ["Sprint", "Ritmo", "Recorrido"],
+      "hard": ["Zancada", "Fondo", "Cambio"]
+    }
+  },
+  {
+    "id": "bloqueo",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Bloqueo",
+    "similarWords": ["Defensa", "Salto", "Ataque"],
+    "hints": {
+      "easy": ["Parar", "Muro", "Rival"],
+      "normal": ["Tapón", "Red", "Contacto"],
+      "hard": ["Anticipación", "Espacio", "Ayuda"]
+    }
+  },
+  {
+    "id": "defensa",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Defensa",
+    "similarWords": ["Ataque", "Bloqueo", "Pase"],
+    "hints": {
+      "easy": ["Proteger", "Rival", "Parar"],
+      "normal": ["Marca", "Cobertura", "Recuperar"],
+      "hard": ["Orden", "Atrás", "Lectura"]
+    }
+  },
+  {
+    "id": "ataque",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Ataque",
+    "similarWords": ["Defensa", "Disparo", "Gol"],
+    "hints": {
+      "easy": ["Avanzar", "Rival", "Ofensiva"],
+      "normal": ["Transición", "Remate", "Presión"],
+      "hard": ["Ritmo", "Espacio", "Superioridad"]
+    }
+  },
+  {
+    "id": "finta",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Finta",
+    "similarWords": ["Pase", "Ataque", "Disparo"],
+    "hints": {
+      "easy": ["Engaño", "Amago", "Rival"],
+      "normal": ["Cuerpo", "Cambio", "Desequilibrio"],
+      "hard": ["Lectura", "Uno", "Cintura"]
+    }
+  },
+  {
+    "id": "gol",
+    "category": "Deportes",
+    "subcategory": "Acciones de juego",
+    "word": "Gol",
+    "similarWords": ["Disparo", "Ataque", "Punto"],
+    "hints": {
+      "easy": ["Portería", "Punto", "Celebrar"],
+      "normal": ["Marcador", "Red", "Remate"],
+      "hard": ["Abrazo", "Grito", "Ventaja"]
+    }
+  },
+
+  {
+    "id": "portero",
+    "category": "Deportes",
+    "subcategory": "Posiciones y roles",
+    "word": "Portero",
+    "similarWords": ["Defensa", "Árbitro", "Capitán"],
+    "hints": {
+      "easy": ["Guantes", "Portería", "Parar"],
+      "normal": ["Área", "Saques", "Palos"],
+      "hard": ["Reflejos", "Solo", "Último"]
+    }
+  },
+  {
+    "id": "delantero",
+    "category": "Deportes",
+    "subcategory": "Posiciones y roles",
+    "word": "Delantero",
+    "similarWords": ["Centrocampista", "Capitán", "Suplente"],
+    "hints": {
+      "easy": ["Gol", "Ataque", "Área"],
+      "normal": ["Desmarque", "Remate", "Punta"],
+      "hard": ["Ocasión", "Cazador", "Definición"]
+    }
+  },
+  {
+    "id": "centrocampista",
+    "category": "Deportes",
+    "subcategory": "Posiciones y roles",
+    "word": "Centrocampista",
+    "similarWords": ["Delantero", "Capitán", "Entrenador"],
+    "hints": {
+      "easy": ["Medio", "Pase", "Balón"],
+      "normal": ["Organiza", "Conecta", "Ritmo"],
+      "hard": ["Visión", "Distribuye", "Motor"]
+    }
+  },
+  {
+    "id": "arbitro",
+    "category": "Deportes",
+    "subcategory": "Posiciones y roles",
+    "word": "Árbitro",
+    "similarWords": ["Entrenador", "Capitán", "Portero"],
+    "hints": {
+      "easy": ["Silbato", "Tarjeta", "Reglas"],
+      "normal": ["Pitar", "Falta", "Decisión"],
+      "hard": ["Autoridad", "Protesta", "Centro"]
+    }
+  },
+  {
+    "id": "capitan",
+    "category": "Deportes",
+    "subcategory": "Posiciones y roles",
+    "word": "Capitán",
+    "similarWords": ["Entrenador", "Centrocampista", "Suplente"],
+    "hints": {
+      "easy": ["Brazalete", "Líder", "Equipo"],
+      "normal": ["Representa", "Sorteo", "Manda"],
+      "hard": ["Respeto", "Vestuario", "Ejemplo"]
+    }
+  },
+  {
+    "id": "entrenador",
+    "category": "Deportes",
+    "subcategory": "Posiciones y roles",
+    "word": "Entrenador",
+    "similarWords": ["Capitán", "Árbitro", "Suplente"],
+    "hints": {
+      "easy": ["Banquillo", "Táctica", "Equipo"],
+      "normal": ["Cambios", "Charla", "Pizarra"],
+      "hard": ["Plan", "Semana", "Vestuario"]
+    }
+  },
+  {
+    "id": "suplente",
+    "category": "Deportes",
+    "subcategory": "Posiciones y roles",
+    "word": "Suplente",
+    "similarWords": ["Capitán", "Entrenador", "Delantero"],
+    "hints": {
+      "easy": ["Banquillo", "Cambio", "Esperar"],
+      "normal": ["Entrar", "Rotación", "Minutos"],
+      "hard": ["Chándal", "Oportunidad", "Reserva"]
+    }
+  },
+
+  {
+    "id": "record",
+    "category": "Deportes",
+    "subcategory": "Objetivos y resultados",
+    "word": "Récord",
+    "similarWords": ["Medalla", "Trofeo", "Clasificación"],
+    "hints": {
+      "easy": ["Marca", "Mejor", "Historia"],
+      "normal": ["Tiempo", "Superar", "Registro"],
+      "hard": ["Legado", "Titular", "Hazaña"]
+    }
+  },
+  {
+    "id": "empate",
+    "category": "Deportes",
+    "subcategory": "Objetivos y resultados",
+    "word": "Empate",
+    "similarWords": ["Derrota", "Clasificación", "Gol"],
+    "hints": {
+      "easy": ["Igualdad", "Marcador", "Mismo"],
+      "normal": ["Tablas", "Punto", "Final"],
+      "hard": ["Reparto", "Equilibrio", "Nadie"]
+    }
+  },
+  {
+    "id": "derrota",
+    "category": "Deportes",
+    "subcategory": "Objetivos y resultados",
+    "word": "Derrota",
+    "similarWords": ["Empate", "Clasificación", "Trofeo"],
+    "hints": {
+      "easy": ["Perder", "Caer", "Rival"],
+      "normal": ["Fracaso", "Marcador", "Final"],
+      "hard": ["Silencio", "Cabizbajo", "Lección"]
+    }
+  },
+  {
+    "id": "clasificacion",
+    "category": "Deportes",
+    "subcategory": "Objetivos y resultados",
+    "word": "Clasificación",
+    "similarWords": ["Récord", "Trofeo", "Medalla"],
+    "hints": {
+      "easy": ["Ronda", "Pasar", "Siguiente"],
+      "normal": ["Tabla", "Puestos", "Fase"],
+      "hard": ["Objetivo", "Cuentas", "Jornada"]
+    }
+  },
+  {
+    "id": "medalla",
+    "category": "Deportes",
+    "subcategory": "Objetivos y resultados",
+    "word": "Medalla",
+    "similarWords": ["Trofeo", "Récord", "Clasificación"],
+    "hints": {
+      "easy": ["Oro", "Plata", "Bronce"],
+      "normal": ["Podio", "Cuello", "Premio"],
+      "hard": ["Himno", "Ceremonia", "Bandera"]
+    }
+  },
+  {
+    "id": "trofeo",
+    "category": "Deportes",
+    "subcategory": "Objetivos y resultados",
+    "word": "Trofeo",
+    "similarWords": ["Medalla", "Récord", "Clasificación"],
+    "hints": {
+      "easy": ["Copa", "Premio", "Levantar"],
+      "normal": ["Final", "Campeón", "Vitrina"],
+      "hard": ["Fiesta", "Foto", "Capitán"]
+    }
+  },
+
+  {
+    "id": "estadio",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Estadio",
+    "similarWords": ["Pabellón", "Cancha", "Circuito"],
+    "hints": {
+      "easy": ["Gradas", "Césped", "Afición"],
+      "normal": ["Marcador", "Tribuna", "Acceso"],
+      "hard": ["Himno", "Entrada", "Multitud"]
+    }
+  },
+  {
+    "id": "pabellon",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Pabellón",
+    "similarWords": ["Cancha", "Estadio", "Ring"],
+    "hints": {
+      "easy": ["Techo", "Parqué", "Gradas"],
+      "normal": ["Interior", "Canastas", "Líneas"],
+      "hard": ["Eco", "Cubierto", "Pista"]
+    }
+  },
+  {
+    "id": "piscina",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Piscina",
+    "similarWords": ["Waterpolo", "Natación", "Pabellón"],
+    "hints": {
+      "easy": ["Agua", "Calles", "Corcheras"],
+      "normal": ["Trampolín", "Gorro", "Bordillo"],
+      "hard": ["Cloro", "Viraje", "Silbato"]
+    }
+  },
+  {
+    "id": "circuito",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Circuito",
+    "similarWords": ["Velódromo", "Estadio", "Cancha"],
+    "hints": {
+      "easy": ["Curvas", "Vuelta", "Recorrido"],
+      "normal": ["Asfalto", "Meta", "Boxes"],
+      "hard": ["Motor", "Trazada", "Piano"]
+    }
+  },
+  {
+    "id": "cancha",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Cancha",
+    "similarWords": ["Pabellón", "Estadio", "Tatami"],
+    "hints": {
+      "easy": ["Líneas", "Juego", "Superficie"],
+      "normal": ["Bote", "Red", "Lateral"],
+      "hard": ["Centro", "Fondo", "Marcaje"]
+    }
+  },
+  {
+    "id": "tatami",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Tatami",
+    "similarWords": ["Ring", "Cancha", "Pabellón"],
+    "hints": {
+      "easy": ["Suelo", "Judo", "Colchoneta"],
+      "normal": ["Dojo", "Caídas", "Descalzo"],
+      "hard": ["Respeto", "Saludo", "Agarre"]
+    }
+  },
+  {
+    "id": "velodromo",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Velódromo",
+    "similarWords": ["Circuito", "Pista", "Estadio"],
+    "hints": {
+      "easy": ["Bicicleta", "Óvalo", "Curva"],
+      "normal": ["Madera", "Peralte", "Vuelta"],
+      "hard": ["Sprint", "Carril", "Pelotón"]
+    }
+  },
+  {
+    "id": "ring",
+    "category": "Deportes",
+    "subcategory": "Instalaciones",
+    "word": "Ring",
+    "similarWords": ["Tatami", "Pabellón", "Cancha"],
+    "hints": {
+      "easy": ["Cuerdas", "Boxeo", "Esquina"],
+      "normal": ["Asalto", "Lona", "Campana"],
+      "hard": ["Árbitro", "Vendaje", "Golpe"]
+    }
+  },
+
+  {
+    "id": "balon",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Balón",
+    "similarWords": ["Raqueta", "Red", "Guantes"],
+    "hints": {
+      "easy": ["Bota", "Rueda", "Esférico"],
+      "normal": ["Inflado", "Pase", "Control"],
+      "hard": ["Césped", "Aire", "Bote"]
+    }
+  },
+  {
+    "id": "raqueta",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Raqueta",
+    "similarWords": ["Red", "Zapatillas", "Balón"],
+    "hints": {
+      "easy": ["Cuerdas", "Mango", "Golpear"],
+      "normal": ["Tenis", "Empuñadura", "Marco"],
+      "hard": ["Revés", "Cordaje", "Vibración"]
+    }
+  },
+  {
+    "id": "bicicleta",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Bicicleta",
+    "similarWords": ["Casco", "Zapatillas", "Cronómetro"],
+    "hints": {
+      "easy": ["Ruedas", "Pedales", "Cadena"],
+      "normal": ["Sillín", "Manillar", "Marchas"],
+      "hard": ["Puertos", "Asfalto", "Maillot"]
+    }
+  },
+  {
+    "id": "casco",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Casco",
+    "similarWords": ["Guantes", "Zapatillas", "Bicicleta"],
+    "hints": {
+      "easy": ["Cabeza", "Protección", "Correa"],
+      "normal": ["Golpe", "Seguridad", "Espuma"],
+      "hard": ["Caída", "Ajuste", "Visera"]
+    }
+  },
+  {
+    "id": "guantes",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Guantes",
+    "similarWords": ["Casco", "Balón", "Zapatillas"],
+    "hints": {
+      "easy": ["Manos", "Protección", "Dedos"],
+      "normal": ["Agarre", "Boxeo", "Portero"],
+      "hard": ["Velcro", "Frío", "Palma"]
+    }
+  },
+  {
+    "id": "red",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Red",
+    "similarWords": ["Raqueta", "Balón", "Cancha"],
+    "hints": {
+      "easy": ["Malla", "Separar", "Postes"],
+      "normal": ["Voleibol", "Tenis", "Caer"],
+      "hard": ["Tensión", "Centro", "Nudo"]
+    }
+  },
+  {
+    "id": "zapatillas",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Zapatillas",
+    "similarWords": ["Casco", "Guantes", "Cronómetro"],
+    "hints": {
+      "easy": ["Pies", "Cordones", "Suela"],
+      "normal": ["Pisada", "Amortiguación", "Talla"],
+      "hard": ["Parqué", "Sprint", "Tacos"]
+    }
+  },
+  {
+    "id": "cronometro",
+    "category": "Deportes",
+    "subcategory": "Material",
+    "word": "Cronómetro",
+    "similarWords": ["Zapatillas", "Bicicleta", "Balón"],
+    "hints": {
+      "easy": ["Tiempo", "Segundos", "Medir"],
+      "normal": ["Marca", "Botón", "Salida"],
+      "hard": ["Registro", "Precisión", "Meta"]
+    }
+  },
+
+  {
+    "id": "agilidad",
+    "category": "Deportes",
+    "subcategory": "Físico y mental",
+    "word": "Agilidad",
+    "similarWords": ["Reflejos", "Equilibrio", "Velocidad"],
+    "hints": {
+      "easy": ["Rápido", "Cambio", "Moverse"],
+      "normal": ["Esquivar", "Ligereza", "Reacción"],
+      "hard": ["Cintura", "Pies", "Coordinación"]
+    }
+  },
+  {
+    "id": "reflejos",
+    "category": "Deportes",
+    "subcategory": "Físico y mental",
+    "word": "Reflejos",
+    "similarWords": ["Agilidad", "Concentración", "Fatiga"],
+    "hints": {
+      "easy": ["Reacción", "Rápido", "Parar"],
+      "normal": ["Instinto", "Respuesta", "Milésima"],
+      "hard": ["Portero", "Sobresalto", "Vista"]
+    }
+  },
+  {
+    "id": "fatiga",
+    "category": "Deportes",
+    "subcategory": "Físico y mental",
+    "word": "Fatiga",
+    "similarWords": ["Recuperación", "Resistencia", "Reflejos"],
+    "hints": {
+      "easy": ["Cansancio", "Pesadez", "Agotado"],
+      "normal": ["Esfuerzo", "Pulso", "Acumulada"],
+      "hard": ["Piernas", "Sudor", "Final"]
+    }
+  },
+  {
+    "id": "recuperacion",
+    "category": "Deportes",
+    "subcategory": "Físico y mental",
+    "word": "Recuperación",
+    "similarWords": ["Fatiga", "Agilidad", "Reflejos"],
+    "hints": {
+      "easy": ["Descanso", "Volver", "Mejorar"],
+      "normal": ["Masaje", "Sueño", "Reponer"],
+      "hard": ["Hielo", "Rutina", "Descarga"]
+    }
   }
 ]

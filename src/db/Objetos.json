@@ -1,128 +1,842 @@
 [
   {
+    "id": "silla",
     "category": "Objetos",
-    "sub": {
-      "id": "hogar",
-      "easy": ["Casa", "Uso diario", "Interior", "Comodidad"],
-      "normal": ["Rutina", "Función", "Espacio", "Orden"],
-      "hard": ["Costumbre", "Necesidad", "Presencia", "Utilidad"]
-    },
-    "words": [
-      "Silla",
-      "Mesa",
+    "subcategory": "Hogar",
+    "word": "Silla",
+    "similarWords": [
       "Sofá",
-      "Lámpara",
-      "Cojín",
-      "Cortina",
-      "Alfombra",
-      "Estantería",
-      "Espejo",
-      "Reloj"
-    ]
+      "Mesa",
+      "Taburete"
+    ],
+    "hints": {
+      "easy": [
+        "Sentarse",
+        "Patas",
+        "Respaldo"
+      ],
+      "normal": [
+        "Comedor",
+        "Madera",
+        "Asiento"
+      ],
+      "hard": [
+        "Invitado",
+        "Descanso",
+        "Apoyo"
+      ]
+    }
   },
   {
+    "id": "mesa",
     "category": "Objetos",
-    "sub": {
-      "id": "cocina",
-      "easy": ["Cocinar", "Comida", "Preparación", "Calor"],
-      "normal": ["Utensilio", "Receta", "Proceso", "Uso"],
-      "hard": ["Hábito", "Rutina", "Funcionalidad", "Soporte"]
-    },
-    "words": [
-      "Sartén",
-      "Cuchillo",
+    "subcategory": "Hogar",
+    "word": "Mesa",
+    "similarWords": [
+      "Silla",
+      "Escritorio",
+      "Estantería"
+    ],
+    "hints": {
+      "easy": [
+        "Superficie",
+        "Patas",
+        "Comer"
+      ],
+      "normal": [
+        "Mantel",
+        "Comedor",
+        "Centro"
+      ],
+      "hard": [
+        "Reunión",
+        "Apoyo",
+        "Platos"
+      ]
+    }
+  },
+  {
+    "id": "sofa",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Sofá",
+    "similarWords": [
+      "Silla",
+      "Cojín",
+      "Alfombra"
+    ],
+    "hints": {
+      "easy": [
+        "Salón",
+        "Sentarse",
+        "Cojines"
+      ],
+      "normal": [
+        "Descanso",
+        "Tapizado",
+        "Televisión"
+      ],
+      "hard": [
+        "Siesta",
+        "Visitas",
+        "Comodidad"
+      ]
+    }
+  },
+  {
+    "id": "lampara",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Lámpara",
+    "similarWords": [
+      "Linterna",
+      "Bombilla",
+      "Reloj"
+    ],
+    "hints": {
+      "easy": [
+        "Luz",
+        "Bombilla",
+        "Encender"
+      ],
+      "normal": [
+        "Pantalla",
+        "Mesita",
+        "Cable"
+      ],
+      "hard": [
+        "Sombra",
+        "Ambiente",
+        "Lectura"
+      ]
+    }
+  },
+  {
+    "id": "cojin",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Cojín",
+    "similarWords": [
+      "Sofá",
+      "Almohada",
+      "Alfombra"
+    ],
+    "hints": {
+      "easy": [
+        "Blando",
+        "Relleno",
+        "Apoyar"
+      ],
+      "normal": [
+        "Decoración",
+        "Tela",
+        "Salón"
+      ],
+      "hard": [
+        "Comodidad",
+        "Espalda",
+        "Descanso"
+      ]
+    }
+  },
+  {
+    "id": "cortina",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Cortina",
+    "similarWords": [
+      "Persiana",
+      "Alfombra",
+      "Espejo"
+    ],
+    "hints": {
+      "easy": [
+        "Ventana",
+        "Tela",
+        "Tapar"
+      ],
+      "normal": [
+        "Luz",
+        "Colgar",
+        "Barra"
+      ],
+      "hard": [
+        "Privacidad",
+        "Sombra",
+        "Habitación"
+      ]
+    }
+  },
+  {
+    "id": "alfombra",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Alfombra",
+    "similarWords": [
+      "Moqueta",
+      "Cojín",
+      "Sofá"
+    ],
+    "hints": {
+      "easy": [
+        "Suelo",
+        "Tela",
+        "Pisada"
+      ],
+      "normal": [
+        "Decoración",
+        "Salón",
+        "Rectángulo"
+      ],
+      "hard": [
+        "Calidez",
+        "Centro",
+        "Pisadas"
+      ]
+    }
+  },
+  {
+    "id": "estanteria",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Estantería",
+    "similarWords": [
+      "Armario",
+      "Mesa",
+      "Archivador"
+    ],
+    "hints": {
+      "easy": [
+        "Libros",
+        "Baldas",
+        "Guardar"
+      ],
+      "normal": [
+        "Pared",
+        "Orden",
+        "Objetos"
+      ],
+      "hard": [
+        "Colección",
+        "Altura",
+        "Espacio"
+      ]
+    }
+  },
+  {
+    "id": "espejo",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Espejo",
+    "similarWords": [
+      "Cristal",
+      "Ventana",
+      "Reloj"
+    ],
+    "hints": {
+      "easy": [
+        "Reflejo",
+        "Cristal",
+        "Mirar"
+      ],
+      "normal": [
+        "Baño",
+        "Marco",
+        "Pared"
+      ],
+      "hard": [
+        "Imagen",
+        "Reflexión",
+        "Cara"
+      ]
+    }
+  },
+  {
+    "id": "reloj",
+    "category": "Objetos",
+    "subcategory": "Hogar",
+    "word": "Reloj",
+    "similarWords": [
+      "Cronómetro",
+      "Teléfono",
+      "Agenda"
+    ],
+    "hints": {
+      "easy": [
+        "Hora",
+        "Agujas",
+        "Tiempo"
+      ],
+      "normal": [
+        "Pared",
+        "Despertar",
+        "Segundos"
+      ],
+      "hard": [
+        "Rutina",
+        "Tictac",
+        "Momento"
+      ]
+    }
+  },
+  {
+    "id": "sarten",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Sartén",
+    "similarWords": [
+      "Olla",
+      "Cazuela",
+      "Plancha"
+    ],
+    "hints": {
+      "easy": [
+        "Freír",
+        "Aceite",
+        "Fuego"
+      ],
+      "normal": [
+        "Mango",
+        "Huevos",
+        "Cocina"
+      ],
+      "hard": [
+        "Voltear",
+        "Calor",
+        "Desayuno"
+      ]
+    }
+  },
+  {
+    "id": "cuchillo",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Cuchillo",
+    "similarWords": [
       "Tenedor",
       "Cuchara",
-      "Plato",
+      "Tabla"
+    ],
+    "hints": {
+      "easy": [
+        "Cortar",
+        "Hoja",
+        "Afilado"
+      ],
+      "normal": [
+        "Cocina",
+        "Chef",
+        "Mango"
+      ],
+      "hard": [
+        "Filetear",
+        "Precisión",
+        "Corte"
+      ]
+    }
+  },
+  {
+    "id": "tenedor",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Tenedor",
+    "similarWords": [
+      "Cuchara",
+      "Cuchillo",
+      "Plato"
+    ],
+    "hints": {
+      "easy": [
+        "Pinchos",
+        "Comer",
+        "Metal"
+      ],
+      "normal": [
+        "Plato",
+        "Cubierto",
+        "Mesa"
+      ],
+      "hard": [
+        "Bocado",
+        "Pasta",
+        "Pinchar"
+      ]
+    }
+  },
+  {
+    "id": "cuchara",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Cuchara",
+    "similarWords": [
+      "Tenedor",
+      "Cuchillo",
+      "Taza"
+    ],
+    "hints": {
+      "easy": [
+        "Sopa",
+        "Redonda",
+        "Comer"
+      ],
+      "normal": [
+        "Cubierto",
+        "Metal",
+        "Plato"
+      ],
+      "hard": [
+        "Caldo",
+        "Servir",
+        "Bocado"
+      ]
+    }
+  },
+  {
+    "id": "plato",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Plato",
+    "similarWords": [
       "Vaso",
       "Taza",
-      "Olla",
-      "Tabla de cortar",
-      "Colador"
-    ]
+      "Bandeja"
+    ],
+    "hints": {
+      "easy": [
+        "Comida",
+        "Redondo",
+        "Mesa"
+      ],
+      "normal": [
+        "Servir",
+        "Cerámica",
+        "Cenar"
+      ],
+      "hard": [
+        "Ración",
+        "Centro",
+        "Borde"
+      ]
+    }
   },
   {
+    "id": "vaso",
     "category": "Objetos",
-    "sub": {
-      "id": "oficina",
-      "easy": ["Trabajo", "Escritura", "Objeto", "Estudio"],
-      "normal": ["Organización", "Tarea", "Material", "Productividad"],
-      "hard": ["Enfoque", "Disciplina", "Proceso", "Constancia"]
-    },
-    "words": [
-      "Ordenador",
-      "Teclado",
+    "subcategory": "Cocina",
+    "word": "Vaso",
+    "similarWords": [
+      "Taza",
+      "Botella",
+      "Copa"
+    ],
+    "hints": {
+      "easy": [
+        "Beber",
+        "Cristal",
+        "Agua"
+      ],
+      "normal": [
+        "Mesa",
+        "Transparente",
+        "Borde"
+      ],
+      "hard": [
+        "Sed",
+        "Trago",
+        "Llenar"
+      ]
+    }
+  },
+  {
+    "id": "taza",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Taza",
+    "similarWords": [
+      "Vaso",
+      "Tetera",
+      "Café"
+    ],
+    "hints": {
+      "easy": [
+        "Café",
+        "Asa",
+        "Beber"
+      ],
+      "normal": [
+        "Desayuno",
+        "Cerámica",
+        "Caliente"
+      ],
+      "hard": [
+        "Mañana",
+        "Aroma",
+        "Sorbo"
+      ]
+    }
+  },
+  {
+    "id": "olla",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Olla",
+    "similarWords": [
+      "Sartén",
+      "Cazuela",
+      "Cacerola"
+    ],
+    "hints": {
+      "easy": [
+        "Hervir",
+        "Agua",
+        "Cocinar"
+      ],
+      "normal": [
+        "Tapa",
+        "Fuego",
+        "Caldo"
+      ],
+      "hard": [
+        "Vapor",
+        "Cocción",
+        "Sopa"
+      ]
+    }
+  },
+  {
+    "id": "tabla_cortar",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Tabla de cortar",
+    "similarWords": [
+      "Cuchillo",
+      "Plato",
+      "Encimera"
+    ],
+    "hints": {
+      "easy": [
+        "Cortar",
+        "Madera",
+        "Cocina"
+      ],
+      "normal": [
+        "Verduras",
+        "Superficie",
+        "Chef"
+      ],
+      "hard": [
+        "Picado",
+        "Preparar",
+        "Corte"
+      ]
+    }
+  },
+  {
+    "id": "colador",
+    "category": "Objetos",
+    "subcategory": "Cocina",
+    "word": "Colador",
+    "similarWords": [
+      "Tamiz",
+      "Escurridor",
+      "Olla"
+    ],
+    "hints": {
+      "easy": [
+        "Agujeros",
+        "Escurrir",
+        "Pasta"
+      ],
+      "normal": [
+        "Agua",
+        "Cocina",
+        "Metal"
+      ],
+      "hard": [
+        "Filtrar",
+        "Lavabo",
+        "Colar"
+      ]
+    }
+  },
+  {
+    "id": "ordenador",
+    "category": "Objetos",
+    "subcategory": "Oficina",
+    "word": "Ordenador",
+    "similarWords": [
+      "Tablet",
+      "Teléfono",
+      "Pantalla"
+    ],
+    "hints": {
+      "easy": [
+        "Pantalla",
+        "Teclado",
+        "Programas"
+      ],
+      "normal": [
+        "Trabajo",
+        "Archivos",
+        "Internet"
+      ],
+      "hard": [
+        "Procesador",
+        "Sistema",
+        "Escritorio"
+      ]
+    }
+  },
+  {
+    "id": "teclado",
+    "category": "Objetos",
+    "subcategory": "Oficina",
+    "word": "Teclado",
+    "similarWords": [
       "Ratón",
       "Pantalla",
-      "Cuaderno",
-      "Bolígrafo",
-      "Agenda",
-      "Archivador",
-      "Impresora",
-      "Grapadora"
-    ]
+      "Ordenador"
+    ],
+    "hints": {
+      "easy": [
+        "Teclas",
+        "Escribir",
+        "Ordenador"
+      ],
+      "normal": [
+        "Letras",
+        "USB",
+        "Escritorio"
+      ],
+      "hard": [
+        "Mecanico",
+        "Atajos",
+        "Pulsar"
+      ]
+    }
   },
   {
+    "id": "raton",
     "category": "Objetos",
-    "sub": {
-      "id": "higiene_personal",
-      "easy": ["Baño", "Cuidado", "Limpieza", "Mañana"],
-      "normal": ["Rutina", "Aseo", "Higiene", "Uso"],
-      "hard": ["Cuidado personal", "Constancia", "Autocontrol", "Hábitos"]
-    },
-    "words": [
-      "Cepillo de dientes",
-      "Pasta dental",
-      "Jabón",
-      "Champú",
-      "Toalla",
-      "Peine",
-      "Desodorante",
-      "Crema hidratante",
-      "Maquinilla",
-      "Secador"
-    ]
+    "subcategory": "Oficina",
+    "word": "Ratón",
+    "similarWords": [
+      "Teclado",
+      "Pantalla",
+      "Ordenador"
+    ],
+    "hints": {
+      "easy": [
+        "Cursor",
+        "Click",
+        "Mano"
+      ],
+      "normal": [
+        "USB",
+        "Alfombrilla",
+        "Ordenador"
+      ],
+      "hard": [
+        "Arrastrar",
+        "Puntero",
+        "Precisión"
+      ]
+    }
   },
   {
+    "id": "pantalla",
     "category": "Objetos",
-    "sub": {
-      "id": "tecnologia",
-      "easy": ["Electrónico", "Tema", "Encendido", "Digital"],
-      "normal": ["Dispositivo", "Conexión", "Batería", "Uso diario"],
-      "hard": ["Dependencia", "Interacción", "Soporte", "Comunicación"]
-    },
-    "words": [
-      "Teléfono móvil",
-      "Auriculares",
-      "Cargador",
-      "Tablet",
+    "subcategory": "Oficina",
+    "word": "Pantalla",
+    "similarWords": [
+      "Monitor",
       "Televisor",
-      "Mando a distancia",
-      "Altavoz",
-      "Reloj inteligente",
-      "Router",
-      "Cámara digital"
-    ]
+      "Tablet"
+    ],
+    "hints": {
+      "easy": [
+        "Imagen",
+        "Ordenador",
+        "Ver"
+      ],
+      "normal": [
+        "Resolución",
+        "Brillo",
+        "Escritorio"
+      ],
+      "hard": [
+        "Pixeles",
+        "Marco",
+        "Visual"
+      ]
+    }
   },
   {
+    "id": "cuaderno",
     "category": "Objetos",
-    "sub": {
-      "id": "ropa_accesorios",
-      "easy": ["Vestir", "Diario", "Tela", "Uso"],
-      "normal": ["Estilo", "Conjunto", "Comodidad", "Protección"],
-      "hard": ["Identidad", "Expresión", "Preferencia", "Imagen"]
-    },
-    "words": [
-      "Camiseta",
-      "Pantalón",
-      "Zapatillas",
-      "Chaqueta",
-      "Calcetines",
-      "Cinturón",
-      "Gorra",
-      "Bufanda",
-      "Mochila",
-      "Gafas de sol"
-    ]
+    "subcategory": "Oficina",
+    "word": "Cuaderno",
+    "similarWords": [
+      "Agenda",
+      "Libro",
+      "Archivador"
+    ],
+    "hints": {
+      "easy": [
+        "Papel",
+        "Escribir",
+        "Hojas"
+      ],
+      "normal": [
+        "Notas",
+        "Clase",
+        "Anotar"
+      ],
+      "hard": [
+        "Apuntes",
+        "Ideas",
+        "Página"
+      ]
+    }
+  },
+  {
+    "id": "boligrafo",
+    "category": "Objetos",
+    "subcategory": "Oficina",
+    "word": "Bolígrafo",
+    "similarWords": [
+      "Lápiz",
+      "Rotulador",
+      "Cuaderno"
+    ],
+    "hints": {
+      "easy": [
+        "Tinta",
+        "Escribir",
+        "Papel"
+      ],
+      "normal": [
+        "Punta",
+        "Firmar",
+        "Oficina"
+      ],
+      "hard": [
+        "Trazo",
+        "Azul",
+        "Anotar"
+      ]
+    }
+  },
+  {
+    "id": "agenda",
+    "category": "Objetos",
+    "subcategory": "Oficina",
+    "word": "Agenda",
+    "similarWords": [
+      "Cuaderno",
+      "Calendario",
+      "Archivador"
+    ],
+    "hints": {
+      "easy": [
+        "Fechas",
+        "Planificar",
+        "Días"
+      ],
+      "normal": [
+        "Reunión",
+        "Notas",
+        "Organizar"
+      ],
+      "hard": [
+        "Citas",
+        "Horario",
+        "Semana"
+      ]
+    }
+  },
+  {
+    "id": "archivador",
+    "category": "Objetos",
+    "subcategory": "Oficina",
+    "word": "Archivador",
+    "similarWords": [
+      "Carpeta",
+      "Estantería",
+      "Cuaderno"
+    ],
+    "hints": {
+      "easy": [
+        "Papeles",
+        "Carpeta",
+        "Guardar"
+      ],
+      "normal": [
+        "Oficina",
+        "Orden",
+        "Documentos"
+      ],
+      "hard": [
+        "Anillas",
+        "Clasificar",
+        "Archivo"
+      ]
+    }
+  },
+  {
+    "id": "impresora",
+    "category": "Objetos",
+    "subcategory": "Oficina",
+    "word": "Impresora",
+    "similarWords": [
+      "Escáner",
+      "Ordenador",
+      "Fotocopiadora"
+    ],
+    "hints": {
+      "easy": [
+        "Papel",
+        "Tinta",
+        "Imprimir"
+      ],
+      "normal": [
+        "Documento",
+        "USB",
+        "Oficina"
+      ],
+      "hard": [
+        "Cartucho",
+        "Hoja",
+        "Salida"
+      ]
+    }
+  },
+  {
+    "id": "grapadora",
+    "category": "Objetos",
+    "subcategory": "Oficina",
+    "word": "Grapadora",
+    "similarWords": [
+      "Clip",
+      "Archivador",
+      "Carpeta"
+    ],
+    "hints": {
+      "easy": [
+        "Grapas",
+        "Papeles",
+        "Unir"
+      ],
+      "normal": [
+        "Metal",
+        "Presionar",
+        "Oficina"
+      ],
+      "hard": [
+        "Pinchar",
+        "Montón",
+        "Sujetar"
+      ]
+    }
   }
 ]
