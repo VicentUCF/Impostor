@@ -1,0 +1,842 @@
+[
+  {
+    "id": "perro",
+    "category": "Animales",
+    "subcategory": "mamiferos",
+    "word": "Perro",
+    "similarWords": [
+      "Lobo",
+      "Zorro",
+      "Gato"
+    ],
+    "hints": {
+      "easy": [
+        "Mascota",
+        "Ladrar",
+        "Pasear"
+      ],
+      "normal": [
+        "Correa",
+        "Dueño",
+        "Parque"
+      ],
+      "hard": [
+        "Olfato",
+        "Guardián",
+        "Patas"
+      ]
+    }
+  },
+  {
+    "id": "gato",
+    "category": "Animales",
+    "subcategory": "mamiferos",
+    "word": "Gato",
+    "similarWords": [
+      "Tigre",
+      "León",
+      "Pantera"
+    ],
+    "hints": {
+      "easy": [
+        "Mascota",
+        "Maullar",
+        "Bigotes"
+      ],
+      "normal": [
+        "Tejado",
+        "Arañar",
+        "Sigilo"
+      ],
+      "hard": [
+        "Felino",
+        "Ronronear",
+        "Salto"
+      ]
+    }
+  },
+  {
+    "id": "leon",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "León",
+    "similarWords": [
+      "Tigre",
+      "Pantera",
+      "Jaguar"
+    ],
+    "hints": {
+      "easy": [
+        "Melena",
+        "Sabana",
+        "Rugir"
+      ],
+      "normal": [
+        "Manada",
+        "África",
+        "Cazar"
+      ],
+      "hard": [
+        "Depredador",
+        "Garra",
+        "Rey"
+      ]
+    }
+  },
+  {
+    "id": "tigre",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Tigre",
+    "similarWords": [
+      "León",
+      "Pantera",
+      "Jaguar"
+    ],
+    "hints": {
+      "easy": [
+        "Rayas",
+        "Felino",
+        "Selva"
+      ],
+      "normal": [
+        "Acechar",
+        "Garras",
+        "Cazar"
+      ],
+      "hard": [
+        "Sigilo",
+        "Depredador",
+        "Emboscar"
+      ]
+    }
+  },
+  {
+    "id": "elefante",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Elefante",
+    "similarWords": [
+      "Rinoceronte",
+      "Hipopotamo",
+      "Jirafa"
+    ],
+    "hints": {
+      "easy": [
+        "Trompa",
+        "Grande",
+        "África"
+      ],
+      "normal": [
+        "Colmillos",
+        "Manada",
+        "Sabana"
+      ],
+      "hard": [
+        "Gigante",
+        "Pisadas",
+        "Peso"
+      ]
+    }
+  },
+  {
+    "id": "jirafa",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Jirafa",
+    "similarWords": [
+      "Cebra",
+      "Elefante",
+      "Antilope"
+    ],
+    "hints": {
+      "easy": [
+        "Cuello",
+        "Alta",
+        "Sabana"
+      ],
+      "normal": [
+        "Manchas",
+        "Hojas",
+        "África"
+      ],
+      "hard": [
+        "Altura",
+        "Acacia",
+        "Largo"
+      ]
+    }
+  },
+  {
+    "id": "cebra",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Cebra",
+    "similarWords": [
+      "Caballo",
+      "Jirafa",
+      "Antilope"
+    ],
+    "hints": {
+      "easy": [
+        "Rayas",
+        "África",
+        "Sabana"
+      ],
+      "normal": [
+        "Manada",
+        "Herbívoro",
+        "Blanco"
+      ],
+      "hard": [
+        "Casco",
+        "Llanura",
+        "Carrera"
+      ]
+    }
+  },
+  {
+    "id": "caballo",
+    "category": "Animales",
+    "subcategory": "mamiferos",
+    "word": "Caballo",
+    "similarWords": [
+      "Cebra",
+      "Burro",
+      "Vaca"
+    ],
+    "hints": {
+      "easy": [
+        "Montar",
+        "Granja",
+        "Crin"
+      ],
+      "normal": [
+        "Carrera",
+        "Establo",
+        "Galopar"
+      ],
+      "hard": [
+        "Herradura",
+        "Rein",
+        "Jinete"
+      ]
+    }
+  },
+  {
+    "id": "vaca",
+    "category": "Animales",
+    "subcategory": "granja",
+    "word": "Vaca",
+    "similarWords": [
+      "Toro",
+      "Cabra",
+      "Oveja"
+    ],
+    "hints": {
+      "easy": [
+        "Leche",
+        "Granja",
+        "Cuernos"
+      ],
+      "normal": [
+        "Pasto",
+        "Manada",
+        "Campo"
+      ],
+      "hard": [
+        "Ubre",
+        "Mugir",
+        "Establo"
+      ]
+    }
+  },
+  {
+    "id": "oveja",
+    "category": "Animales",
+    "subcategory": "granja",
+    "word": "Oveja",
+    "similarWords": [
+      "Cabra",
+      "Vaca",
+      "Cordero"
+    ],
+    "hints": {
+      "easy": [
+        "Lana",
+        "Rebaño",
+        "Campo"
+      ],
+      "normal": [
+        "Pastor",
+        "Blanca",
+        "Colina"
+      ],
+      "hard": [
+        "Esquilar",
+        "Balido",
+        "Pradera"
+      ]
+    }
+  },
+  {
+    "id": "cabra",
+    "category": "Animales",
+    "subcategory": "granja",
+    "word": "Cabra",
+    "similarWords": [
+      "Oveja",
+      "Vaca",
+      "Ciervo"
+    ],
+    "hints": {
+      "easy": [
+        "Cuernos",
+        "Montaña",
+        "Leche"
+      ],
+      "normal": [
+        "Trepar",
+        "Rebaño",
+        "Roca"
+      ],
+      "hard": [
+        "Pezuña",
+        "Pendiente",
+        "Agilidad"
+      ]
+    }
+  },
+  {
+    "id": "lobo",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Lobo",
+    "similarWords": [
+      "Perro",
+      "Zorro",
+      "Hiena"
+    ],
+    "hints": {
+      "easy": [
+        "Aullar",
+        "Bosque",
+        "Manada"
+      ],
+      "normal": [
+        "Cazar",
+        "Noche",
+        "Pelaje"
+      ],
+      "hard": [
+        "Depredador",
+        "Instinto",
+        "Colmillos"
+      ]
+    }
+  },
+  {
+    "id": "zorro",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Zorro",
+    "similarWords": [
+      "Lobo",
+      "Coyote",
+      "Perro"
+    ],
+    "hints": {
+      "easy": [
+        "Cola",
+        "Bosque",
+        "Rojo"
+      ],
+      "normal": [
+        "Astuto",
+        "Sigilo",
+        "Cazar"
+      ],
+      "hard": [
+        "Madriguera",
+        "Acechar",
+        "Rapidez"
+      ]
+    }
+  },
+  {
+    "id": "oso",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Oso",
+    "similarWords": [
+      "Panda",
+      "Lobo",
+      "Tigre"
+    ],
+    "hints": {
+      "easy": [
+        "Grande",
+        "Bosque",
+        "Garras"
+      ],
+      "normal": [
+        "Miel",
+        "Hibernar",
+        "Río"
+      ],
+      "hard": [
+        "Pesado",
+        "Patas",
+        "Pelaje"
+      ]
+    }
+  },
+  {
+    "id": "panda",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Panda",
+    "similarWords": [
+      "Oso",
+      "Koala",
+      "Perezoso"
+    ],
+    "hints": {
+      "easy": [
+        "Bambú",
+        "Blanco",
+        "Negro"
+      ],
+      "normal": [
+        "China",
+        "Oso",
+        "Bosque"
+      ],
+      "hard": [
+        "Lento",
+        "Manchas",
+        "Masticar"
+      ]
+    }
+  },
+  {
+    "id": "koala",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Koala",
+    "similarWords": [
+      "Panda",
+      "Perezoso",
+      "Canguro"
+    ],
+    "hints": {
+      "easy": [
+        "Árbol",
+        "Australia",
+        "Dormir"
+      ],
+      "normal": [
+        "Eucalipto",
+        "Trepar",
+        "Bolsa"
+      ],
+      "hard": [
+        "Marsupial",
+        "Rama",
+        "Lento"
+      ]
+    }
+  },
+  {
+    "id": "canguro",
+    "category": "Animales",
+    "subcategory": "salvajes",
+    "word": "Canguro",
+    "similarWords": [
+      "Koala",
+      "Wallaby",
+      "Conejo"
+    ],
+    "hints": {
+      "easy": [
+        "Saltar",
+        "Australia",
+        "Bolsa"
+      ],
+      "normal": [
+        "Marsupial",
+        "Campo",
+        "Patas"
+      ],
+      "hard": [
+        "Brinco",
+        "Cría",
+        "Desierto"
+      ]
+    }
+  },
+  {
+    "id": "conejo",
+    "category": "Animales",
+    "subcategory": "mamiferos",
+    "word": "Conejo",
+    "similarWords": [
+      "Liebre",
+      "Ratón",
+      "Canguro"
+    ],
+    "hints": {
+      "easy": [
+        "Orejas",
+        "Saltar",
+        "Zanahoria"
+      ],
+      "normal": [
+        "Madriguera",
+        "Campo",
+        "Rápido"
+      ],
+      "hard": [
+        "Bigotes",
+        "Pelaje",
+        "Pradera"
+      ]
+    }
+  },
+  {
+    "id": "raton",
+    "category": "Animales",
+    "subcategory": "mamiferos",
+    "word": "Ratón",
+    "similarWords": [
+      "Rata",
+      "Hámster",
+      "Conejo"
+    ],
+    "hints": {
+      "easy": [
+        "Pequeño",
+        "Cola",
+        "Queso"
+      ],
+      "normal": [
+        "Correr",
+        "Casa",
+        "Roer"
+      ],
+      "hard": [
+        "Madriguera",
+        "Bigotes",
+        "Sigilo"
+      ]
+    }
+  },
+  {
+    "id": "delfin",
+    "category": "Animales",
+    "subcategory": "marinos",
+    "word": "Delfín",
+    "similarWords": [
+      "Ballena",
+      "Orca",
+      "Tiburón"
+    ],
+    "hints": {
+      "easy": [
+        "Mar",
+        "Saltar",
+        "Aleta"
+      ],
+      "normal": [
+        "Inteligente",
+        "Océano",
+        "Grupo"
+      ],
+      "hard": [
+        "Silbido",
+        "Nadar",
+        "Ecolocalización"
+      ]
+    }
+  },
+  {
+    "id": "tiburon",
+    "category": "Animales",
+    "subcategory": "marinos",
+    "word": "Tiburón",
+    "similarWords": [
+      "Delfín",
+      "Orca",
+      "Ballena"
+    ],
+    "hints": {
+      "easy": [
+        "Dientes",
+        "Aleta",
+        "Mar"
+      ],
+      "normal": [
+        "Depredador",
+        "Océano",
+        "Nadar"
+      ],
+      "hard": [
+        "Mandíbula",
+        "Sangre",
+        "Profundidad"
+      ]
+    }
+  },
+  {
+    "id": "ballena",
+    "category": "Animales",
+    "subcategory": "marinos",
+    "word": "Ballena",
+    "similarWords": [
+      "Delfín",
+      "Orca",
+      "Tiburón"
+    ],
+    "hints": {
+      "easy": [
+        "Grande",
+        "Mar",
+        "Soplar"
+      ],
+      "normal": [
+        "Océano",
+        "Gigante",
+        "Nadar"
+      ],
+      "hard": [
+        "Aleta",
+        "Profundo",
+        "Canto"
+      ]
+    }
+  },
+  {
+    "id": "orca",
+    "category": "Animales",
+    "subcategory": "marinos",
+    "word": "Orca",
+    "similarWords": [
+      "Ballena",
+      "Delfín",
+      "Tiburón"
+    ],
+    "hints": {
+      "easy": [
+        "Mar",
+        "Blanco",
+        "Negro"
+      ],
+      "normal": [
+        "Aleta",
+        "Océano",
+        "Grupo"
+      ],
+      "hard": [
+        "Depredador",
+        "Salto",
+        "Cazar"
+      ]
+    }
+  },
+  {
+    "id": "pingüino",
+    "category": "Animales",
+    "subcategory": "aves",
+    "word": "Pingüino",
+    "similarWords": [
+      "Foca",
+      "Pato",
+      "Gaviota"
+    ],
+    "hints": {
+      "easy": [
+        "Frío",
+        "Hielo",
+        "Negro"
+      ],
+      "normal": [
+        "Antártida",
+        "Caminar",
+        "Nadar"
+      ],
+      "hard": [
+        "Torpe",
+        "Colonia",
+        "Plumas"
+      ]
+    }
+  },
+  {
+    "id": "aguila",
+    "category": "Animales",
+    "subcategory": "aves",
+    "word": "Águila",
+    "similarWords": [
+      "Halcón",
+      "Búho",
+      "Cuervo"
+    ],
+    "hints": {
+      "easy": [
+        "Volar",
+        "Pico",
+        "Montaña"
+      ],
+      "normal": [
+        "Cazar",
+        "Cielo",
+        "Ala"
+      ],
+      "hard": [
+        "Planear",
+        "Garra",
+        "Altura"
+      ]
+    }
+  },
+  {
+    "id": "buho",
+    "category": "Animales",
+    "subcategory": "aves",
+    "word": "Búho",
+    "similarWords": [
+      "Lechuza",
+      "Águila",
+      "Cuervo"
+    ],
+    "hints": {
+      "easy": [
+        "Noche",
+        "Ojos",
+        "Volar"
+      ],
+      "normal": [
+        "Bosque",
+        "Silencio",
+        "Cazar"
+      ],
+      "hard": [
+        "Plumas",
+        "Oscuro",
+        "Mirada"
+      ]
+    }
+  },
+  {
+    "id": "serpiente",
+    "category": "Animales",
+    "subcategory": "reptiles",
+    "word": "Serpiente",
+    "similarWords": [
+      "Lagarto",
+      "Cobra",
+      "Boa"
+    ],
+    "hints": {
+      "easy": [
+        "Larga",
+        "Reptil",
+        "Arrastrar"
+      ],
+      "normal": [
+        "Veneno",
+        "Selva",
+        "Escamas"
+      ],
+      "hard": [
+        "Silbar",
+        "Morder",
+        "Enrollar"
+      ]
+    }
+  },
+  {
+    "id": "cocodrilo",
+    "category": "Animales",
+    "subcategory": "reptiles",
+    "word": "Cocodrilo",
+    "similarWords": [
+      "Caimán",
+      "Lagarto",
+      "Serpiente"
+    ],
+    "hints": {
+      "easy": [
+        "Río",
+        "Dientes",
+        "Reptil"
+      ],
+      "normal": [
+        "Agua",
+        "Mandíbula",
+        "Acechar"
+      ],
+      "hard": [
+        "Pantano",
+        "Escamas",
+        "Depredador"
+      ]
+    }
+  },
+  {
+    "id": "tortuga",
+    "category": "Animales",
+    "subcategory": "reptiles",
+    "word": "Tortuga",
+    "similarWords": [
+      "Galápago",
+      "Lagarto",
+      "Cangrejo"
+    ],
+    "hints": {
+      "easy": [
+        "Caparazón",
+        "Lenta",
+        "Reptil"
+      ],
+      "normal": [
+        "Playa",
+        "Arena",
+        "Caminar"
+      ],
+      "hard": [
+        "Escudo",
+        "Longeva",
+        "Océano"
+      ]
+    }
+  },
+  {
+    "id": "camaleon",
+    "category": "Animales",
+    "subcategory": "reptiles",
+    "word": "Camaleón",
+    "similarWords": [
+      "Lagarto",
+      "Iguana",
+      "Serpiente"
+    ],
+    "hints": {
+      "easy": [
+        "Color",
+        "Lengua",
+        "Rama"
+      ],
+      "normal": [
+        "Camuflar",
+        "Reptil",
+        "Selva"
+      ],
+      "hard": [
+        "Cambiar",
+        "Ojos",
+        "Insecto"
+      ]
+    }
+  }
+]

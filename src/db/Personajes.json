@@ -1,0 +1,786 @@
+[
+  {
+    "id": "batman",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Batman",
+    "similarWords": [
+      "Spiderman",
+      "Iron Man",
+      "Superman"
+    ],
+    "hints": {
+      "easy": [
+        "Murciélago",
+        "Capa",
+        "Máscara"
+      ],
+      "normal": [
+        "Vigilante",
+        "Ciudad",
+        "Millonario"
+      ],
+      "hard": [
+        "Justicia",
+        "Oscuridad",
+        "Miedo"
+      ]
+    }
+  },
+  {
+    "id": "spiderman",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Spiderman",
+    "similarWords": [
+      "Batman",
+      "Deadpool",
+      "Iron Man"
+    ],
+    "hints": {
+      "easy": [
+        "Araña",
+        "Telaraña",
+        "Máscara"
+      ],
+      "normal": [
+        "Trepar",
+        "Balanceo",
+        "Ciudad"
+      ],
+      "hard": [
+        "Responsabilidad",
+        "Vecino",
+        "Juventud"
+      ]
+    }
+  },
+  {
+    "id": "superman",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Superman",
+    "similarWords": [
+      "Thor",
+      "Hulk",
+      "Batman"
+    ],
+    "hints": {
+      "easy": [
+        "Capa",
+        "Volar",
+        "Azul"
+      ],
+      "normal": [
+        "Héroe",
+        "Fuerza",
+        "Salvar"
+      ],
+      "hard": [
+        "Esperanza",
+        "Símbolo",
+        "Poder"
+      ]
+    }
+  },
+  {
+    "id": "iron_man",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Iron Man",
+    "similarWords": [
+      "Batman",
+      "Thor",
+      "Hulk"
+    ],
+    "hints": {
+      "easy": [
+        "Armadura",
+        "Rojo",
+        "Volar"
+      ],
+      "normal": [
+        "Tecnología",
+        "Millonario",
+        "Inventor"
+      ],
+      "hard": [
+        "Ingenio",
+        "Ego",
+        "Sacrificio"
+      ]
+    }
+  },
+  {
+    "id": "hulk",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Hulk",
+    "similarWords": [
+      "Thor",
+      "Superman",
+      "Thanos"
+    ],
+    "hints": {
+      "easy": [
+        "Verde",
+        "Gigante",
+        "Fuerte"
+      ],
+      "normal": [
+        "Enfadado",
+        "Romper",
+        "Furia"
+      ],
+      "hard": [
+        "Transformar",
+        "Control",
+        "Rabia"
+      ]
+    }
+  },
+  {
+    "id": "thor",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Thor",
+    "similarWords": [
+      "Hulk",
+      "Zeus",
+      "Superman"
+    ],
+    "hints": {
+      "easy": [
+        "Martillo",
+        "Trueno",
+        "Dios"
+      ],
+      "normal": [
+        "Rayos",
+        "Guerrero",
+        "Batalla"
+      ],
+      "hard": [
+        "Honor",
+        "Poder",
+        "Mitología"
+      ]
+    }
+  },
+  {
+    "id": "darth_vader",
+    "category": "Personajes",
+    "subcategory": "ciencia_ficcion",
+    "word": "Darth Vader",
+    "similarWords": [
+      "Luke Skywalker",
+      "Kylo Ren",
+      "Yoda"
+    ],
+    "hints": {
+      "easy": [
+        "Casco",
+        "Negro",
+        "Espacio"
+      ],
+      "normal": [
+        "Imperio",
+        "Espada",
+        "Oscuro"
+      ],
+      "hard": [
+        "Destino",
+        "Redención",
+        "Poder"
+      ]
+    }
+  },
+  {
+    "id": "luke_skywalker",
+    "category": "Personajes",
+    "subcategory": "ciencia_ficcion",
+    "word": "Luke Skywalker",
+    "similarWords": [
+      "Darth Vader",
+      "Yoda",
+      "Obi Wan"
+    ],
+    "hints": {
+      "easy": [
+        "Jedi",
+        "Espacio",
+        "Espada"
+      ],
+      "normal": [
+        "Entrenar",
+        "Maestro",
+        "Fuerza"
+      ],
+      "hard": [
+        "Destino",
+        "Viaje",
+        "Aprender"
+      ]
+    }
+  },
+  {
+    "id": "yoda",
+    "category": "Personajes",
+    "subcategory": "ciencia_ficcion",
+    "word": "Yoda",
+    "similarWords": [
+      "Luke Skywalker",
+      "Obi Wan",
+      "Darth Vader"
+    ],
+    "hints": {
+      "easy": [
+        "Pequeño",
+        "Verde",
+        "Jedi"
+      ],
+      "normal": [
+        "Maestro",
+        "Sabio",
+        "Entrenar"
+      ],
+      "hard": [
+        "Equilibrio",
+        "Paciencia",
+        "Sabiduría"
+      ]
+    }
+  },
+  {
+    "id": "harry_potter",
+    "category": "Personajes",
+    "subcategory": "fantasia",
+    "word": "Harry Potter",
+    "similarWords": [
+      "Hermione",
+      "Ron",
+      "Dumbledore"
+    ],
+    "hints": {
+      "easy": [
+        "Magia",
+        "Gafas",
+        "Varita"
+      ],
+      "normal": [
+        "Escuela",
+        "Hechizo",
+        "Aventura"
+      ],
+      "hard": [
+        "Destino",
+        "Amistad",
+        "Coraje"
+      ]
+    }
+  },
+  {
+    "id": "hermione",
+    "category": "Personajes",
+    "subcategory": "fantasia",
+    "word": "Hermione",
+    "similarWords": [
+      "Harry Potter",
+      "Ron",
+      "Luna"
+    ],
+    "hints": {
+      "easy": [
+        "Magia",
+        "Libro",
+        "Varita"
+      ],
+      "normal": [
+        "Inteligente",
+        "Escuela",
+        "Amiga"
+      ],
+      "hard": [
+        "Estudio",
+        "Ingenio",
+        "Solución"
+      ]
+    }
+  },
+  {
+    "id": "dumbledore",
+    "category": "Personajes",
+    "subcategory": "fantasia",
+    "word": "Dumbledore",
+    "similarWords": [
+      "Harry Potter",
+      "Gandalf",
+      "Voldemort"
+    ],
+    "hints": {
+      "easy": [
+        "Mago",
+        "Barba",
+        "Escuela"
+      ],
+      "normal": [
+        "Director",
+        "Mentor",
+        "Sabio"
+      ],
+      "hard": [
+        "Guía",
+        "Experiencia",
+        "Protección"
+      ]
+    }
+  },
+  {
+    "id": "gandalf",
+    "category": "Personajes",
+    "subcategory": "fantasia",
+    "word": "Gandalf",
+    "similarWords": [
+      "Dumbledore",
+      "Saruman",
+      "Frodo"
+    ],
+    "hints": {
+      "easy": [
+        "Mago",
+        "Barba",
+        "Bastón"
+      ],
+      "normal": [
+        "Viaje",
+        "Guía",
+        "Aventura"
+      ],
+      "hard": [
+        "Sabiduría",
+        "Consejo",
+        "Destino"
+      ]
+    }
+  },
+  {
+    "id": "frodo",
+    "category": "Personajes",
+    "subcategory": "fantasia",
+    "word": "Frodo",
+    "similarWords": [
+      "Sam",
+      "Gandalf",
+      "Bilbo"
+    ],
+    "hints": {
+      "easy": [
+        "Anillo",
+        "Pequeño",
+        "Viaje"
+      ],
+      "normal": [
+        "Montaña",
+        "Amigo",
+        "Misión"
+      ],
+      "hard": [
+        "Carga",
+        "Destino",
+        "Resistir"
+      ]
+    }
+  },
+  {
+    "id": "mario",
+    "category": "Personajes",
+    "subcategory": "videojuegos",
+    "word": "Mario",
+    "similarWords": [
+      "Luigi",
+      "Sonic",
+      "Link"
+    ],
+    "hints": {
+      "easy": [
+        "Bigote",
+        "Rojo",
+        "Saltar"
+      ],
+      "normal": [
+        "Aventura",
+        "Reino",
+        "Plataforma"
+      ],
+      "hard": [
+        "Rescatar",
+        "Viaje",
+        "Niveles"
+      ]
+    }
+  },
+  {
+    "id": "luigi",
+    "category": "Personajes",
+    "subcategory": "videojuegos",
+    "word": "Luigi",
+    "similarWords": [
+      "Mario",
+      "Yoshi",
+      "Sonic"
+    ],
+    "hints": {
+      "easy": [
+        "Verde",
+        "Bigote",
+        "Hermano"
+      ],
+      "normal": [
+        "Aventura",
+        "Ayudar",
+        "Juego"
+      ],
+      "hard": [
+        "Timidez",
+        "Sombra",
+        "Compañero"
+      ]
+    }
+  },
+  {
+    "id": "sonic",
+    "category": "Personajes",
+    "subcategory": "videojuegos",
+    "word": "Sonic",
+    "similarWords": [
+      "Mario",
+      "Crash",
+      "Pikachu"
+    ],
+    "hints": {
+      "easy": [
+        "Azul",
+        "Rápido",
+        "Anillos"
+      ],
+      "normal": [
+        "Correr",
+        "Velocidad",
+        "Aventura"
+      ],
+      "hard": [
+        "Impulso",
+        "Rapidez",
+        "Movimiento"
+      ]
+    }
+  },
+  {
+    "id": "pikachu",
+    "category": "Personajes",
+    "subcategory": "anime",
+    "word": "Pikachu",
+    "similarWords": [
+      "Charmander",
+      "Eevee",
+      "Bulbasaur"
+    ],
+    "hints": {
+      "easy": [
+        "Amarillo",
+        "Rayo",
+        "Criatura"
+      ],
+      "normal": [
+        "Entrenador",
+        "Batalla",
+        "Electricidad"
+      ],
+      "hard": [
+        "Energía",
+        "Chispa",
+        "Compañero"
+      ]
+    }
+  },
+  {
+    "id": "goku",
+    "category": "Personajes",
+    "subcategory": "anime",
+    "word": "Goku",
+    "similarWords": [
+      "Vegeta",
+      "Naruto",
+      "Luffy"
+    ],
+    "hints": {
+      "easy": [
+        "Anime",
+        "Pelo",
+        "Luchar"
+      ],
+      "normal": [
+        "Entrenar",
+        "Guerrero",
+        "Batalla"
+      ],
+      "hard": [
+        "Superación",
+        "Poder",
+        "Rival"
+      ]
+    }
+  },
+  {
+    "id": "naruto",
+    "category": "Personajes",
+    "subcategory": "anime",
+    "word": "Naruto",
+    "similarWords": [
+      "Sasuke",
+      "Goku",
+      "Luffy"
+    ],
+    "hints": {
+      "easy": [
+        "Ninja",
+        "Rubio",
+        "Anime"
+      ],
+      "normal": [
+        "Entrenar",
+        "Aldea",
+        "Equipo"
+      ],
+      "hard": [
+        "Sueño",
+        "Superación",
+        "Amistad"
+      ]
+    }
+  },
+  {
+    "id": "luffy",
+    "category": "Personajes",
+    "subcategory": "anime",
+    "word": "Luffy",
+    "similarWords": [
+      "Zoro",
+      "Naruto",
+      "Goku"
+    ],
+    "hints": {
+      "easy": [
+        "Pirata",
+        "Sombrero",
+        "Barco"
+      ],
+      "normal": [
+        "Aventura",
+        "Tripulación",
+        "Mar"
+      ],
+      "hard": [
+        "Libertad",
+        "Viaje",
+        "Capitán"
+      ]
+    }
+  },
+  {
+    "id": "sherlock_holmes",
+    "category": "Personajes",
+    "subcategory": "detectives",
+    "word": "Sherlock Holmes",
+    "similarWords": [
+      "Poirot",
+      "Batman",
+      "Detective"
+    ],
+    "hints": {
+      "easy": [
+        "Detective",
+        "Lupa",
+        "Sombrero"
+      ],
+      "normal": [
+        "Investigar",
+        "Caso",
+        "Londres"
+      ],
+      "hard": [
+        "Deducción",
+        "Lógica",
+        "Observación"
+      ]
+    }
+  },
+  {
+    "id": "indiana_jones",
+    "category": "Personajes",
+    "subcategory": "aventura",
+    "word": "Indiana Jones",
+    "similarWords": [
+      "Lara Croft",
+      "James Bond",
+      "Han Solo"
+    ],
+    "hints": {
+      "easy": [
+        "Sombrero",
+        "Látigo",
+        "Aventura"
+      ],
+      "normal": [
+        "Ruinas",
+        "Tesoro",
+        "Explorar"
+      ],
+      "hard": [
+        "Historia",
+        "Descubrimiento",
+        "Viaje"
+      ]
+    }
+  },
+  {
+    "id": "james_bond",
+    "category": "Personajes",
+    "subcategory": "espias",
+    "word": "James Bond",
+    "similarWords": [
+      "Jason Bourne",
+      "Ethan Hunt",
+      "Indiana Jones"
+    ],
+    "hints": {
+      "easy": [
+        "Espía",
+        "Traje",
+        "Pistola"
+      ],
+      "normal": [
+        "Misión",
+        "Agente",
+        "Secreto"
+      ],
+      "hard": [
+        "Elegancia",
+        "Riesgo",
+        "Operación"
+      ]
+    }
+  },
+  {
+    "id": "joker",
+    "category": "Personajes",
+    "subcategory": "villanos",
+    "word": "Joker",
+    "similarWords": [
+      "Harley Quinn",
+      "Batman",
+      "Thanos"
+    ],
+    "hints": {
+      "easy": [
+        "Payaso",
+        "Maquillaje",
+        "Sonrisa"
+      ],
+      "normal": [
+        "Caos",
+        "Villano",
+        "Ciudad"
+      ],
+      "hard": [
+        "Locura",
+        "Anarquía",
+        "Caos"
+      ]
+    }
+  },
+  {
+    "id": "thanos",
+    "category": "Personajes",
+    "subcategory": "villanos",
+    "word": "Thanos",
+    "similarWords": [
+      "Hulk",
+      "Loki",
+      "Ultron"
+    ],
+    "hints": {
+      "easy": [
+        "Morado",
+        "Guante",
+        "Gigante"
+      ],
+      "normal": [
+        "Universo",
+        "Poder",
+        "Equilibrio"
+      ],
+      "hard": [
+        "Destino",
+        "Sacrificio",
+        "Ambición"
+      ]
+    }
+  },
+  {
+    "id": "deadpool",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Deadpool",
+    "similarWords": [
+      "Spiderman",
+      "Wolverine",
+      "Batman"
+    ],
+    "hints": {
+      "easy": [
+        "Rojo",
+        "Máscara",
+        "Espadas"
+      ],
+      "normal": [
+        "Mercenario",
+        "Acción",
+        "Humor"
+      ],
+      "hard": [
+        "Sarcasmo",
+        "Caos",
+        "Ironía"
+      ]
+    }
+  },
+  {
+    "id": "wolverine",
+    "category": "Personajes",
+    "subcategory": "superheroes",
+    "word": "Wolverine",
+    "similarWords": [
+      "Deadpool",
+      "Hulk",
+      "Batman"
+    ],
+    "hints": {
+      "easy": [
+        "Garras",
+        "Mutante",
+        "Fuerte"
+      ],
+      "normal": [
+        "Luchar",
+        "Héroe",
+        "Equipo"
+      ],
+      "hard": [
+        "Instinto",
+        "Bestia",
+        "Resistir"
+      ]
+    }
+  }
+]

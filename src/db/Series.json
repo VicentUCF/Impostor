@@ -1,153 +1,842 @@
 [
   {
+    "id": "la_casa_de_papel",
     "category": "Series",
-    "sub": {
-      "id": "drama",
-      "easy": ["Drama", "Conflicto", "Relaciones", "Historia"],
-      "normal": ["Personajes", "Evolución", "Tensión", "Decisiones"],
-      "hard": ["Arco", "Motivación", "Consecuencia", "Proceso"]
-    },
-    "words": [
+    "subcategory": "Crimen",
+    "word": "La casa de papel",
+    "similarWords": [
+      "Prison Break",
       "Breaking Bad",
-      "The Crown",
-      "Mad Men",
-      "The Wire",
-      "This Is Us",
-      "Succession",
-      "Better Call Saul"
-    ]
+      "Narcos"
+    ],
+    "hints": {
+      "easy": [
+        "Atraco",
+        "Máscaras",
+        "Dinero"
+      ],
+      "normal": [
+        "Profesor",
+        "Rehenes",
+        "Plan"
+      ],
+      "hard": [
+        "Rojo",
+        "Fábrica",
+        "Resistencia"
+      ]
+    }
   },
   {
+    "id": "juego_de_tronos",
     "category": "Series",
-    "sub": {
-      "id": "comedia",
-      "easy": ["Comedia", "Risas", "Grupo", "Situación"],
-      "normal": ["Dinámica", "Ritmo", "Diálogo", "Escena"],
-      "hard": ["Timing", "Tono", "Intención", "Observación"]
-    },
-    "words": [
+    "subcategory": "Fantasía",
+    "word": "Juego de tronos",
+    "similarWords": [
+      "The Witcher",
+      "El señor de los anillos",
+      "Vikingos"
+    ],
+    "hints": {
+      "easy": [
+        "Dragones",
+        "Reinos",
+        "Espadas"
+      ],
+      "normal": [
+        "Trono",
+        "Norte",
+        "Casa"
+      ],
+      "hard": [
+        "Invierno",
+        "Muro",
+        "Corona"
+      ]
+    }
+  },
+  {
+    "id": "breaking_bad",
+    "category": "Series",
+    "subcategory": "Crimen",
+    "word": "Breaking Bad",
+    "similarWords": [
+      "Better Call Saul",
+      "Narcos",
+      "Ozark"
+    ],
+    "hints": {
+      "easy": [
+        "Droga",
+        "Química",
+        "Profesor"
+      ],
+      "normal": [
+        "Laboratorio",
+        "Socio",
+        "Cocinar"
+      ],
+      "hard": [
+        "Cristal",
+        "Máscara",
+        "Desierto"
+      ]
+    }
+  },
+  {
+    "id": "better_call_saul",
+    "category": "Series",
+    "subcategory": "Crimen",
+    "word": "Better Call Saul",
+    "similarWords": [
+      "Breaking Bad",
+      "Suits",
+      "Ozark"
+    ],
+    "hints": {
+      "easy": [
+        "Abogado",
+        "Traje",
+        "Caso"
+      ],
+      "normal": [
+        "Despacho",
+        "Cliente",
+        "Juicio"
+      ],
+      "hard": [
+        "Cartel",
+        "Truco",
+        "Anuncio"
+      ]
+    }
+  },
+  {
+    "id": "stranger_things",
+    "category": "Series",
+    "subcategory": "Ciencia ficción",
+    "word": "Stranger Things",
+    "similarWords": [
+      "Dark",
+      "Expediente X",
+      "The Last of Us"
+    ],
+    "hints": {
+      "easy": [
+        "Niños",
+        "Monstruo",
+        "Pueblo"
+      ],
+      "normal": [
+        "Laboratorio",
+        "Amigos",
+        "Dimensión"
+      ],
+      "hard": [
+        "Bicicleta",
+        "Luces",
+        "Sótano"
+      ]
+    }
+  },
+  {
+    "id": "the_walking_dead",
+    "category": "Series",
+    "subcategory": "Terror",
+    "word": "The Walking Dead",
+    "similarWords": [
+      "The Last of Us",
+      "Stranger Things",
+      "Lost"
+    ],
+    "hints": {
+      "easy": [
+        "Zombies",
+        "Supervivencia",
+        "Apocalipsis"
+      ],
+      "normal": [
+        "Grupo",
+        "Carretera",
+        "Refugio"
+      ],
+      "hard": [
+        "Ballesta",
+        "Campamento",
+        "Horda"
+      ]
+    }
+  },
+  {
+    "id": "the_last_of_us",
+    "category": "Series",
+    "subcategory": "Drama",
+    "word": "The Last of Us",
+    "similarWords": [
+      "The Walking Dead",
+      "Stranger Things",
+      "Chernobyl"
+    ],
+    "hints": {
+      "easy": [
+        "Hongo",
+        "Supervivencia",
+        "Viaje"
+      ],
+      "normal": [
+        "Ruinas",
+        "Niña",
+        "Infectados"
+      ],
+      "hard": [
+        "Guitarra",
+        "Caminar",
+        "Protección"
+      ]
+    }
+  },
+  {
+    "id": "narcos",
+    "category": "Series",
+    "subcategory": "Crimen",
+    "word": "Narcos",
+    "similarWords": [
+      "Breaking Bad",
+      "El Chapo",
+      "La casa de papel"
+    ],
+    "hints": {
+      "easy": [
+        "Droga",
+        "Cartel",
+        "Colombia"
+      ],
+      "normal": [
+        "Policía",
+        "Imperio",
+        "Dinero"
+      ],
+      "hard": [
+        "Coca",
+        "Selva",
+        "Patrón"
+      ]
+    }
+  },
+  {
+    "id": "dark",
+    "category": "Series",
+    "subcategory": "Ciencia ficción",
+    "word": "Dark",
+    "similarWords": [
+      "Stranger Things",
+      "Lost",
+      "Origen"
+    ],
+    "hints": {
+      "easy": [
+        "Tiempo",
+        "Pueblo",
+        "Misterio"
+      ],
+      "normal": [
+        "Cueva",
+        "Familia",
+        "Pasado"
+      ],
+      "hard": [
+        "Ciclo",
+        "Nudo",
+        "Destino"
+      ]
+    }
+  },
+  {
+    "id": "lost",
+    "category": "Series",
+    "subcategory": "Misterio",
+    "word": "Lost",
+    "similarWords": [
+      "Dark",
+      "The Walking Dead",
+      "Prison Break"
+    ],
+    "hints": {
+      "easy": [
+        "Isla",
+        "Avión",
+        "Supervivientes"
+      ],
+      "normal": [
+        "Selva",
+        "Grupo",
+        "Misterio"
+      ],
+      "hard": [
+        "Escotilla",
+        "Números",
+        "Playa"
+      ]
+    }
+  },
+  {
+    "id": "prison_break",
+    "category": "Series",
+    "subcategory": "Thriller",
+    "word": "Prison Break",
+    "similarWords": [
+      "La casa de papel",
+      "Ozark",
+      "Breaking Bad"
+    ],
+    "hints": {
+      "easy": [
+        "Prisión",
+        "Escapar",
+        "Hermano"
+      ],
+      "normal": [
+        "Plan",
+        "Túnel",
+        "Guardias"
+      ],
+      "hard": [
+        "Tatuaje",
+        "Celda",
+        "Fuga"
+      ]
+    }
+  },
+  {
+    "id": "vikingos",
+    "category": "Series",
+    "subcategory": "Histórica",
+    "word": "Vikingos",
+    "similarWords": [
+      "Juego de tronos",
+      "Roma",
+      "Barbarians"
+    ],
+    "hints": {
+      "easy": [
+        "Norte",
+        "Barcos",
+        "Guerreros"
+      ],
+      "normal": [
+        "Aldeas",
+        "Batalla",
+        "Hacha"
+      ],
+      "hard": [
+        "Fiordo",
+        "Barba",
+        "Incursión"
+      ]
+    }
+  },
+  {
+    "id": "chernobyl",
+    "category": "Series",
+    "subcategory": "Drama",
+    "word": "Chernobyl",
+    "similarWords": [
+      "Dark",
+      "The Last of Us",
+      "Black Mirror"
+    ],
+    "hints": {
+      "easy": [
+        "Central",
+        "Explosión",
+        "Radiación"
+      ],
+      "normal": [
+        "Evacuación",
+        "Crisis",
+        "Gobierno"
+      ],
+      "hard": [
+        "Traje",
+        "Zona",
+        "Contador"
+      ]
+    }
+  },
+  {
+    "id": "black_mirror",
+    "category": "Series",
+    "subcategory": "Ciencia ficción",
+    "word": "Black Mirror",
+    "similarWords": [
+      "Dark",
+      "Love Death and Robots",
+      "Westworld"
+    ],
+    "hints": {
+      "easy": [
+        "Tecnología",
+        "Futuro",
+        "Historias"
+      ],
+      "normal": [
+        "Pantallas",
+        "Sociedad",
+        "Experimento"
+      ],
+      "hard": [
+        "Distopía",
+        "Episodio",
+        "Consecuencia"
+      ]
+    }
+  },
+  {
+    "id": "the_office",
+    "category": "Series",
+    "subcategory": "Comedia",
+    "word": "The Office",
+    "similarWords": [
+      "Friends",
+      "Brooklyn 99",
+      "How I Met Your Mother"
+    ],
+    "hints": {
+      "easy": [
+        "Oficina",
+        "Trabajo",
+        "Comedia"
+      ],
+      "normal": [
+        "Jefe",
+        "Empresa",
+        "Empleado"
+      ],
+      "hard": [
+        "Cámara",
+        "Escritorio",
+        "Broma"
+      ]
+    }
+  },
+  {
+    "id": "friends",
+    "category": "Series",
+    "subcategory": "Comedia",
+    "word": "Friends",
+    "similarWords": [
+      "How I Met Your Mother",
+      "The Office",
+      "Big Bang Theory"
+    ],
+    "hints": {
+      "easy": [
+        "Amigos",
+        "Apartamento",
+        "Café"
+      ],
+      "normal": [
+        "Grupo",
+        "Nueva York",
+        "Humor"
+      ],
+      "hard": [
+        "Sofá",
+        "Central",
+        "Vecinos"
+      ]
+    }
+  },
+  {
+    "id": "the_big_bang_theory",
+    "category": "Series",
+    "subcategory": "Comedia",
+    "word": "The Big Bang Theory",
+    "similarWords": [
+      "Friends",
+      "How I Met Your Mother",
+      "The Office"
+    ],
+    "hints": {
+      "easy": [
+        "Ciencia",
+        "Físicos",
+        "Vecinos"
+      ],
+      "normal": [
+        "Laboratorio",
+        "Geek",
+        "Amigos"
+      ],
+      "hard": [
+        "Cómic",
+        "Apartamento",
+        "Doctor"
+      ]
+    }
+  },
+  {
+    "id": "how_i_met_your_mother",
+    "category": "Series",
+    "subcategory": "Comedia",
+    "word": "How I Met Your Mother",
+    "similarWords": [
       "Friends",
       "The Office",
-      "How I Met Your Mother",
-      "Brooklyn Nine-Nine",
-      "Modern Family",
-      "Parks and Recreation"
-    ]
+      "Big Bang Theory"
+    ],
+    "hints": {
+      "easy": [
+        "Amigos",
+        "Bar",
+        "Historia"
+      ],
+      "normal": [
+        "Romance",
+        "Grupo",
+        "Nueva York"
+      ],
+      "hard": [
+        "Paraguas",
+        "Relato",
+        "Promesa"
+      ]
+    }
   },
   {
+    "id": "brooklyn_99",
     "category": "Series",
-    "sub": {
-      "id": "accion",
-      "easy": ["Acción", "Riesgo", "Movimiento", "Conflicto"],
-      "normal": ["Combate", "Amenaza", "Misión", "Presión"],
-      "hard": ["Intensidad", "Respuesta", "Escalada", "Impacto"]
-    },
-    "words": [
-      "24",
-      "Prison Break",
-      "Vikings",
-      "The Boys",
-      "Jack Ryan",
-      "Reacher"
-    ]
+    "subcategory": "Comedia",
+    "word": "Brooklyn 99",
+    "similarWords": [
+      "The Office",
+      "Friends",
+      "Lucifer"
+    ],
+    "hints": {
+      "easy": [
+        "Policía",
+        "Comisaría",
+        "Comedia"
+      ],
+      "normal": [
+        "Detectives",
+        "Casos",
+        "Equipo"
+      ],
+      "hard": [
+        "Placa",
+        "Turno",
+        "Patrulla"
+      ]
+    }
   },
   {
+    "id": "lucifer",
     "category": "Series",
-    "sub": {
-      "id": "fantasia_ciencia_ficcion",
-      "easy": ["Fantasía", "Mundo", "Poder", "Aventura"],
-      "normal": ["Universo", "Reglas", "Exploración", "Descubrimiento"],
-      "hard": ["Sistema", "Mito", "Contexto", "Lógica"]
-    },
-    "words": [
-      "Game of Thrones",
-      "House of the Dragon",
-      "Stranger Things",
-      "The Mandalorian",
-      "The Witcher",
-      "Westworld"
-    ]
+    "subcategory": "Fantasía",
+    "word": "Lucifer",
+    "similarWords": [
+      "Supernatural",
+      "The Sandman",
+      "Good Omens"
+    ],
+    "hints": {
+      "easy": [
+        "Diablo",
+        "Detective",
+        "Ciudad"
+      ],
+      "normal": [
+        "Crimen",
+        "Club",
+        "Policía"
+      ],
+      "hard": [
+        "Tentación",
+        "Infierno",
+        "Alas"
+      ]
+    }
   },
   {
+    "id": "supernatural",
     "category": "Series",
-    "sub": {
-      "id": "misterio_thriller",
-      "easy": ["Misterio", "Pista", "Secreto", "Pregunta"],
-      "normal": ["Investigación", "Sospecha", "Revelación", "Tensión"],
-      "hard": ["Indicio", "Ambigüedad", "Lectura", "Duda"]
-    },
-    "words": [
-      "Dark",
-      "True Detective",
-      "Mindhunter",
-      "Sherlock",
-      "The Night Of",
-      "Broadchurch"
-    ]
-  },
-  {
-    "category": "Series",
-    "sub": {
-      "id": "policial_crimen",
-      "easy": ["Crimen", "Ley", "Orden", "Caso"],
-      "normal": ["Procedimiento", "Evidencia", "Juicio", "Interrogatorio"],
-      "hard": ["Proceso", "Sistema", "Responsabilidad", "Criterio"]
-    },
-    "words": [
-      "Narcos",
-      "La Casa de Papel",
-      "Peaky Blinders",
-      "Ozark",
-      "Gomorra",
-      "The Sopranos"
-    ]
-  },
-  {
-    "category": "Series",
-    "sub": {
-      "id": "terror",
-      "easy": ["Terror", "Miedo", "Oscuridad", "Amenaza"],
-      "normal": ["Suspenso", "Presencia", "Silencio", "Tensión"],
-      "hard": ["Inquietud", "Atmósfera", "Expectativa", "Sensación"]
-    },
-    "words": [
-      "The Haunting of Hill House",
-      "American Horror Story",
-      "From",
+    "subcategory": "Fantasía",
+    "word": "Supernatural",
+    "similarWords": [
+      "Lucifer",
       "The Walking Dead",
-      "Marianne"
-    ]
+      "Stranger Things"
+    ],
+    "hints": {
+      "easy": [
+        "Hermanos",
+        "Monstruos",
+        "Cazar"
+      ],
+      "normal": [
+        "Viajar",
+        "Casos",
+        "Criaturas"
+      ],
+      "hard": [
+        "Carretera",
+        "Sal",
+        "Tronco"
+      ]
+    }
   },
   {
+    "id": "suits",
     "category": "Series",
-    "sub": {
-      "id": "historica",
-      "easy": ["Historia", "Época", "Reino", "Pasado"],
-      "normal": ["Contexto", "Poder", "Conflicto", "Relato"],
-      "hard": ["Marco", "Influencia", "Cambio", "Legado"]
-    },
-    "words": [
-      "Roma",
-      "Vikings Valhalla",
-      "The Last Kingdom",
-      "Chernobyl",
-      "Band of Brothers"
-    ]
+    "subcategory": "Drama",
+    "word": "Suits",
+    "similarWords": [
+      "Better Call Saul",
+      "House of Cards",
+      "Billions"
+    ],
+    "hints": {
+      "easy": [
+        "Abogados",
+        "Juicio",
+        "Traje"
+      ],
+      "normal": [
+        "Despacho",
+        "Cliente",
+        "Caso"
+      ],
+      "hard": [
+        "Firma",
+        "Socio",
+        "Contrato"
+      ]
+    }
   },
   {
+    "id": "house_of_cards",
     "category": "Series",
-    "sub": {
-      "id": "animacion",
-      "easy": ["Animación", "Dibujo", "Color", "Estilo"],
-      "normal": ["Narrativa", "Universo", "Formato", "Expresión"],
-      "hard": ["Lenguaje", "Ritmo", "Tono", "Propuesta"]
-    },
-    "words": [
-      "Rick and Morty",
-      "BoJack Horseman",
-      "The Simpsons",
-      "South Park",
-      "Arcane"
-    ]
+    "subcategory": "Política",
+    "word": "House of Cards",
+    "similarWords": [
+      "Suits",
+      "The Crown",
+      "Billions"
+    ],
+    "hints": {
+      "easy": [
+        "Política",
+        "Poder",
+        "Presidente"
+      ],
+      "normal": [
+        "Gobierno",
+        "Manipular",
+        "Congreso"
+      ],
+      "hard": [
+        "Despacho",
+        "Ambición",
+        "Campaña"
+      ]
+    }
+  },
+  {
+    "id": "the_crown",
+    "category": "Series",
+    "subcategory": "Histórica",
+    "word": "The Crown",
+    "similarWords": [
+      "House of Cards",
+      "Vikingos",
+      "Roma"
+    ],
+    "hints": {
+      "easy": [
+        "Reina",
+        "Palacio",
+        "Reino"
+      ],
+      "normal": [
+        "Familia",
+        "Historia",
+        "Corona"
+      ],
+      "hard": [
+        "Protocolo",
+        "Discurso",
+        "Trono"
+      ]
+    }
+  },
+  {
+    "id": "the_mandalorian",
+    "category": "Series",
+    "subcategory": "Ciencia ficción",
+    "word": "The Mandalorian",
+    "similarWords": [
+      "Star Wars",
+      "The Witcher",
+      "The Last of Us"
+    ],
+    "hints": {
+      "easy": [
+        "Espacio",
+        "Casco",
+        "Cazar"
+      ],
+      "normal": [
+        "Planetas",
+        "Criatura",
+        "Viaje"
+      ],
+      "hard": [
+        "Armadura",
+        "Galaxia",
+        "Encargo"
+      ]
+    }
+  },
+  {
+    "id": "the_witcher",
+    "category": "Series",
+    "subcategory": "Fantasía",
+    "word": "The Witcher",
+    "similarWords": [
+      "Juego de tronos",
+      "Vikingos",
+      "The Mandalorian"
+    ],
+    "hints": {
+      "easy": [
+        "Monstruos",
+        "Espada",
+        "Magia"
+      ],
+      "normal": [
+        "Cazar",
+        "Reinos",
+        "Brujo"
+      ],
+      "hard": [
+        "Contrato",
+        "Poción",
+        "Taberna"
+      ]
+    }
+  },
+  {
+    "id": "the_boys",
+    "category": "Series",
+    "subcategory": "Acción",
+    "word": "The Boys",
+    "similarWords": [
+      "Invencible",
+      "Marvel",
+      "Watchmen"
+    ],
+    "hints": {
+      "easy": [
+        "Héroes",
+        "Poderes",
+        "Violencia"
+      ],
+      "normal": [
+        "Corporación",
+        "Equipo",
+        "Venganza"
+      ],
+      "hard": [
+        "Capa",
+        "Suero",
+        "Caos"
+      ]
+    }
+  },
+  {
+    "id": "wednesday",
+    "category": "Series",
+    "subcategory": "Comedia",
+    "word": "Wednesday",
+    "similarWords": [
+      "Stranger Things",
+      "Sabrina",
+      "Lucifer"
+    ],
+    "hints": {
+      "easy": [
+        "Instituto",
+        "Oscura",
+        "Familia"
+      ],
+      "normal": [
+        "Misterio",
+        "Alumno",
+        "Criaturas"
+      ],
+      "hard": [
+        "Trenzas",
+        "Mano",
+        "Cuervo"
+      ]
+    }
+  },
+  {
+    "id": "el_juego_del_calamar",
+    "category": "Series",
+    "subcategory": "Thriller",
+    "word": "El juego del calamar",
+    "similarWords": [
+      "Alice in Borderland",
+      "La casa de papel",
+      "Black Mirror"
+    ],
+    "hints": {
+      "easy": [
+        "Juegos",
+        "Dinero",
+        "Supervivencia"
+      ],
+      "normal": [
+        "Competición",
+        "Eliminación",
+        "Máscaras"
+      ],
+      "hard": [
+        "Muñeca",
+        "Escaleras",
+        "Número"
+      ]
+    }
+  },
+  {
+    "id": "vis_a_vis",
+    "category": "Series",
+    "subcategory": "Drama",
+    "word": "Vis a vis",
+    "similarWords": [
+      "Prison Break",
+      "Orange is the New Black",
+      "La casa de papel"
+    ],
+    "hints": {
+      "easy": [
+        "Prisión",
+        "Presas",
+        "Cárcel"
+      ],
+      "normal": [
+        "Conflicto",
+        "Guardias",
+        "Fuga"
+      ],
+      "hard": [
+        "Celda",
+        "Patio",
+        "Reclusa"
+      ]
+    }
   }
 ]

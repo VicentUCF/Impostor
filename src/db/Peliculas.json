@@ -1,191 +1,842 @@
 [
   {
-    "category": "Películas",
-    "sub": {
-      "id": "accion_aventura",
-      "easy": ["Explosiones", "Persecución", "Héroe", "Rescate", "Batalla"],
-      "normal": ["Misión", "Riesgo", "Velocidad", "Enemigo", "Estrategia"],
-      "hard": ["Valentía", "Caos", "Destino", "Impulso", "Conflicto"]
-    },
-    "words": [
-      "Mad Max",
-      "John Wick",
-      "Die Hard",
+    "id": "titanic",
+    "category": "Peliculas",
+    "subcategory": "Drama",
+    "word": "Titanic",
+    "similarWords": [
+      "Avatar",
       "Gladiator",
-      "Top Gun",
-      "Indiana Jones",
-      "Mission Impossible",
-      "The Batman",
-      "The Avengers",
-      "Jurassic Park",
-      "Pirates of the Caribbean",
-      "The Matrix"
-    ]
-  },
-  {
-    "category": "Películas",
-    "sub": {
-      "id": "ciencia_ficcion",
-      "easy": ["Espacio", "Robots", "Futuro", "Planeta", "Tecnología"],
-      "normal": ["Distopía", "Viaje", "Experimento", "Exploración", "Universo"],
-      "hard": ["Paradoja", "Asombro", "Progreso", "Infinito", "Evolución"]
-    },
-    "words": [
-      "Interstellar",
-      "Blade Runner",
-      "Dune",
-      "Arrival",
-      "Alien",
-      "Terminator",
-      "Elysium",
-      "District 9",
-      "Ex Machina",
-      "Wall E",
-      "Star Wars",
-      "2001 A Space Odyssey"
-    ]
-  },
-  {
-    "category": "Películas",
-    "sub": {
-      "id": "animacion_familiar",
-      "easy": ["Dibujo", "Familia", "Aventura", "Amistad", "Humor"],
-      "normal": ["Viaje", "Lección", "Equipo", "Sueño", "Magia"],
+      "Pearl Harbor"
+    ],
+    "hints": {
+      "easy": [
+        "Barco",
+        "Iceberg",
+        "Hundimiento"
+      ],
+      "normal": [
+        "Romance",
+        "Atlántico",
+        "Clase"
+      ],
       "hard": [
-        "Inocencia",
-        "Crecimiento",
-        "Esperanza",
-        "Imaginación",
-        "Vínculo"
+        "Silbato",
+        "Chimenea",
+        "Cubierta"
       ]
-    },
-    "words": [
-      "Toy Story",
-      "Finding Nemo",
-      "Shrek",
-      "The Lion King",
-      "Frozen",
-      "Coco",
-      "Inside Out",
-      "Spirited Away",
-      "Up",
-      "Monsters Inc",
-      "Kung Fu Panda",
-      "How to Train Your Dragon"
-    ]
+    }
   },
   {
-    "category": "Películas",
-    "sub": {
-      "id": "comedia",
-      "easy": ["Risas", "Enredo", "Amigos", "Fiesta", "Torpeza"],
-      "normal": ["Situación", "Ironía", "Diálogo", "Problema", "Improviso"],
-      "hard": ["Ridículo", "Sátira", "Costumbre", "Contraste", "Perspectiva"]
-    },
-    "words": [
-      "The Hangover",
-      "Superbad",
-      "Step Brothers",
-      "Groundhog Day",
-      "The Mask",
-      "Borat",
-      "Bridesmaids",
-      "Mean Girls",
-      "Anchorman",
-      "Airplane",
-      "Home Alone",
-      "Big"
-    ]
+    "id": "avatar",
+    "category": "Peliculas",
+    "subcategory": "Ciencia ficción",
+    "word": "Avatar",
+    "similarWords": [
+      "Star Wars",
+      "Matrix",
+      "Dune"
+    ],
+    "hints": {
+      "easy": [
+        "Azules",
+        "Planeta",
+        "Selva"
+      ],
+      "normal": [
+        "Pandora",
+        "Avatar",
+        "Tribu"
+      ],
+      "hard": [
+        "Flotar",
+        "Cola",
+        "Árbol"
+      ]
+    }
   },
   {
-    "category": "Películas",
-    "sub": {
-      "id": "terror_suspenso",
-      "easy": ["Miedo", "Oscuro", "Grito", "Sombra", "Tensión"],
-      "normal": ["Amenaza", "Secreto", "Encierro", "Sospecha", "Nervios"],
-      "hard": ["Angustia", "Incertidumbre", "Límite", "Peligro", "Instinto"]
-    },
-    "words": [
-      "The Shining",
-      "It",
-      "A Quiet Place",
-      "The Conjuring",
-      "Get Out",
-      "Hereditary",
-      "Scream",
-      "Psycho",
-      "The Exorcist",
-      "Halloween",
-      "Saw",
-      "The Ring"
-    ]
+    "id": "star_wars",
+    "category": "Peliculas",
+    "subcategory": "Ciencia ficción",
+    "word": "Star Wars",
+    "similarWords": [
+      "Matrix",
+      "Avatar",
+      "Dune"
+    ],
+    "hints": {
+      "easy": [
+        "Espacio",
+        "Sables",
+        "Jedi"
+      ],
+      "normal": [
+        "Imperio",
+        "Fuerza",
+        "Galaxia"
+      ],
+      "hard": [
+        "Droide",
+        "Túnica",
+        "Maestro"
+      ]
+    }
   },
   {
-    "category": "Películas",
-    "sub": {
-      "id": "drama",
-      "easy": ["Emoción", "Familia", "Lágrimas", "Vida", "Relación"],
-      "normal": ["Decisión", "Conflicto", "Cambio", "Sacrificio", "Verdad"],
-      "hard": ["Identidad", "Consecuencia", "Pérdida", "Redención", "Destino"]
-    },
-    "words": [
-      "The Godfather",
-      "Forrest Gump",
-      "The Shawshank Redemption",
-      "Fight Club",
-      "The Social Network",
-      "A Beautiful Mind",
-      "Good Will Hunting",
-      "Whiplash",
-      "Parasite",
-      "Moonlight",
-      "The Pianist",
-      "La La Land"
-    ]
+    "id": "matrix",
+    "category": "Peliculas",
+    "subcategory": "Ciencia ficción",
+    "word": "Matrix",
+    "similarWords": [
+      "Star Wars",
+      "Origen",
+      "Terminator"
+    ],
+    "hints": {
+      "easy": [
+        "Pastilla",
+        "Realidad",
+        "Ordenador"
+      ],
+      "normal": [
+        "Código",
+        "Simulación",
+        "Agente"
+      ],
+      "hard": [
+        "Cuero",
+        "Despertar",
+        "Elegido"
+      ]
+    }
   },
   {
-    "category": "Películas",
-    "sub": {
-      "id": "romance",
-      "easy": ["Amor", "Pareja", "Beso", "Cita", "Corazón"],
-      "normal": ["Relación", "Duda", "Conexión", "Separación", "Promesa"],
-      "hard": ["Anhelo", "Destino", "Nostalgia", "Elección", "Vínculo"]
-    },
-    "words": [
+    "id": "el_senor_de_los_anillos",
+    "category": "Peliculas",
+    "subcategory": "Fantasía",
+    "word": "El señor de los anillos",
+    "similarWords": [
+      "Harry Potter",
+      "Hobbit",
+      "Narnia"
+    ],
+    "hints": {
+      "easy": [
+        "Anillo",
+        "Hobbit",
+        "Montaña"
+      ],
+      "normal": [
+        "Comunidad",
+        "Orcos",
+        "Viaje"
+      ],
+      "hard": [
+        "Volcán",
+        "Mapa",
+        "Tierra"
+      ]
+    }
+  },
+  {
+    "id": "harry_potter",
+    "category": "Peliculas",
+    "subcategory": "Fantasía",
+    "word": "Harry Potter",
+    "similarWords": [
+      "El señor de los anillos",
+      "Narnia",
+      "Percy Jackson"
+    ],
+    "hints": {
+      "easy": [
+        "Magia",
+        "Colegio",
+        "Varita"
+      ],
+      "normal": [
+        "Hechizo",
+        "Castillo",
+        "Escoba"
+      ],
+      "hard": [
+        "Lechuza",
+        "Capa",
+        "Casa"
+      ]
+    }
+  },
+  {
+    "id": "gladiator",
+    "category": "Peliculas",
+    "subcategory": "Acción",
+    "word": "Gladiator",
+    "similarWords": [
+      "Troya",
+      "300",
+      "Braveheart"
+    ],
+    "hints": {
+      "easy": [
+        "Roma",
+        "Arena",
+        "Espada"
+      ],
+      "normal": [
+        "Imperio",
+        "Venganza",
+        "General"
+      ],
+      "hard": [
+        "Arena",
+        "Multitud",
+        "Honor"
+      ]
+    }
+  },
+  {
+    "id": "jurassic_park",
+    "category": "Peliculas",
+    "subcategory": "Aventura",
+    "word": "Jurassic Park",
+    "similarWords": [
+      "King Kong",
+      "Godzilla",
+      "Avatar"
+    ],
+    "hints": {
+      "easy": [
+        "Dinosaurios",
+        "Parque",
+        "Isla"
+      ],
+      "normal": [
+        "Fósil",
+        "Laboratorio",
+        "Valla"
+      ],
+      "hard": [
+        "Huella",
+        "Jeep",
+        "Rugido"
+      ]
+    }
+  },
+  {
+    "id": "terminator",
+    "category": "Peliculas",
+    "subcategory": "Ciencia ficción",
+    "word": "Terminator",
+    "similarWords": [
+      "Matrix",
+      "Robocop",
+      "Alien"
+    ],
+    "hints": {
+      "easy": [
+        "Robot",
+        "Futuro",
+        "Máquina"
+      ],
+      "normal": [
+        "Resistencia",
+        "Viaje",
+        "Cyborg"
+      ],
+      "hard": [
+        "Metal",
+        "Moto",
+        "Gafas"
+      ]
+    }
+  },
+  {
+    "id": "rocky",
+    "category": "Peliculas",
+    "subcategory": "Deporte",
+    "word": "Rocky",
+    "similarWords": [
+      "Creed",
+      "Million Dollar Baby",
+      "Karate Kid"
+    ],
+    "hints": {
+      "easy": [
+        "Boxeo",
+        "Ring",
+        "Entrenar"
+      ],
+      "normal": [
+        "Combate",
+        "Rival",
+        "Guantes"
+      ],
+      "hard": [
+        "Escaleras",
+        "Sudor",
+        "Golpe"
+      ]
+    }
+  },
+  {
+    "id": "forrest_gump",
+    "category": "Peliculas",
+    "subcategory": "Drama",
+    "word": "Forrest Gump",
+    "similarWords": [
       "Titanic",
-      "The Notebook",
-      "Pretty Woman",
-      "Before Sunrise",
-      "Pride and Prejudice",
-      "Notting Hill",
-      "Eternal Sunshine",
-      "Romeo and Juliet",
-      "Crazy Rich Asians",
-      "About Time",
-      "Casablanca"
-    ]
+      "La vida es bella",
+      "Intocable"
+    ],
+    "hints": {
+      "easy": [
+        "Banco",
+        "Correr",
+        "Pluma"
+      ],
+      "normal": [
+        "Chocolate",
+        "Historia",
+        "Viaje"
+      ],
+      "hard": [
+        "Zapatos",
+        "Parada",
+        "Carretera"
+      ]
+    }
   },
   {
-    "category": "Películas",
-    "sub": {
-      "id": "crimen_misterio",
-      "easy": ["Detective", "Robo", "Pista", "Caso", "Sospechoso"],
-      "normal": ["Investigación", "Engaño", "Plan", "Culpable", "Coartada"],
-      "hard": ["Intriga", "Ambición", "Manipulación", "Secreto", "Duda"]
-    },
-    "words": [
-      "Se7en",
-      "The Departed",
-      "Pulp Fiction",
-      "The Usual Suspects",
-      "Knives Out",
-      "Gone Girl",
-      "Zodiac",
-      "Heat",
-      "Ocean's Eleven",
+    "id": "el_padrino",
+    "category": "Peliculas",
+    "subcategory": "Crimen",
+    "word": "El padrino",
+    "similarWords": [
       "Scarface",
-      "The Silence of the Lambs",
-      "Memento"
-    ]
+      "Uno de los nuestros",
+      "Casino"
+    ],
+    "hints": {
+      "easy": [
+        "Mafia",
+        "Familia",
+        "Italia"
+      ],
+      "normal": [
+        "Negocios",
+        "Poder",
+        "Respeto"
+      ],
+      "hard": [
+        "Traje",
+        "Despacho",
+        "Oferta"
+      ]
+    }
+  },
+  {
+    "id": "scarface",
+    "category": "Peliculas",
+    "subcategory": "Crimen",
+    "word": "Scarface",
+    "similarWords": [
+      "El padrino",
+      "Casino",
+      "Narcos"
+    ],
+    "hints": {
+      "easy": [
+        "Droga",
+        "Dinero",
+        "Armas"
+      ],
+      "normal": [
+        "Imperio",
+        "Ambición",
+        "Crimen"
+      ],
+      "hard": [
+        "Mansión",
+        "Tigre",
+        "Montón"
+      ]
+    }
+  },
+  {
+    "id": "regreso_al_futuro",
+    "category": "Peliculas",
+    "subcategory": "Aventura",
+    "word": "Regreso al futuro",
+    "similarWords": [
+      "Terminator",
+      "Matrix",
+      "Origen"
+    ],
+    "hints": {
+      "easy": [
+        "Tiempo",
+        "Coche",
+        "Viajar"
+      ],
+      "normal": [
+        "Pasado",
+        "Rayo",
+        "Inventor"
+      ],
+      "hard": [
+        "Relámpago",
+        "Patinete",
+        "Reloj"
+      ]
+    }
+  },
+  {
+    "id": "shrek",
+    "category": "Peliculas",
+    "subcategory": "Animación",
+    "word": "Shrek",
+    "similarWords": [
+      "Toy Story",
+      "Frozen",
+      "Kung Fu Panda"
+    ],
+    "hints": {
+      "easy": [
+        "Ogro",
+        "Pantano",
+        "Burro"
+      ],
+      "normal": [
+        "Princesa",
+        "Castillo",
+        "Cuento"
+      ],
+      "hard": [
+        "Cebolla",
+        "Fiona",
+        "Pantano"
+      ]
+    }
+  },
+  {
+    "id": "toy_story",
+    "category": "Peliculas",
+    "subcategory": "Animación",
+    "word": "Toy Story",
+    "similarWords": [
+      "Shrek",
+      "Cars",
+      "Frozen"
+    ],
+    "hints": {
+      "easy": [
+        "Juguetes",
+        "Niño",
+        "Habitación"
+      ],
+      "normal": [
+        "Vaquero",
+        "Espacio",
+        "Aventura"
+      ],
+      "hard": [
+        "Caja",
+        "Estante",
+        "Andy"
+      ]
+    }
+  },
+  {
+    "id": "frozen",
+    "category": "Peliculas",
+    "subcategory": "Animación",
+    "word": "Frozen",
+    "similarWords": [
+      "Encanto",
+      "Shrek",
+      "Rapunzel"
+    ],
+    "hints": {
+      "easy": [
+        "Hielo",
+        "Princesa",
+        "Nieve"
+      ],
+      "normal": [
+        "Reino",
+        "Magia",
+        "Hermana"
+      ],
+      "hard": [
+        "Muñeco",
+        "Castillo",
+        "Montaña"
+      ]
+    }
+  },
+  {
+    "id": "el_rey_leon",
+    "category": "Peliculas",
+    "subcategory": "Animación",
+    "word": "El rey león",
+    "similarWords": [
+      "Tarzán",
+      "Madagascar",
+      "Bambi"
+    ],
+    "hints": {
+      "easy": [
+        "León",
+        "Sabana",
+        "Rey"
+      ],
+      "normal": [
+        "Manada",
+        "Roca",
+        "Herencia"
+      ],
+      "hard": [
+        "Melena",
+        "Trono",
+        "Horizonte"
+      ]
+    }
+  },
+  {
+    "id": "gladiator",
+    "category": "Peliculas",
+    "subcategory": "Acción",
+    "word": "Gladiator",
+    "similarWords": [
+      "Troya",
+      "300",
+      "Braveheart"
+    ],
+    "hints": {
+      "easy": [
+        "Roma",
+        "Arena",
+        "Espada"
+      ],
+      "normal": [
+        "Imperio",
+        "General",
+        "Venganza"
+      ],
+      "hard": [
+        "Multitud",
+        "Arena",
+        "Honor"
+      ]
+    }
+  },
+  {
+    "id": "troya",
+    "category": "Peliculas",
+    "subcategory": "Histórica",
+    "word": "Troya",
+    "similarWords": [
+      "Gladiator",
+      "300",
+      "Alejandro"
+    ],
+    "hints": {
+      "easy": [
+        "Grecia",
+        "Guerra",
+        "Caballo"
+      ],
+      "normal": [
+        "Muralla",
+        "Héroe",
+        "Espada"
+      ],
+      "hard": [
+        "Puertas",
+        "Lanza",
+        "Asedio"
+      ]
+    }
+  },
+  {
+    "id": "300",
+    "category": "Peliculas",
+    "subcategory": "Acción",
+    "word": "300",
+    "similarWords": [
+      "Troya",
+      "Gladiator",
+      "Braveheart"
+    ],
+    "hints": {
+      "easy": [
+        "Esparta",
+        "Soldados",
+        "Batalla"
+      ],
+      "normal": [
+        "Escudos",
+        "Lanza",
+        "Rey"
+      ],
+      "hard": [
+        "Acantilado",
+        "Formación",
+        "Arena"
+      ]
+    }
+  },
+  {
+    "id": "piratas_del_caribe",
+    "category": "Peliculas",
+    "subcategory": "Aventura",
+    "word": "Piratas del Caribe",
+    "similarWords": [
+      "Indiana Jones",
+      "Peter Pan",
+      "Hook"
+    ],
+    "hints": {
+      "easy": [
+        "Piratas",
+        "Barco",
+        "Tesoro"
+      ],
+      "normal": [
+        "Isla",
+        "Espada",
+        "Ron"
+      ],
+      "hard": [
+        "Brújula",
+        "Perla",
+        "Tripulación"
+      ]
+    }
+  },
+  {
+    "id": "indiana_jones",
+    "category": "Peliculas",
+    "subcategory": "Aventura",
+    "word": "Indiana Jones",
+    "similarWords": [
+      "Tomb Raider",
+      "Piratas del Caribe",
+      "La momia"
+    ],
+    "hints": {
+      "easy": [
+        "Arqueólogo",
+        "Sombrero",
+        "Látigo"
+      ],
+      "normal": [
+        "Ruinas",
+        "Tesoro",
+        "Mapa"
+      ],
+      "hard": [
+        "Trampa",
+        "Templo",
+        "Relic"
+      ]
+    }
+  },
+  {
+    "id": "la_momia",
+    "category": "Peliculas",
+    "subcategory": "Aventura",
+    "word": "La momia",
+    "similarWords": [
+      "Indiana Jones",
+      "Van Helsing",
+      "Drácula"
+    ],
+    "hints": {
+      "easy": [
+        "Egipto",
+        "Arena",
+        "Tumba"
+      ],
+      "normal": [
+        "Maldición",
+        "Desierto",
+        "Ruinas"
+      ],
+      "hard": [
+        "Sarcófago",
+        "Arena",
+        "Pergamino"
+      ]
+    }
+  },
+  {
+    "id": "la_vida_es_bella",
+    "category": "Peliculas",
+    "subcategory": "Drama",
+    "word": "La vida es bella",
+    "similarWords": [
+      "Forrest Gump",
+      "Intocable",
+      "El niño con el pijama de rayas"
+    ],
+    "hints": {
+      "easy": [
+        "Padre",
+        "Niño",
+        "Guerra"
+      ],
+      "normal": [
+        "Campo",
+        "Juego",
+        "Protección"
+      ],
+      "hard": [
+        "Tanque",
+        "Promesa",
+        "Sonrisa"
+      ]
+    }
+  },
+  {
+    "id": "intocable",
+    "category": "Peliculas",
+    "subcategory": "Drama",
+    "word": "Intocable",
+    "similarWords": [
+      "Forrest Gump",
+      "Campeones",
+      "Green Book"
+    ],
+    "hints": {
+      "easy": [
+        "Silla",
+        "Amistad",
+        "Cuidados"
+      ],
+      "normal": [
+        "París",
+        "Trabajo",
+        "Ayuda"
+      ],
+      "hard": [
+        "Clásica",
+        "Paseo",
+        "Lujo"
+      ]
+    }
+  },
+  {
+    "id": "campeones",
+    "category": "Peliculas",
+    "subcategory": "Comedia",
+    "word": "Campeones",
+    "similarWords": [
+      "Intocable",
+      "Padre no hay más que uno",
+      "Ocho apellidos vascos"
+    ],
+    "hints": {
+      "easy": [
+        "Baloncesto",
+        "Equipo",
+        "Entrenar"
+      ],
+      "normal": [
+        "Grupo",
+        "Partido",
+        "Entrenador"
+      ],
+      "hard": [
+        "Canasta",
+        "Autobús",
+        "Compañeros"
+      ]
+    }
+  },
+  {
+    "id": "ocho_apellidos_vascos",
+    "category": "Peliculas",
+    "subcategory": "Comedia",
+    "word": "Ocho apellidos vascos",
+    "similarWords": [
+      "Campeones",
+      "Padre no hay más que uno",
+      "Torrente"
+    ],
+    "hints": {
+      "easy": [
+        "Comedia",
+        "Pareja",
+        "Norte"
+      ],
+      "normal": [
+        "Familia",
+        "Mentira",
+        "Viaje"
+      ],
+      "hard": [
+        "Bar",
+        "Acento",
+        "Boda"
+      ]
+    }
+  },
+  {
+    "id": "torrente",
+    "category": "Peliculas",
+    "subcategory": "Comedia",
+    "word": "Torrente",
+    "similarWords": [
+      "Ocho apellidos vascos",
+      "Padre no hay más que uno",
+      "Campeones"
+    ],
+    "hints": {
+      "easy": [
+        "Policía",
+        "Comedia",
+        "España"
+      ],
+      "normal": [
+        "Barrio",
+        "Disparo",
+        "Caos"
+      ],
+      "hard": [
+        "Bigote",
+        "Bar",
+        "Desastre"
+      ]
+    }
+  },
+  {
+    "id": "padre_no_hay_mas_que_uno",
+    "category": "Peliculas",
+    "subcategory": "Comedia",
+    "word": "Padre no hay más que uno",
+    "similarWords": [
+      "Campeones",
+      "Ocho apellidos vascos",
+      "Torrente"
+    ],
+    "hints": {
+      "easy": [
+        "Padre",
+        "Niños",
+        "Casa"
+      ],
+      "normal": [
+        "Familia",
+        "Caos",
+        "Vacaciones"
+      ],
+      "hard": [
+        "Desorden",
+        "Colegio",
+        "Rutina"
+      ]
+    }
   }
 ]

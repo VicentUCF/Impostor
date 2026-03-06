@@ -1,165 +1,646 @@
 [
   {
+    "id": "policia",
     "category": "Trabajos",
-    "sub": {
-      "id": "oficios_manual",
-      "easy": ["Oficio", "Herramienta", "Taller", "Manos"],
-      "normal": ["Trabajo", "Material", "Proceso", "Montaje"],
-      "hard": ["Tarea", "Ejecución", "Rutina", "Resultado"]
-    },
-    "words": [
-      "Carpintero",
-      "Fontanero",
-      "Electricista",
-      "Albañil",
-      "Herrero",
-      "Mecánico",
-      "Soldador",
-      "Pintor"
-    ]
+    "subcategory": "servicio_publico",
+    "word": "Policía",
+    "similarWords": [
+      "Guardia civil",
+      "Detective",
+      "Vigilante"
+    ],
+    "hints": {
+      "easy": [
+        "Uniforme",
+        "Sirena",
+        "Patrulla"
+      ],
+      "normal": [
+        "Comisaría",
+        "Detener",
+        "Radio"
+      ],
+      "hard": [
+        "Ronda",
+        "Sospecha",
+        "Denuncia"
+      ]
+    }
   },
   {
+    "id": "bombero",
     "category": "Trabajos",
-    "sub": {
-      "id": "sanidad",
-      "easy": ["Salud", "Hospital", "Paciente", "Atención"],
-      "normal": ["Clínica", "Tratamiento", "Cuidado", "Servicio"],
-      "hard": ["Asistencia", "Responsabilidad", "Intervención", "Gestión"]
-    },
-    "words": [
-      "Médico",
+    "subcategory": "servicio_publico",
+    "word": "Bombero",
+    "similarWords": [
+      "Rescatista",
+      "Paramédico",
+      "Policía"
+    ],
+    "hints": {
+      "easy": [
+        "Fuego",
+        "Camión",
+        "Manguera"
+      ],
+      "normal": [
+        "Incendio",
+        "Escalera",
+        "Casco"
+      ],
+      "hard": [
+        "Humo",
+        "Rescate",
+        "Sirena"
+      ]
+    }
+  },
+  {
+    "id": "medico",
+    "category": "Trabajos",
+    "subcategory": "sanidad",
+    "word": "Médico",
+    "similarWords": [
       "Enfermero",
       "Cirujano",
-      "Fisioterapeuta",
-      "Dentista",
-      "Psicólogo",
+      "Dentista"
+    ],
+    "hints": {
+      "easy": [
+        "Hospital",
+        "Paciente",
+        "Consulta"
+      ],
+      "normal": [
+        "Diagnóstico",
+        "Receta",
+        "Síntoma"
+      ],
+      "hard": [
+        "Explorar",
+        "Historial",
+        "Pulso"
+      ]
+    }
+  },
+  {
+    "id": "enfermero",
+    "category": "Trabajos",
+    "subcategory": "sanidad",
+    "word": "Enfermero",
+    "similarWords": [
+      "Médico",
       "Auxiliar",
       "Paramédico"
-    ]
+    ],
+    "hints": {
+      "easy": [
+        "Hospital",
+        "Inyección",
+        "Paciente"
+      ],
+      "normal": [
+        "Turno",
+        "Sala",
+        "Cuidar"
+      ],
+      "hard": [
+        "Suero",
+        "Gasas",
+        "Vía"
+      ]
+    }
   },
   {
+    "id": "dentista",
     "category": "Trabajos",
-    "sub": {
-      "id": "educacion",
-      "easy": ["Escuela", "Clase", "Alumno", "Aula"],
-      "normal": ["Formación", "Enseñanza", "Aprendizaje", "Evaluación"],
-      "hard": ["Didáctica", "Método", "Guía", "Proceso"]
-    },
-    "words": [
-      "Profesor",
+    "subcategory": "sanidad",
+    "word": "Dentista",
+    "similarWords": [
+      "Médico",
+      "Higienista",
+      "Cirujano"
+    ],
+    "hints": {
+      "easy": [
+        "Dientes",
+        "Clínica",
+        "Boca"
+      ],
+      "normal": [
+        "Empaste",
+        "Taladro",
+        "Molar"
+      ],
+      "hard": [
+        "Encía",
+        "Raíz",
+        "Ortodoncia"
+      ]
+    }
+  },
+  {
+    "id": "profesor",
+    "category": "Trabajos",
+    "subcategory": "educacion",
+    "word": "Profesor",
+    "similarWords": [
       "Maestro",
-      "Docente",
       "Tutor",
-      "Instructor",
-      "Orientador",
-      "Pedagogo"
-    ]
+      "Instructor"
+    ],
+    "hints": {
+      "easy": [
+        "Clase",
+        "Alumno",
+        "Pizarra"
+      ],
+      "normal": [
+        "Examen",
+        "Asignatura",
+        "Explicar"
+      ],
+      "hard": [
+        "Lección",
+        "Tiza",
+        "Apuntes"
+      ]
+    }
   },
   {
+    "id": "camarero",
     "category": "Trabajos",
-    "sub": {
-      "id": "tecnologia",
-      "easy": ["Tecnología", "Ordenador", "Pantalla", "Sistema"],
-      "normal": ["Software", "Datos", "Código", "Plataforma"],
-      "hard": ["Lógica", "Arquitectura", "Abstracción", "Estructura"]
-    },
-    "words": [
-      "Programador",
-      "Desarrollador",
-      "Ingeniero",
-      "Analista",
-      "Administrador",
-      "Técnico",
-      "Consultor"
-    ]
+    "subcategory": "hosteleria",
+    "word": "Camarero",
+    "similarWords": [
+      "Cocinero",
+      "Barman",
+      "Dependiente"
+    ],
+    "hints": {
+      "easy": [
+        "Bandeja",
+        "Mesa",
+        "Bar"
+      ],
+      "normal": [
+        "Pedido",
+        "Carta",
+        "Cuenta"
+      ],
+      "hard": [
+        "Propina",
+        "Comanda",
+        "Terraza"
+      ]
+    }
   },
   {
+    "id": "cocinero",
     "category": "Trabajos",
-    "sub": {
-      "id": "servicios",
-      "easy": ["Servicio", "Cliente", "Atención", "Turno"],
-      "normal": ["Gestión", "Soporte", "Interacción", "Organización"],
-      "hard": ["Relación", "Flujo", "Coordinación", "Contexto"]
-    },
-    "words": [
+    "subcategory": "hosteleria",
+    "word": "Cocinero",
+    "similarWords": [
+      "Chef",
       "Camarero",
-      "Dependiente",
-      "Recepcionista",
-      "Repartidor",
-      "Cajero",
-      "Teleoperador"
-    ]
+      "Panadero"
+    ],
+    "hints": {
+      "easy": [
+        "Cocina",
+        "Sartén",
+        "Receta"
+      ],
+      "normal": [
+        "Ingredientes",
+        "Plato",
+        "Fuego"
+      ],
+      "hard": [
+        "Sazonar",
+        "Cortar",
+        "Preparar"
+      ]
+    }
   },
   {
+    "id": "panadero",
     "category": "Trabajos",
-    "sub": {
-      "id": "seguridad",
-      "easy": ["Seguridad", "Orden", "Uniforme", "Control"],
-      "normal": ["Vigilancia", "Protección", "Autoridad", "Intervención"],
-      "hard": ["Riesgo", "Presencia", "Respuesta", "Prevención"]
-    },
-    "words": [
-      "Policía",
-      "Guardia",
-      "Vigilante",
-      "Bombero",
-      "Escolta",
-      "Rescatista"
-    ]
+    "subcategory": "alimentacion",
+    "word": "Panadero",
+    "similarWords": [
+      "Pastelero",
+      "Cocinero",
+      "Agricultor"
+    ],
+    "hints": {
+      "easy": [
+        "Pan",
+        "Horno",
+        "Harina"
+      ],
+      "normal": [
+        "Masa",
+        "Amasar",
+        "Bandeja"
+      ],
+      "hard": [
+        "Fermentar",
+        "Corteza",
+        "Levadura"
+      ]
+    }
   },
   {
+    "id": "mecanico",
     "category": "Trabajos",
-    "sub": {
-      "id": "transporte",
-      "easy": ["Transporte", "Vehículo", "Ruta", "Viaje"],
-      "normal": ["Conducción", "Trayecto", "Servicio", "Movimiento"],
-      "hard": ["Dirección", "Logística", "Flujo", "Recorrido"]
-    },
-    "words": ["Conductor", "Piloto", "Maquinista", "Mensajero", "Transportista"]
+    "subcategory": "oficio",
+    "word": "Mecánico",
+    "similarWords": [
+      "Electricista",
+      "Ingeniero",
+      "Soldador"
+    ],
+    "hints": {
+      "easy": [
+        "Coche",
+        "Motor",
+        "Taller"
+      ],
+      "normal": [
+        "Aceite",
+        "Pieza",
+        "Reparar"
+      ],
+      "hard": [
+        "Bujía",
+        "Pistón",
+        "Llave"
+      ]
+    }
   },
   {
+    "id": "electricista",
     "category": "Trabajos",
-    "sub": {
-      "id": "arte_creativo",
-      "easy": ["Arte", "Creatividad", "Diseño", "Imagen"],
-      "normal": ["Expresión", "Estilo", "Composición", "Producción"],
-      "hard": ["Concepto", "Narrativa", "Intención", "Visión"]
-    },
-    "words": [
-      "Diseñador",
-      "Ilustrador",
-      "Fotógrafo",
-      "Músico",
-      "Actor",
-      "Escritor",
+    "subcategory": "oficio",
+    "word": "Electricista",
+    "similarWords": [
+      "Fontanero",
+      "Técnico",
+      "Ingeniero"
+    ],
+    "hints": {
+      "easy": [
+        "Cable",
+        "Luz",
+        "Enchufe"
+      ],
+      "normal": [
+        "Cuadro",
+        "Interruptor",
+        "Voltaje"
+      ],
+      "hard": [
+        "Circuito",
+        "Fase",
+        "Neutro"
+      ]
+    }
+  },
+  {
+    "id": "fontanero",
+    "category": "Trabajos",
+    "subcategory": "oficio",
+    "word": "Fontanero",
+    "similarWords": [
+      "Electricista",
+      "Albañil",
+      "Mecánico"
+    ],
+    "hints": {
+      "easy": [
+        "Agua",
+        "Tubería",
+        "Grifo"
+      ],
+      "normal": [
+        "Fuga",
+        "Desagüe",
+        "Llave"
+      ],
+      "hard": [
+        "Codo",
+        "Rosca",
+        "Sifón"
+      ]
+    }
+  },
+  {
+    "id": "albanil",
+    "category": "Trabajos",
+    "subcategory": "oficio",
+    "word": "Albañil",
+    "similarWords": [
+      "Carpintero",
+      "Pintor",
+      "Fontanero"
+    ],
+    "hints": {
+      "easy": [
+        "Ladrillo",
+        "Cemento",
+        "Obra"
+      ],
+      "normal": [
+        "Pared",
+        "Mortero",
+        "Paleta"
+      ],
+      "hard": [
+        "Andamio",
+        "Nivel",
+        "Encofrado"
+      ]
+    }
+  },
+  {
+    "id": "carpintero",
+    "category": "Trabajos",
+    "subcategory": "oficio",
+    "word": "Carpintero",
+    "similarWords": [
+      "Albañil",
+      "Herrero",
+      "Pintor"
+    ],
+    "hints": {
+      "easy": [
+        "Madera",
+        "Sierra",
+        "Mesa"
+      ],
+      "normal": [
+        "Tablón",
+        "Cepillo",
+        "Clavo"
+      ],
+      "hard": [
+        "Veta",
+        "Serrín",
+        "Ensamble"
+      ]
+    }
+  },
+  {
+    "id": "piloto",
+    "category": "Trabajos",
+    "subcategory": "transporte",
+    "word": "Piloto",
+    "similarWords": [
+      "Conductor",
+      "Azafata",
+      "Capitán"
+    ],
+    "hints": {
+      "easy": [
+        "Avión",
+        "Cabina",
+        "Volar"
+      ],
+      "normal": [
+        "Aeropuerto",
+        "Vuelo",
+        "Ruta"
+      ],
+      "hard": [
+        "Radar",
+        "Altitud",
+        "Aterrizar"
+      ]
+    }
+  },
+  {
+    "id": "taxista",
+    "category": "Trabajos",
+    "subcategory": "transporte",
+    "word": "Taxista",
+    "similarWords": [
+      "Conductor",
+      "Uber",
+      "Repartidor"
+    ],
+    "hints": {
+      "easy": [
+        "Taxi",
+        "Ciudad",
+        "Cliente"
+      ],
+      "normal": [
+        "Carrera",
+        "Ruta",
+        "Parada"
+      ],
+      "hard": [
+        "Taxímetro",
+        "Recoger",
+        "Destino"
+      ]
+    }
+  },
+  {
+    "id": "repartidor",
+    "category": "Trabajos",
+    "subcategory": "servicios",
+    "word": "Repartidor",
+    "similarWords": [
+      "Mensajero",
+      "Conductor",
+      "Transportista"
+    ],
+    "hints": {
+      "easy": [
+        "Paquete",
+        "Entrega",
+        "Moto"
+      ],
+      "normal": [
+        "Pedido",
+        "Dirección",
+        "Ruta"
+      ],
+      "hard": [
+        "Portal",
+        "Timbre",
+        "Caja"
+      ]
+    }
+  },
+  {
+    "id": "fotografo",
+    "category": "Trabajos",
+    "subcategory": "arte",
+    "word": "Fotógrafo",
+    "similarWords": [
+      "Cámara",
+      "Director",
+      "Diseñador"
+    ],
+    "hints": {
+      "easy": [
+        "Cámara",
+        "Foto",
+        "Lente"
+      ],
+      "normal": [
+        "Retrato",
+        "Disparo",
+        "Enfoque"
+      ],
+      "hard": [
+        "Flash",
+        "Sensor",
+        "Apertura"
+      ]
+    }
+  },
+  {
+    "id": "actor",
+    "category": "Trabajos",
+    "subcategory": "arte",
+    "word": "Actor",
+    "similarWords": [
+      "Director",
+      "Presentador",
+      "Guionista"
+    ],
+    "hints": {
+      "easy": [
+        "Película",
+        "Escena",
+        "Personaje"
+      ],
+      "normal": [
+        "Guion",
+        "Rodaje",
+        "Teatro"
+      ],
+      "hard": [
+        "Toma",
+        "Ensayo",
+        "Cámara"
+      ]
+    }
+  },
+  {
+    "id": "periodista",
+    "category": "Trabajos",
+    "subcategory": "medios",
+    "word": "Periodista",
+    "similarWords": [
+      "Reportero",
+      "Presentador",
       "Editor"
-    ]
+    ],
+    "hints": {
+      "easy": [
+        "Noticias",
+        "Micrófono",
+        "Entrevista"
+      ],
+      "normal": [
+        "Prensa",
+        "Reportaje",
+        "Directo"
+      ],
+      "hard": [
+        "Redacción",
+        "Titular",
+        "Fuente"
+      ]
+    }
   },
   {
+    "id": "agricultor",
     "category": "Trabajos",
-    "sub": {
-      "id": "gestion_empresa",
-      "easy": ["Empresa", "Oficina", "Equipo", "Trabajo"],
-      "normal": ["Gestión", "Organización", "Planificación", "Dirección"],
-      "hard": ["Estrategia", "Decisión", "Liderazgo", "Responsabilidad"]
-    },
-    "words": ["Gerente", "Director", "Supervisor", "Coordinador", "Responsable"]
-  },
-  {
-    "category": "Trabajos",
-    "sub": {
-      "id": "campo_naturaleza",
-      "easy": ["Campo", "Naturaleza", "Tierra", "Aire"],
-      "normal": ["Cultivo", "Cuidado", "Producción", "Entorno"],
-      "hard": ["Ciclo", "Ritmo", "Sostenibilidad", "Equilibrio"]
-    },
-    "words": [
-      "Agricultor",
+    "subcategory": "campo",
+    "word": "Agricultor",
+    "similarWords": [
       "Ganadero",
       "Jardinero",
-      "Pescador",
-      "Forestero",
-      "Apicultor"
-    ]
+      "Pescador"
+    ],
+    "hints": {
+      "easy": [
+        "Campo",
+        "Cultivo",
+        "Tierra"
+      ],
+      "normal": [
+        "Tractor",
+        "Semilla",
+        "Cosecha"
+      ],
+      "hard": [
+        "Surco",
+        "Arado",
+        "Grano"
+      ]
+    }
+  },
+  {
+    "id": "jardinero",
+    "category": "Trabajos",
+    "subcategory": "campo",
+    "word": "Jardinero",
+    "similarWords": [
+      "Agricultor",
+      "Paisajista",
+      "Florista"
+    ],
+    "hints": {
+      "easy": [
+        "Plantas",
+        "Jardín",
+        "Podar"
+      ],
+      "normal": [
+        "Regar",
+        "Tierra",
+        "Flores"
+      ],
+      "hard": [
+        "Tijeras",
+        "Maceta",
+        "Césped"
+      ]
+    }
+  },
+  {
+    "id": "pescador",
+    "category": "Trabajos",
+    "subcategory": "mar",
+    "word": "Pescador",
+    "similarWords": [
+      "Marinero",
+      "Agricultor",
+      "Ganadero"
+    ],
+    "hints": {
+      "easy": [
+        "Mar",
+        "Pez",
+        "Red"
+      ],
+      "normal": [
+        "Barco",
+        "Anzuelo",
+        "Captura"
+      ],
+      "hard": [
+        "Marea",
+        "Caña",
+        "Puerto"
+      ]
+    }
   }
 ]
