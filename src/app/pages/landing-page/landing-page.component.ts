@@ -37,6 +37,12 @@ export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChildren('revealItem')
   private readonly revealItems?: QueryList<ElementRef<HTMLElement>>;
 
+  readonly chaosVariants: readonly string[] = [
+    'Sin impostor',
+    'Doble impostor',
+    'Giro oculto'
+  ];
+
   readonly steps: LandingStep[] = [
     {
       index: '01',

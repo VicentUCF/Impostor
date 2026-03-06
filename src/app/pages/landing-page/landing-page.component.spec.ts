@@ -50,4 +50,29 @@ describe('LandingPageComponent SEO', () => {
     expect(element.querySelector('nav[aria-label="Principal"]')).toBeTruthy();
     expect(element.querySelector('#faq')).toBeTruthy();
   });
+
+  it('should render the hero highlights and chaos variants', () => {
+    const fixture = TestBed.createComponent(LandingPageComponent);
+    fixture.detectChanges();
+
+    const element = fixture.nativeElement as HTMLElement;
+    const highlights = Array.from(
+      element.querySelectorAll('.landing-highlights .landing-highlight strong')
+    ).map((item) => item.textContent?.trim());
+    const chaosVariants = Array.from(
+      element.querySelectorAll('.landing-chaos__variants .landing-pill')
+    ).map((item) => item.textContent?.trim());
+
+    expect(highlights).toEqual([
+      '3 a 12',
+      'Un solo móvil',
+      'Montaje rápido',
+      'Modo caos'
+    ]);
+    expect(chaosVariants).toEqual([
+      'Sin impostor',
+      'Doble impostor',
+      'Giro oculto'
+    ]);
+  });
 });
