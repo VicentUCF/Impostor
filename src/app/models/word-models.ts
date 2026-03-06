@@ -1,28 +1,18 @@
 export type Difficulty = 'easy' | 'normal' | 'hard';
 
-export interface WordSub {
-  id?: string;
-  easy?: string[];
-  normal?: string[];
-  hard?: string[];
-}
-
-export interface WordEntryRaw {
-  category?: string;
-  sub?: WordSub;
-  words?: string[];
-}
-
 export interface WordHints {
-  easy: string[];
-  normal: string[];
-  hard: string[];
+  easy: [string, string, string];
+  normal: [string, string, string];
+  hard: [string, string, string];
 }
 
 export interface WordEntry {
+  id: string;
   category: string;
+  subcategory: string;
+  word: string;
+  similarWords: [string, string, string];
   hints: WordHints;
-  words: string[];
 }
 
 export interface CategorySource {
@@ -33,7 +23,10 @@ export interface CategorySource {
 }
 
 export interface WordSelection {
+  id: string;
   category: string;
+  subcategory: string;
+  similarWords: [string, string, string];
   hint: string;
   word: string;
 }

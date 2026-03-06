@@ -1,6 +1,6 @@
 import { assignRoles } from './game-utils';
 import { collectActiveEntries, collectAllEntries, pickWordEntry } from './word-data';
-import { CategorySource } from '../models/word-models';
+import { CategorySource, WordSelection } from '../models/word-models';
 import { ChaosVariant, PlayerSecret, RoundConfig, RoundState } from '../models/game-models';
 
 export interface RoundSetup {
@@ -8,6 +8,7 @@ export interface RoundSetup {
   impostors: number;
   sources: CategorySource[];
   config: RoundConfig;
+  previousSelection?: WordSelection | null;
 }
 
 interface ChaosVariantWeight {
@@ -75,7 +76,11 @@ const buildChaosRoles = (
 export const createRoundState = (setup: RoundSetup): RoundState => {
   const activeEntries = collectActiveEntries(setup.sources);
   const pool = activeEntries.length > 0 ? activeEntries : collectAllEntries(setup.sources);
-  const selection = pickWordEntry(pool, setup.config.hintDifficulty);
+  const selection = pickWordEntry(
+    pool,
+    setup.config.hintDifficulty,
+    setup.previousSelection ?? null
+  );
   const chaosRoll = Math.random() < clampChance(setup.config.chaosChance);
   const variant = chaosRoll ? pickChaosVariant(setup.totalPlayers) : 'none';
   const roles = chaosRoll

@@ -489,12 +489,14 @@ export class AppComponent implements OnDestroy, OnInit {
       hintDifficulty: this.hintDifficulty,
       chaosChance
     };
+    const previousSelection = this.roundState?.selectedEntry ?? null;
 
     this.roundState = createRoundState({
       totalPlayers: this.totalPlayers,
       impostors: this.impostors,
       sources: this.categorySources,
-      config
+      config,
+      previousSelection
     });
     this.starterIndex = Math.floor(Math.random() * this.totalPlayers);
   }
