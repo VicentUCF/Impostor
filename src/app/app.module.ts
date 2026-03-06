@@ -4,14 +4,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GamePageComponent } from './pages/game-page/game-page.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
-    GamePageComponent
+    LandingPageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

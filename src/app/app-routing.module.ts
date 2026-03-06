@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GamePageComponent } from './pages/game-page/game-page.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 export const appRoutes: Routes = [
@@ -10,7 +9,8 @@ export const appRoutes: Routes = [
   },
   {
     path: 'jugar',
-    component: GamePageComponent
+    loadChildren: () =>
+      import('./pages/game-page/game-page.module').then((module) => module.GamePageModule)
   },
   {
     path: '**',
