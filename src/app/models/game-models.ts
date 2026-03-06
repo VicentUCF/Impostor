@@ -24,14 +24,30 @@ export type ChaosVariant =
   | 'none'
   | 'no-impostor'
   | 'all-impostors'
-  | 'roles-inverted'
   | 'double-impostor';
+
+export type RealChaosVariant = Exclude<ChaosVariant, 'none'>;
 
 export interface RoundConfig {
   showCategory: boolean;
   showHint: boolean;
   hintDifficulty: Difficulty;
   chaosChance: number;
+}
+
+export interface RecentSelectionHistory {
+  sourceId: string;
+  subcategory: string;
+  word: string;
+  similarWords: string[];
+}
+
+export interface RoundHistory {
+  recentSelections: RecentSelectionHistory[];
+  starterHistory: number[];
+  impostorHistory: number[][];
+  chaosVariantHistory: RealChaosVariant[];
+  roundsSinceLastChaos: number;
 }
 
 export interface PlayerSecret {

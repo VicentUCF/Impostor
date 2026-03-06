@@ -1,14 +1,17 @@
 import deportesData from '../../db/Deportes.json';
+import animalesData from '../../db/Animales.json';
 import escapeRoomsData from '../../db/EscapeRooms.json';
 import juegosData from '../../db/Juegos.json';
 import marcasData from '../../db/Marcas.json';
 import padelData from '../../db/Padel.json';
 import peliculasData from '../../db/Peliculas.json';
+import personajesData from '../../db/Personajes.json';
 import seriesData from '../../db/Series.json';
 import trabajosData from '../../db/Trabajos.json';
 import comidaData from '../../db/Comida.json';
 import objetosData from '../../db/Objetos.json';
 import { randomItem } from './game-utils';
+import { RecentSelectionHistory, RoundHistory } from '../models/game-models';
 import {
   CategorySource,
   Difficulty,
@@ -63,7 +66,7 @@ const buildHints = (rawHints: WordEntryRaw['hints']): WordHints => ({
   hard: ensureTriple(rawHints?.hard, [EMPTY_HINT])
 });
 
-const normalizeComparable = (value: string): string =>
+export const normalizeComparable = (value: string): string =>
   value
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -72,8 +75,8 @@ const normalizeComparable = (value: string): string =>
     .replace(/\s+/g, ' ')
     .trim();
 
-const normalizeEntries = (label: string, rawEntries: unknown[]): WordEntry[] =>
-  rawEntries
+const normalizeEntries = (sourceId: string, label: string, rawEntries: unknown[]): WordEntry[] => {
+  const normalizedEntries = rawEntries
     .map((raw): WordEntryRaw => (typeof raw === 'object' && raw !== null ? (raw as WordEntryRaw) : {}))
     .map((raw) => {
       const category = sanitizeValue(raw.category) || label;
@@ -85,6 +88,7 @@ const normalizeEntries = (label: string, rawEntries: unknown[]): WordEntry[] =>
 
       return {
         id,
+        sourceId,
         category,
         subcategory,
         word,
@@ -93,6 +97,18 @@ const normalizeEntries = (label: string, rawEntries: unknown[]): WordEntry[] =>
       };
     })
     .filter((entry) => entry.word.length > 0 && entry.id.length > 0);
+  const seenWords = new Set<string>();
+
+  return normalizedEntries.filter((entry) => {
+    const comparableWord = normalizeComparable(entry.word);
+    if (seenWords.has(comparableWord)) {
+      return false;
+    }
+
+    seenWords.add(comparableWord);
+    return true;
+  });
+};
 
 const asEntries = (data: unknown): unknown[] => (Array.isArray(data) ? data : []);
 
@@ -103,6 +119,7 @@ const deriveLabel = (fallback: string, entries: WordEntry[]): string => {
 
 const emptySelection = (): WordSelection => ({
   id: '',
+  sourceId: '',
   category: '',
   subcategory: '',
   word: '',
@@ -112,6 +129,11 @@ const emptySelection = (): WordSelection => ({
 
 export const buildCategorySources = (): CategorySource[] => {
   const sources = [
+    {
+      id: 'animales',
+      fallbackLabel: 'Animales',
+      raw: asEntries(animalesData)
+    },
     {
       id: 'deportes',
       fallbackLabel: 'Deportes',
@@ -131,6 +153,11 @@ export const buildCategorySources = (): CategorySource[] => {
       id: 'peliculas',
       fallbackLabel: 'Películas',
       raw: asEntries(peliculasData)
+    },
+    {
+      id: 'personajes',
+      fallbackLabel: 'Personajes',
+      raw: asEntries(personajesData)
     },
     {
       id: 'series',
@@ -165,7 +192,7 @@ export const buildCategorySources = (): CategorySource[] => {
   ];
 
   return sources.map((source) => {
-    const entries = normalizeEntries(source.fallbackLabel, source.raw);
+    const entries = normalizeEntries(source.id, source.fallbackLabel, source.raw);
     const label = deriveLabel(source.fallbackLabel, entries);
 
     return {
@@ -185,10 +212,94 @@ export const collectActiveEntries = (sources: CategorySource[]): WordEntry[] =>
 export const collectAllEntries = (sources: CategorySource[]): WordEntry[] =>
   sources.flatMap((source) => source.entries);
 
+const buildRecentWordBlocklist = (recentSelections: readonly RecentSelectionHistory[]): Set<string> => {
+  const blockedWords = new Set<string>();
+
+  recentSelections.forEach((selection) => {
+    blockedWords.add(selection.word);
+    selection.similarWords.forEach((word) => blockedWords.add(word));
+  });
+
+  return blockedWords;
+};
+
+const hasRecentWordConflict = (
+  entry: WordEntry,
+  blockedWords: ReadonlySet<string>
+): boolean => {
+  const comparableWord = normalizeComparable(entry.word);
+  if (blockedWords.has(comparableWord)) {
+    return true;
+  }
+
+  return entry.similarWords
+    .map((word) => normalizeComparable(word))
+    .some((word) => blockedWords.has(word));
+};
+
+const getEntriesBySubcategory = (entries: WordEntry[]): Array<[string, WordEntry[]]> => {
+  const groups = new Map<string, WordEntry[]>();
+
+  entries.forEach((entry) => {
+    const subcategory = entry.subcategory || 'General';
+    const currentEntries = groups.get(subcategory) ?? [];
+    currentEntries.push(entry);
+    groups.set(subcategory, currentEntries);
+  });
+
+  return Array.from(groups.entries());
+};
+
+const getLastSelectionForSource = (
+  recentSelections: readonly RecentSelectionHistory[],
+  sourceId: string
+): RecentSelectionHistory | null => {
+  for (let index = recentSelections.length - 1; index >= 0; index -= 1) {
+    if (recentSelections[index]?.sourceId === sourceId) {
+      return recentSelections[index] ?? null;
+    }
+  }
+
+  return null;
+};
+
+const pickStrictEntry = (
+  sources: CategorySource[],
+  recentSelections: readonly RecentSelectionHistory[]
+): WordEntry | null => {
+  const blockedWords = buildRecentWordBlocklist(recentSelections);
+  const candidatesBySource = sources
+    .map((source) => ({
+      source,
+      entries: source.entries.filter((entry) => !hasRecentWordConflict(entry, blockedWords))
+    }))
+    .filter((source) => source.entries.length > 0);
+
+  if (candidatesBySource.length === 0) {
+    return null;
+  }
+
+  const blockedSourceIds = new Set(recentSelections.slice(-2).map((selection) => selection.sourceId));
+  const preferredSources = candidatesBySource.filter((source) => !blockedSourceIds.has(source.source.id));
+  const eligibleSources = preferredSources.length > 0 ? preferredSources : candidatesBySource;
+  const selectedSource = randomItem(eligibleSources);
+  const subcategories = getEntriesBySubcategory(selectedSource.entries);
+  const lastSelectionForSource = getLastSelectionForSource(recentSelections, selectedSource.source.id);
+  const preferredSubcategories =
+    lastSelectionForSource && subcategories.length > 1
+      ? subcategories.filter(([subcategory]) => subcategory !== lastSelectionForSource.subcategory)
+      : subcategories;
+  const eligibleSubcategories =
+    preferredSubcategories.length > 0 ? preferredSubcategories : subcategories;
+  const [, entries] = randomItem(eligibleSubcategories);
+
+  return randomItem(entries);
+};
+
 export const pickWordEntry = (
   entries: WordEntry[],
   difficulty: Difficulty,
-  previousSelection?: WordSelection | null
+  previousSelection?: Pick<RecentSelectionHistory, 'word' | 'similarWords'> | null
 ): WordSelection => {
   if (entries.length === 0) {
     return emptySelection();
@@ -224,10 +335,39 @@ export const pickWordEntry = (
 
   return {
     id: entry.id,
+    sourceId: entry.sourceId,
     category: entry.category,
     subcategory: entry.subcategory,
     word: entry.word,
     similarWords: entry.similarWords,
     hint: hintPool.length > 0 ? randomItem(hintPool) : EMPTY_HINT
   };
+};
+
+export const pickBalancedWordEntry = (
+  sources: CategorySource[],
+  difficulty: Difficulty,
+  history: RoundHistory
+): WordSelection => {
+  const activeSources = sources.filter((source) => source.enabled && source.entries.length > 0);
+  const fallbackSources = activeSources.length > 0 ? activeSources : sources.filter((source) => source.entries.length > 0);
+  const strictEntry = pickStrictEntry(fallbackSources, history.recentSelections);
+
+  if (strictEntry) {
+    const hintPool = strictEntry.hints[difficulty];
+
+    return {
+      id: strictEntry.id,
+      sourceId: strictEntry.sourceId,
+      category: strictEntry.category,
+      subcategory: strictEntry.subcategory,
+      word: strictEntry.word,
+      similarWords: strictEntry.similarWords,
+      hint: hintPool.length > 0 ? randomItem(hintPool) : EMPTY_HINT
+    };
+  }
+
+  const pool = fallbackSources.flatMap((source) => source.entries);
+  const previousSelection = history.recentSelections[history.recentSelections.length - 1] ?? null;
+  return pickWordEntry(pool, difficulty, previousSelection);
 };

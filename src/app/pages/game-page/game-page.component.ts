@@ -1,10 +1,24 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ConfigPanel, PlayerSecret, RoundConfig, RoundState, Screen } from '../../models/game-models';
+import {
+  ConfigPanel,
+  PlayerSecret,
+  RoundConfig,
+  RoundHistory,
+  RoundState,
+  Screen
+} from '../../models/game-models';
 import { CategorySource, Difficulty, WordEntry } from '../../models/word-models';
 import { GameTimerService } from '../../services/game-timer.service';
 import { SeoService } from '../../services/seo.service';
 import { createRoundState } from '../../utils/game-engine';
 import { formatTime, parseBoundedInt } from '../../utils/game-utils';
+import {
+  computeChaosChance,
+  createEmptyRoundHistory,
+  pickStarterIndex,
+  sanitizeRoundHistory,
+  updateRoundHistory
+} from '../../utils/round-history';
 import { buildCategorySources, collectActiveEntries } from '../../utils/word-data';
 
 interface SavedConfig {
@@ -47,7 +61,9 @@ export class GamePageComponent implements OnDestroy, OnInit {
   hintDifficulty: Difficulty = 'normal';
   chaosChanceBase = 0.2;
   chaosChanceIncrement = 0.01;
+  chaosChanceMax = 0.35;
   categorySources: CategorySource[] = buildCategorySources();
+  roundHistory: RoundHistory = createEmptyRoundHistory();
 
   roundSeconds = 0;
   canReveal = false;
@@ -57,26 +73,25 @@ export class GamePageComponent implements OnDestroy, OnInit {
   chaosNamesVisible = 0;
   normalRevealStage: 'none' | 'prep' | 'pause' | 'reveal' | 'transition' | 'final' = 'none';
   roleRevealPending = false;
-  roundsPlayed = 0;
   private chaosTimeoutIds: number[] = [];
   private chaosNamesIntervalId: number | undefined;
   private normalTimeoutIds: number[] = [];
   private roleRevealTimeoutId: number | undefined;
   private backgroundDriftTimeoutId: number | undefined;
-  private readonly roundsPlayedKey = 'impostor.roundsPlayed';
   private readonly configStorageKey = 'impostor.config';
   private readonly totalPlayersKey = 'impostor.totalPlayers';
   private readonly impostorsKey = 'impostor.impostors';
   private readonly playerNamesKey = 'impostor.playerNames';
+  private readonly roundHistoryKey = 'impostor.roundHistory';
 
   constructor(
     private readonly timerService: GameTimerService,
     private readonly seoService: SeoService
   ) {
-    this.roundsPlayed = this.readRoundsPlayed();
     this.loadSavedPlayerCounts();
     this.loadSavedPlayerNames();
     this.loadSavedConfig();
+    this.loadRoundHistory();
   }
 
   ngOnInit(): void {
@@ -138,11 +153,7 @@ export class GamePageComponent implements OnDestroy, OnInit {
   }
 
   get isChaosRevealable(): boolean {
-    return (
-      this.roundState?.mode === 'chaos' &&
-      this.roundState?.variant !== 'roles-inverted' &&
-      this.roundState?.variant !== 'none'
-    );
+    return this.roundState?.mode === 'chaos' && this.roundState?.variant !== 'none';
   }
 
   get showChaosFake(): boolean {
@@ -434,7 +445,7 @@ export class GamePageComponent implements OnDestroy, OnInit {
 
   revealImpostors(): void {
     this.clearRoundTimer();
-    this.incrementRoundsPlayed();
+    this.persistCompletedRound();
     this.screen = 'reveal';
     if (this.isChaosRevealable) {
       this.startChaosReveal();
@@ -491,52 +502,24 @@ export class GamePageComponent implements OnDestroy, OnInit {
       hintDifficulty: this.hintDifficulty,
       chaosChance
     };
-    const previousSelection = this.roundState?.selectedEntry ?? null;
 
     this.roundState = createRoundState({
       totalPlayers: this.totalPlayers,
       impostors: this.impostors,
       sources: this.categorySources,
       config,
-      previousSelection
+      history: this.roundHistory
     });
-    this.starterIndex = Math.floor(Math.random() * this.totalPlayers);
+    this.starterIndex = pickStarterIndex(this.totalPlayers, this.roundHistory);
   }
 
   private computeChaosChance(): number {
-    const chance = this.chaosChanceBase + this.roundsPlayed * this.chaosChanceIncrement;
-    return Math.min(Math.max(chance, 0), 1);
-  }
-
-  private readRoundsPlayed(): number {
-    if (typeof window === 'undefined') {
-      return 0;
-    }
-
-    try {
-      const stored = window.sessionStorage.getItem(this.roundsPlayedKey);
-      const parsed = Number.parseInt(stored ?? '0', 10);
-      return Number.isNaN(parsed) ? 0 : Math.max(0, parsed);
-    } catch {
-      return 0;
-    }
-  }
-
-  private writeRoundsPlayed(value: number): void {
-    if (typeof window === 'undefined') {
-      return;
-    }
-
-    try {
-      window.sessionStorage.setItem(this.roundsPlayedKey, String(value));
-    } catch {
-      // Ignore storage errors (private mode, disabled storage).
-    }
-  }
-
-  private incrementRoundsPlayed(): void {
-    this.roundsPlayed += 1;
-    this.writeRoundsPlayed(this.roundsPlayed);
+    return computeChaosChance(
+      this.roundHistory,
+      this.chaosChanceBase,
+      this.chaosChanceIncrement,
+      this.chaosChanceMax
+    );
   }
 
   private loadSavedConfig(): void {
@@ -637,6 +620,29 @@ export class GamePageComponent implements OnDestroy, OnInit {
 
   private persistPlayerNames(): void {
     this.writeSessionJson(this.playerNamesKey, this.playerNames);
+  }
+
+  private loadRoundHistory(): void {
+    this.roundHistory = sanitizeRoundHistory(this.readSessionJson(this.roundHistoryKey));
+  }
+
+  private persistRoundHistory(): void {
+    this.writeSessionJson(this.roundHistoryKey, this.roundHistory);
+  }
+
+  private persistCompletedRound(): void {
+    if (!this.roundState) {
+      return;
+    }
+
+    this.roundHistory = updateRoundHistory(this.roundHistory, {
+      selection: this.roundState.selectedEntry,
+      starterIndex: this.starterIndex,
+      impostorIndexes: this.roundState.impostorIndexes,
+      totalPlayers: this.totalPlayers,
+      variant: this.roundState.variant
+    });
+    this.persistRoundHistory();
   }
 
   private clearSavedPlayerNames(): void {

@@ -8,6 +8,7 @@ export interface WordHints {
 
 export interface WordEntry {
   id: string;
+  sourceId: string;
   category: string;
   subcategory: string;
   word: string;
@@ -24,6 +25,7 @@ export interface CategorySource {
 
 export interface WordSelection {
   id: string;
+  sourceId: string;
   category: string;
   subcategory: string;
   similarWords: [string, string, string];

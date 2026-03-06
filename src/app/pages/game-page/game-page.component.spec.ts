@@ -4,6 +4,9 @@ import { GamePageComponent } from './game-page.component';
 
 describe('GamePageComponent', () => {
   beforeEach(async () => {
+    window.sessionStorage.clear();
+    window.localStorage.clear();
+
     await TestBed.configureTestingModule({
       declarations: [GamePageComponent]
     }).compileComponents();
