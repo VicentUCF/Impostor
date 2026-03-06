@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { formatTime, parseBoundedInt } from './utils/game-utils';
 import { GameTimerService } from './services/game-timer.service';
 import { ConfigPanel, PlayerSecret, RoundConfig, RoundState, Screen } from './models/game-models';
@@ -21,7 +21,7 @@ interface SavedConfig {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnDestroy {
+export class AppComponent implements OnDestroy, OnInit {
   title = 'Impostor';
   screen: Screen = 'intro';
 
@@ -65,6 +65,7 @@ export class AppComponent implements OnDestroy {
   private chaosNamesIntervalId: number | undefined;
   private normalTimeoutIds: number[] = [];
   private roleRevealTimeoutId: number | undefined;
+  private backgroundDriftTimeoutId: number | undefined;
   private readonly roundsPlayedKey = 'impostor.roundsPlayed';
   private readonly configStorageKey = 'impostor.config';
   private readonly totalPlayersKey = 'impostor.totalPlayers';
@@ -76,6 +77,10 @@ export class AppComponent implements OnDestroy {
     this.loadSavedPlayerCounts();
     this.loadSavedPlayerNames();
     this.loadSavedConfig();
+  }
+
+  ngOnInit(): void {
+    this.startBackgroundDrift();
   }
 
   get isImpostor(): boolean {
@@ -465,6 +470,7 @@ export class AppComponent implements OnDestroy {
     this.clearChaosReveal();
     this.clearNormalReveal();
     this.clearRoleReveal();
+    this.clearBackgroundDrift();
   }
 
   trackByIndex(index: number): number {
@@ -715,6 +721,52 @@ export class AppComponent implements OnDestroy {
     } catch {
       // Ignore storage errors.
     }
+  }
+
+  private startBackgroundDrift(): void {
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion?.matches) {
+      return;
+    }
+
+    this.applyRandomBackgroundPositions();
+    this.scheduleBackgroundDrift();
+  }
+
+  private scheduleBackgroundDrift(): void {
+    const delay = this.randomBetween(9000, 14000);
+    this.backgroundDriftTimeoutId = window.setTimeout(() => {
+      this.applyRandomBackgroundPositions();
+      this.scheduleBackgroundDrift();
+    }, delay);
+  }
+
+  private applyRandomBackgroundPositions(): void {
+    if (typeof document === 'undefined') {
+      return;
+    }
+
+    const x1 = this.randomBetween(0, 35);
+    const y1 = this.randomBetween(0, 35);
+    const x2 = this.randomBetween(65, 100);
+    const y2 = this.randomBetween(0, 35);
+    const position = `${x1.toFixed(1)}% ${y1.toFixed(1)}%, ${x2.toFixed(1)}% ${y2.toFixed(1)}%, 0% 0%`;
+    document.body.style.backgroundPosition = position;
+  }
+
+  private clearBackgroundDrift(): void {
+    if (this.backgroundDriftTimeoutId !== undefined) {
+      window.clearTimeout(this.backgroundDriftTimeoutId);
+      this.backgroundDriftTimeoutId = undefined;
+    }
+  }
+
+  private randomBetween(min: number, max: number): number {
+    return Math.random() * (max - min) + min;
   }
 
   private startChaosReveal(): void {
