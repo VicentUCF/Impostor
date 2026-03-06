@@ -10,6 +10,16 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    url("/assets/fonts/Cormorant_Garamond/CormorantGaramond-SemiBold.woff2")
+      format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-bg: #000000;
   --color-surface: #0d0d0d;
@@ -19,7 +29,10 @@
   --color-chaos: rgba(255, 59, 48, 0.75);
   --color-informante: #2f6fff;
   --color-border: #1f1f1f;
-  --font-base: "Space Grotesk", sans-serif;
+  --font-brand: "Space Grotesk", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-base: var(--font-body);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -33,8 +46,11 @@
   --radius-2: 22px;
   --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.45);
   --motion-fast: 160ms;
-  --motion-slow: 220ms;
+  --motion-medium: 240ms;
+  --motion-slow: 420ms;
   --motion-ambient: 14000ms;
+  --easing-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  --easing-emphasis: cubic-bezier(0.16, 1, 0.3, 1);
   color-scheme: dark;
 }
 
@@ -74,6 +90,7 @@ body {
   transition: background-position var(--motion-ambient) ease-in-out;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-synthesis: none;
 }
 
 h1,

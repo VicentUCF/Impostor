@@ -31,7 +31,7 @@ describe('AppComponent routing', () => {
     fixture.detectChanges();
 
     expect(location.path()).toBe('/');
-    expect(fixture.nativeElement.textContent).toContain('Juego del impostor para movil');
+    expect(fixture.nativeElement.textContent).toContain('Juego del impostor para móvil');
   }));
 
   it('should navigate to /jugar from the main CTA', fakeAsync(() => {

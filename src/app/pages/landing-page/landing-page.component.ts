@@ -1,4 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Inject,
+  OnDestroy,
+  OnInit,
+  PLATFORM_ID,
+  QueryList,
+  ViewChildren
+} from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { SeoService } from '../../services/seo.service';
 
 interface LandingStep {
@@ -22,25 +33,28 @@ interface ChaosFeature {
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChildren('revealItem')
+  private readonly revealItems?: QueryList<ElementRef<HTMLElement>>;
+
   readonly steps: LandingStep[] = [
     {
       index: '01',
       title: 'Configura la ronda',
       body:
-        'Elige de 3 a 12 jugadores, ajusta cuantos impostores quieres y activa las categorias que mejor encajan con tu grupo.'
+        'Elige de 3 a 12 jugadores, ajusta cuántos impostores quieres y activa las categorías que mejor encajan con tu grupo.'
     },
     {
       index: '02',
-      title: 'Reparte el movil',
+      title: 'Reparte el móvil',
       body:
-        'Cada persona mira su rol en secreto. La mayoria ve la palabra; el impostor solo recibe categoria y pista si tu quieres.'
+        'Cada persona mira su rol en secreto. La mayoría ve la palabra; el impostor solo recibe categoría y pista si tú quieres.'
     },
     {
       index: '03',
       title: 'Hablad y descubrid',
       body:
-        'Empiezan las sospechas, las preguntas cruzadas y el farol. Cuando el grupo lo tenga claro, revela quien mentia.'
+        'Empiezan las sospechas, las preguntas cruzadas y el farol. Cuando el grupo lo tenga claro, revela quién mentía.'
     }
   ];
 
@@ -48,7 +62,7 @@ export class LandingPageComponent implements OnInit {
     {
       title: 'Rondas que rompen la mesa',
       body:
-        'El Modo Caos no avisa. Puede no haber impostor, puede haber dos o puede girar las expectativas cuando todos creen controlar la partida.'
+        'El modo caos no avisa. Puede no haber impostor, puede haber dos o puede girar las expectativas cuando todos creen controlar la partida.'
     },
     {
       title: 'Mentira, paranoia y giros',
@@ -58,40 +72,45 @@ export class LandingPageComponent implements OnInit {
     {
       title: 'Ideal para repetir',
       body:
-        'Cuantas mas partidas jugais, mas posibilidades hay de que aparezca una ronda extraña. El juego aprende el ritmo del grupo y devuelve tension.'
+        'Cuantas más partidas jugáis, más posibilidades hay de que aparezca una ronda extraña. El juego acompaña el ritmo del grupo y devuelve tensión.'
     }
   ];
 
   readonly faqs: LandingFaq[] = [
     {
-      question: '¿Como se juega a Algo No Cuadra con un solo movil?',
+      question: '¿Cómo se juega a Algo No Cuadra con un solo móvil?',
       answer:
-        'Una persona configura la ronda, el movil se pasa por turnos y cada jugador ve solo su informacion. No hace falta imprimir cartas ni preparar nada mas.'
+        'Una persona configura la ronda, el móvil se pasa por turnos y cada jugador ve solo su información. No hace falta imprimir cartas ni preparar nada más.'
     },
     {
-      question: '¿Cuantos jugadores admite la partida?',
+      question: '¿Cuántos jugadores admite la partida?',
       answer:
-        'El juego esta pensado para grupos de 3 a 12 personas. Funciona bien tanto en cenas pequenas como en fiestas con mucha gente.'
+        'El juego está pensado para grupos de 3 a 12 personas. Funciona bien tanto en cenas pequeñas como en fiestas con mucha gente.'
     },
     {
-      question: '¿Que ve el impostor?',
+      question: '¿Qué ve el impostor?',
       answer:
-        'Por defecto ve la categoria y puede recibir una pista con dificultad ajustable. Eso te permite hacer la partida mas accesible o mas salvaje.'
+        'Por defecto ve la categoría y puede recibir una pista con dificultad ajustable. Eso te permite hacer la partida más accesible o más salvaje.'
     },
     {
-      question: '¿Que es el Modo Caos?',
+      question: '¿Qué es el modo caos?',
       answer:
         'Es una capa de variaciones que altera el formato esperado de la ronda: dobles impostores, mesas sin impostor o giros que cambian la lectura social.'
     }
   ];
 
-  constructor(private readonly seoService: SeoService) {}
+  private revealObserver?: IntersectionObserver;
+
+  constructor(
+    private readonly seoService: SeoService,
+    @Inject(PLATFORM_ID) private readonly platformId: object
+  ) {}
 
   ngOnInit(): void {
     this.seoService.setPage({
-      title: 'Juego del impostor para fiestas y grupos',
+      title: 'Juego del impostor para grupos y fiestas en un solo móvil',
       description:
-        'Juego del impostor para 3 a 12 jugadores, en un solo movil. Explica reglas, activa el Modo Caos y juega una partida al instante.',
+        'Juego del impostor para 3 a 12 jugadores en un solo móvil. Explica reglas, activa el modo caos y lanza una partida para grupos en segundos.',
       path: '/',
       imagePath: '/assets/og-cover.png',
       type: 'website',
@@ -113,7 +132,7 @@ export class LandingPageComponent implements OnInit {
             operatingSystem: 'Web',
             inLanguage: 'es',
             description:
-              'Juego del impostor para jugar en grupo desde un solo movil, con categorias, pistas y un Modo Caos pensado para fiestas.',
+              'Juego del impostor para jugar en grupo desde un solo móvil, con categorías, pistas y un modo caos pensado para fiestas.',
             url: 'https://www.algonocuadra.app/',
             offers: {
               '@type': 'Offer',
@@ -136,5 +155,59 @@ export class LandingPageComponent implements OnInit {
         ]
       }
     });
+  }
+
+  ngAfterViewInit(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    const revealElements =
+      this.revealItems?.toArray().map((item) => item.nativeElement) ?? [];
+
+    if (!revealElements.length) {
+      return;
+    }
+
+    const reduceMotion =
+      window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches ?? false;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealElements.forEach((element) =>
+        element.setAttribute('data-reveal-state', 'visible')
+      );
+      return;
+    }
+
+    const foldThreshold = window.innerHeight * 0.88;
+    revealElements.forEach((element) => {
+      const top = element.getBoundingClientRect().top;
+      element.setAttribute(
+        'data-reveal-state',
+        top > foldThreshold ? 'hidden' : 'visible'
+      );
+    });
+
+    this.revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.setAttribute('data-reveal-state', 'visible');
+            this.revealObserver?.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.18
+      }
+    );
+
+    revealElements
+      .filter((element) => element.getAttribute('data-reveal-state') === 'hidden')
+      .forEach((element) => this.revealObserver?.observe(element));
+  }
+
+  ngOnDestroy(): void {
+    this.revealObserver?.disconnect();
   }
 }

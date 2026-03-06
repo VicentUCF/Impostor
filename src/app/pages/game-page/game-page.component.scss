@@ -183,6 +183,7 @@
 }
 
 .game-eyebrow {
+  font-family: var(--font-brand);
   font-size: 12px;
   letter-spacing: 0.35em;
   text-transform: uppercase;
@@ -190,6 +191,7 @@
 }
 
 .game-title {
+  font-family: var(--font-brand);
   font-size: clamp(28px, 8vw, 46px);
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -197,6 +199,7 @@
 }
 
 .game-name {
+  font-family: var(--font-brand);
   font-size: clamp(30px, 10vw, 54px);
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -204,6 +207,7 @@
 }
 
 .game-subtitle {
+  font-family: var(--font-brand);
   font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -211,6 +215,7 @@
 }
 
 .game-role {
+  font-family: var(--font-brand);
   font-size: clamp(32px, 11vw, 60px);
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -253,6 +258,7 @@
 .game-toggle__state,
 .game-accordion__title,
 .game-accordion__state {
+  font-family: var(--font-brand);
   text-transform: uppercase;
 }
 
