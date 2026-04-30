@@ -1,6 +1,7 @@
 import { RoundHistory } from '../models/game-models';
 import { WordSelection } from '../models/word-models';
 import {
+  canRollChaos,
   computeChaosChance,
   pickBalancedImpostorIndexes,
   pickChaosVariant,
@@ -32,6 +33,34 @@ describe('round-history', () => {
     const chance = computeChaosChance(createHistory({ roundsSinceLastChaos: 99 }));
 
     expect(chance).toBe(0.35);
+  });
+
+  it('should block chaos for five completed rounds after chaos has appeared', () => {
+    const firstChaosChance = computeChaosChance(createHistory());
+    const blockedChance = computeChaosChance(
+      createHistory({
+        chaosVariantHistory: ['no-impostor'],
+        roundsSinceLastChaos: 4
+      })
+    );
+    const cooledChance = computeChaosChance(
+      createHistory({
+        chaosVariantHistory: ['no-impostor'],
+        roundsSinceLastChaos: 5
+      })
+    );
+
+    expect(firstChaosChance).toBe(0.2);
+    expect(blockedChance).toBe(0);
+    expect(cooledChance).toBe(0.25);
+    expect(
+      canRollChaos(
+        createHistory({
+          chaosVariantHistory: ['no-impostor'],
+          roundsSinceLastChaos: 4
+        })
+      )
+    ).toBeFalse();
   });
 
   it('should rotate the starter away from the most recent players when possible', () => {

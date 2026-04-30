@@ -13,6 +13,7 @@ const MAX_STARTER_HISTORY = 12;
 const MAX_IMPOSTOR_HISTORY = 12;
 const MAX_CHAOS_VARIANT_HISTORY = 2;
 const MAX_ROUNDS_WITHOUT_CHAOS = 15;
+export const MIN_ROUNDS_BETWEEN_CHAOS = 5;
 
 interface RoundHistoryUpdate {
   selection: WordSelection;
@@ -143,12 +144,27 @@ export const sanitizeRoundHistory = (value: unknown): RoundHistory => {
   };
 };
 
+export const canRollChaos = (history: RoundHistory): boolean =>
+  history.chaosVariantHistory.length === 0 ||
+  history.roundsSinceLastChaos >= MIN_ROUNDS_BETWEEN_CHAOS;
+
 export const computeChaosChance = (
   history: RoundHistory,
   baseChance = 0.2,
   increment = 0.01,
   maxChance = 0.35
-): number => Math.min(Math.max(baseChance + history.roundsSinceLastChaos * increment, 0), maxChance);
+): number => {
+  const sanitizedHistory = sanitizeRoundHistory(history);
+
+  if (!canRollChaos(sanitizedHistory)) {
+    return 0;
+  }
+
+  return Math.min(
+    Math.max(baseChance + sanitizedHistory.roundsSinceLastChaos * increment, 0),
+    maxChance
+  );
+};
 
 export const pickStarterIndex = (totalPlayers: number, history: RoundHistory): number => {
   const availablePlayers = Array.from({ length: totalPlayers }, (_, index) => index);

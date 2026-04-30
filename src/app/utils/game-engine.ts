@@ -1,4 +1,5 @@
 import {
+  canRollChaos,
   pickBalancedImpostorIndexes,
   pickChaosVariant,
   sanitizeRoundHistory
@@ -47,7 +48,8 @@ const buildRoles = (
 export const createRoundState = (setup: RoundSetup): RoundState => {
   const history = sanitizeRoundHistory(setup.history);
   const selection = pickBalancedWordEntry(setup.sources, setup.config.hintDifficulty, history);
-  const chaosRoll = Math.random() < clampChance(setup.config.chaosChance);
+  const chaosRoll =
+    canRollChaos(history) && Math.random() < clampChance(setup.config.chaosChance);
   const variant: ChaosVariant = chaosRoll ? pickChaosVariant(setup.totalPlayers, history) : 'none';
   const impostorIndexes =
     variant === 'no-impostor'
