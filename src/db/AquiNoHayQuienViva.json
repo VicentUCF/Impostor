@@ -1,0 +1,242 @@
+[
+  {
+    "id": "emilio_delgado",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Portería",
+    "word": "Emilio Delgado",
+    "similarWords": ["Mariano Delgado", "Paco Delgado", "Belén López"],
+    "hints": {
+      "easy": ["Portero", "Uniforme", "Un poquito de por favor"],
+      "normal": ["Desengaños", "Comunidad", "Conserjería"],
+      "hard": ["Garita", "Recados", "Sótano"]
+    }
+  },
+  {
+    "id": "mariano_delgado",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Portería",
+    "word": "Mariano Delgado",
+    "similarWords": ["Emilio Delgado", "Paco Delgado", "Juan Cuesta"],
+    "hints": {
+      "easy": ["Padre", "Bar", "Jubilado"],
+      "normal": ["Consejos", "Picaresca", "Familia"],
+      "hard": ["Sofá", "Chapuzas", "Morro"]
+    }
+  },
+  {
+    "id": "juan_cuesta",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Comunidad",
+    "word": "Juan Cuesta",
+    "similarWords": ["Paloma Hurtado", "Isabel Ruiz", "José Miguel Cuesta"],
+    "hints": {
+      "easy": ["Presidente", "Profesor", "Familia Cuesta"],
+      "normal": ["Actas", "Reuniones", "Escalera"],
+      "hard": ["Autoridad", "Votaciones", "Caos vecinal"]
+    }
+  },
+  {
+    "id": "paloma_hurtado",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Comunidad",
+    "word": "Paloma Hurtado",
+    "similarWords": ["Juan Cuesta", "Isabel Ruiz", "Natalia Cuesta"],
+    "hints": {
+      "easy": ["Esposa", "Gritos", "Primeras temporadas"],
+      "normal": ["Cuesta", "Carácter", "Vecinos"],
+      "hard": ["Azotea", "Drama", "Control"]
+    }
+  },
+  {
+    "id": "isabel_la_hierbas",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Comunidad",
+    "word": "Isabel la Hierbas",
+    "similarWords": ["Juan Cuesta", "Paloma Hurtado", "Vicenta Benito"],
+    "hints": {
+      "easy": ["Hierbas", "Yoga", "Pareja de Juan"],
+      "normal": ["Natural", "Relajación", "Terapias"],
+      "hard": ["Incienso", "Cambio", "Equilibrio"]
+    }
+  },
+  {
+    "id": "jose_miguel_cuesta",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Comunidad",
+    "word": "Josemi Cuesta",
+    "similarWords": ["Natalia Cuesta", "Juan Cuesta", "Pablo Guerra"],
+    "hints": {
+      "easy": ["Niño", "Familia Cuesta", "Colegio"],
+      "normal": ["Travieso", "Hijo", "Vecindario"],
+      "hard": ["Mochila", "Preguntas", "Escalera"]
+    }
+  },
+  {
+    "id": "belén_lópez",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinas",
+    "word": "Belén López",
+    "similarWords": ["Alicia Sanz", "Emilio Delgado", "Lucía Álvarez"],
+    "hints": {
+      "easy": ["La Golfa", "Emilio", "Piso alquilado"],
+      "normal": ["Amoríos", "Trabajo", "Compañera"],
+      "hard": ["Ironía", "Independencia", "Vaivenes"]
+    }
+  },
+  {
+    "id": "alicia_sanz",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinas",
+    "word": "Alicia Sanz",
+    "similarWords": ["Belén López", "Lucía Álvarez", "Roberto Alonso"],
+    "hints": {
+      "easy": ["Actriz", "Compañera de Belén", "Rubia"],
+      "normal": ["Audiciones", "Piso", "Citas"],
+      "hard": ["Fama", "Casting", "Ego"]
+    }
+  },
+  {
+    "id": "lucía_álvarez",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinas",
+    "word": "Lucía Álvarez",
+    "similarWords": ["Roberto Alonso", "Belén López", "Carlos de Haro"],
+    "hints": {
+      "easy": ["La Pija", "Roberto", "Ático"],
+      "normal": ["Dinero", "Noviazgo", "Diseño"],
+      "hard": ["Elegancia", "Dudas", "Reformas"]
+    }
+  },
+  {
+    "id": "roberto_alonso",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinos",
+    "word": "Roberto Alonso",
+    "similarWords": ["Lucía Álvarez", "Carlos de Haro", "Fernando Navarro"],
+    "hints": {
+      "easy": ["Arquitecto", "Lucía", "Ático"],
+      "normal": ["Pareja", "Planos", "Celos"],
+      "hard": ["Reformas", "Inseguridad", "Promesas"]
+    }
+  },
+  {
+    "id": "mauri_hidalgo",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinos",
+    "word": "Mauri Hidalgo",
+    "similarWords": ["Fernando Navarro", "Bea Villarejo", "Paco Delgado"],
+    "hints": {
+      "easy": ["Periodista", "Fernando", "Humor ácido"],
+      "normal": ["Pareja", "Cotilleos", "Piso"],
+      "hard": ["Guion", "Neurosis", "Orgullo"]
+    }
+  },
+  {
+    "id": "fernando_navarro",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinos",
+    "word": "Fernando Navarro",
+    "similarWords": ["Mauri Hidalgo", "Bea Villarejo", "Roberto Alonso"],
+    "hints": {
+      "easy": ["Abogado", "Mauri", "Sensato"],
+      "normal": ["Pareja", "Despacho", "Equilibrio"],
+      "hard": ["Formalidad", "Contraste", "Discreción"]
+    }
+  },
+  {
+    "id": "concha_de_la_fuente",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Radio Patio",
+    "word": "Concha de la Fuente",
+    "similarWords": ["Vicenta Benito", "Marisa Benito", "María Jesús Vázquez"],
+    "hints": {
+      "easy": ["Radio Patio", "Mayor", "Cotilleos"],
+      "normal": ["Chismorreo", "Mirilla", "Vecinas"],
+      "hard": ["Lengua afilada", "Tertulia", "Escalera"]
+    }
+  },
+  {
+    "id": "vicenta_benito",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Radio Patio",
+    "word": "Vicenta Benito",
+    "similarWords": ["Marisa Benito", "Concha de la Fuente", "Isabel la Hierbas"],
+    "hints": {
+      "easy": ["Radio Patio", "Hermana", "Dulce"],
+      "normal": ["Inocente", "Cotilleos", "Amigas"],
+      "hard": ["Ternura", "Confusión", "Mirilla"]
+    }
+  },
+  {
+    "id": "marisa_benito",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Radio Patio",
+    "word": "Marisa Benito",
+    "similarWords": ["Vicenta Benito", "Concha de la Fuente", "Mariano Delgado"],
+    "hints": {
+      "easy": ["Radio Patio", "Cigarrillo", "Hermana"],
+      "normal": ["Carácter", "Comentarios", "Vecinas"],
+      "hard": ["Humo", "Sarcasmo", "Tertulia"]
+    }
+  },
+  {
+    "id": "paco_delgado",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Portería",
+    "word": "Paco Delgado",
+    "similarWords": ["Emilio Delgado", "Mariano Delgado", "Mauri Hidalgo"],
+    "hints": {
+      "easy": ["Videoclub", "Hermano de Emilio", "Cine"],
+      "normal": ["Mostrador", "Películas", "Familia"],
+      "hard": ["Recomendaciones", "Friki", "Cintas"]
+    }
+  },
+  {
+    "id": "beatriz_villarejo",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinas",
+    "word": "Bea Villarejo",
+    "similarWords": ["Mauri Hidalgo", "Fernando Navarro", "Belén López"],
+    "hints": {
+      "easy": ["Abogada", "Amiga de Mauri", "Piso"],
+      "normal": ["Maternidad", "Compañera", "Consejos"],
+      "hard": ["Apoyo", "Decisiones", "Cercanía"]
+    }
+  },
+  {
+    "id": "andrés_guerra",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinos",
+    "word": "Andrés Guerra",
+    "similarWords": ["Pablo Guerra", "Álex Guerra", "Juan Cuesta"],
+    "hints": {
+      "easy": ["Empresario", "Padre", "Familia Guerra"],
+      "normal": ["Negocios", "Hijos", "Comunidad"],
+      "hard": ["Ambición", "Problemas", "Votos"]
+    }
+  },
+  {
+    "id": "pablo_guerra",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinos",
+    "word": "Pablo Guerra",
+    "similarWords": ["Álex Guerra", "Andrés Guerra", "Natalia Cuesta"],
+    "hints": {
+      "easy": ["Hijo", "Familia Guerra", "Joven"],
+      "normal": ["Hermano", "Vecindario", "Líos"],
+      "hard": ["Adolescencia", "Escalera", "Familia"]
+    }
+  },
+  {
+    "id": "carlos_de_haro",
+    "category": "Aquí no hay quien viva",
+    "subcategory": "Vecinos",
+    "word": "Carlos de Haro",
+    "similarWords": ["Roberto Alonso", "Lucía Álvarez", "Alicia Sanz"],
+    "hints": {
+      "easy": ["Pretendiente", "Lucía", "Rival"],
+      "normal": ["Conquista", "Dinero", "Triángulo"],
+      "hard": ["Elegante", "Competencia", "Persistencia"]
+    }
+  }
+]
