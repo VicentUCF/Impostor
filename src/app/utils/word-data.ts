@@ -1,5 +1,6 @@
 import deportesData from '../../db/Deportes.json';
 import animalesData from '../../db/Animales.json';
+import aquiNoHayQuienVivaData from '../../db/AquiNoHayQuienViva.json';
 import escapeRoomsData from '../../db/EscapeRooms.json';
 import juegosData from '../../db/Juegos.json';
 import marcasData from '../../db/Marcas.json';
@@ -129,6 +130,11 @@ const emptySelection = (): WordSelection => ({
 
 export const buildCategorySources = (): CategorySource[] => {
   const sources = [
+    {
+      id: 'aqui-no-hay-quien-viva',
+      fallbackLabel: 'Aquí no hay quien viva',
+      raw: asEntries(aquiNoHayQuienVivaData)
+    },
     {
       id: 'animales',
       fallbackLabel: 'Animales',

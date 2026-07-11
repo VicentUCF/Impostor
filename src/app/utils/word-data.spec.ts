@@ -41,20 +41,25 @@ const createHistory = (recentSelections: RoundHistory['recentSelections']): Roun
 });
 
 describe('word-data', () => {
-  it('should include animales and personajes while deduplicating words inside each source', () => {
+  it('should include themed sources while deduplicating words inside each source', () => {
     const sources = buildCategorySources();
     const sourceIds = sources.map((source) => source.id);
+    const aquiNoHayQuienViva = sources.find((source) => source.id === 'aqui-no-hay-quien-viva');
     const escapeRooms = sources.find((source) => source.id === 'escape-rooms');
     const peliculas = sources.find((source) => source.id === 'peliculas');
     const personajes = sources.find((source) => source.id === 'personajes');
 
-    if (!escapeRooms || !peliculas || !personajes) {
+    if (!aquiNoHayQuienViva || !escapeRooms || !peliculas || !personajes) {
       fail('Expected core sources to be available.');
       return;
     }
 
+    expect(sourceIds).toContain('aqui-no-hay-quien-viva');
     expect(sourceIds).toContain('animales');
     expect(sourceIds).toContain('personajes');
+    expect(
+      aquiNoHayQuienViva.entries.some((entry) => normalizeComparable(entry.word) === 'emilio delgado')
+    ).toBeTrue();
     expect(
       new Set(escapeRooms.entries.map((entry) => normalizeComparable(entry.word))).size
     ).toBe(escapeRooms.entries.length);
