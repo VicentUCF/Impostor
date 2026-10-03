@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import {
   ConfigPanel,
+  GameType,
   PlayerSecret,
   RoundConfig,
   RoundHistory,
@@ -20,8 +21,10 @@ import {
   updateRoundHistory
 } from '../../utils/round-history';
 import { buildCategorySources, collectActiveEntries } from '../../utils/word-data';
+import { buildFactCatalog } from '../../utils/fact-data';
 
 interface SavedConfig {
+  gameType?: GameType;
   showCategory?: boolean;
   showHint?: boolean;
   hintDifficulty?: Difficulty;
@@ -55,6 +58,8 @@ export class GamePageComponent implements OnDestroy, OnInit {
   currentPlayer = 1;
   starterIndex = 0;
   roundState: RoundState | null = null;
+  gameType: GameType = 'words';
+  readonly factCatalog = buildFactCatalog();
 
   showCategory = true;
   showHint = true;
@@ -128,6 +133,25 @@ export class GamePageComponent implements OnDestroy, OnInit {
     return this.roundState?.secrets[this.currentPlayer - 1] ?? null;
   }
 
+  get isFactsMode(): boolean {
+    return (this.roundState?.gameType ?? this.gameType) === 'facts';
+  }
+
+  get currentFact(): string {
+    return this.currentSecret?.fact?.statement ?? '';
+  }
+
+  get revealedFacts() {
+    if (this.roundState?.gameType !== 'facts') {
+      return [];
+    }
+
+    return this.roundState.secrets.flatMap((secret, index) => secret.fact ? [{
+      playerName: this.playerNames[index] || `JUGADOR ${index + 1}`,
+      fact: secret.fact
+    }] : []);
+  }
+
   get currentWord(): string {
     return this.currentSecret?.word ?? '';
   }
@@ -141,15 +165,15 @@ export class GamePageComponent implements OnDestroy, OnInit {
   }
 
   get revealWord(): string {
-    return this.roundState?.selectedEntry.word ?? '';
+    return this.roundState?.selectedEntry?.word ?? '';
   }
 
   get revealHint(): string {
-    return this.roundState?.selectedEntry.hint ?? '';
+    return this.roundState?.selectedEntry?.hint ?? '';
   }
 
   get revealCategory(): string {
-    return this.roundState?.selectedEntry.category ?? '';
+    return this.roundState?.selectedEntry?.category ?? '';
   }
 
   get isChaosRevealable(): boolean {
@@ -298,7 +322,10 @@ export class GamePageComponent implements OnDestroy, OnInit {
   }
 
   get canConfirmConfig(): boolean {
-    return this.activeEntries.length > 0;
+    // Chaos may make every player an informant, so reserve enough unique facts.
+    return this.gameType === 'facts'
+      ? this.factCatalog.length >= this.totalPlayers
+      : this.activeEntries.length > 0;
   }
 
   get impostorNames(): string[] {
@@ -373,6 +400,11 @@ export class GamePageComponent implements OnDestroy, OnInit {
 
   toggleConfigPanel(panel: ConfigPanel): void {
     this.configPanels[panel] = !this.configPanels[panel];
+  }
+
+  setGameType(gameType: GameType): void {
+    this.gameType = gameType;
+    this.persistConfig();
   }
 
   toggleShowCategory(): void {
@@ -504,6 +536,8 @@ export class GamePageComponent implements OnDestroy, OnInit {
     };
 
     this.roundState = createRoundState({
+      gameType: this.gameType,
+      facts: this.factCatalog,
       totalPlayers: this.totalPlayers,
       impostors: this.impostors,
       sources: this.categorySources,
@@ -526,6 +560,10 @@ export class GamePageComponent implements OnDestroy, OnInit {
     const saved = this.readSavedConfig();
     if (!saved) {
       return;
+    }
+
+    if (saved.gameType === 'words' || saved.gameType === 'facts') {
+      this.gameType = saved.gameType;
     }
 
     if (typeof saved.showCategory === 'boolean') {
@@ -558,6 +596,7 @@ export class GamePageComponent implements OnDestroy, OnInit {
 
   private persistConfig(): void {
     const payload: SavedConfig = {
+      gameType: this.gameType,
       showCategory: this.showCategory,
       showHint: this.showHint,
       hintDifficulty: this.hintDifficulty,
@@ -637,6 +676,9 @@ export class GamePageComponent implements OnDestroy, OnInit {
 
     this.roundHistory = updateRoundHistory(this.roundHistory, {
       selection: this.roundState.selectedEntry,
+      factIds: this.roundState.gameType === 'facts'
+        ? this.roundState.secrets.flatMap((secret) => secret.fact ? [secret.fact.id] : [])
+        : [],
       starterIndex: this.starterIndex,
       impostorIndexes: this.roundState.impostorIndexes,
       totalPlayers: this.totalPlayers,

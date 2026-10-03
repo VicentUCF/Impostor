@@ -1,4 +1,5 @@
 import { Difficulty, WordSelection } from './word-models';
+import { FactEntry } from './fact-models';
 
 export type Screen =
   | 'intro'
@@ -15,6 +16,8 @@ export type Screen =
   | 'reveal';
 
 export type Role = 'crew' | 'impostor';
+
+export type GameType = 'words' | 'facts';
 
 export type ConfigPanel = 'impostor' | 'themes';
 
@@ -44,23 +47,47 @@ export interface RecentSelectionHistory {
 
 export interface RoundHistory {
   recentSelections: RecentSelectionHistory[];
+  recentFactIds: string[];
   starterHistory: number[];
   impostorHistory: number[][];
   chaosVariantHistory: RealChaosVariant[];
   roundsSinceLastChaos: number;
 }
 
-export interface PlayerSecret {
+interface BasePlayerSecret {
   role: Role;
-  word: string;
   hint: string;
   category: string;
 }
 
-export interface RoundState {
+export interface WordPlayerSecret extends BasePlayerSecret {
+  word: string;
+  fact?: never;
+}
+
+export interface FactPlayerSecret extends BasePlayerSecret {
+  word?: never;
+  fact: FactEntry | null;
+}
+
+export type PlayerSecret = WordPlayerSecret | FactPlayerSecret;
+
+interface BaseRoundState {
   mode: RoundMode;
   variant: ChaosVariant;
-  secrets: PlayerSecret[];
   impostorIndexes: number[];
+}
+
+export interface WordRoundState extends BaseRoundState {
+  gameType: 'words';
+  secrets: WordPlayerSecret[];
   selectedEntry: WordSelection;
 }
+
+export interface FactRoundState extends BaseRoundState {
+  gameType: 'facts';
+  secrets: FactPlayerSecret[];
+  selectedEntry?: never;
+}
+
+export type RoundState = WordRoundState | FactRoundState;

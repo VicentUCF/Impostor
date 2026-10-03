@@ -34,6 +34,7 @@ const createSource = (id: string, entries: WordEntry[]): CategorySource => ({
 
 const createHistory = (recentSelections: RoundHistory['recentSelections']): RoundHistory => ({
   recentSelections,
+  recentFactIds: [],
   starterHistory: [],
   impostorHistory: [],
   chaosVariantHistory: [],

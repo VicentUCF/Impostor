@@ -490,6 +490,31 @@
   font-size: clamp(24px, 9vw, 42px);
 }
 
+.game-value--fact {
+  font-size: clamp(19px, 5vw, 24px);
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.game-fact-copy {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.game-fact-result {
+  text-align: left;
+}
+
+.game-fact-source {
+  color: var(--color-accent);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
 .game-note {
   font-size: 13px;
   letter-spacing: 0.2em;
