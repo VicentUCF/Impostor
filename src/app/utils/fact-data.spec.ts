@@ -3,7 +3,7 @@ import { buildFactCatalog, pickFacts } from './fact-data';
 describe('fact-data', () => {
   const catalog = buildFactCatalog();
 
-  it('has a sourced starter catalog large enough for twelve informants', () => {
+  it('has a catalog with source links large enough for twelve informants', () => {
     expect(catalog.length).toBeGreaterThanOrEqual(12);
     expect(new Set(catalog.map((fact) => fact.id)).size).toBe(catalog.length);
     expect(new Set(catalog.map((fact) => fact.statement)).size).toBe(catalog.length);
