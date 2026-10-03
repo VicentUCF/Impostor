@@ -1,3 +1,4 @@
+import adultos21Data from '../../db/Adultos21.json';
 import deportesData from '../../db/Deportes.json';
 import animalesData from '../../db/Animales.json';
 import aquiNoHayQuienVivaData from '../../db/AquiNoHayQuienViva.json';
@@ -194,6 +195,11 @@ export const buildCategorySources = (): CategorySource[] => {
       id: 'escape-rooms',
       fallbackLabel: 'Escape Room',
       raw: asEntries(escapeRoomsData)
+    },
+    {
+      id: 'adultos-21',
+      fallbackLabel: '+21',
+      raw: asEntries(adultos21Data)
     }
   ];
 
