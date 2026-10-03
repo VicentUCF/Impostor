@@ -16,10 +16,15 @@ Las explicaciones y enlaces de los datos aparecen únicamente al terminar la rev
 
 ### Ampliar el catálogo de datos
 
-`src/db/Datos.json` contiene 12 datos iniciales para probar el modo, pendientes de la
-ampliación editorial. Cada entrada tiene `id` estable, `category`, `statement`,
-`explanation` y `source: { label, url }`. Solo se incluyen afirmaciones verdaderas
-verificadas en la fuente enlazada; no hay un banco de mentiras.
+`src/db/Datos.json` contiene los 500 datos aportados en `datos_random_500.json`,
+repartidos en 10 categorías. Cada entrada tiene `id` estable, `category`, `statement`,
+`explanation` y `source: { label, url }`. El catálogo está destinado a afirmaciones
+verdaderas; no hay un banco de mentiras.
+
+La importación comprueba el formato, los campos obligatorios y la ausencia de IDs y
+textos repetidos. No equivale a una verificación factual de las 500 afirmaciones:
+varias fuentes del archivo apuntan a portadas o secciones generales y necesitan una
+referencia más específica en una futura revisión editorial.
 
 Añadir entradas al JSON no requiere cambiar el motor. Evitar IDs o afirmaciones duplicadas
 y redactar frases breves que se puedan recordar al pasar el móvil. Debe haber al menos

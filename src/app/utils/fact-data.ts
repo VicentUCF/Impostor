@@ -4,7 +4,7 @@ import { FactEntry } from '../models/fact-models';
 export const buildFactCatalog = (): FactEntry[] => factsData;
 
 // Prefer unseen facts, then the least recently used. Never repeat within a round,
-// even when the small starter catalog has already been exhausted.
+// even when the catalog has already been exhausted.
 export const pickFacts = (
   catalog: readonly FactEntry[],
   count: number,
