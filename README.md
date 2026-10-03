@@ -2,6 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
+## Modos de juego
+
+- **Palabras:** los informantes comparten una palabra; el impostor recibe las ayudas configuradas.
+- **Datos:** cada informante recibe un dato real diferente, sin tema común obligatorio.
+  El impostor no recibe un dato ni una mentira preparada: debe improvisar.
+  Se mantienen el reparto privado, el jugador inicial, el debate y votación fuera de la app,
+  el temporizador y la revelación. El caos automático conserva sus tres variantes.
+
+El selector está en la configuración de la partida y se guarda junto a las preferencias.
+Las categorías y pistas de Palabras se conservan al cambiar de modo; no se aplican a Datos.
+Las explicaciones y enlaces de los datos aparecen únicamente al terminar la revelación.
+
+### Ampliar el catálogo de datos
+
+`src/db/Datos.json` contiene 12 datos iniciales para probar el modo, pendientes de la
+ampliación editorial. Cada entrada tiene `id` estable, `category`, `statement`,
+`explanation` y `source: { label, url }`. Solo se incluyen afirmaciones verdaderas
+verificadas en la fuente enlazada; no hay un banco de mentiras.
+
+Añadir entradas al JSON no requiere cambiar el motor. Evitar IDs o afirmaciones duplicadas
+y redactar frases breves que se puedan recordar al pasar el móvil. Debe haber al menos
+12 datos distintos para admitir el máximo de jugadores incluso en caos sin impostor.
+Se priorizan datos no vistos y luego los menos recientes, sin repetir dentro de una ronda.
+El historial de datos es independiente del de palabras y admite preferencias antiguas.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

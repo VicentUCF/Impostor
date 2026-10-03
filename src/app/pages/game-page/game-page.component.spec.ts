@@ -1,4 +1,5 @@
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
 
 import { GamePageComponent } from './game-page.component';
 
@@ -8,9 +9,67 @@ describe('GamePageComponent', () => {
     window.localStorage.clear();
 
     await TestBed.configureTestingModule({
+      imports: [CommonModule],
       declarations: [GamePageComponent]
     }).compileComponents();
   });
+
+  it('persists the chosen mode independently of classic settings', () => {
+    const fixture = TestBed.createComponent(GamePageComponent);
+    const component = fixture.componentInstance;
+    component.toggleShowHint();
+    component.setGameType('facts');
+    const restored = TestBed.createComponent(GamePageComponent).componentInstance;
+    expect(restored.gameType).toBe('facts');
+    expect(restored.showHint).toBeFalse();
+    restored.setGameType('words');
+    expect(restored.showHint).toBeFalse();
+  });
+
+  it('plays facts with disabled word categories and only shows sources after revealing', fakeAsync(() => {
+    const fixture = TestBed.createComponent(GamePageComponent);
+    const component = fixture.componentInstance;
+    spyOn<any>(component, 'startBackgroundDrift').and.stub();
+    component.chaosChanceBase = 0;
+    component.playerNames = ['ANA', 'LUIS', 'MARTA'];
+    component.categorySources.forEach((source) => source.enabled = false);
+    component.screen = 'config';
+    component.setGameType('facts');
+    fixture.detectChanges();
+    expect(component.canConfirmConfig).toBeTrue();
+    expect(fixture.nativeElement.querySelector('.game-accordion')).toBeNull();
+    component.confirmConfig();
+    component.startRoles();
+
+    for (let index = 0; index < component.totalPlayers; index += 1) {
+      component.startRoleReveal();
+      tick(240);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.querySelector('.game-fact-source')).toBeNull();
+      if (component.isImpostor) {
+        expect(fixture.nativeElement.textContent).toContain('NO TIENES DATO');
+        expect(fixture.nativeElement.querySelector('.game-value--fact')).toBeNull();
+      } else {
+        expect(fixture.nativeElement.textContent).toContain(component.currentFact);
+      }
+      component.hideRole();
+      tick(700);
+    }
+
+    component.startRound();
+    tick(3000);
+    component.revealImpostors();
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.game-fact-source')).toBeNull();
+    tick(5000);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelectorAll('.game-fact-source').length).toBe(2);
+    expect(component.roundHistory.recentFactIds.length).toBe(2);
+    component.newRound();
+    expect(component.screen).toBe('ready');
+    expect(component.roundState?.gameType).toBe('facts');
+    component.ngOnDestroy();
+  }));
 
   it('should preserve the round flow from setup to reveal', fakeAsync(() => {
     const fixture = TestBed.createComponent(GamePageComponent);

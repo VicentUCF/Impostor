@@ -6,11 +6,13 @@ import {
   pickBalancedImpostorIndexes,
   pickChaosVariant,
   pickStarterIndex,
+  sanitizeRoundHistory,
   updateRoundHistory
 } from './round-history';
 
 const createHistory = (overrides: Partial<RoundHistory> = {}): RoundHistory => ({
   recentSelections: [],
+  recentFactIds: [],
   starterHistory: [],
   impostorHistory: [],
   chaosVariantHistory: [],
@@ -29,6 +31,27 @@ const createSelection = (word: string): WordSelection => ({
 });
 
 describe('round-history', () => {
+  it('loads pre-facts history and ignores invalid stored fact IDs', () => {
+    expect(sanitizeRoundHistory({ recentSelections: [] }).recentFactIds).toEqual([]);
+    expect(sanitizeRoundHistory({ recentFactIds: ['venus', null, 4, ''] }).recentFactIds)
+      .toEqual(['venus']);
+  });
+
+  it('records all dealt facts without replacing the classic word history', () => {
+    const first = updateRoundHistory(createHistory(), {
+      selection: createSelection('Lobo'), starterIndex: 0, impostorIndexes: [1],
+      totalPlayers: 4, variant: 'none'
+    });
+    const updated = updateRoundHistory(first, {
+      factIds: ['venus', 'marte', 'pulpos'], starterIndex: 1, impostorIndexes: [2],
+      totalPlayers: 4, variant: 'none'
+    });
+    expect(updated.recentSelections).toEqual(first.recentSelections);
+    expect(updated.recentFactIds).toEqual(['venus', 'marte', 'pulpos']);
+    expect(updated.impostorHistory).toEqual([[1], [2]]);
+    expect(updated.roundsSinceLastChaos).toBe(2);
+  });
+
   it('should cap chaos chance at 35 percent', () => {
     const chance = computeChaosChance(createHistory({ roundsSinceLastChaos: 99 }));
 

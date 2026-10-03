@@ -9,6 +9,7 @@ import { randomItem } from './game-utils';
 import { normalizeComparable } from './word-data';
 
 const MAX_RECENT_SELECTIONS = 8;
+const MAX_RECENT_FACTS = 120;
 const MAX_STARTER_HISTORY = 12;
 const MAX_IMPOSTOR_HISTORY = 12;
 const MAX_CHAOS_VARIANT_HISTORY = 2;
@@ -16,7 +17,8 @@ const MAX_ROUNDS_WITHOUT_CHAOS = 15;
 export const MIN_ROUNDS_BETWEEN_CHAOS = 5;
 
 interface RoundHistoryUpdate {
-  selection: WordSelection;
+  selection?: WordSelection;
+  factIds?: string[];
   starterIndex: number;
   impostorIndexes: number[];
   totalPlayers: number;
@@ -109,6 +111,7 @@ const scoreLeastRecentImpostor = (
 
 export const createEmptyRoundHistory = (): RoundHistory => ({
   recentSelections: [],
+  recentFactIds: [],
   starterHistory: [],
   impostorHistory: [],
   chaosVariantHistory: [],
@@ -137,6 +140,11 @@ export const sanitizeRoundHistory = (value: unknown): RoundHistory => {
 
   return {
     recentSelections,
+    recentFactIds: Array.isArray(candidate.recentFactIds)
+      ? candidate.recentFactIds
+          .filter((id): id is string => typeof id === 'string' && id.trim().length > 0)
+          .slice(-MAX_RECENT_FACTS)
+      : [],
     starterHistory,
     impostorHistory,
     chaosVariantHistory,
@@ -244,14 +252,14 @@ export const updateRoundHistory = (
   update: RoundHistoryUpdate
 ): RoundHistory => {
   const sanitizedHistory = sanitizeRoundHistory(history);
-  const recentSelection: RecentSelectionHistory = {
+  const recentSelection: RecentSelectionHistory | null = update.selection ? {
     sourceId: update.selection.sourceId,
     subcategory: update.selection.subcategory,
     word: normalizeComparable(update.selection.word),
     similarWords: update.selection.similarWords
       .map((entry) => normalizeComparable(entry))
       .filter((entry, index, entries) => entry.length > 0 && entries.indexOf(entry) === index)
-  };
+  } : null;
   const validImpostorIndexes = Array.from(
     new Set(
       update.impostorIndexes.filter(
@@ -264,11 +272,13 @@ export const updateRoundHistory = (
     update.starterIndex >= 0 && update.starterIndex < update.totalPlayers ? update.starterIndex : 0;
 
   return {
-    recentSelections: appendWithLimit(
+    recentSelections: recentSelection ? appendWithLimit(
       sanitizedHistory.recentSelections,
       recentSelection,
       MAX_RECENT_SELECTIONS
-    ),
+    ) : sanitizedHistory.recentSelections,
+    recentFactIds: [...sanitizedHistory.recentFactIds, ...(update.factIds ?? [])]
+      .slice(-MAX_RECENT_FACTS),
     starterHistory: appendWithLimit(
       sanitizedHistory.starterHistory,
       validStarterIndex,

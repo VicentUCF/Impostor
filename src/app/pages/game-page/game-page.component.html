@@ -100,7 +100,45 @@
       <div *ngSwitchCase="'config'" class="game-stack game-stack--form">
         <p class="game-eyebrow">CONFIGURACION</p>
         <h1 class="game-title">PARTIDA</h1>
+        <p class="game-section" id="game-type-label">MODO DE JUEGO</p>
+        <div class="game-choice-list" role="group" aria-labelledby="game-type-label">
+          <button
+            class="game-choice"
+            type="button"
+            [class.game-choice--on]="gameType === 'words'"
+            [attr.aria-pressed]="gameType === 'words'"
+            (click)="setGameType('words')"
+          >
+            <div class="game-choice__row">
+              <span class="game-choice__label">PALABRAS</span>
+            </div>
+            <span class="game-choice__meta">La misma palabra para los informantes.</span>
+          </button>
+          <button
+            class="game-choice"
+            type="button"
+            [class.game-choice--on]="gameType === 'facts'"
+            [attr.aria-pressed]="gameType === 'facts'"
+            (click)="setGameType('facts')"
+          >
+            <div class="game-choice__row">
+              <span class="game-choice__label">DATOS</span>
+            </div>
+            <span class="game-choice__meta">Un dato real distinto para cada informante.</span>
+          </button>
+        </div>
+        <div class="game-block" *ngIf="gameType === 'facts'">
+          <p class="game-meta">DATOS DISTINTOS. TEMAS MEZCLADOS.</p>
+          <p class="game-fact-copy">
+            Cada informante cuenta su dato. El impostor no recibe ninguno y debe
+            improvisar para pasar desapercibido. Preguntad, debatid y descubrid quién es.
+          </p>
+        </div>
+        <p class="game-note" role="alert" *ngIf="gameType === 'facts' && !canConfirmConfig">
+          No hay suficientes datos distintos para {{ totalPlayers }} jugadores.
+        </p>
         <div
+          *ngIf="gameType === 'words'"
           class="game-accordion"
           [class.game-accordion--open]="configPanels.impostor"
         >
@@ -188,7 +226,7 @@
             </ng-container>
           </div>
         </div>
-        <div class="game-accordion" [class.game-accordion--open]="configPanels.themes">
+        <div *ngIf="gameType === 'words'" class="game-accordion" [class.game-accordion--open]="configPanels.themes">
           <button
             class="game-accordion__header"
             type="button"
@@ -281,7 +319,7 @@
         >
           {{ isImpostor ? "IMPOSTOR" : "INFORMANTE" }}
         </h1>
-        <div class="game-block" *ngIf="showCategory || (showHint && isImpostor)">
+        <div class="game-block" *ngIf="!isFactsMode && (showCategory || (showHint && isImpostor))">
           <ng-container *ngIf="showCategory">
             <p class="game-meta">CATEGORIA</p>
             <p class="game-value">{{ currentCategory }}</p>
@@ -292,10 +330,15 @@
           </ng-container>
         </div>
         <div *ngIf="!isImpostor" class="game-block">
-          <p class="game-meta">PALABRA</p>
-          <p class="game-value game-value--word">{{ currentWord }}</p>
+          <p class="game-meta">{{ isFactsMode ? 'TU DATO' : 'PALABRA' }}</p>
+          <p class="game-value" [class.game-value--word]="!isFactsMode" [class.game-value--fact]="isFactsMode">
+            {{ isFactsMode ? currentFact : currentWord }}
+          </p>
         </div>
-        <p *ngIf="isImpostor" class="game-note">NO TIENES PALABRA</p>
+        <p *ngIf="isImpostor" class="game-note">{{ isFactsMode ? 'NO TIENES DATO' : 'NO TIENES PALABRA' }}</p>
+        <p *ngIf="isFactsMode" class="game-fact-copy">
+          {{ isImpostor ? 'Inventa un dato creíble y defiéndelo como si lo hubieras recibido.' : 'Recuerda tu dato y cuéntalo con naturalidad cuando te toque.' }}
+        </p>
         <button class="game-action" type="button" (click)="hideRole()">
           {{ hasNextPlayer ? "OCULTAR Y PASAR" : "CONTINUAR" }}
         </button>
@@ -309,6 +352,7 @@
       <div *ngSwitchCase="'starter'" class="game-stack">
         <p class="game-eyebrow">EMPIEZA</p>
         <h1 class="game-name">{{ starterName }}</h1>
+        <p *ngIf="isFactsMode" class="game-fact-copy">Por turnos, contad vuestro dato. Después, preguntad, debatid y votad como siempre.</p>
         <button class="game-action" type="button" (click)="startRound()">
           INICIAR RONDA
         </button>
@@ -360,20 +404,7 @@
                 </li>
               </ul>
             </ng-container>
-            <div class="game-block">
-              <p class="game-meta">PALABRA</p>
-              <p class="game-value game-value--word">{{ revealWord }}</p>
-            </div>
-            <div class="game-block" *ngIf="showCategory || showHint">
-              <ng-container *ngIf="showCategory">
-                <p class="game-meta">CATEGORIA</p>
-                <p class="game-value">{{ revealCategory }}</p>
-              </ng-container>
-              <ng-container *ngIf="showHint">
-                <p class="game-meta">PISTA</p>
-                <p class="game-value">{{ revealHint }}</p>
-              </ng-container>
-            </div>
+            <ng-container *ngTemplateOutlet="roundDetails"></ng-container>
           </ng-container>
         </ng-container>
         <ng-template #normalReveal>
@@ -401,22 +432,39 @@
                   </li>
                 </ul>
               </ng-container>
-              <div class="game-block">
-                <p class="game-meta">PALABRA</p>
-                <p class="game-value game-value--word">{{ revealWord }}</p>
-              </div>
-              <div class="game-block" *ngIf="showCategory || showHint">
-                <ng-container *ngIf="showCategory">
-                  <p class="game-meta">CATEGORIA</p>
-                  <p class="game-value">{{ revealCategory }}</p>
-                </ng-container>
-                <ng-container *ngIf="showHint">
-                  <p class="game-meta">PISTA</p>
-                  <p class="game-value">{{ revealHint }}</p>
-                </ng-container>
-              </div>
+              <ng-container *ngTemplateOutlet="roundDetails"></ng-container>
             </div>
           </ng-container>
+        </ng-template>
+        <ng-template #roundDetails>
+          <ng-container *ngIf="isFactsMode; else wordDetails">
+            <p class="game-section">LOS DATOS DE LA RONDA</p>
+            <p class="game-fact-copy" *ngIf="revealedFacts.length === 0">Nadie recibió un dato en esta ronda. Todos tuvisteis que improvisar.</p>
+            <article class="game-block game-fact-result" *ngFor="let entry of revealedFacts">
+              <p class="game-meta">{{ entry.playerName }}</p>
+              <p class="game-value game-value--fact">{{ entry.fact.statement }}</p>
+              <p class="game-fact-copy">{{ entry.fact.explanation }}</p>
+              <a class="game-fact-source" [href]="entry.fact.source.url" target="_blank" rel="noopener noreferrer">
+                Fuente: {{ entry.fact.source.label }}
+              </a>
+            </article>
+          </ng-container>
+          <ng-template #wordDetails>
+            <div class="game-block">
+              <p class="game-meta">PALABRA</p>
+              <p class="game-value game-value--word">{{ revealWord }}</p>
+            </div>
+            <div class="game-block" *ngIf="showCategory || showHint">
+              <ng-container *ngIf="showCategory">
+                <p class="game-meta">CATEGORIA</p>
+                <p class="game-value">{{ revealCategory }}</p>
+              </ng-container>
+              <ng-container *ngIf="showHint">
+                <p class="game-meta">PISTA</p>
+                <p class="game-value">{{ revealHint }}</p>
+              </ng-container>
+            </div>
+          </ng-template>
         </ng-template>
         <button
           class="game-action"

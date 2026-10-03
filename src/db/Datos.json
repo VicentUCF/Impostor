@@ -1,0 +1,86 @@
+[
+  {
+    "id": "venus-rotacion",
+    "category": "Espacio",
+    "statement": "Venus tarda más en girar sobre sí mismo que en dar una vuelta al Sol.",
+    "explanation": "Su rotación dura unos 243 días terrestres y su órbita, unos 225.",
+    "source": { "label": "NASA · Venus", "url": "https://science.nasa.gov/venus/venus-facts/" }
+  },
+  {
+    "id": "venus-amanecer",
+    "category": "Espacio",
+    "statement": "En Venus, el Sol sale por el oeste y se pone por el este.",
+    "explanation": "Venus gira en sentido contrario al de la Tierra.",
+    "source": { "label": "NASA · Venus", "url": "https://science.nasa.gov/venus/venus-facts/" }
+  },
+  {
+    "id": "venus-calor",
+    "category": "Espacio",
+    "statement": "El planeta más caliente del sistema solar es Venus, no Mercurio.",
+    "explanation": "Su densa atmósfera retiene el calor mediante un intenso efecto invernadero.",
+    "source": { "label": "NASA · Venus", "url": "https://science.nasa.gov/venus/venus-facts/" }
+  },
+  {
+    "id": "venus-lunas",
+    "category": "Espacio",
+    "statement": "Venus no tiene ninguna luna.",
+    "explanation": "Es uno de los dos planetas del sistema solar sin satélites naturales.",
+    "source": { "label": "NASA · Venus", "url": "https://science.nasa.gov/venus/venus-facts/" }
+  },
+  {
+    "id": "marte-volcan",
+    "category": "Espacio",
+    "statement": "El volcán más grande del sistema solar está en Marte.",
+    "explanation": "Se llama Olympus Mons y supera ampliamente a los volcanes terrestres.",
+    "source": { "label": "NASA · Marte", "url": "https://science.nasa.gov/mars/facts/" }
+  },
+  {
+    "id": "marte-lunas",
+    "category": "Espacio",
+    "statement": "Las dos lunas de Marte tienen forma de patata.",
+    "explanation": "Fobos y Deimos tienen tan poca masa que su gravedad no les da forma esférica.",
+    "source": { "label": "NASA · Marte", "url": "https://science.nasa.gov/mars/facts/" }
+  },
+  {
+    "id": "marte-oxido",
+    "category": "Espacio",
+    "statement": "Marte se ve rojo por el hierro oxidado de su polvo y sus rocas.",
+    "explanation": "El polvo con óxidos de hierro también se eleva a la atmósfera.",
+    "source": { "label": "NASA · Marte", "url": "https://science.nasa.gov/mars/facts/" }
+  },
+  {
+    "id": "marte-superficie",
+    "category": "Espacio",
+    "statement": "La superficie total de Marte es casi igual a toda la tierra firme de la Tierra.",
+    "explanation": "Marte tiene aproximadamente la mitad del diámetro terrestre, pero aquí gran parte de la superficie es océano.",
+    "source": { "label": "NASA · Marte", "url": "https://science.nasa.gov/mars/facts/" }
+  },
+  {
+    "id": "pulpos-sangre",
+    "category": "Animales",
+    "statement": "Los pulpos tienen la sangre azul.",
+    "explanation": "Transportan oxígeno con hemocianina, una molécula que contiene cobre.",
+    "source": { "label": "Smithsonian · Cefalópodos", "url": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives" }
+  },
+  {
+    "id": "pulpos-corazones",
+    "category": "Animales",
+    "statement": "Los pulpos tienen tres corazones.",
+    "explanation": "Dos bombean sangre hacia las branquias y el tercero hacia el resto del cuerpo.",
+    "source": { "label": "Smithsonian · Cefalópodos", "url": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives" }
+  },
+  {
+    "id": "pulpos-pico",
+    "category": "Animales",
+    "statement": "Los pulpos tienen un pico afilado para cortar a sus presas.",
+    "explanation": "Dentro del pico hay una rádula con pequeños dientes que ayuda a procesar el alimento.",
+    "source": { "label": "Smithsonian · Cefalópodos", "url": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives" }
+  },
+  {
+    "id": "pulpos-esofago",
+    "category": "Animales",
+    "statement": "El esófago de un pulpo pasa por el interior de su cerebro.",
+    "explanation": "El alimento debe estar suficientemente triturado para atravesar ese paso estrecho.",
+    "source": { "label": "Smithsonian · Cefalópodos", "url": "https://ocean.si.edu/ocean-life/invertebrates/octopuses-squids-and-relatives" }
+  }
+]
